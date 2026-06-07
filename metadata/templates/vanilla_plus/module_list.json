@@ -1,0 +1,27 @@
+{
+  "template": "vanilla_plus",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echoindex",
+    "echotutorialcore",
+    "echoplayercore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echoindex",
+    "echotutorialcore",
+    "echoplayercore"
+  ],
+  "optionalModules": [
+    "echoholomap",
+    "echothemecore",
+    "echosoundcore",
+    "echomissioncore",
+    "echorecovery"
+  ]
+}

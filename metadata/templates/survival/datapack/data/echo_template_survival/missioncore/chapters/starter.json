@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_survival:starter_chapter",
+  "title": "Survival Opening Loop",
+  "summary": "A practical survival starter with a shelter, weather, safe-zone, farming, and reclamation chain plus normal and hardcore config guidance.",
+  "description": "Find shelter, check weather, mark a safe zone, start food or reclamation, and prepare supplies before harder exploration.",
+  "sortOrder": 10
+}

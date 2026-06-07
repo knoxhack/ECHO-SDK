@@ -1,0 +1,13 @@
+{
+  "type": "echoindustrialnexus:industrial_processing",
+  "machine": "component_assembler",
+  "ingredient": [
+    "echopowergrid:ceramic_insulator",
+    "echopowergrid:insulated_wire"
+  ],
+  "result": "echopowergrid:high_voltage_bus",
+  "count": 1,
+  "duration": 120,
+  "fluxCost": 80,
+  "heat": 1
+}

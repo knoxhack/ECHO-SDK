@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_pack2_draft:shift_lore_brief",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Story Brief: Cold Shift Handoff",
+  "summary": "A lightweight lore note for the internal prototype.",
+  "body": "The Foundry Protocol fiction starts small: an operator arrives after a cold shift handoff, restores the starter power line, marks the processor bay, and leaves the next crew a readable route. The 1.0.0 prototype keeps this as Index and MissionCore flavor only; no full story chapter ships yet.",
+  "tags": [
+    "lore",
+    "story",
+    "prototype"
+  ],
+  "related": [
+    "echo_template_pack2_draft:foundry_overview",
+    "echo_template_pack2_draft:runtime_budget"
+  ],
+  "sortOrder": 65
+}

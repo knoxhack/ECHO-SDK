@@ -1,0 +1,45 @@
+{
+  "id": "echo_template_server_smp:starter_flow",
+  "chapterId": "echo_template_server_smp:starter_chapter",
+  "title": "Server Readiness Check",
+  "briefing": "Verify the server basics before inviting players.",
+  "objectives": [
+    {
+      "id": "review_server_setup_docs",
+      "type": "creator_action",
+      "label": "Review server setup docs",
+      "detail": "Creator starter objective for Server SMP: Review server setup docs."
+    },
+    {
+      "id": "confirm_permissions",
+      "type": "creator_action",
+      "label": "Confirm permissions",
+      "detail": "Creator starter objective for Server SMP: Confirm permissions."
+    },
+    {
+      "id": "run_diagnostics",
+      "type": "creator_action",
+      "label": "Run diagnostics",
+      "detail": "Creator starter objective for Server SMP: Run diagnostics."
+    },
+    {
+      "id": "create_a_team_marker",
+      "type": "creator_action",
+      "label": "Create a team marker",
+      "detail": "Creator starter objective for Server SMP: Create a team marker."
+    },
+    {
+      "id": "document_backup_cadence",
+      "type": "creator_action",
+      "label": "Document backup cadence",
+      "detail": "Creator starter objective for Server SMP: Document backup cadence."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_server_smp:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

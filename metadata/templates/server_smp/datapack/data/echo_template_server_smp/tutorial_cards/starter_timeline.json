@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_server_smp:starter_timeline",
+  "category": "creator_pack",
+  "title": "Server SMP Starter Timeline",
+  "summary": "A server starter with PlayerCore, RuntimeGuard, DataCore, HoloMap, MissionCore, Index, TutorialCore, shared objectives, and low-end guidance.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Server SMP generated packs.",
+  "steps": [
+    "Open the admin setup Index page.",
+    "Confirm PlayerCore permissions and home rules.",
+    "Run the first RuntimeGuard budget check.",
+    "Create a shared HoloMap objective marker.",
+    "Complete the admin setup MissionCore checklist."
+  ],
+  "commonMistakes": [
+    "Single-player story campaigns",
+    "Packs without admins"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

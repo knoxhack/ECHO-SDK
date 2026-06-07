@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_survival:first_hint",
+  "title": "Survival First Hint",
+  "message": "Open the survival guide in Index.",
+  "trigger": "first_login"
+}

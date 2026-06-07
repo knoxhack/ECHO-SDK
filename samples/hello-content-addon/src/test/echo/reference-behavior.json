@@ -1,0 +1,16 @@
+{
+  "schema": "echo.reference.behavior.v1",
+  "moduleId": "hello_content_addon",
+  "version": "0.1.0",
+  "behaviors": [
+    {
+      "id": "register-content",
+      "domains": [
+        "items",
+        "blocks",
+        "recipes"
+      ],
+      "expectedRegistrations": 3
+    }
+  ]
+}

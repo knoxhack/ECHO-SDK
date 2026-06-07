@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_story_lore:starter_chapter",
+  "title": "Story/Lore Opening Loop",
+  "summary": "A story foundation with Terminal archive start, SignalOS chapter sample, Lens clue objective, HoloMap story marker, and mission chain guidance.",
+  "description": "Open Terminal, read the first archive, accept the mission chain, scan a clue, and follow the HoloMap marker to the next story beat.",
+  "sortOrder": 10
+}

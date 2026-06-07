@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:factory_substations",
+  "category": "echo_template_tech:starter",
+  "title": "Factory Substations",
+  "subtitle": "Readable boundaries for automation lines",
+  "summary": "Factory Substations are routing anchors for heavier Tech packs.",
+  "body": "Place Factory Substations at the edge of a machine hall, battery room, or logistics depot. Shift-use a substation to inspect network generation, demand, stored power, state, and quality. If a grid is unstable, split the line and inspect each section separately.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

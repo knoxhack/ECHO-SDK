@@ -1,0 +1,69 @@
+{
+  "id": "echo_template_pack2_draft:calibrate_depot_requests",
+  "chapter": "echo_template_pack2_draft:foundry_draft",
+  "phase": "foundry_commissioning_mvp",
+  "phaseTitle": "Foundry Commissioning MVP",
+  "phaseOrder": 10,
+  "category": "Foundry Protocol",
+  "difficulty": "Guided",
+  "terminal_route_phase": "foundry_commissioning_mvp",
+  "terminal_source": "missioncore",
+  "terminal_chapter": "echo_template_pack2_draft:foundry_draft",
+  "order": 40,
+  "title": "Read the First Meter",
+  "briefing": "Place and Deep Scan the Power Meter to confirm the starter line can be measured before depot work begins.",
+  "fieldGuide": "This keeps progression grounded in the first system rather than jumping to a full factory. The meter is a diagnostic reward, not a production unlock. The depot route remains a prototype handoff into Logistics Network.",
+  "icon": "echopowergrid:power_meter",
+  "kind": "main",
+  "prerequisites": [
+    "echo_template_pack2_draft:route_processor_line"
+  ],
+  "objectives": [
+    {
+      "id": "echo_template_pack2_draft:calibrate_depot_requests/scan_power_meter",
+      "type": "scan_block",
+      "target": "echopowergrid:power_meter",
+      "label": "Deep Scan the Power Meter",
+      "detail": "Place the Power Meter on the starter line and scan it.",
+      "required": 1,
+      "icon": "echopowergrid:power_meter"
+    },
+    {
+      "id": "echo_template_pack2_draft:calibrate_depot_requests/read_depot_request",
+      "type": "custom",
+      "target": "echologisticsnetwork:route_requester",
+      "label": "Read the depot request",
+      "detail": "Review the depot request board guidance in Index or the Terminal archive panel.",
+      "required": 1,
+      "icon": "echologisticsnetwork:route_requester"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "echo_template_pack2_draft:calibrate_depot_requests/power_cell",
+      "item": "echopowergrid:power_cell",
+      "count": 1,
+      "label": "Power Cell",
+      "detail": "A modest component toward the next starter upgrade."
+    },
+    {
+      "id": "echo_template_pack2_draft:calibrate_depot_requests/insulated_wire",
+      "item": "echopowergrid:insulated_wire",
+      "count": 4,
+      "label": "Insulated Wire",
+      "detail": "A small wiring reward for safe follow-up routing."
+    }
+  ],
+  "metadata": {
+    "indexEntry": "echo_template_pack2_draft:depot_requests",
+    "scanProfile": "echo_template_pack2_draft:depot_request_board",
+    "tutorialHint": "echo_template_pack2_draft:depot_request_hint",
+    "holoMapMarker": "echo_template_pack2_draft:depot_route#depot_request_board",
+    "completionCue": "echo_template_pack2_draft:objective_complete",
+    "unlockIndexEntries": "echo_template_pack2_draft:logistics_request_board,echo_template_pack2_draft:fault_troubleshooting",
+    "completionFeedback": "Depot request checked. Runtime Budget Review is available as an optional side check."
+  },
+  "terminal_route_order": "40",
+  "terminal_route_role": "starter_mission",
+  "terminal_route_prerequisites": "echo_template_pack2_draft:route_processor_line"
+}

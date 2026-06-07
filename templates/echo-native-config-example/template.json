@@ -1,0 +1,53 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-native-config-example",
+  "name": "ECHO Native Config Example",
+  "kind": "addon",
+  "description": "Example scaffold for typed native configuration keys.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoNativeConfig",
+    "kind": "native_example",
+    "role": "config_example",
+    "feature_id": "native.config.example",
+    "display_name": "ECHO Native Config Example"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/examples/{{class_name}}Keys.java"
+  ],
+  "defaultFeatures": [
+    "native.config.example"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "src/main/resources/data/{{module_id}}/**",
+    "docs/**"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "runtime_agent",
+    "diagnostics_agent",
+    "test_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew validateEchoSdkTemplates",
+    ".\\gradlew generatePlan3ReleasePrepReport"
+  ]
+}

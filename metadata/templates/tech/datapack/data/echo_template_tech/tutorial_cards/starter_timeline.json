@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_tech:starter_timeline",
+  "category": "creator_pack",
+  "title": "Tech Starter Timeline",
+  "summary": "A factory-ready 1.0.0 template with reinforced power, high-voltage routing, logistics, multiblocks, Lens, HoloMap, Terminal, and runtime guidance.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Tech generated packs.",
+  "steps": [
+    "Open Terminal and read Power Basics.",
+    "Build a starter generator or reinforced solar path.",
+    "Place a Field Battery Bank and inspect stored power.",
+    "Route High Voltage Cable through a Factory Substation.",
+    "Run the first Industrial Nexus processor recipe."
+  ],
+  "commonMistakes": [
+    "Vanilla-only packs",
+    "No-tech RPG packs"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

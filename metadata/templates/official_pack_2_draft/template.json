@@ -1,0 +1,179 @@
+{
+  "id": "official_pack_2_draft",
+  "name": "Official Pack #2 Release Candidate Draft",
+  "version": "1.0.0",
+  "style": "Factory",
+  "goals": [
+    "Lock the selected Official Pack #2 concept as a validated release-candidate prototype",
+    "Exercise the first 30-60 minute factory commissioning loop using existing ECHO modules",
+    "Keep all Pack #2-specific copy, ids, preview metadata, and release decision docs inside the draft profile and echo_template_pack2_draft namespace"
+  ],
+  "description": "Locked release-candidate prototype for ECHO: Foundry Protocol, the selected Official Pack #2 factory commissioning concept.",
+  "targetPlayer": "ECHO maintainers and approved creators validating the locked second official ECHO pack prototype before public beta consideration.",
+  "gameplayLoop": "Open the Foundry Terminal dashboard, read the internal-preview status, follow the first what-now panel, complete the starter Lens scan, commission the first PowerGrid loop, create HoloMap objective links, read polished Index docs, hear subtle SoundCore cues, and use the optional RuntimeGuard review.",
+  "first30Minutes": [
+    "Open the Foundry Terminal dashboard and verify the internal-preview badge.",
+    "Read the What Now panel and complete Foundry Orientation with one Lens Deep Scan.",
+    "Claim, place, and scan the starter PowerGrid loop.",
+    "Use the HoloMap next-objective marker if HoloMap is present.",
+    "Mark and scan the processor worksite, then read the depot request guidance and known issue text."
+  ],
+  "first2Hours": [
+    "Play through the four main starter missions and the optional Runtime Budget Review side mission.",
+    "Walk the Index, Terminal, HoloMap, Lens, TutorialCore, SoundCore, ThemeCore, RuntimeGuard, and WorldCore MVP support links.",
+    "Replace temporary visual/audio references with approved Pack #2 assets in a later milestone.",
+    "Run Pack #2 profile validation after every profile or template edit."
+  ],
+  "notRecommendedFor": [
+    "Public players",
+    "Packs derived from another official profile",
+    "Finished gameplay showcases"
+  ],
+  "wizardCopy": {
+    "summary": "Locked Official Pack #2 release-candidate prototype for Terminal, Index, MissionCore, HoloMap, Lens, SoundCore, ThemeCore, TutorialCore, WorldCore, and validation.",
+    "difficulty": "Creator Preview RC",
+    "bestFor": [
+      "Official Pack QA",
+      "Creator Preview",
+      "Factory"
+    ],
+    "warnings": [
+      "This RC is not public beta; placeholder visuals and unfinished final content remain."
+    ],
+    "notFor": [
+      "Public beta players",
+      "Storefront listings",
+      "Finished pack exports"
+    ]
+  },
+  "recommendedModules": [
+    "echoterminal",
+    "echoindex",
+    "echomissioncore",
+    "echopowergrid",
+    "echoindustrialnexus",
+    "echomultiblockcore",
+    "echologisticsnetwork",
+    "echoholomap",
+    "echolens",
+    "echoruntimeguard",
+    "echothemecore",
+    "echotutorialcore",
+    "echoworldcore",
+    "echosoundcore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "optionalModules": [
+    "echodatacore",
+    "echoplayercore",
+    "echorecovery",
+    "echowiki",
+    "echoscreencore",
+    "echoblockworks",
+    "echoconvoyprotocol",
+    "echonpcore",
+    "echotextureforge"
+  ],
+  "defaultTheme": "pack2_theme",
+  "starterMissions": [
+    "datapack/data/echo_template_pack2_draft/missioncore/chapters/foundry_draft.json",
+    "datapack/data/echo_template_pack2_draft/missioncore/missions/foundry_commissioning_draft.json",
+    "datapack/data/echo_template_pack2_draft/missioncore/missions/restore_power_spine.json",
+    "datapack/data/echo_template_pack2_draft/missioncore/missions/route_processor_line.json",
+    "datapack/data/echo_template_pack2_draft/missioncore/missions/calibrate_depot_requests.json",
+    "datapack/data/echo_template_pack2_draft/missioncore/missions/runtime_budget_review.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echo_template_pack2_draft/echo_index/categories/foundry_ops.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/foundry_overview.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/terminal_next_objective.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/grid_commissioning.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/foundry_power_components.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/processor_route.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/processor_workcell.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/depot_requests.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/logistics_request_board.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/runtime_budget.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/fault_troubleshooting.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/entries/shift_lore_brief.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/relations/overview_to_commissioning.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/relations/scans_to_index_unlocks.json",
+    "datapack/data/echo_template_pack2_draft/echo_index/relations/map_route_to_processor.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echo_template_pack2_draft/tutorial_cards/foundry_orientation.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/foundry_next_step_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/power_spine_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/depot_request_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/terminal_first_open_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/lens_scan_unlock_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/holomap_next_objective_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_hints/warning_state_hint.json",
+    "datapack/data/echo_template_pack2_draft/tutorial_flows/foundry_30_minutes.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echo_template_pack2_draft/echoholomap/layers/foundry_floor.json",
+    "datapack/data/echo_template_pack2_draft/echoholomap/layers/power_spine.json",
+    "datapack/data/echo_template_pack2_draft/echoholomap/layers/processor_route.json",
+    "datapack/data/echo_template_pack2_draft/echoholomap/layers/depot_route.json"
+  ],
+  "starterTerminalLayouts": [
+    "datapack/data/echo_template_pack2_draft/echoterminal/layouts/foundry_dashboard.json"
+  ],
+  "starterLensScanProfiles": [
+    "datapack/data/echo_template_pack2_draft/echolens/scan_profiles/dormant_substation.json",
+    "datapack/data/echo_template_pack2_draft/echolens/scan_profiles/processor_worksite.json",
+    "datapack/data/echo_template_pack2_draft/echolens/scan_profiles/depot_request_board.json",
+    "datapack/data/echo_template_pack2_draft/echolens/scan_profiles/runtime_budget_panel.json"
+  ],
+  "starterWeatherCoreEvents": [],
+  "starterSoundCoreRules": [
+    "datapack/data/echo_template_pack2_draft/echosoundcore/audio_profiles/ambience/factory_idle.json",
+    "datapack/data/echo_template_pack2_draft/echosoundcore/audio_profiles/stingers/throughput_ready.json",
+    "datapack/data/echo_template_pack2_draft/echosoundcore/audio_profiles/stingers/objective_complete.json",
+    "datapack/data/echo_template_pack2_draft/echosoundcore/audio_profiles/stingers/warning_fault.json"
+  ],
+  "starterWorldCoreRegions": [
+    "datapack/data/echo_template_pack2_draft/echoworldcore/world_regions/foundry_floor.json",
+    "datapack/data/echo_template_pack2_draft/echoworldcore/world_regions/processor_bay.json"
+  ],
+  "starterWorldCoreHazards": [
+    "datapack/data/echo_template_pack2_draft/echoworldcore/world_hazards/unstable_power_bus.json",
+    "datapack/data/echo_template_pack2_draft/echoworldcore/world_hazards/blocked_processor_lane.json"
+  ],
+  "configPresets": [
+    "tech_normal",
+    "low_end_performance"
+  ],
+  "exportProfiles": [
+    "client",
+    "server",
+    "curseforge",
+    "modrinth",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "dependencies.required_present",
+    "versions.ecosystem_aligned",
+    "configs.preset_reasoned",
+    "datapacks.examples_valid",
+    "theme.tokens.required",
+    "export.profiles.present",
+    "ashfall.no_leak"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "officialPackDraft": true,
+  "profilePath": "metadata/official_packs/pack2/profile.json",
+  "contentWaveLabel": "1.0.0 release candidate locked prototype",
+  "previewStatus": "release_candidate_locked",
+  "releaseCandidateStatus": "locked_prototype",
+  "releaseRecommendation": "Ready for Creator Preview",
+  "publicBetaReadiness": "not_ready",
+  "prototypeLocked": true,
+  "contentLocked": true,
+  "majorFeaturesLocked": true,
+  "bugfixOnly": true
+}

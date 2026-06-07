@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_server_smp:overview",
+  "category": "echo_template_server_smp:starter",
+  "title": "Server SMP Overview",
+  "subtitle": "A server-focused starter with PlayerCore, RuntimeGuard, DataCore, HoloMap, MissionCore, Index, and TutorialCore.",
+  "summary": "A multiplayer-safe ECHO starter focused on permissions, homes, team markers, diagnostics, server budgets, backups, and optional shared systems.",
+  "body": "Set server-safe defaults, document permissions, validate diagnostics, and let teams use markers and missions together.\n\nFirst 30 minutes:\n- Read the server setup page.\n- Confirm PlayerCore permissions and home rules.\n- Run diagnostics and review RuntimeGuard budgets.\n- Create a team marker or shared objective.\n\nFirst 2 hours:\n- Review backup and DataCore notes.\n- Test MissionCore progress with multiple players.\n- Enable optional Logistics or WeatherCore only after permissions are clear.",
+  "tags": [
+    "Server SMP",
+    "template",
+    "creator"
+  ]
+}

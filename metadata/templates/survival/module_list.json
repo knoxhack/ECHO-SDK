@@ -1,0 +1,33 @@
+{
+  "template": "survival",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echoindex",
+    "echotutorialcore",
+    "echoweathercore",
+    "echoagriculturereclamation",
+    "echoplayercore",
+    "echosoundcore",
+    "echoholomap"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echoindex",
+    "echotutorialcore",
+    "echoweathercore",
+    "echoagriculturereclamation",
+    "echoplayercore",
+    "echosoundcore",
+    "echoholomap"
+  ],
+  "optionalModules": [
+    "echomissioncore",
+    "echorecovery",
+    "echothemecore"
+  ]
+}

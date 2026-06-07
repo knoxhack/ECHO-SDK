@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_horror:archive_safety",
+  "category": "echo_template_horror:starter",
+  "title": "Archive Safety",
+  "subtitle": "Horror creator note",
+  "summary": "Starter documentation for archive safety in a Horror pack.",
+  "body": "Use this page to explain archive safety with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Horror",
+    "starter"
+  ]
+}

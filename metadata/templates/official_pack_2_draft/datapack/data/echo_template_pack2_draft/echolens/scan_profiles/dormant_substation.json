@@ -1,0 +1,37 @@
+{
+  "id": "echo_template_pack2_draft:dormant_substation",
+  "title": "Starter Grid Deep Scan",
+  "target": "echopowergrid:small_battery_bank",
+  "summary": "Metadata label for the first Pack #2 Lens scan. Live Deep Scan progress uses the actual block id emitted by Lens.",
+  "signals": [
+    "server_scan_verified",
+    "actual_block_target_recorded",
+    "index_guidance_available",
+    "mission_objective_ready",
+    "holomap_marker_ready"
+  ],
+  "linkedMission": "echo_template_pack2_draft:restore_power_spine",
+  "linkedIndexEntry": "echo_template_pack2_draft:grid_commissioning",
+  "linkedMapLayer": "echo_template_pack2_draft:power_spine",
+  "linkedMapMarker": "first_power_loop",
+  "missionObjective": "echo_template_pack2_draft:restore_power_spine/scan_small_battery_bank",
+  "unlocks": {
+    "indexEntries": [
+      "echo_template_pack2_draft:grid_commissioning",
+      "echo_template_pack2_draft:foundry_power_components"
+    ],
+    "missionObjectives": [
+      "echo_template_pack2_draft:restore_power_spine/scan_small_battery_bank"
+    ],
+    "mapMarkers": [
+      "echo_template_pack2_draft:power_spine#first_power_loop"
+    ]
+  },
+  "scanTargets": [
+    "echolens:mission/verified_deep_scan/scan",
+    "echopowergrid:small_battery_bank",
+    "echopowergrid:power_meter",
+    "echopowergrid:hand_crank_generator"
+  ],
+  "status": "1.0.0_systems_integration"
+}

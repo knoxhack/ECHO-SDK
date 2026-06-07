@@ -1,0 +1,48 @@
+{
+  "id": "industrial_panel",
+  "name": "Industrial Panel",
+  "version": "1.0.0",
+  "tokens": {
+    "surface.background": "#071018",
+    "surface.panel": "#10202c",
+    "text.primary": "#eaf7ff",
+    "text.muted": "#91a6b8",
+    "state.success": "#56d68a",
+    "state.warning": "#f0a24a",
+    "state.error": "#ff5d6c",
+    "focus.primary": "#58d7ff",
+    "accent.primary": "#f0a24a"
+  },
+  "iconRequirements": [
+    "module icon",
+    "warning icon",
+    "success icon"
+  ],
+  "panelStyle": "Cyberglass-compatible panels with readable contrast.",
+  "uiPreviewNotes": "Use generated launch visuals as style references; capture real screenshots before publishing.",
+  "resourcePackStructure": [
+    "assets/<namespace>/textures/gui/",
+    "assets/<namespace>/lang/en_us.json"
+  ],
+  "fallback": "default_dark",
+  "examplePrompts": [
+    "Create a clean Industrial Panel ECHO ThemeCore UI preview, no baked readable text, no watermark."
+  ],
+  "optionalTokens": [
+    "surface.row",
+    "surface.row.selected",
+    "surface.hover",
+    "surface.selected",
+    "border.soft",
+    "text.error"
+  ],
+  "contrastNotes": "Primary text and state chips are intended to pass readable contrast on dark ThemeCore surfaces.",
+  "moduleCompatibility": [
+    "Terminal",
+    "Index",
+    "HoloMap",
+    "MissionCore",
+    "TutorialCore",
+    "Command Center"
+  ]
+}

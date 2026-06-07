@@ -1,0 +1,18 @@
+{
+  "id": "echo_template_pack2_draft:throughput_ready",
+  "title": "Throughput Ready Stinger",
+  "description": "Prototype completion stinger for the first processor route. No final audio asset ships in 1.0.0.",
+  "events": [
+    {
+      "id": "processor_route_ready",
+      "trigger": "echomissioncore:mission_completed",
+      "mission": "echo_template_pack2_draft:route_processor_line",
+      "sound": "echo_template_pack2_draft:stinger.throughput_ready",
+      "volume": 0.45,
+      "pitch": 1,
+      "fallback": "silent"
+    }
+  ],
+  "status": "prototype_stub",
+  "themeToken": "state.success"
+}

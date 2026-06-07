@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_tech:cables_and_relays",
+  "category": "echo_template_tech:starter",
+  "title": "Cables and Relays",
+  "subtitle": "Tech creator note",
+  "summary": "Starter documentation for cables and relays in a Tech pack.",
+  "body": "Use this page to explain cables and relays with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Tech",
+    "starter"
+  ]
+}

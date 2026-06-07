@@ -1,0 +1,44 @@
+{
+  "id": "echo_template_vanilla_plus:starter_progression_sync",
+  "chapterId": "echo_template_vanilla_plus:starter_chapter",
+  "title": "Vanilla+ Gentle Route",
+  "briefing": "Connect the first home, useful marker, and optional checklist so the pack feels guided without becoming quest-heavy.",
+  "objectives": [
+    {
+      "id": "read_the_vanilla_index_welcome_page",
+      "type": "creator_action",
+      "label": "Read the Vanilla+ Index welcome page",
+      "detail": "1.0.0 template sync objective 1: Read the Vanilla+ Index welcome page."
+    },
+    {
+      "id": "set_a_home_or_safe_return_point",
+      "type": "creator_action",
+      "label": "Set a home or safe return point",
+      "detail": "1.0.0 template sync objective 2: Set a home or safe return point."
+    },
+    {
+      "id": "mark_a_base_farm_village_or_mine",
+      "type": "creator_action",
+      "label": "Mark a base, farm, village, or mine",
+      "detail": "1.0.0 template sync objective 3: Mark a base, farm, village, or mine."
+    },
+    {
+      "id": "complete_the_gentle_starter_checklist",
+      "type": "creator_action",
+      "label": "Complete the gentle starter checklist",
+      "detail": "1.0.0 template sync objective 4: Complete the gentle starter checklist."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_vanilla_plus:starter_timeline",
+    "holomapMarker": "echo_template_vanilla_plus:vanilla_safe_base",
+    "tutorialCard": "echo_template_vanilla_plus:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_vanilla_plus:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

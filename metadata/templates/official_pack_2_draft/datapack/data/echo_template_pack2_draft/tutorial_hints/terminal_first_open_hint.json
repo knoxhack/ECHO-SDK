@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_pack2_draft:terminal_first_open_hint",
+  "text": "The Foundry dashboard is the safest first stop: dashboard, next objective, missions, archives, map, scans, and warning states all point to the same route.",
+  "context": "terminal",
+  "linkedPanel": "echo_template_pack2_draft:foundry_dashboard#dashboard",
+  "themeToken": "surface.selected"
+}

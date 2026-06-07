@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_horror:overview",
+  "category": "echo_template_horror:starter",
+  "title": "Horror Overview",
+  "subtitle": "A horror investigation starter with Terminal, Index, SoundCore, Lens, MissionCore, and HoloMap.",
+  "summary": "A generic station, signal, and evidence mystery starter with restrained ambience, Lens scans, archives, and objective tracking.",
+  "body": "Investigate a signal, scan evidence, open an archive, follow a marker, recover a log, and survive the first event.\n\nFirst 30 minutes:\n- Read the signal investigation page.\n- Scan one evidence object.\n- Open the first archive entry.\n- Follow a HoloMap marker to the next clue.\n\nFirst 2 hours:\n- Add optional Stationfall or Blackbox content if the pack needs deeper horror systems.\n- Tune SoundCore ambience so it supports tension without constant noise.\n- Keep mission feedback clear when players miss evidence.",
+  "tags": [
+    "Horror",
+    "template",
+    "creator"
+  ]
+}

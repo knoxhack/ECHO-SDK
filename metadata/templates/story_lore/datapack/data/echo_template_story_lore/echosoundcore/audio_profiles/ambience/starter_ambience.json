@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_story_lore:starter_ambience",
+  "sound": "minecraft:ambient.cave",
+  "subtitle": "Archive Notification Ambience",
+  "volume": 0.35,
+  "pitch": 1.0,
+  "loop": true,
+  "description": "Subtle ambience placeholder for Story/Lore starter packs."
+}

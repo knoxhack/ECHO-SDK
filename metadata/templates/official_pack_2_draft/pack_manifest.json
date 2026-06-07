@@ -1,0 +1,57 @@
+{
+  "id": "official_pack_2_draft",
+  "name": "Official Pack #2 Release Candidate Draft",
+  "version": "1.0.0",
+  "minecraftVersion": "26.1.2",
+  "loader": "NeoForge",
+  "modules": {
+    "requiredModules": [
+      "echocore",
+      "echonetcore"
+    ],
+    "recommendedModules": [
+      "echoterminal",
+      "echoindex",
+      "echomissioncore",
+      "echopowergrid",
+      "echoindustrialnexus",
+      "echomultiblockcore",
+      "echologisticsnetwork",
+      "echoholomap",
+      "echolens",
+      "echoruntimeguard",
+      "echothemecore",
+      "echotutorialcore",
+      "echoworldcore",
+      "echosoundcore"
+    ],
+    "optionalModules": [
+      "echodatacore",
+      "echoplayercore",
+      "echorecovery",
+      "echowiki",
+      "echoscreencore",
+      "echoblockworks",
+      "echoconvoyprotocol",
+      "echonpcore",
+      "echotextureforge"
+    ]
+  },
+  "exportProfiles": {
+    "client": true,
+    "server": true,
+    "curseforge": true,
+    "modrinth": true,
+    "configsOnly": true
+  },
+  "docs": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "knownIssues": "KNOWN_ISSUES.md",
+    "support": "SUPPORT.md"
+  },
+  "ashfallProfile": false,
+  "jars": [],
+  "previewStatus": "release_candidate_locked",
+  "releaseCandidateStatus": "locked_prototype"
+}

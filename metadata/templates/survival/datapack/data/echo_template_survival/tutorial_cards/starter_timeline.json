@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_survival:starter_timeline",
+  "category": "creator_pack",
+  "title": "Survival Starter Timeline",
+  "summary": "A survival starter with weather checks, safety markers, reclamation goals, SoundCore ambience, and normal versus hardcore config guidance.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Survival generated packs.",
+  "steps": [
+    "Open the survival guide in Index.",
+    "Find shelter and check the WeatherCore warning page.",
+    "Mark a safe zone on HoloMap.",
+    "Gather emergency food, light, and recovery supplies.",
+    "Start a first farm or reclamation patch."
+  ],
+  "commonMistakes": [
+    "Creative-only packs",
+    "Story packs with no survival pressure"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

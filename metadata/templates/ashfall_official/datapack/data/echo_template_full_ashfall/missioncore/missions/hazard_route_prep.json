@@ -1,0 +1,49 @@
+{
+  "id": "echo_template_full_ashfall:hazard_route_prep",
+  "chapterId": "ashfall_first_month",
+  "title": "Optional: Prep a Hazard Route",
+  "optional": true,
+  "briefing": "A hazard marker is useful only if you treat it as a warning. Confirm the risk, prepare countermeasures, and mark a retreat route before entering.",
+  "prerequisites": [
+    "echo_template_full_ashfall:ashfall_first_month_routes"
+  ],
+  "objectives": [
+    {
+      "id": "scan_hazard_marker",
+      "type": "lens_scan",
+      "label": "Scan the hazard warning",
+      "detail": "Identify whether the threat is toxicity, radiation, storm exposure, or another local hazard."
+    },
+    {
+      "id": "read_hazard_entry",
+      "type": "index_entry",
+      "label": "Read route prep guidance",
+      "detail": "Use Weather Route Planning before moving into the danger zone."
+    },
+    {
+      "id": "pack_counterplay",
+      "type": "inventory_check",
+      "label": "Pack counterplay supplies",
+      "detail": "Carry filters, clean water, food, and a safe return marker before entering."
+    },
+    {
+      "id": "mark_retreat",
+      "type": "holomap_marker",
+      "label": "Mark a retreat path",
+      "detail": "Track the hazard marker but keep a known safe zone selected for retreat."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_full_ashfall:weather_route_planning",
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_full_ashfall:hazard_prep_checklist",
+      "label": "Hazard prep checklist"
+    }
+  ],
+  "completionText": "Hazard route prepared. Enter only when the weather, supplies, and retreat marker all agree."
+}

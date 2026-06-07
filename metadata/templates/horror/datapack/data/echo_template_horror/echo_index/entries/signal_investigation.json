@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_horror:signal_investigation",
+  "category": "echo_template_horror:starter",
+  "title": "Signal Investigation",
+  "subtitle": "Horror creator note",
+  "summary": "Starter documentation for signal investigation in a Horror pack.",
+  "body": "Use this page to explain signal investigation with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Horror",
+    "starter"
+  ]
+}

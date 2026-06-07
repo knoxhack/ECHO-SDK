@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_full_ashfall:holomap_field_intel",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "HoloMap Field Intel",
+  "subtitle": "Markers should tell you risk, route status, and preparation",
+  "summary": "Ashfall HoloMap markers are route decisions with risk labels, prep notes, and discovery states.",
+  "body": "Track one first-month marker at a time. Use filters to separate safe zones, POI signals, field caches, hazards, and faction markers.",
+  "links": {
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "terminalPage": "echo_template_full_ashfall:ashfall_first_month_routes"
+  },
+  "tags": [
+    "ashfall",
+    "holomap",
+    "field_intel"
+  ]
+}

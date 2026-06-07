@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_pack2_draft:holomap_next_objective_hint",
+  "text": "The next-objective marker is advisory. If HoloMap is missing, follow MissionCore and Index instead.",
+  "context": "holomap",
+  "linkedMapMarker": "echo_template_pack2_draft:power_spine#first_power_loop",
+  "themeToken": "map.marker.next"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_tech:starter_layer",
+  "name": "Tech Starter Layer",
+  "description": "Starter HoloMap layer for Tech generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_tech:factory_commissioning_point",
+      "label": "Factory Commissioning Point",
+      "kind": "factory",
+      "description": "Factory substation, high-voltage trunk, and depot markers connect missions to the existing Tech wave.",
+      "missionId": "echo_template_tech:starter_progression_sync",
+      "indexEntry": "echo_template_tech:starter_timeline"
+    }
+  ]
+}

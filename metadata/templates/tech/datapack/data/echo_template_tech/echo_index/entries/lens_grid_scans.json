@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_tech:lens_grid_scans",
+  "category": "echo_template_tech:starter",
+  "title": "Lens Grid Scans",
+  "subtitle": "Scan rows that explain the next grid action",
+  "summary": "PowerGrid Lens scans expose state, transfer, Index hints, MissionCore hints, and HoloMap marker ids.",
+  "body": "Scan generators, Field Battery Banks, high-voltage trunks, and Factory Substations whenever a player is unsure what the grid is doing. Expanded rows point back to Index pages and the grid commissioning mission so the first Tech Wave does not depend on out-of-game notes.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "Lens",
+    "PowerGrid"
+  ],
+  "related": [
+    "echo_template_tech:power_basics",
+    "echo_template_tech:high_voltage_distribution",
+    "echo_template_tech:grid_commissioning_depth"
+  ]
+}

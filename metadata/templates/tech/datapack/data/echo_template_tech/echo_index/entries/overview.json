@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:overview",
+  "category": "echo_template_tech:starter",
+  "title": "Tech Overview",
+  "subtitle": "A factory-ready template with power, machines, logistics, multiblocks, Lens, HoloMap, and runtime guidance.",
+  "summary": "A clean tech-progression starter focused on power, machines, multiblocks, logistics, diagnostics, and readable factory onboarding.",
+  "body": "Open Terminal, read Power Basics, build generation and storage, process a material, then connect logistics.\n\nFirst 30 minutes:\n- Open Terminal and read the Power Basics Index page.\n- Build or spawn-test a starter generator and battery.\n- Place a first machine and inspect its status text.\n- Use RuntimeGuard guidance before scaling automation.\n\nFirst 2 hours:\n- Process the first material through an Industrial Nexus machine.\n- Place a logistics depot and request a basic item flow.\n- Validate a small multiblock and document failure reasons in Index.",
+  "tags": [
+    "Tech",
+    "template",
+    "creator"
+  ]
+}

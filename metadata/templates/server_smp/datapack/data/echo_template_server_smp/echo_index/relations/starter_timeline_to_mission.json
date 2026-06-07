@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_server_smp:starter_timeline_to_mission",
+  "from": "echo_template_server_smp:starter_timeline",
+  "to": "echo_template_server_smp:first_10_minutes",
+  "relation": "guides_progression",
+  "missionId": "echo_template_server_smp:starter_progression_sync",
+  "holomapMarkerId": "echo_template_server_smp:shared_spawn_objective"
+}

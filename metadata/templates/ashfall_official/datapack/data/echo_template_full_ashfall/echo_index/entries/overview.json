@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_full_ashfall:overview",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Full Ashfall Overview",
+  "subtitle": "The official Ashfall pack profile with Ashfall theme, docs, metadata, and export checks.",
+  "summary": "The official Ashfall profile starter for ECHO Launcher exports, preserving Ashfall as Official ECHO Pack #1 and keeping its content isolated from generic templates.",
+  "body": "Install the official profile, review Ashfall docs, validate required modules, then export client or server packs.\n\nFirst 30 minutes:\n- Read the Ashfall install notes.\n- Confirm required modules and official theme metadata.\n- Review the known issues and server notes.\n- Run diagnostics before publishing an export.\n\nFirst 2 hours:\n- Validate client and server export profiles.\n- Review official Index and Terminal content registration.\n- Keep Ashfall-specific content inside the official profile namespace.",
+  "tags": [
+    "Official Pack",
+    "template",
+    "creator"
+  ]
+}

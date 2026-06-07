@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:runtime_safety",
+  "category": "echo_template_tech:starter",
+  "title": "Runtime Safety",
+  "subtitle": "Scale carefully",
+  "summary": "RuntimeGuard and diagnostics keep heavy automation friendly for servers.",
+  "body": "Before adding multiple processors, check RuntimeGuard budget labels and Command Center diagnostics. If a line creates warnings, reduce tick-heavy automation, split the grid with substations, and document the expected load in your pack README.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

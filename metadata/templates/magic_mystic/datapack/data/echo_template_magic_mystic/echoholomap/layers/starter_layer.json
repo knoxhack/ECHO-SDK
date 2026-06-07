@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_magic_mystic:starter_layer",
+  "name": "Magic/Mystic Starter Layer",
+  "description": "Starter HoloMap layer for Magic/Mystic generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_magic_mystic:relic_signal",
+      "label": "Relic Signal",
+      "kind": "relic",
+      "description": "The first HoloMap marker points to a safe relic clue instead of a combat encounter.",
+      "missionId": "echo_template_magic_mystic:starter_progression_sync",
+      "indexEntry": "echo_template_magic_mystic:starter_timeline"
+    }
+  ]
+}

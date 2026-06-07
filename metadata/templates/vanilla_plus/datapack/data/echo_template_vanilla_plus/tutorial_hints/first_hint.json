@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_vanilla_plus:first_hint",
+  "title": "Vanilla+ First Hint",
+  "message": "Open the Index guide and read the Vanilla+ welcome page.",
+  "trigger": "first_login"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_full_ashfall:install_notes",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Install Notes",
+  "subtitle": "Full Ashfall creator note",
+  "summary": "Starter documentation for install notes in a Full Ashfall pack.",
+  "body": "Use this page to explain install notes with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Official Pack",
+    "starter"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_pack2_draft:factory_idle",
+  "title": "Factory Idle Ambience",
+  "description": "Subtle SoundCore profile for Pack #2 MVP ambience. No final audio asset ships in 1.0.0.",
+  "events": [
+    {
+      "id": "terminal_soft_tick",
+      "trigger": "echoterminal:panel_open",
+      "sound": "echo_template_pack2_draft:ui.terminal_soft_tick",
+      "volume": 0.25,
+      "pitch": 1,
+      "fallback": "silent"
+    }
+  ],
+  "status": "prototype_stub",
+  "themeToken": "sound.ui"
+}

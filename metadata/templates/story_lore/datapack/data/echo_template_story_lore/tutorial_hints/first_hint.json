@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_story_lore:first_hint",
+  "title": "Story/Lore First Hint",
+  "message": "Open the Chapter 1 archive entry.",
+  "trigger": "first_login"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "echo_template_pack2_draft:runtime_budget_panel",
+  "title": "Runtime Budget Panel Scan",
+  "target": "echoruntimeguard:pack2_budget_note",
+  "summary": "Optional scan-to-Index hook for warning and budget posture.",
+  "signals": [
+    "runtime_warning_state_seen",
+    "troubleshooting_docs_unlocked",
+    "optional_side_mission_ready"
+  ],
+  "linkedMission": "echo_template_pack2_draft:runtime_budget_review",
+  "linkedIndexEntry": "echo_template_pack2_draft:runtime_budget",
+  "linkedMapLayer": "echo_template_pack2_draft:foundry_floor",
+  "linkedMapMarker": "diagnostics_console",
+  "missionObjective": "echo_template_pack2_draft:runtime_budget_review/read_budget_note",
+  "unlocks": {
+    "indexEntries": [
+      "echo_template_pack2_draft:runtime_budget",
+      "echo_template_pack2_draft:fault_troubleshooting"
+    ],
+    "missionObjectives": [
+      "echo_template_pack2_draft:runtime_budget_review/read_budget_note"
+    ],
+    "mapMarkers": [
+      "echo_template_pack2_draft:foundry_floor#diagnostics_console"
+    ]
+  },
+  "scanTargets": [
+    "echoruntimeguard:pack2_budget_note",
+    "echopowergrid:hand_crank_generator",
+    "echopowergrid:power_meter"
+  ],
+  "status": "1.0.0_systems_integration"
+}

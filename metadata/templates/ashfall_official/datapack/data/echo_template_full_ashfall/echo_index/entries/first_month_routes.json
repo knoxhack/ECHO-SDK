@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_full_ashfall:first_month_routes",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "First-Month Routes",
+  "subtitle": "Scanned signals, planned exits, and one route at a time",
+  "summary": "The first month is about controlled exploration. Scan a signal, read its field guide entry, track one HoloMap marker, and return before pushing deeper.",
+  "body": "Do not chase every marker the moment it appears. A good route has a known signal, a readable risk label, a reward reason, a prep list, and a return path.",
+  "links": {
+    "mission": "echo_template_full_ashfall:ashfall_first_month_routes",
+    "terminalPage": "echo_template_full_ashfall:ashfall_first_month_routes",
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "tags": [
+    "ashfall",
+    "routes",
+    "first_month"
+  ]
+}

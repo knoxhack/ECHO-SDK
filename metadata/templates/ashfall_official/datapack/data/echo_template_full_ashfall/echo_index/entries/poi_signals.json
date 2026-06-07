@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_full_ashfall:poi_signals",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "POI Signals",
+  "subtitle": "Routes are leads, not guarantees",
+  "summary": "POI signals point toward salvage, caches, faction edges, or future hazards. Each signal needs a reason to visit and a reason to wait.",
+  "body": "Early POIs should provide survival supplies, route records, repair material, or scanner intel. Late first-month POIs should stay marked as future or hazard routes until prep is complete.",
+  "links": {
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "mission": "echo_template_full_ashfall:ashfall_first_month_routes"
+  },
+  "tags": [
+    "ashfall",
+    "poi",
+    "routes"
+  ]
+}

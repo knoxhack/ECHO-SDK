@@ -1,0 +1,63 @@
+{
+  "id": "echo_template_tech:starter_flow",
+  "chapterId": "echo_template_tech:starter_chapter",
+  "title": "Factory Power Spine",
+  "briefing": "Commission a readable Tech Wave starter line from Terminal docs to powered automation.",
+  "objectives": [
+    {
+      "id": "open_terminal_and_read_power_basics",
+      "type": "creator_action",
+      "label": "Open Terminal and read Power Basics",
+      "detail": "Confirm the player can find the Index pages for generation, batteries, cables, logistics, and runtime safety."
+    },
+    {
+      "id": "craft_reinforced_solar_or_biofuel",
+      "type": "creator_action",
+      "label": "Build a Reinforced Solar Panel or Biofuel Generator",
+      "detail": "Use the 1.0.0 Tech Wave generator tier as the first visible stabilized upgrade."
+    },
+    {
+      "id": "place_field_battery_bank",
+      "type": "creator_action",
+      "label": "Place a Field Battery Bank",
+      "detail": "Buffer 160000 EP near the first generator cluster before routing to machines."
+    },
+    {
+      "id": "route_high_voltage_cable",
+      "type": "creator_action",
+      "label": "Route High Voltage Cable through a Factory Substation",
+      "detail": "Mark the boundary between generation, storage, and the machine hall with the factory_substation_anchor HoloMap marker."
+    },
+    {
+      "id": "scan_and_mark_grid",
+      "type": "creator_action",
+      "label": "Scan and mark the grid",
+      "detail": "Use Lens on one PowerGrid node, then place high_voltage_trunk and field_battery_room HoloMap markers."
+    },
+    {
+      "id": "process_first_material",
+      "type": "creator_action",
+      "label": "Process the first material",
+      "detail": "Use an existing Industrial Nexus processor or a pack-specific recipe to prove the line does useful work."
+    },
+    {
+      "id": "create_logistics_depot_line",
+      "type": "creator_action",
+      "label": "Create a depot-backed automation line",
+      "detail": "Use the factory utilities logistics category to move power components or machine parts."
+    },
+    {
+      "id": "validate_multiblock_power_spine",
+      "type": "creator_action",
+      "label": "Validate the factory power spine",
+      "detail": "Confirm your multiblock structure reports clear missing-block feedback before publishing."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_tech:automation_line",
+      "label": "Unlock the Automation Line Index page."
+    }
+  ]
+}

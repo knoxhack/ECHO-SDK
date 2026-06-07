@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_story_lore:starter_weather",
+  "type": "ambient",
+  "displayName": "Narrative Atmosphere Profile",
+  "defaultSeverity": "low",
+  "scope": "starter_area",
+  "description": "Weather profile used by the Story/Lore starter template."
+}

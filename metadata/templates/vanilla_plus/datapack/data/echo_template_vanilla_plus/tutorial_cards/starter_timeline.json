@@ -1,0 +1,21 @@
+{
+  "id": "echo_template_vanilla_plus:starter_timeline",
+  "category": "creator_pack",
+  "title": "Vanilla+ Starter Timeline",
+  "summary": "A quiet Vanilla+ starter with guided Index, PlayerCore homes, HoloMap markers, TutorialCore hints, and a gentle MissionCore checklist.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Vanilla+ generated packs.",
+  "steps": [
+    "Open Index and read the Vanilla+ welcome page.",
+    "Set a home or safe return point with PlayerCore.",
+    "Create one HoloMap marker for base, farm, mine, or village.",
+    "Finish a small shelter or base corner.",
+    "Mark a farm, mine, or village on the starter HoloMap layer."
+  ],
+  "commonMistakes": [
+    "Tech factories",
+    "Horror investigations",
+    "Official pack campaigns"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:reinforced_power",
+  "category": "echo_template_tech:starter",
+  "title": "Reinforced Power",
+  "subtitle": "Durable solar and fuel-backed generation",
+  "summary": "Reinforced solar panels and biofuel generators are the first Tech Wave upgrade tier.",
+  "body": "Reinforced Solar Panels use the same solar behavior as baseline panels, but provide a stronger 30 EP/t profile and a larger buffer. Biofuel Generators use fuel-burner behavior and are designed for compact factories that need reliable bursts while batteries recharge.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

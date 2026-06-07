@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_full_ashfall:starter_progression_sync",
+  "chapterId": "echo_template_full_ashfall:starter_chapter",
+  "title": "Ashfall Profile Starter Sync",
+  "briefing": "Confirm the official profile, docs, marker, and validation path without leaking Ashfall text into generic templates.",
+  "objectives": [
+    {
+      "id": "read_official_install_notes",
+      "type": "creator_action",
+      "label": "Read official install notes",
+      "detail": "1.7.6 template sync objective 1: Read official install notes."
+    },
+    {
+      "id": "confirm_required_modules",
+      "type": "creator_action",
+      "label": "Confirm required modules",
+      "detail": "1.7.6 template sync objective 2: Confirm required modules."
+    },
+    {
+      "id": "track_the_official_profile_marker",
+      "type": "creator_action",
+      "label": "Track the official profile marker",
+      "detail": "1.7.6 template sync objective 3: Track the official profile marker."
+    },
+    {
+      "id": "review_known_issues",
+      "type": "creator_action",
+      "label": "Review known issues",
+      "detail": "1.7.6 template sync objective 4: Review known issues."
+    },
+    {
+      "id": "run_diagnostics_before_export",
+      "type": "creator_action",
+      "label": "Run diagnostics before export",
+      "detail": "1.7.6 template sync objective 5: Run diagnostics before export."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_full_ashfall:starter_timeline",
+    "holomapMarker": "echo_template_full_ashfall:official_profile_checkpoint",
+    "tutorialCard": "echo_template_full_ashfall:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_full_ashfall:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

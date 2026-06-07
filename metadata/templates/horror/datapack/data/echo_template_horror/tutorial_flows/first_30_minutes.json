@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_horror:first_30_minutes",
+  "title": "Horror First 30 Minutes",
+  "cards": [
+    "echo_template_horror:orientation",
+    "echo_template_horror:starter_timeline"
+  ],
+  "steps": [
+    "Open the first archive entry.",
+    "Follow a HoloMap clue marker while noting nearby danger.",
+    "Complete the starter evidence mission.",
+    "Review SoundCore stinger and ambience notes."
+  ]
+}

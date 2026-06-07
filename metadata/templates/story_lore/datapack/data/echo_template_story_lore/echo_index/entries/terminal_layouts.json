@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_story_lore:terminal_layouts",
+  "category": "echo_template_story_lore:starter",
+  "title": "Terminal Layouts",
+  "subtitle": "Story/Lore creator note",
+  "summary": "Starter documentation for terminal layouts in a Story/Lore pack.",
+  "body": "Use this page to explain terminal layouts with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Story/Lore",
+    "starter"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "echo_template_pack2_draft:logistics_request_board",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "First System: Depot Request Board",
+  "summary": "How Pack #2 introduces logistics without shipping final depot balance.",
+  "body": "Depot requests stay as a guided prototype in 1.0.0. The mission asks players to read the first meter and inspect the depot route, while Logistics Network remains a generic provider. Pack-specific docs explain the request board, route labels, and failure states without adding Pack #2 logic to the reusable module.",
+  "linked_items": [
+    "echologisticsnetwork:route_requester",
+    "echologisticsnetwork:logistics_terminal",
+    "echologisticsnetwork:auto_restock_station"
+  ],
+  "tags": [
+    "logistics",
+    "depot",
+    "first_system"
+  ],
+  "related": [
+    "echo_template_pack2_draft:depot_requests",
+    "echo_template_pack2_draft:fault_troubleshooting"
+  ],
+  "sortOrder": 45
+}

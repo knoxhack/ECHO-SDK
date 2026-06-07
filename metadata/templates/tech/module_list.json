@@ -1,0 +1,40 @@
+{
+  "template": "tech",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echothemecore",
+    "echoindex",
+    "echoterminal",
+    "echomissioncore",
+    "echopowergrid",
+    "echoindustrialnexus",
+    "echomultiblockcore",
+    "echologisticsnetwork",
+    "echolens",
+    "echoholomap",
+    "echoruntimeguard"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echothemecore",
+    "echoindex",
+    "echoterminal",
+    "echomissioncore",
+    "echopowergrid",
+    "echoindustrialnexus",
+    "echomultiblockcore",
+    "echologisticsnetwork",
+    "echolens",
+    "echoholomap",
+    "echoruntimeguard"
+  ],
+  "optionalModules": [
+    "echodatacore",
+    "echosoundcore"
+  ]
+}

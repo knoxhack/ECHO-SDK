@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_horror:starter_weather",
+  "type": "ambient",
+  "displayName": "Indoor Dread Atmosphere",
+  "defaultSeverity": "low",
+  "scope": "starter_area",
+  "description": "Weather profile used by the Horror starter template."
+}

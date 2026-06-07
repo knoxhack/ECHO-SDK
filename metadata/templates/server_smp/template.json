@@ -1,0 +1,132 @@
+{
+  "id": "server_smp",
+  "name": "Server SMP",
+  "version": "1.0.0",
+  "style": "Server SMP",
+  "goals": [
+    "Document server-safe defaults",
+    "Teach diagnostics, permissions, homes, and backups",
+    "Keep shared objectives and performance budgets explicit"
+  ],
+  "description": "A server-focused starter with admin setup missions, PlayerCore permissions and home docs, RuntimeGuard budgets, shared HoloMap objectives, and server-balanced plus low-end configs.",
+  "targetPlayer": "Server owners and admins who want ECHO guidance, diagnostics, permissions, and shared objectives without a campaign dependency.",
+  "gameplayLoop": "Read admin setup, confirm PlayerCore rules, run diagnostics, mark a shared objective, and select server-balanced or low-end configs.",
+  "first30Minutes": [
+    "Create a shared HoloMap objective marker.",
+    "Complete the admin setup MissionCore checklist.",
+    "Review backup and diagnostics docs.",
+    "Choose server-balanced or low-end config guidance."
+  ],
+  "first2Hours": [
+    "Write staff-specific permission notes.",
+    "Add one shared community objective mission.",
+    "Recheck RuntimeGuard budgets after player count assumptions change."
+  ],
+  "notRecommendedFor": [
+    "Single-player story campaigns",
+    "Packs without admins"
+  ],
+  "wizardCopy": {
+    "summary": "A server starter with PlayerCore, RuntimeGuard, DataCore, HoloMap, MissionCore, Index, TutorialCore, shared objectives, and low-end guidance.",
+    "difficulty": "Admin",
+    "bestFor": [
+      "SMP",
+      "Server Admins",
+      "Community Packs"
+    ],
+    "warnings": [
+      "Document permissions before opening the server to players."
+    ],
+    "notFor": [
+      "Single-player story campaigns",
+      "Packs without admins"
+    ]
+  },
+  "recommendedModules": [
+    "echocore",
+    "echonetcore",
+    "echoplayercore",
+    "echoruntimeguard",
+    "echodatacore",
+    "echoholomap",
+    "echomissioncore",
+    "echoindex",
+    "echotutorialcore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "optionalModules": [
+    "echologisticsnetwork",
+    "echoweathercore",
+    "echothemecore",
+    "echosoundcore"
+  ],
+  "defaultTheme": "default_dark",
+  "starterMissions": [
+    "datapack/data/echo_template_server_smp/missioncore/chapters/starter.json",
+    "datapack/data/echo_template_server_smp/missioncore/missions/starter_flow.json",
+    "datapack/data/echo_template_server_smp/missioncore/missions/starter_progression_sync.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echo_template_server_smp/echo_index/categories/starter.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/overview.json",
+    "datapack/data/echo_template_server_smp/echo_index/relations/overview_to_flow.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/server_setup.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/permissions.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/homes_and_rtp.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/team_markers.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/diagnostics.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/backups.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/first_10_minutes.json",
+    "datapack/data/echo_template_server_smp/echo_index/entries/starter_timeline.json",
+    "datapack/data/echo_template_server_smp/echo_index/relations/starter_timeline_to_mission.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echo_template_server_smp/tutorial_cards/orientation.json",
+    "datapack/data/echo_template_server_smp/tutorial_hints/first_hint.json",
+    "datapack/data/echo_template_server_smp/tutorial_cards/starter_timeline.json",
+    "datapack/data/echo_template_server_smp/tutorial_hints/starter_next_step_hint.json",
+    "datapack/data/echo_template_server_smp/tutorial_flows/first_30_minutes.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echo_template_server_smp/echoholomap/layers/starter_layer.json"
+  ],
+  "starterWeatherCoreEvents": [
+    "datapack/data/echo_template_server_smp/echoweathercore/weather_profiles/starter_weather.json"
+  ],
+  "starterSoundCoreRules": [
+    "datapack/data/echo_template_server_smp/echosoundcore/audio_profiles/ambience/starter_ambience.json"
+  ],
+  "starterWorldCoreRegions": [
+    "datapack/data/echo_template_server_smp/echoworldcore/world_regions/starter_region.json"
+  ],
+  "configPresets": [
+    "server_balanced",
+    "low_end_performance"
+  ],
+  "exportProfiles": [
+    "client",
+    "server",
+    "curseforge",
+    "modrinth",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "dependencies.required_present",
+    "versions.ecosystem_aligned",
+    "configs.preset_reasoned",
+    "datapacks.examples_valid",
+    "theme.tokens.required",
+    "export.profiles.present",
+    "ashfall.no_leak"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "first10Minutes": [
+    "Open the admin setup Index page.",
+    "Confirm PlayerCore permissions and home rules.",
+    "Run the first RuntimeGuard budget check."
+  ],
+  "contentWaveLabel": "1.0.0 template sync"
+}

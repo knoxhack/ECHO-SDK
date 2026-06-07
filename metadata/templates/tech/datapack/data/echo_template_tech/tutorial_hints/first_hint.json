@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_tech:first_hint",
+  "title": "Tech Wave First Hint",
+  "message": "Read Power Basics, then build one generator, one Field Battery Bank, one High Voltage Cable line, and one HoloMap marker before adding machines.",
+  "trigger": "first_login"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_full_ashfall:first_30_minutes",
+  "title": "Full Ashfall First 30 Minutes",
+  "cards": [
+    "echo_template_full_ashfall:orientation",
+    "echo_template_full_ashfall:starter_timeline"
+  ],
+  "steps": [
+    "Review known issues and server notes.",
+    "Track the first official-profile HoloMap marker.",
+    "Complete the Ashfall profile validation mission.",
+    "Run diagnostics before publishing an export."
+  ]
+}

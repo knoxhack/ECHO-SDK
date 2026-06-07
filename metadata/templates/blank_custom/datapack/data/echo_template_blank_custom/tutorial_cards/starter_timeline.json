@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_blank_custom:starter_timeline",
+  "category": "creator_pack",
+  "title": "Blank Custom Starter Timeline",
+  "summary": "A guided blank scaffold with Core, NetCore, Index, TutorialCore, MissionCore, and HoloMap selected so generated packs have a tiny playable loop.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Blank Custom generated packs.",
+  "steps": [
+    "Open Index and read the Blank Custom orientation page.",
+    "Open the starter TutorialCore card.",
+    "Track the starter HoloMap marker.",
+    "Complete the minimal MissionCore checklist.",
+    "Rename the sample Index page to match the pack concept."
+  ],
+  "commonMistakes": [
+    "Players expecting finished gameplay",
+    "Official-pack profiles"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

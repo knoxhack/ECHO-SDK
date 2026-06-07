@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_pack2_draft:runtime_budget",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Optional System: Runtime Budget Review",
+  "summary": "Pack #2 should stay within existing RuntimeGuard expectations.",
+  "body": "The internal MVP is light enough to rely on existing RuntimeGuard guidance. The optional Runtime Budget Review mission teaches players where warning states and budget notes live, but it does not add a Pack #2-specific budget system yet. Any future heavy automation, route simulation, or multiblock telemetry should add explicit budgets before release.",
+  "tags": [
+    "runtimeguard",
+    "optional",
+    "warning"
+  ],
+  "related": [
+    "echo_template_pack2_draft:foundry_overview",
+    "echo_template_pack2_draft:processor_route",
+    "echo_template_pack2_draft:fault_troubleshooting",
+    "echo_template_pack2_draft:terminal_next_objective"
+  ],
+  "sortOrder": 50
+}

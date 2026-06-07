@@ -1,0 +1,53 @@
+{
+  "template": "official_pack_2_draft",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echoterminal",
+    "echoindex",
+    "echomissioncore",
+    "echopowergrid",
+    "echoindustrialnexus",
+    "echomultiblockcore",
+    "echologisticsnetwork",
+    "echoholomap",
+    "echolens",
+    "echoruntimeguard",
+    "echothemecore",
+    "echotutorialcore",
+    "echoworldcore",
+    "echosoundcore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echoterminal",
+    "echoindex",
+    "echomissioncore",
+    "echopowergrid",
+    "echoindustrialnexus",
+    "echomultiblockcore",
+    "echologisticsnetwork",
+    "echoholomap",
+    "echolens",
+    "echoruntimeguard",
+    "echothemecore",
+    "echotutorialcore",
+    "echoworldcore",
+    "echosoundcore"
+  ],
+  "optionalModules": [
+    "echodatacore",
+    "echoplayercore",
+    "echorecovery",
+    "echowiki",
+    "echoscreencore",
+    "echoblockworks",
+    "echoconvoyprotocol",
+    "echonpcore",
+    "echotextureforge"
+  ]
+}

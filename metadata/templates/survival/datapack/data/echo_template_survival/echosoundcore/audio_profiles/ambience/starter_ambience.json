@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_survival:starter_ambience",
+  "sound": "minecraft:ambient.cave",
+  "subtitle": "Shelter Ambience",
+  "volume": 0.35,
+  "pitch": 1.0,
+  "loop": true,
+  "description": "Subtle ambience placeholder for Survival starter packs."
+}

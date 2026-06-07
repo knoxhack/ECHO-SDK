@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_server_smp:homes_and_rtp",
+  "category": "echo_template_server_smp:starter",
+  "title": "Homes and RTP",
+  "subtitle": "Server SMP creator note",
+  "summary": "Starter documentation for homes and rtp in a Server SMP pack.",
+  "body": "Use this page to explain homes and rtp with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Server SMP",
+    "starter"
+  ]
+}

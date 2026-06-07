@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_vanilla_plus:using_index",
+  "category": "echo_template_vanilla_plus:starter",
+  "title": "Using Index",
+  "subtitle": "Vanilla+ creator note",
+  "summary": "Starter documentation for using index in a Vanilla+ pack.",
+  "body": "Use this page to explain using index with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Vanilla+",
+    "starter"
+  ]
+}

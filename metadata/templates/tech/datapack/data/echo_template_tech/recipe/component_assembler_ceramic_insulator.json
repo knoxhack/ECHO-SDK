@@ -1,0 +1,14 @@
+{
+  "type": "echoindustrialnexus:industrial_processing",
+  "machine": "component_assembler",
+  "ingredient": [
+    "minecraft:quartz",
+    "minecraft:brick",
+    "minecraft:copper_ingot"
+  ],
+  "result": "echopowergrid:ceramic_insulator",
+  "count": 2,
+  "duration": 80,
+  "fluxCost": 50,
+  "heat": 1
+}

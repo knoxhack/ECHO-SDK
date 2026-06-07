@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_full_ashfall:starter_timeline",
+  "category": "creator_pack",
+  "title": "Full Ashfall Starter Timeline",
+  "summary": "The official Ashfall pack profile with Ashfall theme, docs, metadata, starter progression, and export checks.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Full Ashfall generated packs.",
+  "steps": [
+    "Read the Ashfall install notes.",
+    "Confirm the official profile module list.",
+    "Open the Ashfall-safe starter TutorialCore card.",
+    "Review known issues and server notes.",
+    "Track the first official-profile HoloMap marker."
+  ],
+  "commonMistakes": [
+    "Generic ECHO packs",
+    "Blank custom starts"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

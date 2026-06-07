@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:lens_scans_to_depth_mission",
+  "from": "echo_template_tech:lens_grid_scans",
+  "to": "echo_template_tech:grid_commissioning_depth",
+  "type": "mission_link",
+  "label": "Lens scan hints point to the grid commissioning mission."
+}

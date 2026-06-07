@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:starter_next_step_hint",
+  "title": "Tech Next Step",
+  "message": "Open Terminal and read Power Basics.",
+  "trigger": "first_login",
+  "nextStep": "Route High Voltage Cable through a Factory Substation."
+}

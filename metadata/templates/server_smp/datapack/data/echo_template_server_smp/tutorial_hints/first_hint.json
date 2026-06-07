@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_server_smp:first_hint",
+  "title": "Server SMP First Hint",
+  "message": "Read the server setup page.",
+  "trigger": "first_login"
+}

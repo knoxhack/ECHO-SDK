@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_survival:starter_layer",
+  "name": "Survival Starter Layer",
+  "description": "Starter HoloMap layer for Survival generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_survival:starter_safe_zone",
+      "label": "Starter Safe Zone",
+      "kind": "safety",
+      "description": "The safety layer highlights shelter, weather fallback, and first reclamation work.",
+      "missionId": "echo_template_survival:starter_progression_sync",
+      "indexEntry": "echo_template_survival:starter_timeline"
+    }
+  ]
+}

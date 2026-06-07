@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_story_lore:starter_next_step_hint",
+  "title": "Story/Lore Next Step",
+  "message": "Open Terminal and read the first archive.",
+  "trigger": "first_login",
+  "nextStep": "Scan a story clue with Lens."
+}

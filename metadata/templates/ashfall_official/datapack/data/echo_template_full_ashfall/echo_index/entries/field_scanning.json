@@ -1,0 +1,18 @@
+{
+  "id": "echo_template_full_ashfall:field_scanning",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Field Scanning",
+  "subtitle": "Lens turns unknown signals into usable decisions",
+  "summary": "A useful scan answers what the object is, how dangerous it is, what to do next, and whether it should become a map marker.",
+  "body": "Scan from relative safety before entering a route. Cache casings, route boards, relay nodes, faction signs, and hazard warnings all provide different kinds of field intel.",
+  "links": {
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans",
+    "mission": "echo_template_full_ashfall:ashfall_first_month_routes",
+    "tutorial": "echo_template_full_ashfall:first_month_route_hint"
+  },
+  "tags": [
+    "ashfall",
+    "lens",
+    "scanner"
+  ]
+}

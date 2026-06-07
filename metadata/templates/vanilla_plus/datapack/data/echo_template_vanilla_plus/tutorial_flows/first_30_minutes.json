@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_vanilla_plus:first_30_minutes",
+  "title": "Vanilla+ First 30 Minutes",
+  "cards": [
+    "echo_template_vanilla_plus:orientation",
+    "echo_template_vanilla_plus:starter_timeline"
+  ],
+  "steps": [
+    "Finish a small shelter or base corner.",
+    "Mark a farm, mine, or village on the starter HoloMap layer.",
+    "Complete the gentle MissionCore checklist.",
+    "Review the TutorialCore card if a module is unfamiliar."
+  ]
+}

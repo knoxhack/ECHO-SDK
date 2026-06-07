@@ -1,0 +1,40 @@
+{
+  "id": "vanilla_plus",
+  "name": "Vanilla+ Starter Pack",
+  "version": "1.0.0",
+  "minecraftVersion": "26.1.2",
+  "loader": "NeoForge",
+  "modules": {
+    "requiredModules": [
+      "echocore",
+      "echonetcore"
+    ],
+    "recommendedModules": [
+      "echoindex",
+      "echotutorialcore",
+      "echoplayercore"
+    ],
+    "optionalModules": [
+      "echoholomap",
+      "echothemecore",
+      "echosoundcore",
+      "echomissioncore",
+      "echorecovery"
+    ]
+  },
+  "exportProfiles": {
+    "client": true,
+    "server": true,
+    "curseforge": true,
+    "modrinth": true,
+    "configsOnly": true
+  },
+  "docs": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "knownIssues": "KNOWN_ISSUES.md",
+    "support": "SUPPORT.md"
+  },
+  "ashfallProfile": false,
+  "jars": []
+}

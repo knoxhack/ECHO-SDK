@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_blank_custom:starter_layer",
+  "name": "Blank Custom Starter Layer",
+  "description": "Starter HoloMap layer for Blank Custom generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_blank_custom:starter_marker",
+      "label": "Starter Marker",
+      "kind": "blank_starter",
+      "description": "A neutral marker proves HoloMap wiring and gives creators a safe place to swap in their own objective.",
+      "missionId": "echo_template_blank_custom:starter_progression_sync",
+      "indexEntry": "echo_template_blank_custom:starter_timeline"
+    }
+  ]
+}

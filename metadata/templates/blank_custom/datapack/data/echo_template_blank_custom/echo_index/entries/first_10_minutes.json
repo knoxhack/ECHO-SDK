@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_blank_custom:first_10_minutes",
+  "category": "echo_template_blank_custom:starter",
+  "title": "First 10 Minutes",
+  "subtitle": "Template starter guidance",
+  "summary": "Opening goals for Blank Custom generated packs.",
+  "body": "Open Index and read the Blank Custom orientation page. Open the starter TutorialCore card. Track the starter HoloMap marker.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "first-10-minutes"
+  ]
+}

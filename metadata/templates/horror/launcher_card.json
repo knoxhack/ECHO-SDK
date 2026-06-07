@@ -1,0 +1,38 @@
+{
+  "id": "horror",
+  "title": "Horror",
+  "subtitle": "A horror investigation starter with Terminal, Index, SoundCore, Lens, MissionCore, HoloMap, danger markers, and pacing hints.",
+  "description": "A generic horror investigation starter with evidence scans, first archive guidance, danger and clue markers, SoundCore stinger rules, and investigation Index pages.",
+  "status": "Beta",
+  "style": "Horror",
+  "theme": "horror_monitor",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Horror",
+    "Mystery",
+    "Investigation"
+  ],
+  "difficulty": "Medium",
+  "first10MinutesPreview": [
+    "Read the signal investigation Index page.",
+    "Scan one evidence object with Lens.",
+    "Enable the first investigation hint."
+  ],
+  "first30MinutesPreview": [
+    "Open the first archive entry.",
+    "Follow a HoloMap clue marker while noting nearby danger.",
+    "Complete the starter evidence mission.",
+    "Review SoundCore stinger and ambience notes."
+  ],
+  "first2HoursPreview": [
+    "Add a second evidence type and archive page.",
+    "Tune HoloMap marker visibility to avoid spoiling reveals.",
+    "Replace sample tension text with pack-specific pacing."
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Horror first 10 minutes screenshot",
+    "Horror first 30 minutes checklist screenshot",
+    "Horror generated pack launcher card screenshot"
+  ]
+}

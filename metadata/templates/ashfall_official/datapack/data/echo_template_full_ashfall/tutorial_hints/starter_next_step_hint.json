@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_full_ashfall:starter_next_step_hint",
+  "title": "Full Ashfall Next Step",
+  "message": "Read the Ashfall install notes.",
+  "trigger": "first_login",
+  "nextStep": "Review known issues and server notes."
+}

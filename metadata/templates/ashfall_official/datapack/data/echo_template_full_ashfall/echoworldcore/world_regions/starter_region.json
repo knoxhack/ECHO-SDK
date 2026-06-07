@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_full_ashfall:starter_region",
+  "displayName": "Ashfall Profile Region",
+  "description": "Example WorldCore region for Full Ashfall packs.",
+  "regionType": "starter",
+  "priority": 1
+}

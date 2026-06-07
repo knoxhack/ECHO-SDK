@@ -1,0 +1,18 @@
+{
+  "id": "echo_template_full_ashfall:field_caches",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Field Caches",
+  "subtitle": "Small rewards that make the next route safer",
+  "summary": "Field caches should support survival, tech repair, map intel, or route preparation without skipping progression.",
+  "body": "The first survivor cache should feel useful without becoming a permanent exploit. Good rewards include food, filters, repair parts, and route notes.",
+  "links": {
+    "mission": "echo_template_full_ashfall:survivor_cache_sweep",
+    "holomapMarker": "echo_template_full_ashfall:survivor_cache_signal",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "tags": [
+    "ashfall",
+    "cache",
+    "rewards"
+  ]
+}

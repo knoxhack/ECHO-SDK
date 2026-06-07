@@ -1,0 +1,95 @@
+{
+  "id": "echo_template_pack2_draft:foundry_commissioning_draft",
+  "chapter": "echo_template_pack2_draft:foundry_draft",
+  "phase": "foundry_commissioning_mvp",
+  "phaseTitle": "Foundry Commissioning MVP",
+  "phaseOrder": 10,
+  "category": "Foundry Protocol",
+  "difficulty": "Guided",
+  "terminal_route_phase": "foundry_commissioning_mvp",
+  "terminal_source": "missioncore",
+  "terminal_chapter": "echo_template_pack2_draft:foundry_draft",
+  "order": 10,
+  "title": "Foundry Orientation: Bring the Dashboard Online",
+  "briefing": "Open the internal-preview dashboard, confirm the What Now panel, then verify the first Lens Deep Scan handoff. This is the Pack #2 launcher-preview entry point, not a public release start.",
+  "fieldGuide": "Use Lens Deep Scan once. The scan result should unlock the Pack #2 welcome and grid commissioning Index pages, then Terminal should advance the next objective toward First Tool Check.",
+  "icon": "minecraft:spyglass",
+  "kind": "main",
+  "objectives": [
+    {
+      "id": "echo_template_pack2_draft:foundry_commissioning_draft/deep_scan_orientation",
+      "type": "scan_block",
+      "target": "echolens:mission/verified_deep_scan/scan",
+      "label": "Deep Scan any block",
+      "detail": "Use Lens Deep Scan once to verify the first guidance loop.",
+      "required": 1,
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "echo_template_pack2_draft:foundry_commissioning_draft/read_terminal_next_step",
+      "type": "custom",
+      "target": "echoterminal:panel/foundry_dashboard/next_objective",
+      "label": "Read the next objective",
+      "detail": "Open the Foundry dashboard and confirm the next objective panel points to First Tool Check.",
+      "required": 1,
+      "icon": "echoterminal:terminal"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "echo_template_pack2_draft:foundry_commissioning_draft/hand_crank_generator",
+      "item": "echopowergrid:hand_crank_generator",
+      "count": 1,
+      "label": "Hand Crank Generator",
+      "detail": "Starter manual power source for the first loop; shown first so testers know what to place next."
+    },
+    {
+      "id": "echo_template_pack2_draft:foundry_commissioning_draft/small_battery_bank",
+      "item": "echopowergrid:small_battery_bank",
+      "count": 1,
+      "label": "Small Battery Bank",
+      "detail": "Starter storage for the first loop and the first required Lens scan target."
+    },
+    {
+      "id": "echo_template_pack2_draft:foundry_commissioning_draft/low_voltage_cable",
+      "item": "echopowergrid:low_voltage_cable",
+      "count": 8,
+      "label": "Low Voltage Cable Bundle",
+      "detail": "Enough cable to connect the generator and battery without opening larger grids."
+    },
+    {
+      "id": "echo_template_pack2_draft:foundry_commissioning_draft/grid_diagnostic_tool",
+      "item": "echopowergrid:grid_diagnostic_tool",
+      "count": 1,
+      "label": "Grid Diagnostic Tool",
+      "detail": "A safe first-system tool for checking starter grid state."
+    }
+  ],
+  "metadata": {
+    "indexEntry": "echo_template_pack2_draft:foundry_overview",
+    "terminalPanel": "echo_template_pack2_draft:foundry_dashboard#next_objective",
+    "tutorialHint": "echo_template_pack2_draft:foundry_next_step_hint",
+    "completionCue": "echo_template_pack2_draft:objective_complete",
+    "unlockIndexEntries": "echo_template_pack2_draft:foundry_overview,echo_template_pack2_draft:grid_commissioning,echo_template_pack2_draft:terminal_next_objective",
+    "completionFeedback": "Foundry dashboard online. First Tool Check is now active, and the internal preview route is ready for launcher review.",
+    "whatNowPanel": "echo_template_pack2_draft:foundry_dashboard#what_now"
+  },
+  "terminal_route_order": "10",
+  "terminal_route_role": "starter_mission",
+  "previewCardCopy": "Begin the launcher preview review from this Foundry dashboard route.",
+  "failureStates": [
+    {
+      "id": "lens_missing",
+      "label": "Lens is not installed or disabled",
+      "message": "Read the Terminal What Now panel and Index overview; the scan objective remains unavailable until Lens is present.",
+      "severity": "warning"
+    },
+    {
+      "id": "terminal_panel_missing",
+      "label": "Terminal dashboard did not open",
+      "message": "Use the Index Foundry overview as fallback guidance and rerun Pack #2 profile validation.",
+      "severity": "error"
+    }
+  ],
+  "commonIssueText": "If the objective does not advance, confirm Lens scan completion, then check the Terminal next-objective panel and Pack #2 known issues."
+}

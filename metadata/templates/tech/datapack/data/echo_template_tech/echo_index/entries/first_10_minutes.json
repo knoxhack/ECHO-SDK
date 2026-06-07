@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:first_10_minutes",
+  "category": "echo_template_tech:starter",
+  "title": "First 10 Minutes",
+  "subtitle": "Template starter guidance",
+  "summary": "Opening goals for Tech generated packs.",
+  "body": "Open Terminal and read Power Basics. Build a starter generator or reinforced solar path. Place a Field Battery Bank and inspect stored power.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "first-10-minutes"
+  ]
+}

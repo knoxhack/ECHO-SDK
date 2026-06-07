@@ -1,0 +1,45 @@
+{
+  "id": "echo_template_magic_mystic:starter_flow",
+  "chapterId": "echo_template_magic_mystic:starter_chapter",
+  "title": "Resonant Fragment Survey",
+  "briefing": "Study a strange relic signal and stabilize it before expanding research.",
+  "objectives": [
+    {
+      "id": "locate_a_strange_relic",
+      "type": "creator_action",
+      "label": "Locate a strange relic",
+      "detail": "Creator starter objective for Magic/Mystic: Locate a strange relic."
+    },
+    {
+      "id": "scan_the_relic_with_lens",
+      "type": "creator_action",
+      "label": "Scan the relic with Lens",
+      "detail": "Creator starter objective for Magic/Mystic: Scan the relic with Lens."
+    },
+    {
+      "id": "open_the_relic_basics_index_entry",
+      "type": "creator_action",
+      "label": "Open the Relic Basics Index entry",
+      "detail": "Creator starter objective for Magic/Mystic: Open the Relic Basics Index entry."
+    },
+    {
+      "id": "stabilize_a_fragment",
+      "type": "creator_action",
+      "label": "Stabilize a fragment",
+      "detail": "Creator starter objective for Magic/Mystic: Stabilize a fragment."
+    },
+    {
+      "id": "track_the_next_relic_signal",
+      "type": "creator_action",
+      "label": "Track the next relic signal",
+      "detail": "Creator starter objective for Magic/Mystic: Track the next relic signal."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_magic_mystic:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

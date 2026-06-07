@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_vanilla_plus:orientation",
+  "category": "creator_pack",
+  "title": "Vanilla+ Orientation",
+  "summary": "A quiet Vanilla+ starter with Index, tutorials, PlayerCore, and optional map support.",
+  "body": "A lightweight ECHO-enhanced vanilla starter that adds guidance, homes, optional map markers, and gentle survival goals without changing the core feel.",
+  "steps": [
+    "Open Index from the keybind or guide item.",
+    "Use PlayerCore commands for a safe return path.",
+    "Treat HoloMap and missions as optional quality-of-life layers."
+  ],
+  "commonMistakes": [
+    "Heavy tech progression",
+    "Horror campaigns",
+    "Nexus or finale-driven story packs",
+    "Ashfall-derived packs"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

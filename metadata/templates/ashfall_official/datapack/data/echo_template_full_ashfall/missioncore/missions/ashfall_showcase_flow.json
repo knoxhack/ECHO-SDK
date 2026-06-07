@@ -1,0 +1,69 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_showcase_flow",
+  "chapterId": "echo_template_full_ashfall:starter_chapter",
+  "title": "Ashfall Showcase Opening",
+  "briefing": "Use the first Ashfall session to touch the ECHO stack in a readable order while keeping the profile isolated from generic templates.",
+  "objectives": [
+    {
+      "id": "open_terminal",
+      "type": "creator_action",
+      "label": "Open Terminal",
+      "detail": "Read the Ashfall dashboard and confirm the next-step summary."
+    },
+    {
+      "id": "read_index",
+      "type": "creator_action",
+      "label": "Read the first Index archive",
+      "detail": "Open the Showcase Flow and Profile Isolation entries."
+    },
+    {
+      "id": "scan_wreckage",
+      "type": "creator_action",
+      "label": "Scan pod wreckage with Lens",
+      "detail": "Use the Ashfall showcase scan row to reveal the first marker and mission hint."
+    },
+    {
+      "id": "track_marker",
+      "type": "creator_action",
+      "label": "Track the first HoloMap marker",
+      "detail": "Pin the field objective before leaving the pod route."
+    },
+    {
+      "id": "survive_weather",
+      "type": "creator_action",
+      "label": "React to the first WeatherCore warning",
+      "detail": "Use the toxic-front warning as a tutorial beat rather than a punishment spike."
+    },
+    {
+      "id": "recover_relic",
+      "type": "creator_action",
+      "label": "Recover a relic field note",
+      "detail": "Bridge RelicTech, Index, Lens, and SoundCore with a small discovery."
+    },
+    {
+      "id": "repair_power",
+      "type": "creator_action",
+      "label": "Repair the pod power spine",
+      "detail": "Use the PowerGrid repair note before larger factory systems appear."
+    },
+    {
+      "id": "upgrade_gear",
+      "type": "creator_action",
+      "label": "Install a first Armory upgrade",
+      "detail": "Introduce gear readiness before faction/story pressure rises."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_full_ashfall:showcase_flow",
+    "holomapMarker": "echo_template_full_ashfall:first_field_objective",
+    "lensProfile": "echo_template_full_ashfall:ashfall_showcase_scans",
+    "terminalPage": "echo_template_full_ashfall:ashfall_showcase_dashboard"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_full_ashfall:showcase_bridge_docs",
+      "label": "Unlock Ashfall showcase bridge notes."
+    }
+  ]
+}

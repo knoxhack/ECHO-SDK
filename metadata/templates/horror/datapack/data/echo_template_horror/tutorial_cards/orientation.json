@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_horror:orientation",
+  "category": "creator_pack",
+  "title": "Investigation Loop",
+  "summary": "A horror investigation starter with Terminal, Index, SoundCore, Lens, MissionCore, and HoloMap.",
+  "body": "A generic station, signal, and evidence mystery starter with restrained ambience, Lens scans, archives, and objective tracking.",
+  "steps": [
+    "Use Lens results to unlock clue context.",
+    "Use HoloMap markers sparingly so tension survives.",
+    "Keep failure text clear when evidence is missing."
+  ],
+  "commonMistakes": [
+    "Bright vanilla packs",
+    "Factory automation packs",
+    "Official Ashfall story ports"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

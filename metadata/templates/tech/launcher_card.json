@@ -1,0 +1,39 @@
+{
+  "id": "tech",
+  "title": "Tech",
+  "subtitle": "A factory-ready 1.0.0 template with reinforced power, high-voltage routing, logistics, multiblocks, Lens, HoloMap, Terminal, and runtime guidance.",
+  "description": "A 1.0.0-synced Tech starter that keeps the existing 1.0.0 Tech wave content and makes the first generator, battery, processor, depot, and Terminal dashboard path explicit.",
+  "status": "Beta",
+  "style": "Tech",
+  "theme": "tech_console",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Tech",
+    "Automation",
+    "Kitchen Sink"
+  ],
+  "difficulty": "Medium",
+  "first10MinutesPreview": [
+    "Open Terminal and read Power Basics.",
+    "Build a starter generator or reinforced solar path.",
+    "Place a Field Battery Bank and inspect stored power."
+  ],
+  "first30MinutesPreview": [
+    "Route High Voltage Cable through a Factory Substation.",
+    "Run the first Industrial Nexus processor recipe.",
+    "Place a logistics depot beside the powered machine row.",
+    "Open Terminal again and confirm the next-step dashboard."
+  ],
+  "first2HoursPreview": [
+    "Automate the first depot request loop.",
+    "Validate the factory power spine and note failure reasons in Index.",
+    "Review RuntimeGuard budget guidance before duplicating machine rows."
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Tech first 10 minutes screenshot",
+    "Tech first 30 minutes checklist screenshot",
+    "Tech generated pack launcher card screenshot"
+  ],
+  "contentWave": "tech_1_0_0"
+}

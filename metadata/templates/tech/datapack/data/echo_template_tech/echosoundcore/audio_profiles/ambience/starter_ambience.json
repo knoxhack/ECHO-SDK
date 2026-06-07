@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_tech:factory_floor_ambience",
+  "sound": "minecraft:block.copper_bulb.step",
+  "subtitle": "Factory Floor Ambience",
+  "volume": 0.22,
+  "pitch": 0.85,
+  "loop": true,
+  "description": "Subtle low-noise ambience for machine halls. Keep volume low so warning cues remain readable."
+}

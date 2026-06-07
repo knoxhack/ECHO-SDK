@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_vanilla_plus:starter_weather",
+  "type": "ambient",
+  "displayName": "Mild Weather Notes",
+  "defaultSeverity": "low",
+  "scope": "starter_area",
+  "description": "Weather profile used by the Vanilla+ starter template."
+}

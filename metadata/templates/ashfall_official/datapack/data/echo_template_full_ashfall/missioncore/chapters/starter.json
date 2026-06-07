@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_full_ashfall:starter_chapter",
+  "title": "Full Ashfall Opening Loop",
+  "summary": "The official Ashfall profile starter for ECHO Launcher exports, with Ashfall-safe starter progression kept isolated inside the Ashfall template/profile.",
+  "description": "Install the official profile, review Ashfall starter guidance, validate required modules, track the first safe objective, then export client or server packs.",
+  "sortOrder": 10
+}

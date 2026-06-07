@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_story_lore:overview",
+  "category": "echo_template_story_lore:starter",
+  "title": "Story/Lore Overview",
+  "subtitle": "A lore-pack foundation with Terminal, Index, MissionCore, SignalOS, Lens, HoloMap, tutorials, and SoundCore.",
+  "summary": "A creator-ready story foundation with chapters, archives, missions, scan objectives, map markers, and Terminal presentation examples.",
+  "body": "Open an archive chapter, follow a mission chain, scan a clue, track the objective, and play a subtle notification.\n\nFirst 30 minutes:\n- Open the Chapter 1 archive entry.\n- Accept the starter mission chain.\n- Track the first objective marker.\n- Scan a story clue with Lens.\n\nFirst 2 hours:\n- Add two more chapter records and connect them to missions.\n- Use SoundCore for subtle progression notifications.\n- Build a Terminal dashboard that reflects the creator's own story world.",
+  "tags": [
+    "Story/Lore",
+    "template",
+    "creator"
+  ]
+}

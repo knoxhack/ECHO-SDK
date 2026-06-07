@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:terminal_steps_to_depth_mission",
+  "from": "echo_template_tech:terminal_next_steps",
+  "to": "echo_template_tech:grid_commissioning_depth",
+  "type": "mission_link",
+  "label": "Terminal next-step guidance leads to the commissioning mission."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_server_smp:starter_progression_sync",
+  "chapterId": "echo_template_server_smp:starter_chapter",
+  "title": "Server Commissioning Checklist",
+  "briefing": "Connect permissions, RuntimeGuard budgets, backups, and a shared HoloMap objective into the first admin loop.",
+  "objectives": [
+    {
+      "id": "read_admin_setup",
+      "type": "creator_action",
+      "label": "Read admin setup",
+      "detail": "1.0.0 template sync objective 1: Read admin setup."
+    },
+    {
+      "id": "confirm_playercore_permissions",
+      "type": "creator_action",
+      "label": "Confirm PlayerCore permissions",
+      "detail": "1.0.0 template sync objective 2: Confirm PlayerCore permissions."
+    },
+    {
+      "id": "run_runtimeguard_budget_check",
+      "type": "creator_action",
+      "label": "Run RuntimeGuard budget check",
+      "detail": "1.0.0 template sync objective 3: Run RuntimeGuard budget check."
+    },
+    {
+      "id": "create_a_shared_objective_marker",
+      "type": "creator_action",
+      "label": "Create a shared objective marker",
+      "detail": "1.0.0 template sync objective 4: Create a shared objective marker."
+    },
+    {
+      "id": "review_backup_notes",
+      "type": "creator_action",
+      "label": "Review backup notes",
+      "detail": "1.0.0 template sync objective 5: Review backup notes."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_server_smp:starter_timeline",
+    "holomapMarker": "echo_template_server_smp:shared_spawn_objective",
+    "tutorialCard": "echo_template_server_smp:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_server_smp:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

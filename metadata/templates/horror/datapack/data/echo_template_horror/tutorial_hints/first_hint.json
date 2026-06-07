@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_horror:first_hint",
+  "title": "Horror First Hint",
+  "message": "Read the signal investigation page.",
+  "trigger": "first_login"
+}

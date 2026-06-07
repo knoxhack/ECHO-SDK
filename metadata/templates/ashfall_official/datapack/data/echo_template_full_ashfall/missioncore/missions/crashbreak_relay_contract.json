@@ -1,0 +1,49 @@
+{
+  "id": "echo_template_full_ashfall:crashbreak_relay_contract",
+  "chapterId": "ashfall_major_routes",
+  "title": "Optional: Crashbreak Relay Proof",
+  "optional": true,
+  "briefing": "Crashbreak will pay for proof that the relay route is safe enough for salvage crews. This is a small field contract, not a full faction commitment.",
+  "prerequisites": [
+    "echo_template_full_ashfall:first_relay_station_route"
+  ],
+  "objectives": [
+    {
+      "id": "scan_contract_board",
+      "type": "lens_scan",
+      "label": "Scan the Crashbreak contract board",
+      "detail": "Confirm the contract is optional and tied to relay route proof."
+    },
+    {
+      "id": "log_relay_proof",
+      "type": "terminal_route_record",
+      "label": "Log relay proof",
+      "detail": "Record the relay route state and cache result in Terminal Route Records."
+    },
+    {
+      "id": "claim_contract_reward",
+      "type": "reward_claim",
+      "label": "Claim contract support",
+      "detail": "Reward should support route progression with power cells, scrap metal, or scanner supplies."
+    }
+  ],
+  "guidanceLinks": {
+    "terminalPage": "echo_template_full_ashfall:ashfall_major_route_records",
+    "indexEntry": "echo_template_full_ashfall:field_contracts",
+    "holomapMarker": "echo_template_full_ashfall:crashbreak_relay_contract",
+    "lensProfile": "echo_template_full_ashfall:ashfall_major_route_scans"
+  },
+  "rewards": [
+    {
+      "type": "items",
+      "id": "echo_template_full_ashfall:crashbreak_relay_support",
+      "label": "Power cell, scrap metal, and route note support"
+    },
+    {
+      "type": "reputation_note",
+      "id": "echo_template_full_ashfall:crashbreak_field_proof",
+      "label": "Crashbreak field proof"
+    }
+  ],
+  "completionText": "Crashbreak relay proof logged. The contract stays optional and should not block the main Ashfall route."
+}

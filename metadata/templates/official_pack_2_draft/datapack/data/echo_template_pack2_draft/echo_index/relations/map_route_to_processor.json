@@ -1,0 +1,10 @@
+{
+  "id": "echo_template_pack2_draft:map_route_to_processor",
+  "from": "echo_template_pack2_draft:processor_route",
+  "to": "echo_template_pack2_draft:processor_workcell",
+  "type": "map_objective",
+  "label": "Processor route links to the workcell marker",
+  "mission": "echo_template_pack2_draft:route_processor_line",
+  "holoMapLayer": "echo_template_pack2_draft:processor_route",
+  "holoMapMarker": "processor_worksite"
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-native-packet-example",
+  "name": "ECHO Native Packet Example",
+  "kind": "addon",
+  "description": "Example scaffold for typed native network packet channels.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoNativePacket",
+    "kind": "native_example",
+    "role": "network_example",
+    "feature_id": "native.packet.example",
+    "display_name": "ECHO Native Packet Example"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/examples/{{class_name}}Channel.java"
+  ],
+  "defaultFeatures": [
+    "native.packet.example"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "docs/**"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "runtime_agent",
+    "diagnostics_agent",
+    "test_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew validateEchoSdkTemplates",
+    ".\\gradlew generatePlan3ReleasePrepReport"
+  ]
+}

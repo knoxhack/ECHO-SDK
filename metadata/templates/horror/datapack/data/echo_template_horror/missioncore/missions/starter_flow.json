@@ -1,0 +1,51 @@
+{
+  "id": "echo_template_horror:starter_flow",
+  "chapterId": "echo_template_horror:starter_chapter",
+  "title": "Signal Investigation",
+  "briefing": "Trace a strange signal through evidence, archives, markers, and a first scripted pressure beat.",
+  "objectives": [
+    {
+      "id": "investigate_the_signal",
+      "type": "creator_action",
+      "label": "Investigate the signal",
+      "detail": "Creator starter objective for Horror: Investigate the signal."
+    },
+    {
+      "id": "scan_strange_evidence",
+      "type": "creator_action",
+      "label": "Scan strange evidence",
+      "detail": "Creator starter objective for Horror: Scan strange evidence."
+    },
+    {
+      "id": "open_the_archive",
+      "type": "creator_action",
+      "label": "Open the archive",
+      "detail": "Creator starter objective for Horror: Open the archive."
+    },
+    {
+      "id": "follow_the_marker",
+      "type": "creator_action",
+      "label": "Follow the marker",
+      "detail": "Creator starter objective for Horror: Follow the marker."
+    },
+    {
+      "id": "recover_a_log",
+      "type": "creator_action",
+      "label": "Recover a log",
+      "detail": "Creator starter objective for Horror: Recover a log."
+    },
+    {
+      "id": "survive_the_first_event",
+      "type": "creator_action",
+      "label": "Survive the first event",
+      "detail": "Creator starter objective for Horror: Survive the first event."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_horror:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

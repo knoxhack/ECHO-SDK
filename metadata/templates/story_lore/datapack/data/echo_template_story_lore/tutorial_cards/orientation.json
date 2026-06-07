@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_story_lore:orientation",
+  "category": "creator_pack",
+  "title": "Story Pack Flow",
+  "summary": "A lore-pack foundation with Terminal, Index, MissionCore, SignalOS, Lens, HoloMap, tutorials, and SoundCore.",
+  "body": "A creator-ready story foundation with chapters, archives, missions, scan objectives, map markers, and Terminal presentation examples.",
+  "steps": [
+    "Use Index for player-readable lore and mechanics.",
+    "Use MissionCore for action, rewards, and pacing.",
+    "Use SignalOS and Terminal for archives and presentation."
+  ],
+  "commonMistakes": [
+    "Packs with no narrative or guide content",
+    "Ashfall story clones",
+    "Minimal utility-only packs"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

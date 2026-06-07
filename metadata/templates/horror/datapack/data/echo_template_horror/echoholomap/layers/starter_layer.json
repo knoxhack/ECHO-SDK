@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_horror:starter_layer",
+  "name": "Horror Starter Layer",
+  "description": "Starter HoloMap layer for Horror generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_horror:evidence_signal",
+      "label": "Evidence Signal",
+      "kind": "clue",
+      "description": "A visible clue marker pairs with a hidden danger note and SoundCore stinger rule.",
+      "missionId": "echo_template_horror:starter_progression_sync",
+      "indexEntry": "echo_template_horror:starter_timeline"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:biofuel_generation",
+  "category": "echo_template_tech:starter",
+  "title": "Biofuel Generation",
+  "subtitle": "Fuel-burner generation without new machine rules",
+  "summary": "Biofuel generators accept valid furnace fuel and buffer EP for machine startups.",
+  "body": "Place a Biofuel Generator beside a cable or battery, then shift-use with fuel in hand or open its node menu. Treat it as a higher-output fuel burner: it is stronger than the Scrap Burner, but it still needs storage and routing to avoid brownouts.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

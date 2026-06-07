@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:runtime_budgets_to_depth_mission",
+  "from": "echo_template_tech:runtime_budget_checklist",
+  "to": "echo_template_tech:grid_commissioning_depth",
+  "type": "mission_link",
+  "label": "Runtime budget review closes the first Tech Wave loop."
+}

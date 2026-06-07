@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_showcase_bridge",
+  "title": "Ashfall Bridge Signal",
+  "summary": "Terminal/archive bridge from the opening route into Nexus, Orbital, Stationfall, and Blackbox hooks when those chapters are present.",
+  "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+  "archiveEntry": "echo_template_full_ashfall:showcase_flow"
+}

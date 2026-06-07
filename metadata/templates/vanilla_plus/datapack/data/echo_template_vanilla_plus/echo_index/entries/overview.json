@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_vanilla_plus:overview",
+  "category": "echo_template_vanilla_plus:starter",
+  "title": "Vanilla+ Overview",
+  "subtitle": "A quiet Vanilla+ starter with Index, tutorials, PlayerCore, and optional map support.",
+  "summary": "A lightweight ECHO-enhanced vanilla starter that adds guidance, homes, optional map markers, and gentle survival goals without changing the core feel.",
+  "body": "Open Index, learn one small mechanic, set a safe home, mark a useful place, and follow gentle optional goals.\n\nFirst 30 minutes:\n- Open the Index guide and read the Vanilla+ welcome page.\n- Set a home or spawn-safe return point with PlayerCore.\n- Create a simple HoloMap marker if HoloMap is installed.\n- Complete the light survival checklist without opening a tech chain.\n\nFirst 2 hours:\n- Build a first base and mark farms, mines, and villages.\n- Use TutorialCore hints to learn optional ECHO quality-of-life systems.\n- Add MissionCore later if the pack needs soft chapter goals.",
+  "tags": [
+    "Vanilla+",
+    "template",
+    "creator"
+  ]
+}

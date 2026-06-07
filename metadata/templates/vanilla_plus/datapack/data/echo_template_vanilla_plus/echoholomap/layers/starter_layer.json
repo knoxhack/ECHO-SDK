@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_vanilla_plus:starter_layer",
+  "name": "Vanilla+ Starter Layer",
+  "description": "Starter HoloMap layer for Vanilla+ generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_vanilla_plus:vanilla_safe_base",
+      "label": "Vanilla Safe Base",
+      "kind": "safe_base",
+      "description": "Base, farm, village, and mine markers teach players to anchor familiar play with lightweight map support.",
+      "missionId": "echo_template_vanilla_plus:starter_progression_sync",
+      "indexEntry": "echo_template_vanilla_plus:starter_timeline"
+    }
+  ]
+}

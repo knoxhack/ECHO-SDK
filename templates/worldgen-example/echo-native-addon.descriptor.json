@@ -1,0 +1,13 @@
+{
+  "schema": "echo.native.descriptor.v1",
+  "id": "worldgenexample",
+  "name": "Worldgen Example",
+  "version": "1.0.0",
+  "nativePolicy": "NATIVE",
+  "entryPoints": {
+    "native": "com.example.worldgenexample.WorldgenExampleAddon"
+  },
+  "services": ["worldgenexample:worldgen_service"],
+  "optionalIntegrations": [],
+  "side": "BOTH"
+}

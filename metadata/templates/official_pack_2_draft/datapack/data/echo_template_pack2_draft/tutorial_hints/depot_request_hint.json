@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_pack2_draft:depot_request_hint",
+  "text": "Depot requests are prototype guidance only until Pack #2 leaves MVP scope; use Index and HoloMap labels for the route.",
+  "context": "logistics",
+  "linkedIndexEntry": "echo_template_pack2_draft:logistics_request_board",
+  "linkedMapMarker": "echo_template_pack2_draft:depot_route#depot_request_board",
+  "themeToken": "map.route.logistics"
+}

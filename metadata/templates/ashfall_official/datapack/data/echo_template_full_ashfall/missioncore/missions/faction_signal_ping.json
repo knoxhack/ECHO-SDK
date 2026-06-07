@@ -1,0 +1,43 @@
+{
+  "id": "echo_template_full_ashfall:faction_signal_ping",
+  "chapterId": "ashfall_first_month",
+  "title": "Optional: Read the Faction Signal",
+  "optional": true,
+  "briefing": "Faction signals can become contacts later. For now, scan signs, read the dossier, and avoid turning a first contact into a fight.",
+  "prerequisites": [
+    "echo_template_full_ashfall:ashfall_first_month_routes"
+  ],
+  "objectives": [
+    {
+      "id": "scan_faction_sign",
+      "type": "lens_scan",
+      "label": "Scan a faction sign or route board",
+      "detail": "Crashbreak and Radwarden markers should identify the contact type and risk."
+    },
+    {
+      "id": "read_faction_dossier",
+      "type": "index_entry",
+      "label": "Read the faction field dossier",
+      "detail": "Check whether the route expects observation, trade, or avoidance."
+    },
+    {
+      "id": "mark_contact",
+      "type": "holomap_marker",
+      "label": "Mark the contact route",
+      "detail": "Use the HoloMap marker for later, then leave before the area escalates."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_full_ashfall:faction_field_contacts",
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "rewards": [
+    {
+      "type": "reputation_note",
+      "id": "echo_template_full_ashfall:first_contact_note",
+      "label": "Faction contact note"
+    }
+  ],
+  "completionText": "Faction signal logged. You have a contact lead without committing to a faction route yet."
+}

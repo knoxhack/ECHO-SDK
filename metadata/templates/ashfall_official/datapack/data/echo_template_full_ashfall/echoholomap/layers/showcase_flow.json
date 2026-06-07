@@ -1,0 +1,65 @@
+{
+  "id": "echo_template_full_ashfall:showcase_flow",
+  "name": "Ashfall Showcase Flow",
+  "description": "Opening route markers for the Ashfall official profile only.",
+  "visibleByDefault": true,
+  "markerStyle": "ashfall_cyberglass",
+  "markers": [
+    {
+      "id": "echo_template_full_ashfall:drop_pod_terminal",
+      "label": "Drop Pod Terminal",
+      "kind": "terminal",
+      "description": "First Terminal dashboard and Index handoff.",
+      "icon": "ashfall_terminal",
+      "riskLabel": "safe return point",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "missionId": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "indexEntry": "echo_template_full_ashfall:showcase_flow"
+    },
+    {
+      "id": "echo_template_full_ashfall:first_field_objective",
+      "label": "First Field Objective",
+      "kind": "field_intel",
+      "description": "Lens scan and HoloMap marker used before the first weather warning.",
+      "icon": "ashfall_field_objective",
+      "riskLabel": "low route risk",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "nextObjective": true,
+      "missionId": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "indexEntry": "echo_template_full_ashfall:showcase_flow"
+    },
+    {
+      "id": "echo_template_full_ashfall:relic_signal",
+      "label": "Relic Signal",
+      "kind": "relic",
+      "description": "Small RelicTech discovery linked to Index and SoundCore feedback.",
+      "icon": "ashfall_relic",
+      "riskLabel": "signal interference",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "missionId": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "indexEntry": "echo_template_full_ashfall:ashfall_relic_field_note"
+    },
+    {
+      "id": "echo_template_full_ashfall:pod_power_spine",
+      "label": "Pod Power Spine",
+      "kind": "powergrid",
+      "description": "First PowerGrid repair marker for Ashfall opening route.",
+      "icon": "ashfall_power",
+      "riskLabel": "low voltage repair",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "missionId": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "indexEntry": "echo_template_full_ashfall:ashfall_powergrid_repair"
+    },
+    {
+      "id": "echo_template_full_ashfall:faction_contact",
+      "label": "First Faction Signal",
+      "kind": "story",
+      "description": "Safe handoff toward Nexus, Orbital, Stationfall, and Blackbox hooks later in the profile.",
+      "icon": "ashfall_signal",
+      "riskLabel": "deferred story handoff",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "missionId": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "indexEntry": "echo_template_full_ashfall:showcase_flow"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:component_recipes_to_depth_mission",
+  "from": "echo_template_tech:component_assembly_recipes",
+  "to": "echo_template_tech:grid_commissioning_depth",
+  "type": "mission_link",
+  "label": "Uses component assembly as a commissioning objective."
+}

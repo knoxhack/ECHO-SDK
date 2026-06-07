@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_survival:overview_to_flow",
+  "from": "echo_template_survival:overview",
+  "to": "echo_template_survival:starter_flow",
+  "type": "mission_link",
+  "label": "Pairs the overview with the starter mission flow."
+}

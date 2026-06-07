@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_depot_bridge",
+  "title": "Pod Cache Depot Bridge",
+  "summary": "Optional Logistics bridge for storing route supplies without turning the opening into a factory build.",
+  "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+  "holomapMarker": "echo_template_full_ashfall:drop_pod_terminal"
+}

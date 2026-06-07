@@ -1,0 +1,10 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_toxic_front",
+  "type": "toxic_front",
+  "displayName": "Ashfall Toxic Front",
+  "defaultSeverity": "moderate",
+  "scope": "ashfall_opening_route",
+  "description": "A readable first WeatherCore warning for Ashfall official profile.",
+  "terminalWarning": "Toxic front approaching. Return to the pod route or use a marked shelter.",
+  "lensScanText": "Airborne particulate density rising; HoloMap marker recommended."
+}

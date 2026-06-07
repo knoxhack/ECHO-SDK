@@ -1,0 +1,34 @@
+{
+  "template": "server_smp",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echoplayercore",
+    "echoruntimeguard",
+    "echodatacore",
+    "echoholomap",
+    "echomissioncore",
+    "echoindex",
+    "echotutorialcore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echoplayercore",
+    "echoruntimeguard",
+    "echodatacore",
+    "echoholomap",
+    "echomissioncore",
+    "echoindex",
+    "echotutorialcore"
+  ],
+  "optionalModules": [
+    "echologisticsnetwork",
+    "echoweathercore",
+    "echothemecore",
+    "echosoundcore"
+  ]
+}

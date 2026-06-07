@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_server_smp:orientation",
+  "category": "creator_pack",
+  "title": "Server Admin Flow",
+  "summary": "A server-focused starter with PlayerCore, RuntimeGuard, DataCore, HoloMap, MissionCore, Index, and TutorialCore.",
+  "body": "A multiplayer-safe ECHO starter focused on permissions, homes, team markers, diagnostics, server budgets, backups, and optional shared systems.",
+  "steps": [
+    "Configure PlayerCore before opening the server.",
+    "Use RuntimeGuard categories for low-end profiles.",
+    "Keep optional integrations documented for players."
+  ],
+  "commonMistakes": [
+    "Single-player story campaigns",
+    "Packs without server admins",
+    "Ashfall official profile exports"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

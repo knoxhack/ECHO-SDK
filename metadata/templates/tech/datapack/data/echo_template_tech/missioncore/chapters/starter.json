@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:starter_chapter",
+  "title": "Tech Opening Loop",
+  "summary": "A 1.0.0-synced Tech starter that keeps the existing 1.0.0 Tech wave content and makes the first generator, battery, processor, depot, and Terminal dashboard path explicit.",
+  "description": "Open Terminal, read Power Basics, build generation and storage, route high voltage into a processor, automate a depot, then verify runtime budgets before scaling.",
+  "sortOrder": 10
+}

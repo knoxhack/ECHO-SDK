@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_blank_custom:starter_chapter",
+  "title": "Blank Custom Opening Loop",
+  "summary": "A guided Blank Custom starter with Core, NetCore, Index, TutorialCore, MissionCore, and HoloMap scaffolds plus one replaceable first-session loop.",
+  "description": "Open Index, read the blank-pack orientation, complete a tiny MissionCore checklist, view the starter HoloMap layer, and replace the sample content with the pack concept.",
+  "sortOrder": 10
+}

@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:automation_line",
+  "category": "echo_template_tech:starter",
+  "title": "Automation Line",
+  "subtitle": "Power, process, move, validate",
+  "summary": "A good starter automation line has one power source, one buffer, one processor, and one depot.",
+  "body": "The recommended Tech Wave line is Terminal -> Power Basics -> generator -> Field Battery Bank -> High Voltage Cable -> Industrial Nexus processor -> Logistics depot. Validate each step before adding a second machine, and document any custom recipe or multiblock changes in Index.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

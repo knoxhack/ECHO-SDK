@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_tech:grid_commissioning",
+  "category": "creator_pack",
+  "title": "Grid Commissioning",
+  "summary": "After the first generator and battery are online, scan, mark, and document the grid before scaling.",
+  "body": "Use Lens on a PowerGrid node, open the Power Grid Terminal tab, and place HoloMap markers for the Factory Substation anchor, high-voltage trunk, and Field Battery room. The goal is a readable factory path, not a larger content wave.",
+  "steps": [
+    "Scan a generator, high-voltage cable, Field Battery Bank, or Factory Substation with Lens.",
+    "Open the Power Grid Terminal tab and follow the next-step line.",
+    "Place HoloMap markers for factory_substation_anchor, high_voltage_trunk, and field_battery_room.",
+    "Finish the Grid Commissioning mission before adding more machine rows."
+  ],
+  "commonMistakes": [
+    "Treating high-voltage cable as decoration instead of a marked route.",
+    "Skipping Field Battery reserve before the first heavy processor.",
+    "Leaving custom component recipes undocumented in Index."
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echopowergrid"
+}

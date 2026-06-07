@@ -1,0 +1,23 @@
+{
+  "id": "echo_template_pack2_draft:processor_workcell",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Item and Block Docs: Processor Workcell",
+  "summary": "Prototype docs for the first Industrial Nexus worksite route.",
+  "body": "The processor workcell is a route target in 1.0.0, not a balanced production release. Use the HoloMap marker, Lens worksite scan, and MissionCore waypoint objective to prove the processor line can be connected to Terminal and Index before final recipes or machine tuning are introduced.",
+  "linked_items": [
+    "echoindustrialnexus:scrap_processor_controller",
+    "echoindustrialnexus:component_assembler",
+    "echoindustrialnexus:industrial_item_bus",
+    "echoindustrialnexus:industrial_power_bus"
+  ],
+  "tags": [
+    "industrialnexus",
+    "processor",
+    "prototype"
+  ],
+  "related": [
+    "echo_template_pack2_draft:processor_route",
+    "echo_template_pack2_draft:terminal_next_objective"
+  ],
+  "sortOrder": 35
+}

@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_vanilla_plus:starter_timeline_to_mission",
+  "from": "echo_template_vanilla_plus:starter_timeline",
+  "to": "echo_template_vanilla_plus:first_10_minutes",
+  "relation": "guides_progression",
+  "missionId": "echo_template_vanilla_plus:starter_progression_sync",
+  "holomapMarkerId": "echo_template_vanilla_plus:vanilla_safe_base"
+}

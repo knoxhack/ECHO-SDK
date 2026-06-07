@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_full_ashfall:route_records",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Route Records",
+  "subtitle": "Terminal memory for what the field taught you",
+  "summary": "Route Records connect Lens discoveries, HoloMap markers, mission state, and the next useful What Now prompt.",
+  "body": "After each route, return to shelter and check Terminal Route Records. A route record should include signal source, marker, risk label, reward reason, and route status.",
+  "links": {
+    "terminalPage": "echo_template_full_ashfall:ashfall_first_month_routes",
+    "mission": "echo_template_full_ashfall:ashfall_first_month_routes"
+  },
+  "tags": [
+    "ashfall",
+    "terminal",
+    "routes"
+  ]
+}

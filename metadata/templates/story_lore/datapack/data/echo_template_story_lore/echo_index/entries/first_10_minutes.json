@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_story_lore:first_10_minutes",
+  "category": "echo_template_story_lore:starter",
+  "title": "First 10 Minutes",
+  "subtitle": "Template starter guidance",
+  "summary": "Opening goals for Story/Lore generated packs.",
+  "body": "Open Terminal and read the first archive. Accept the starter story mission. Pin the first story marker on HoloMap.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "first-10-minutes"
+  ]
+}

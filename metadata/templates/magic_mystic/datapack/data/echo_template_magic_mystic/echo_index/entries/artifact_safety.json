@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_magic_mystic:artifact_safety",
+  "category": "echo_template_magic_mystic:starter",
+  "title": "Artifact Safety",
+  "subtitle": "Magic/Mystic creator note",
+  "summary": "Starter documentation for artifact safety in a Magic/Mystic pack.",
+  "body": "Use this page to explain artifact safety with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Magic/Mystic",
+    "starter"
+  ]
+}

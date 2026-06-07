@@ -1,0 +1,36 @@
+{
+  "template": "story_lore",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echoterminal",
+    "echoindex",
+    "echomissioncore",
+    "signalos",
+    "echosoundcore",
+    "echoholomap",
+    "echolens",
+    "echotutorialcore",
+    "echothemecore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echoterminal",
+    "echoindex",
+    "echomissioncore",
+    "signalos",
+    "echosoundcore",
+    "echoholomap",
+    "echolens",
+    "echotutorialcore",
+    "echothemecore"
+  ],
+  "optionalModules": [
+    "echodatacore",
+    "echoworldcore"
+  ]
+}

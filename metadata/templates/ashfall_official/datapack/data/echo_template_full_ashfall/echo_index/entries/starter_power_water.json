@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_full_ashfall:starter_power_water",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Starter Power and Water",
+  "subtitle": "Stabilize before expanding",
+  "summary": "Clean water, basic power, and route prep are the bridge between first-week survival and first-month exploration.",
+  "body": "Do not leave for a medium-risk route before the first water and power loops are understandable or documented. Filters, clean water, a charged scanner, and small repair supplies should support the next route.",
+  "links": {
+    "mission": "echo_template_full_ashfall:ashfall_first_month_routes",
+    "terminalPage": "echo_template_full_ashfall:ashfall_first_month_routes"
+  },
+  "tags": [
+    "ashfall",
+    "water",
+    "power"
+  ]
+}

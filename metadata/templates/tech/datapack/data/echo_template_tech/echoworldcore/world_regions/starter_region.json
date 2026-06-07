@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:starter_region",
+  "displayName": "Starter Factory Plot",
+  "description": "Example WorldCore region for Tech packs.",
+  "regionType": "starter",
+  "priority": 1
+}

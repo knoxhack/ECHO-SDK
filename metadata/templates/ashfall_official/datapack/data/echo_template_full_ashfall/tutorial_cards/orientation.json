@@ -1,0 +1,18 @@
+{
+  "id": "echo_template_full_ashfall:orientation",
+  "category": "creator_pack",
+  "title": "Ashfall Profile Check",
+  "summary": "The official Ashfall pack profile with Ashfall theme, docs, metadata, and export checks.",
+  "body": "The official Ashfall profile starter for ECHO Launcher exports, preserving Ashfall as Official ECHO Pack #1 and keeping its content isolated from generic templates.",
+  "steps": [
+    "Use the official pack metadata as the source of truth.",
+    "Keep Ashfall-specific content registered through the Ashfall profile.",
+    "Validate exports before public distribution."
+  ],
+  "commonMistakes": [
+    "Generic custom packs",
+    "Creators who do not want the official Ashfall profile"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-native-addon",
+  "name": "ECHO Native Addon",
+  "kind": "addon",
+  "description": "Public native addon starter with release-prep checklist and SDK-only boundaries.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoNativeAddon",
+    "kind": "native_addon",
+    "role": "native_feature",
+    "feature_id": "native.generated",
+    "display_name": "ECHO Native Addon"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.mod.json",
+    "addons/{{module_id}}/docs/native-release-checklist.md"
+  ],
+  "defaultFeatures": [
+    "native.generated"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "src/main/resources/assets/{{module_id}}/**",
+    "docs/**",
+    "README.md"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "architect_agent",
+    "runtime_agent",
+    "diagnostics_agent",
+    "release_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew validateEchoSdkTemplates",
+    ".\\gradlew generatePlan3ReleasePrepReport"
+  ]
+}

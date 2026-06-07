@@ -1,0 +1,67 @@
+{
+    "id": "ashfall_official",
+    "name": "Full Ashfall Starter Pack",
+    "version": "1.7.6",
+    "minecraftVersion": "26.1.2",
+    "loader": "NeoForge",
+    "modules": {
+        "requiredModules": [
+            "echocore",
+            "echonetcore",
+            "echoashfallprotocol"
+        ],
+        "recommendedModules": [
+            "echoagriculturereclamation",
+            "echoarmory",
+            "echoblackboxprotocol",
+            "echoblockworks",
+            "echoconvoyprotocol",
+            "echodatacore",
+            "echoholomap",
+            "echoindex",
+            "echoindustrialnexus",
+            "echolens",
+            "echologisticsnetwork",
+            "echomissioncore",
+            "echomultiblockcore",
+            "echonexusprotocol",
+            "echoorbitalremnants",
+            "echoplayercore",
+            "echopowergrid",
+            "echorecovery",
+            "echorelictech",
+            "echorendercore",
+            "echoruntimeguard",
+            "echoscreencore",
+            "echosoundcore",
+            "echostationfall",
+            "echoterminal",
+            "echothemecore",
+            "echotutorialcore",
+            "echoweathercore",
+            "echowiki",
+            "echoworldcore",
+            "signalos"
+        ],
+        "optionalModules": [
+            "echomodpackcommandcenter",
+            "echotextureforge",
+            "signalosexample"
+        ]
+    },
+    "exportProfiles": {
+        "client": true,
+        "server": true,
+        "curseforge": true,
+        "modrinth": true,
+        "configsOnly": true
+    },
+    "docs": {
+        "readme": "README.md",
+        "changelog": "CHANGELOG.md",
+        "knownIssues": "KNOWN_ISSUES.md",
+        "support": "SUPPORT.md"
+    },
+    "ashfallProfile": true,
+    "jars": []
+}

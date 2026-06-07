@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_pack2_draft:grid_commissioning",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Core Mechanic: Starter Power Loop",
+  "summary": "Build, scan, and document the first PowerGrid loop.",
+  "body": "The first real system is intentionally small: one hand crank generator, one small battery bank, low voltage cable, a grid diagnostic tool, and a later power meter check. Deep Scan the battery when First Tool Check asks for it. The Lens result unlocks Index guidance, the Terminal shows the active route, and HoloMap labels the objective without adding Pack #2 logic to generic PowerGrid.",
+  "tags": [
+    "powergrid",
+    "lens",
+    "core_mechanic"
+  ],
+  "related": [
+    "echo_template_pack2_draft:foundry_overview",
+    "echo_template_pack2_draft:foundry_power_components",
+    "echo_template_pack2_draft:depot_requests",
+    "echo_template_pack2_draft:fault_troubleshooting"
+  ],
+  "sortOrder": 20
+}

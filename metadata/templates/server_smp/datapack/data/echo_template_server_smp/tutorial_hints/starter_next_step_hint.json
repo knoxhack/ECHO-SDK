@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_server_smp:starter_next_step_hint",
+  "title": "Server SMP Next Step",
+  "message": "Open the admin setup Index page.",
+  "trigger": "first_login",
+  "nextStep": "Create a shared HoloMap objective marker."
+}

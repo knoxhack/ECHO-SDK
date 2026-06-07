@@ -1,0 +1,264 @@
+{
+    "id": "ashfall_official",
+    "name": "Full Ashfall",
+    "version": "1.7.6",
+    "style": "Official Pack",
+    "goals": [
+        "Represent Ashfall as Official ECHO Pack #1",
+        "Validate Ashfall profile metadata, starter guidance, and docs",
+        "Prevent official-pack content from leaking into generic templates"
+    ],
+    "description": "The official Ashfall showcase profile for ECHO Launcher exports, with the 1.0.0 content wave integrated into an Ashfall-only first-play route.",
+    "targetPlayer": "Players and pack maintainers preparing the official Ashfall profile.",
+    "gameplayLoop": "Start at the drop pod, open Terminal, read Index, scan wreckage with Lens, pin a HoloMap marker, accept MissionCore guidance, respond to weather, discover a relic, repair power, upgrade gear, then follow the first story signal.",
+    "first30Minutes": [
+        "Accept the Ashfall Showcase Opening mission.",
+        "Respond to the first WeatherCore toxic-front warning.",
+        "Recover the first relic field note.",
+        "Repair the pod PowerGrid spine."
+    ],
+    "first2Hours": [
+        "Install the first Armory upgrade.",
+        "Follow the first faction/story signal.",
+        "Use Logistics, Convoy, Nexus, Orbital, Stationfall, and Blackbox hooks only when the profile route calls for them.",
+        "Verify Ashfall-specific content remains in the official profile or echoashfallprotocol namespace."
+    ],
+    "notRecommendedFor": [
+        "Generic ECHO packs",
+        "Blank custom starts"
+    ],
+    "wizardCopy": {
+        "summary": "The official Ashfall showcase profile with Terminal, Index, Lens, HoloMap, MissionCore, WeatherCore, RelicTech, PowerGrid, Armory, and story hooks kept Ashfall-isolated.",
+        "difficulty": "Official",
+        "bestFor": [
+            "Ashfall",
+            "Official Pack",
+            "Story Survival"
+        ],
+        "warnings": [
+            "Use this only for the official Ashfall profile or explicit Ashfall-derived packs.",
+            "Do not copy Ashfall route text into generic templates."
+        ],
+        "notFor": [
+            "Generic ECHO packs",
+            "Blank custom starts"
+        ]
+    },
+    "recommendedModules": [
+        "echocore",
+        "echonetcore",
+        "echoashfallprotocol",
+        "echoagriculturereclamation",
+        "echoarmory",
+        "echoblackboxprotocol",
+        "echoblockworks",
+        "echoconvoyprotocol",
+        "echodatacore",
+        "echoholomap",
+        "echoindex",
+        "echoindustrialnexus",
+        "echolens",
+        "echologisticsnetwork",
+        "echomissioncore",
+        "echomultiblockcore",
+        "echonexusprotocol",
+        "echoorbitalremnants",
+        "echoplayercore",
+        "echopowergrid",
+        "echorecovery",
+        "echorelictech",
+        "echorendercore",
+        "echoruntimeguard",
+        "echoscreencore",
+        "echosoundcore",
+        "echostationfall",
+        "echoterminal",
+        "echothemecore",
+        "echotutorialcore",
+        "echoweathercore",
+        "echowiki",
+        "echoworldcore",
+        "signalos"
+    ],
+    "requiredModules": [
+        "echocore",
+        "echonetcore",
+        "echoashfallprotocol"
+    ],
+    "optionalModules": [
+        "echomodpackcommandcenter",
+        "echotextureforge",
+        "signalosexample"
+    ],
+    "defaultTheme": "ashfall",
+    "starterMissions": [
+        "datapack/data/echo_template_full_ashfall/missioncore/chapters/starter.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/starter_flow.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/starter_progression_sync.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/ashfall_showcase_flow.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/ashfall_first_month_routes.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/survivor_cache_sweep.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/faction_signal_ping.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/hazard_route_prep.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/first_relay_station_route.json",
+        "datapack/data/echo_template_full_ashfall/missioncore/missions/crashbreak_relay_contract.json"
+    ],
+    "starterIndexEntries": [
+        "datapack/data/echo_template_full_ashfall/echo_index/categories/starter.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/overview.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/relations/overview_to_flow.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/official_profile.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/install_notes.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/server_notes.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/known_issues.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/first_10_minutes.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/starter_timeline.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/relations/starter_timeline_to_mission.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/showcase_flow.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/profile_isolation.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/ashfall_powergrid_repair.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/ashfall_relic_field_note.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/relations/showcase_flow_to_mission.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/relations/showcase_flow_to_marker.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/first_month_routes.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/field_scanning.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/holomap_field_intel.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/poi_signals.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/weather_route_planning.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/faction_field_contacts.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/field_caches.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/route_records.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/safe_zones.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/starter_power_water.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/first_relay_station.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/field_contracts.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/relay_station_rewards.json",
+        "datapack/data/echo_template_full_ashfall/echo_index/entries/relay_hazard_prep.json"
+    ],
+    "starterTutorials": [
+        "datapack/data/echo_template_full_ashfall/tutorial_cards/orientation.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_hints/first_hint.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_cards/starter_timeline.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_hints/starter_next_step_hint.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_flows/first_30_minutes.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_cards/ashfall_showcase_flow.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_hints/ashfall_showcase_next_step.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_hints/first_month_route_hint.json",
+        "datapack/data/echo_template_full_ashfall/tutorial_hints/first_major_route_hint.json"
+    ],
+    "starterHoloMapLayers": [
+        "datapack/data/echo_template_full_ashfall/echoholomap/layers/starter_layer.json",
+        "datapack/data/echo_template_full_ashfall/echoholomap/layers/showcase_flow.json",
+        "datapack/data/echo_template_full_ashfall/echoholomap/layers/first_month_field_intel.json",
+        "datapack/data/echo_template_full_ashfall/echoholomap/layers/first_major_route.json"
+    ],
+    "starterWeatherCoreEvents": [
+        "datapack/data/echo_template_full_ashfall/echoweathercore/weather_profiles/starter_weather.json",
+        "datapack/data/echo_template_full_ashfall/echoweathercore/weather_profiles/ashfall_toxic_front.json"
+    ],
+    "starterSoundCoreRules": [
+        "datapack/data/echo_template_full_ashfall/echosoundcore/audio_profiles/ambience/starter_ambience.json",
+        "datapack/data/echo_template_full_ashfall/echosoundcore/audio_profiles/ambience/showcase_cues.json"
+    ],
+    "starterWorldCoreRegions": [
+        "datapack/data/echo_template_full_ashfall/echoworldcore/world_regions/starter_region.json",
+        "datapack/data/echo_template_full_ashfall/echoworldcore/world_regions/showcase_corridor.json"
+    ],
+    "configPresets": [
+        "ashfall_default"
+    ],
+    "exportProfiles": [
+        "client",
+        "server",
+        "curseforge",
+        "modrinth",
+        "configsOnly"
+    ],
+    "healthRules": [
+        "dependencies.required_present",
+        "versions.ecosystem_aligned",
+        "configs.preset_reasoned",
+        "datapacks.examples_valid",
+        "theme.tokens.required",
+        "export.profiles.present",
+        "ashfall.no_leak"
+    ],
+    "packManifestPath": "pack_manifest.json",
+    "officialPack": "ashfall",
+    "first10Minutes": [
+        "Open Terminal and read the Ashfall field dashboard.",
+        "Read the Ashfall Showcase Flow Index entry.",
+        "Scan drop-pod wreckage with Lens and pin the first HoloMap marker."
+    ],
+    "contentWaveLabel": "1.0.0 Ashfall showcase sync",
+    "showcaseFlow": [
+        "start at the armored drop pod",
+        "open Terminal and read the Ashfall field dashboard",
+        "read the Ashfall Showcase Flow Index entry",
+        "scan drop-pod wreckage with Lens",
+        "pin the first HoloMap field objective",
+        "accept the Ashfall Showcase Opening MissionCore mission",
+        "respond to the first WeatherCore toxic-front warning",
+        "recover a small RelicTech field note",
+        "repair the pod PowerGrid spine",
+        "install a basic Armory upgrade",
+        "follow the first faction/story signal",
+        "defer Nexus, Orbital, Stationfall, and Blackbox hooks until the player is supplied"
+    ],
+    "showcaseIntegrations": {
+        "terminal": "Field dashboard summarizes the current next step and links to Index, mission, and marker ids.",
+        "index": "Showcase Flow, Profile Isolation, Relic Field Note, and Power Repair entries stay in the Ashfall namespace.",
+        "missioncore": "Ashfall Showcase Opening chains the first ECHO systems without adding a new content wave.",
+        "holomap": "Showcase Flow layer exposes opening route markers only for the Ashfall official profile.",
+        "lens": "Opening scan rows unlock Index and MissionCore context for wreckage, relic, and power repair beats.",
+        "weathercore": "Toxic Front warning teaches retreat and shelter without becoming a punishment spike.",
+        "soundcore": "Subtle optional cue profile supports Terminal, Lens, relic, and repair feedback.",
+        "worldcore": "Showcase Corridor groups the opening route as profile-scoped field intel.",
+        "relictech": "First relic field note demonstrates discovery cross-links before Nexus escalation.",
+        "powergrid": "Drop-pod grid repair uses the 1.0.0 tech wave as a small survival repair step.",
+        "armory": "First Field Upgrade introduces gear readiness before faction pressure rises.",
+        "logisticsConvoy": "Depot and convoy hooks remain optional later-route bridges.",
+        "stationNexusBlackbox": "Story links are signposted as later hooks, not front-loaded requirements.",
+        "themeCore": "Ashfall Cyberglass tokens use orange warning, cyan focus, and dark panel surfaces."
+    },
+    "ashfallProfileIsolation": {
+        "allowedNamespaces": [
+            "echoashfallprotocol",
+            "echo_template_full_ashfall"
+        ],
+        "allowedSurfaces": [
+            "metadata/official_packs/ashfall",
+            "metadata/templates/ashfall_official",
+            "examples/packs/full_ashfall",
+            "addons/echoashfallprotocol/src/main/resources/data/echoashfallprotocol"
+        ],
+        "genericDefaultsMustNotContain": [
+            "echoashfallprotocol",
+            "ECHO-7",
+            "Prime Relay",
+            "Ashfall Nexus"
+        ],
+        "reusableModulesRemainStandalone": true
+    },
+    "starterLensScans": [
+        "datapack/data/echo_template_full_ashfall/echolens/scan_profiles/ashfall_showcase_scans.json",
+        "datapack/data/echo_template_full_ashfall/echolens/scan_profiles/ashfall_first_month_scans.json",
+        "datapack/data/echo_template_full_ashfall/echolens/scan_profiles/ashfall_major_route_scans.json"
+    ],
+    "starterTerminalPages": [
+        "datapack/data/echo_template_full_ashfall/echoterminal/pages/ashfall_showcase_dashboard.json",
+        "datapack/data/echo_template_full_ashfall/echoterminal/pages/ashfall_first_month_routes.json",
+        "datapack/data/echo_template_full_ashfall/echoterminal/pages/ashfall_major_route_records.json"
+    ],
+    "starterRelicTechDiscoveries": [
+        "datapack/data/echo_template_full_ashfall/echorelictech/discoveries/ashfall_relic_first_contact.json",
+        "datapack/data/echo_template_full_ashfall/echorelictech/discoveries/ashfall_relay_signal_fragment.json"
+    ],
+    "starterPowerGridRepairs": [
+        "datapack/data/echo_template_full_ashfall/echopowergrid/repair_paths/ashfall_drop_pod_grid.json",
+        "datapack/data/echo_template_full_ashfall/echopowergrid/repair_paths/ashfall_relay_station_repair.json"
+    ],
+    "starterArmoryLoadouts": [
+        "datapack/data/echo_template_full_ashfall/echoarmory/loadouts/ashfall_first_upgrade.json"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_story_lore:starter_layer",
+  "name": "Story/Lore Starter Layer",
+  "description": "Starter HoloMap layer for Story/Lore generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_story_lore:first_archive_signal",
+      "label": "First Archive Signal",
+      "kind": "story",
+      "description": "The starter marker connects the opening archive to a clue scan and mission objective.",
+      "missionId": "echo_template_story_lore:starter_progression_sync",
+      "indexEntry": "echo_template_story_lore:starter_timeline"
+    }
+  ]
+}

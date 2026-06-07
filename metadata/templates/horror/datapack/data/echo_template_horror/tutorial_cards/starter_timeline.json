@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_horror:starter_timeline",
+  "category": "creator_pack",
+  "title": "Horror Starter Timeline",
+  "summary": "A horror investigation starter with Terminal, Index, SoundCore, Lens, MissionCore, HoloMap, danger markers, and pacing hints.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Horror generated packs.",
+  "steps": [
+    "Read the signal investigation Index page.",
+    "Scan one evidence object with Lens.",
+    "Enable the first investigation hint.",
+    "Open the first archive entry.",
+    "Follow a HoloMap clue marker while noting nearby danger."
+  ],
+  "commonMistakes": [
+    "Bright utility-only packs",
+    "Factory automation starts"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

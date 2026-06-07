@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_tech:runtime_budget_checklist",
+  "category": "echo_template_tech:starter",
+  "title": "Runtime Budget Checklist",
+  "subtitle": "Keep the first factory readable and cheap to tick",
+  "summary": "Use RuntimeGuard checks, small loaded networks, and marked substations before expanding the Tech starter line.",
+  "body": "Before publishing, inspect loaded network count, node count, route length, HoloMap marker density, and machine hall chunk loading. Substations should divide generation, battery rooms, and consumers so RuntimeGuard and Lens output stay legible.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "RuntimeGuard",
+    "PowerGrid"
+  ],
+  "related": [
+    "echo_template_tech:runtime_safety",
+    "echo_template_tech:high_voltage_distribution",
+    "echo_template_tech:grid_commissioning_depth"
+  ]
+}

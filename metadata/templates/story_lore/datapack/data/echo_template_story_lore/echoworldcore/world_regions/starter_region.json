@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_story_lore:starter_region",
+  "displayName": "Chapter One Region",
+  "description": "Example WorldCore region for Story/Lore packs.",
+  "regionType": "starter",
+  "priority": 1
+}

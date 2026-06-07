@@ -1,0 +1,39 @@
+{
+  "id": "echo_template_full_ashfall:starter_flow",
+  "chapterId": "echo_template_full_ashfall:starter_chapter",
+  "title": "Ashfall Profile Verification",
+  "briefing": "Verify the official profile metadata, docs, and export flow before release.",
+  "objectives": [
+    {
+      "id": "review_official_pack_metadata",
+      "type": "creator_action",
+      "label": "Review official pack metadata",
+      "detail": "Creator starter objective for Full Ashfall: Review official pack metadata."
+    },
+    {
+      "id": "confirm_ashfall_theme_selection",
+      "type": "creator_action",
+      "label": "Confirm Ashfall theme selection",
+      "detail": "Creator starter objective for Full Ashfall: Confirm Ashfall theme selection."
+    },
+    {
+      "id": "check_known_issues",
+      "type": "creator_action",
+      "label": "Check known issues",
+      "detail": "Creator starter objective for Full Ashfall: Check known issues."
+    },
+    {
+      "id": "validate_client_and_server_exports",
+      "type": "creator_action",
+      "label": "Validate client and server exports",
+      "detail": "Creator starter objective for Full Ashfall: Validate client and server exports."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_full_ashfall:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

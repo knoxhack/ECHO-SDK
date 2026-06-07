@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_tech:starter_weather",
+  "type": "ambient",
+  "displayName": "Factory Weather Awareness",
+  "defaultSeverity": "low",
+  "scope": "starter_area",
+  "description": "Weather profile used by the Tech starter template."
+}

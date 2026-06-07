@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_server_smp:starter_ambience",
+  "sound": "minecraft:ambient.cave",
+  "subtitle": "SMP Notification Ambience",
+  "volume": 0.35,
+  "pitch": 1.0,
+  "loop": true,
+  "description": "Subtle ambience placeholder for Server SMP starter packs."
+}

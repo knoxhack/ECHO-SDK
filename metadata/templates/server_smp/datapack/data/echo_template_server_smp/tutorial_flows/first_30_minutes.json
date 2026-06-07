@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_server_smp:first_30_minutes",
+  "title": "Server SMP First 30 Minutes",
+  "cards": [
+    "echo_template_server_smp:orientation",
+    "echo_template_server_smp:starter_timeline"
+  ],
+  "steps": [
+    "Create a shared HoloMap objective marker.",
+    "Complete the admin setup MissionCore checklist.",
+    "Review backup and diagnostics docs.",
+    "Choose server-balanced or low-end config guidance."
+  ]
+}

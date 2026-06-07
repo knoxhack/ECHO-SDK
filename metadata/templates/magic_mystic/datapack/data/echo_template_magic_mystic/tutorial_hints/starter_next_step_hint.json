@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_magic_mystic:starter_next_step_hint",
+  "title": "Magic/Mystic Next Step",
+  "message": "Read the Relic Basics Index page.",
+  "trigger": "first_login",
+  "nextStep": "Track a relic signal on HoloMap."
+}

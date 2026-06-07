@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_pack2_draft:warning_state_hint",
+  "text": "Amber warning states mean review the route or optional module, not that Pack #2 is broken.",
+  "context": "runtimeguard",
+  "linkedIndexEntry": "echo_template_pack2_draft:fault_troubleshooting",
+  "themeToken": "border.warning"
+}

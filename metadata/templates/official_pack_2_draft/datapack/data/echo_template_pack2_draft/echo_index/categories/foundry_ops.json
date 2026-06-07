@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_pack2_draft:foundry_ops",
+  "title": "Foundry Operations",
+  "description": "Draft category for Pack #2 factory planning entries.",
+  "icon": "minecraft:furnace",
+  "sortOrder": 10
+}

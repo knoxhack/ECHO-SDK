@@ -1,0 +1,57 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_first_month_routes",
+  "chapterId": "ashfall_first_month",
+  "title": "Open the First Route Desk",
+  "briefing": "Your first week kept you alive. The next step is controlled exploration: scan a nearby lead, read the field guide, track one route marker, and return before the weather turns.",
+  "objectives": [
+    {
+      "id": "review_route_desk",
+      "type": "terminal_page",
+      "label": "Open the First-Month Route Desk",
+      "detail": "Use Terminal What Now or Route Records to review the active route desk."
+    },
+    {
+      "id": "scan_cache_signal",
+      "type": "lens_scan",
+      "label": "Scan the survivor cache signal",
+      "detail": "Use Lens on the nearest cache signal or scanner-led salvage marker."
+    },
+    {
+      "id": "read_field_guide",
+      "type": "index_entry",
+      "label": "Read the field guide",
+      "detail": "Open First-Month Routes or Field Caches in the Index before committing to the route."
+    },
+    {
+      "id": "track_marker",
+      "type": "holomap_marker",
+      "label": "Track one field marker",
+      "detail": "Track Survivor Cache Signal or Ruined Plains Route from the HoloMap field intel layer."
+    },
+    {
+      "id": "return_to_base",
+      "type": "return",
+      "label": "Return and update What Now",
+      "detail": "After the route, return to shelter and check Terminal for the next safe step."
+    }
+  ],
+  "guidanceLinks": {
+    "terminalPage": "echo_template_full_ashfall:ashfall_first_month_routes",
+    "indexEntry": "echo_template_full_ashfall:first_month_routes",
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_full_ashfall:route_records",
+      "label": "Route Records field guide unlocked"
+    },
+    {
+      "type": "supply_cache",
+      "id": "echo_template_full_ashfall:first_month_route_cache",
+      "label": "Small route prep cache"
+    }
+  ],
+  "completionText": "Route desk online. Your next safe expansion should come from a scanned signal, a readable risk label, and a planned return path."
+}

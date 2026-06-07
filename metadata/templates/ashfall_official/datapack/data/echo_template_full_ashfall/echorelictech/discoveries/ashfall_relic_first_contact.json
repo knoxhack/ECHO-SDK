@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_relic_first_contact",
+  "title": "Relic Field Note",
+  "summary": "First low-risk RelicTech discovery for the official profile opening route.",
+  "indexEntry": "echo_template_full_ashfall:ashfall_relic_field_note",
+  "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+  "soundCue": "echo_template_full_ashfall:showcase_cues"
+}

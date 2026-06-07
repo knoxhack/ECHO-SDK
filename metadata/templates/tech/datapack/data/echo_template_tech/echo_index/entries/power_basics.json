@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:power_basics",
+  "category": "echo_template_tech:starter",
+  "title": "Power Basics",
+  "subtitle": "From starter grids to factory buses",
+  "summary": "Use PowerGrid to build a readable EP network before scaling machines.",
+  "body": "Start with a starter generator, one battery, and a short cable run. In 1.0.0, Tech packs can progress into reinforced solar panels, biofuel generators, field battery banks, high-voltage cable, and factory substations. Keep each grid small enough to inspect, then use RuntimeGuard and HoloMap markers before scaling automation.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_server_smp:starter_region",
+  "displayName": "Community Spawn Region",
+  "description": "Example WorldCore region for Server SMP packs.",
+  "regionType": "starter",
+  "priority": 1
+}

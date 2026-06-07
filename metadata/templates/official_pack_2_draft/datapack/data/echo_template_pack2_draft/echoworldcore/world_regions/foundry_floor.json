@@ -1,0 +1,11 @@
+{
+  "id": "echo_template_pack2_draft:foundry_floor",
+  "name": "Foundry Floor",
+  "description": "Prototype WorldCore region for the first Pack #2 commissioning route.",
+  "risk": "controlled",
+  "riskLabel": "starter_route",
+  "linkedIndexEntry": "echo_template_pack2_draft:foundry_overview",
+  "linkedHoloMapLayer": "echo_template_pack2_draft:foundry_floor",
+  "linkedMission": "echo_template_pack2_draft:foundry_commissioning_draft",
+  "notes": "No generated structures or world placement ship in 1.0.0; this is a data-driven label for integration validation."
+}

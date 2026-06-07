@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_pack2_draft:scans_to_index_unlocks",
+  "from": "echo_template_pack2_draft:grid_commissioning",
+  "to": "echo_template_pack2_draft:foundry_power_components",
+  "type": "scan_unlock",
+  "label": "Lens scans reveal component docs",
+  "scanProfiles": [
+    "echo_template_pack2_draft:dormant_substation",
+    "echo_template_pack2_draft:processor_worksite",
+    "echo_template_pack2_draft:depot_request_board",
+    "echo_template_pack2_draft:runtime_budget_panel"
+  ]
+}

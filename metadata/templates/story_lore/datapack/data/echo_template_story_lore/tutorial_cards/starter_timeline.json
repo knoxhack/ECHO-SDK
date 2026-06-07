@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_story_lore:starter_timeline",
+  "category": "creator_pack",
+  "title": "Story/Lore Starter Timeline",
+  "summary": "A lore-pack foundation with Terminal, Index, MissionCore, SignalOS, Lens, HoloMap, tutorials, and SoundCore.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Story/Lore generated packs.",
+  "steps": [
+    "Open Terminal and read the first archive.",
+    "Accept the starter story mission.",
+    "Pin the first story marker on HoloMap.",
+    "Scan a story clue with Lens.",
+    "Read the Index page that summarizes the chapter."
+  ],
+  "commonMistakes": [
+    "Utility-only packs",
+    "Official-pack clones without profile separation"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

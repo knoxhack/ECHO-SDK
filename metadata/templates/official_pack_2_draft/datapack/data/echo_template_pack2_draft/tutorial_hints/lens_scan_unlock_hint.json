@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_pack2_draft:lens_scan_unlock_hint",
+  "text": "Pack #2 Lens scans unlock Index notes, mission objective text, and map markers when those optional surfaces are available.",
+  "context": "lens",
+  "linkedScanProfile": "echo_template_pack2_draft:dormant_substation",
+  "themeToken": "scan.pulse"
+}

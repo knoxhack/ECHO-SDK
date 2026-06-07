@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_full_ashfall:starter_timeline",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Starter Timeline",
+  "subtitle": "Template starter guidance",
+  "summary": "First-session progression for Full Ashfall.",
+  "body": "First 10 minutes: Read the Ashfall install notes. Confirm the official profile module list. Open the Ashfall-safe starter TutorialCore card. First 30 minutes: Review known issues and server notes. Track the first official-profile HoloMap marker. Complete the Ashfall profile validation mission. Run diagnostics before publishing an export. First 2 hours: Validate client and server export profiles. Review official Index and Terminal content registration. Keep Ashfall-specific content inside the official profile namespace.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "progression"
+  ]
+}

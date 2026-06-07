@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_horror:tension_pacing",
+  "category": "echo_template_horror:starter",
+  "title": "Tension Pacing",
+  "subtitle": "Horror creator note",
+  "summary": "Starter documentation for tension pacing in a Horror pack.",
+  "body": "Use this page to explain tension pacing with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Horror",
+    "starter"
+  ]
+}

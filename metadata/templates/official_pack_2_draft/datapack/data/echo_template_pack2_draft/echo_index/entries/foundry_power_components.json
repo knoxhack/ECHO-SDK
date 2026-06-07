@@ -1,0 +1,25 @@
+{
+  "id": "echo_template_pack2_draft:foundry_power_components",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Item and Block Docs: Starter Power Components",
+  "summary": "Reference for the MVP power objects used by the first Pack #2 missions.",
+  "body": "The prototype uses existing PowerGrid content instead of Pack #2-only blocks. The hand crank generator starts the line, low voltage cable connects it, the small battery bank stores the first charge, the power meter verifies the route, and later Factory Substation or High Voltage Cable docs can expand the line without changing generic PowerGrid behavior.",
+  "linked_items": [
+    "echopowergrid:hand_crank_generator",
+    "echopowergrid:low_voltage_cable",
+    "echopowergrid:small_battery_bank",
+    "echopowergrid:power_meter",
+    "echopowergrid:factory_substation",
+    "echopowergrid:high_voltage_cable"
+  ],
+  "tags": [
+    "powergrid",
+    "items",
+    "blocks"
+  ],
+  "related": [
+    "echo_template_pack2_draft:grid_commissioning",
+    "echo_template_pack2_draft:fault_troubleshooting"
+  ],
+  "sortOrder": 25
+}

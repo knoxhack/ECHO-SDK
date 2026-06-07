@@ -1,0 +1,44 @@
+{
+  "id": "echo_template_pack2_draft:depot_route",
+  "title": "Depot Request Route",
+  "description": "Prototype logistics route linking the meter check to the depot request board.",
+  "markerSource": "pack2_metadata_and_logistics_network",
+  "visibleByDefault": true,
+  "markerStyle": "pack2_theme",
+  "routeLinks": [
+    {
+      "id": "processor_to_depot",
+      "from": "processor_worksite",
+      "to": "depot_request_board",
+      "riskLabel": "unproven",
+      "themeToken": "map.route.logistics"
+    }
+  ],
+  "markers": [
+    {
+      "id": "depot_request_board",
+      "label": "Depot Request Board",
+      "kind": "logistics",
+      "type": "next_objective",
+      "status": "prototype",
+      "riskLabel": "watch",
+      "icon": "echologisticsnetwork:route_requester",
+      "x": -14,
+      "z": 16,
+      "missionId": "echo_template_pack2_draft:calibrate_depot_requests",
+      "objectiveId": "echo_template_pack2_draft:calibrate_depot_requests/read_depot_request",
+      "indexEntry": "echo_template_pack2_draft:logistics_request_board",
+      "lensProfile": "echo_template_pack2_draft:depot_request_board",
+      "themeToken": "map.marker.next",
+      "previewIconState": "prototype",
+      "tooltip": "Depot Request Board: watch",
+      "screenshotHint": "Include this marker in the HoloMap preview screenshot if it is part of the active route."
+    }
+  ],
+  "previewStatus": "internal_preview",
+  "visualPolish": {
+    "markerShape": "compact diamond or square pin",
+    "labelDensity": "short labels with risk chip",
+    "avoidAshfallStyle": true
+  }
+}

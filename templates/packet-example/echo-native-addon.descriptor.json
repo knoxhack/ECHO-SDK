@@ -1,0 +1,13 @@
+{
+  "schema": "echo.native.descriptor.v1",
+  "id": "packetexample",
+  "name": "Packet Example",
+  "version": "1.0.0",
+  "nativePolicy": "NATIVE",
+  "entryPoints": {
+    "native": "com.example.packetexample.PacketExampleAddon"
+  },
+  "services": ["packetexample:packet_service"],
+  "optionalIntegrations": [],
+  "side": "BOTH"
+}

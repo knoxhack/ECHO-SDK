@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_tech:factory_markers_to_depth_mission",
+  "from": "echo_template_tech:factory_marker_map",
+  "to": "echo_template_tech:grid_commissioning_depth",
+  "type": "mission_link",
+  "label": "HoloMap marker ids support the commissioning mission."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_convoy_hook",
+  "title": "Convoy Hook",
+  "summary": "A later marker handoff from the opening field route toward vehicle and depot play.",
+  "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+  "holomapMarker": "echo_template_full_ashfall:faction_contact"
+}

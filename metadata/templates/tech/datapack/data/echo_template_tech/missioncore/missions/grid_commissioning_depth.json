@@ -1,0 +1,56 @@
+{
+  "id": "echo_template_tech:grid_commissioning_depth",
+  "chapterId": "echo_template_tech:starter_chapter",
+  "title": "Grid Commissioning",
+  "briefing": "Bridge the Tech Wave generator tier into readable scans, mapped rooms, component recipes, and Terminal next steps.",
+  "phase": "phase_1",
+  "phaseTitle": "Progression Bridge",
+  "phaseOrder": 20,
+  "order": 20,
+  "prerequisites": [
+    "echo_template_tech:starter_flow"
+  ],
+  "objectives": [
+    {
+      "id": "scan_power_node_with_lens",
+      "type": "scan_block",
+      "label": "Scan a PowerGrid node with Lens",
+      "detail": "Scan a reinforced generator, Field Battery Bank, high-voltage cable, or Factory Substation to reveal Index, MissionCore, and HoloMap hints.",
+      "target": "echopowergrid:power_node",
+      "criteria": {
+        "lensProvider": "echopowergrid:power_grid_scan"
+      }
+    },
+    {
+      "id": "mark_factory_substation",
+      "type": "creator_action",
+      "label": "Mark the Factory Substation anchor",
+      "detail": "Confirm a HoloMap marker uses the factory_substation_anchor id near the grid boundary."
+    },
+    {
+      "id": "assemble_supporting_components",
+      "type": "creator_action",
+      "label": "Assemble support components",
+      "detail": "Use Component Assembler recipes for photovoltaic arrays, biofuel turbines, ceramic insulators, and high-voltage buses."
+    },
+    {
+      "id": "review_terminal_next_step",
+      "type": "creator_action",
+      "label": "Review the Terminal next-step summary",
+      "detail": "Open the Power Grid Terminal tab and use the next-step line before scaling the machine hall."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "item",
+      "item": "echopowergrid:grid_diagnostic_tool",
+      "count": 1,
+      "label": "Grid Diagnostic Tool"
+    },
+    {
+      "type": "documentation",
+      "id": "echo_template_tech:terminal_next_steps",
+      "label": "Unlock the Terminal Next Steps Index page."
+    }
+  ]
+}

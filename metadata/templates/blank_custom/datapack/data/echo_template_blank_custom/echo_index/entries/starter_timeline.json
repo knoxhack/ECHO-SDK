@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_blank_custom:starter_timeline",
+  "category": "echo_template_blank_custom:starter",
+  "title": "Starter Timeline",
+  "subtitle": "Template starter guidance",
+  "summary": "First-session progression for Blank Custom.",
+  "body": "First 10 minutes: Open Index and read the Blank Custom orientation page. Open the starter TutorialCore card. Track the starter HoloMap marker. First 30 minutes: Complete the minimal MissionCore checklist. Rename the sample Index page to match the pack concept. Pick the first additional module or config preset. Run pack validation after changing the scaffold. First 2 hours: Replace the sample mission with a real chapter objective. Add one pack-specific Index entry and one tutorial hint. Export and validate a client and server manifest.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "progression"
+  ]
+}

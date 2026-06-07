@@ -1,0 +1,22 @@
+{
+  "id": "echo_template_pack2_draft:foundry_overview",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Foundry Protocol Preview Brief",
+  "summary": "Internal launcher-preview brief for Official Pack #2.",
+  "body": "Foundry Protocol connects its preview route across Terminal, Index, MissionCore, HoloMap, Lens, SoundCore, ThemeCore, TutorialCore, WorldCore, and profile validation. Start in Terminal, confirm the internal-preview badge, read What Now, complete one Lens scan, follow the starter PowerGrid route, pin the processor worksite, read the depot request, and use Runtime Budget Review as an optional systems check. This page is preview guidance, not public release copy.",
+  "tags": [
+    "overview",
+    "systems_integration",
+    "prototype"
+  ],
+  "related": [
+    "echo_template_pack2_draft:terminal_next_objective",
+    "echo_template_pack2_draft:grid_commissioning",
+    "echo_template_pack2_draft:processor_route",
+    "echo_template_pack2_draft:runtime_budget",
+    "echo_template_pack2_draft:shift_lore_brief"
+  ],
+  "sortOrder": 10,
+  "previewBadge": "internal preview",
+  "screenshotRequirement": "Capture this Index page with the Foundry category and related route links visible before public release."
+}

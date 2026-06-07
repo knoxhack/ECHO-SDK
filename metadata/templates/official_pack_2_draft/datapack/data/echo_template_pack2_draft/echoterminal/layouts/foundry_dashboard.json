@@ -1,0 +1,168 @@
+{
+  "id": "echo_template_pack2_draft:foundry_dashboard",
+  "title": "Foundry Protocol Dashboard",
+  "status": "1.0.0_launcher_preview",
+  "theme": "pack2_theme",
+  "themeTokens": {
+    "surface": "surface.panel",
+    "active": "mission.active",
+    "warning": "border.warning",
+    "error": "border.error",
+    "objective": "map.marker.next",
+    "preview": "preview.badge",
+    "placeholder": "screenshot.placeholder",
+    "whatNow": "tutorial.next",
+    "reward": "mission.reward"
+  },
+  "liveDashboard": "MissionCore route plus existing PowerGrid, HoloMap, Lens, Index, SoundCore, ThemeCore, TutorialCore, and RuntimeGuard surfaces, presented as an internal launcher preview.",
+  "metadataOnly": true,
+  "panels": [
+    {
+      "id": "preview_status",
+      "title": "Internal Preview",
+      "source": "metadata/official_packs/pack2/launcher_card.json",
+      "state": "preview_only",
+      "tone": "preview.badge",
+      "description": "Shows that Official Pack #2 is visible only in internal launcher preview mode and is not a public release.",
+      "links": {
+        "indexEntry": "echo_template_pack2_draft:foundry_overview"
+      }
+    },
+    {
+      "id": "dashboard",
+      "title": "Dashboard",
+      "source": "echoterminal",
+      "state": "metadata",
+      "tone": "surface.panel",
+      "description": "Compact launcher-preview overview for the internal Foundry Protocol MVP route.",
+      "links": {
+        "indexEntry": "echo_template_pack2_draft:foundry_overview",
+        "mission": "echo_template_pack2_draft:foundry_commissioning_draft"
+      },
+      "previewCopy": "Internal preview: not public, not balanced, and still using placeholder visuals."
+    },
+    {
+      "id": "next_objective",
+      "title": "Next Objective",
+      "source": "echomissioncore",
+      "state": "live",
+      "tone": "mission.active",
+      "description": "Reads the active MissionCore route and points players at the next guided Pack #2 beat.",
+      "fallbackText": "Open Foundry Orientation, scan once with Lens, then follow the starter PowerGrid route.",
+      "links": {
+        "mission": "echo_template_pack2_draft:foundry_commissioning_draft",
+        "marker": "echo_template_pack2_draft:foundry_floor#orientation_terminal",
+        "soundCue": "echo_template_pack2_draft:objective_complete"
+      }
+    },
+    {
+      "id": "what_now",
+      "title": "What Now",
+      "source": "echotutorialcore,echomissioncore",
+      "state": "live",
+      "tone": "tutorial.next",
+      "description": "Plain first-step guidance for testers: read this panel, run one Lens Deep Scan, then follow First Tool Check.",
+      "missionIds": [
+        "echo_template_pack2_draft:foundry_commissioning_draft"
+      ],
+      "indexEntries": [
+        "echo_template_pack2_draft:terminal_next_objective",
+        "echo_template_pack2_draft:fault_troubleshooting"
+      ],
+      "links": {
+        "mission": "echo_template_pack2_draft:foundry_commissioning_draft",
+        "indexEntry": "echo_template_pack2_draft:terminal_next_objective",
+        "marker": "echo_template_pack2_draft:foundry_floor#orientation_terminal"
+      }
+    },
+    {
+      "id": "module_status",
+      "title": "Module Status",
+      "source": "metadata/official_packs/pack2/profile.json",
+      "state": "profile",
+      "tone": "surface.raised",
+      "description": "Shows selected, recommended, and optional module posture without treating optional modules as errors.",
+      "modules": [
+        "echoterminal",
+        "echoindex",
+        "echomissioncore",
+        "echoholomap",
+        "echolens",
+        "echosoundcore",
+        "echotutorialcore",
+        "echoworldcore"
+      ]
+    },
+    {
+      "id": "mission_panel",
+      "title": "Mission Panel",
+      "source": "echomissioncore",
+      "state": "live",
+      "tone": "mission.active",
+      "description": "Surfaces Foundry Orientation, First Tool Check, Processor Worksite, Depot Meter, and the optional Runtime Budget Review.",
+      "missionIds": [
+        "echo_template_pack2_draft:foundry_commissioning_draft",
+        "echo_template_pack2_draft:restore_power_spine",
+        "echo_template_pack2_draft:route_processor_line",
+        "echo_template_pack2_draft:calibrate_depot_requests",
+        "echo_template_pack2_draft:runtime_budget_review"
+      ]
+    },
+    {
+      "id": "archive_docs",
+      "title": "Archive Docs",
+      "source": "echoindex",
+      "state": "live",
+      "tone": "surface.selected",
+      "description": "Opens Pack #2 Index entries for core mechanics, item/block docs, progression, troubleshooting, and Foundry story notes.",
+      "indexEntries": [
+        "echo_template_pack2_draft:foundry_overview",
+        "echo_template_pack2_draft:grid_commissioning",
+        "echo_template_pack2_draft:foundry_power_components",
+        "echo_template_pack2_draft:processor_workcell",
+        "echo_template_pack2_draft:logistics_request_board",
+        "echo_template_pack2_draft:fault_troubleshooting",
+        "echo_template_pack2_draft:shift_lore_brief"
+      ]
+    },
+    {
+      "id": "map_objective",
+      "title": "Map Objective",
+      "source": "echoholomap",
+      "state": "live_optional",
+      "tone": "map.marker.next",
+      "description": "Links the active objective to the Pack #2 HoloMap layer when HoloMap is present.",
+      "layers": [
+        "echo_template_pack2_draft:foundry_floor",
+        "echo_template_pack2_draft:power_spine",
+        "echo_template_pack2_draft:processor_route",
+        "echo_template_pack2_draft:depot_route"
+      ],
+      "emptyState": "HoloMap is optional; MissionCore and Index still carry the route."
+    },
+    {
+      "id": "scan_status",
+      "title": "Lens Scan Status",
+      "source": "echolens",
+      "state": "live",
+      "tone": "scan.pulse",
+      "description": "Tracks scan-to-Index and scan-to-mission handoffs for starter power, processor, depot, and runtime review objects.",
+      "scanProfiles": [
+        "echo_template_pack2_draft:dormant_substation",
+        "echo_template_pack2_draft:processor_worksite",
+        "echo_template_pack2_draft:depot_request_board",
+        "echo_template_pack2_draft:runtime_budget_panel"
+      ]
+    },
+    {
+      "id": "warning_state",
+      "title": "Warning State",
+      "source": "echoruntimeguard,echosoundcore",
+      "state": "metadata",
+      "tone": "border.warning",
+      "description": "Routes overload, missing optional module, placeholder visual, and first-use warning copy through theme tokens and subtle sound hooks.",
+      "emptyState": "Warnings explain preview limitations; they do not imply a public release blocker unless validation fails."
+    }
+  ],
+  "previewStatus": "internal_preview"
+}

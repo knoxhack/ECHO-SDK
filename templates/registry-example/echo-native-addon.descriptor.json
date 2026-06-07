@@ -1,0 +1,13 @@
+{
+  "schema": "echo.native.descriptor.v1",
+  "id": "registryexample",
+  "name": "Registry Example",
+  "version": "1.0.0",
+  "nativePolicy": "NATIVE",
+  "entryPoints": {
+    "native": "com.example.registryexample.RegistryExampleAddon"
+  },
+  "services": ["registryexample:block_registry"],
+  "optionalIntegrations": [],
+  "side": "BOTH"
+}

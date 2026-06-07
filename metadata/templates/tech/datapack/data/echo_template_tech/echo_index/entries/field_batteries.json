@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:field_batteries",
+  "category": "echo_template_tech:starter",
+  "title": "Field Battery Banks",
+  "subtitle": "Mid-tier storage for compact factories",
+  "summary": "Field Battery Banks bridge medium and industrial storage without hiding network problems.",
+  "body": "A Field Battery Bank stores 160000 EP and moves up to 800 EP/t in or out. Use one near generator clusters and another near machine rows to smooth demand spikes before building an Industrial Battery Bank.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

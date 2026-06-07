@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:logistics",
+  "category": "echo_template_tech:starter",
+  "title": "Logistics",
+  "subtitle": "Depot-backed item movement",
+  "summary": "Use logistics categories and offers to keep machine chains readable.",
+  "body": "Start with a depot for machine parts and a depot for power components. The template includes a factory utilities category and an example offer that creators can replace with pack-specific materials.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

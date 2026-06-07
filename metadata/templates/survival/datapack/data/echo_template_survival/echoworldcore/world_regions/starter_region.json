@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_survival:starter_region",
+  "displayName": "Starter Safe Zone",
+  "description": "Example WorldCore region for Survival packs.",
+  "regionType": "starter",
+  "priority": 1
+}

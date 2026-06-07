@@ -1,0 +1,26 @@
+{
+  "id": "echo_template_pack2_draft:foundry_30_minutes",
+  "title": "Foundry First 30 Minutes Preview",
+  "steps": [
+    "Open the Foundry Terminal dashboard and confirm the internal-preview badge.",
+    "Read What Now and complete Foundry Orientation with one Lens scan.",
+    "Restore the first PowerGrid spine and scan the starter battery.",
+    "Use HoloMap next-objective markers if HoloMap is installed; otherwise continue through MissionCore and Index.",
+    "Mark and scan the first processor worksite.",
+    "Read depot request guidance, check the first meter, and review known issues before judging preview readiness."
+  ],
+  "linkedMissions": [
+    "echo_template_pack2_draft:foundry_commissioning_draft",
+    "echo_template_pack2_draft:restore_power_spine",
+    "echo_template_pack2_draft:route_processor_line",
+    "echo_template_pack2_draft:calibrate_depot_requests",
+    "echo_template_pack2_draft:runtime_budget_review"
+  ],
+  "failureStates": [
+    "lens_missing",
+    "holomap_missing",
+    "placeholder_visuals",
+    "objective_not_advancing"
+  ],
+  "whatNow": "Terminal should always name the next action before asking the player to inspect a secondary panel."
+}

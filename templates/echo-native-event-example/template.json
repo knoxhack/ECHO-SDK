@@ -1,0 +1,52 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-native-event-example",
+  "name": "ECHO Native Event Example",
+  "kind": "addon",
+  "description": "Example scaffold for typed native event subscriptions and receipts.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoNativeEvent",
+    "kind": "native_example",
+    "role": "event_example",
+    "feature_id": "native.event.example",
+    "display_name": "ECHO Native Event Example"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/examples/{{class_name}}Topic.java"
+  ],
+  "defaultFeatures": [
+    "native.event.example"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "docs/**"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "runtime_agent",
+    "diagnostics_agent",
+    "test_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew validateEchoSdkTemplates",
+    ".\\gradlew generatePlan3ReleasePrepReport"
+  ]
+}

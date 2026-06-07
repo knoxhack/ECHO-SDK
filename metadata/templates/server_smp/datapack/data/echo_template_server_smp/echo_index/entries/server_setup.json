@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_server_smp:server_setup",
+  "category": "echo_template_server_smp:starter",
+  "title": "Server Setup",
+  "subtitle": "Server SMP creator note",
+  "summary": "Starter documentation for server setup in a Server SMP pack.",
+  "body": "Use this page to explain server setup with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Server SMP",
+    "starter"
+  ]
+}

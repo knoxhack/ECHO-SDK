@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_survival:starter_timeline_to_mission",
+  "from": "echo_template_survival:starter_timeline",
+  "to": "echo_template_survival:first_10_minutes",
+  "relation": "guides_progression",
+  "missionId": "echo_template_survival:starter_progression_sync",
+  "holomapMarkerId": "echo_template_survival:starter_safe_zone"
+}

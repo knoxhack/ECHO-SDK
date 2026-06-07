@@ -1,0 +1,69 @@
+{
+  "id": "echo_template_pack2_draft:restore_power_spine",
+  "chapter": "echo_template_pack2_draft:foundry_draft",
+  "phase": "foundry_commissioning_mvp",
+  "phaseTitle": "Foundry Commissioning MVP",
+  "phaseOrder": 10,
+  "category": "Foundry Protocol",
+  "difficulty": "Guided",
+  "terminal_route_phase": "foundry_commissioning_mvp",
+  "terminal_source": "missioncore",
+  "terminal_chapter": "echo_template_pack2_draft:foundry_draft",
+  "order": 20,
+  "title": "First Tool Check",
+  "briefing": "Place the starter grid kit, then Deep Scan the Small Battery Bank so MissionCore can verify the first PowerGrid loop.",
+  "fieldGuide": "The starter loop is deliberately small: hand crank generator, low voltage cable, and one small battery bank. Scan the battery after it is placed, then confirm the HoloMap next-objective marker if HoloMap is present.",
+  "icon": "echopowergrid:small_battery_bank",
+  "kind": "main",
+  "prerequisites": [
+    "echo_template_pack2_draft:foundry_commissioning_draft"
+  ],
+  "objectives": [
+    {
+      "id": "echo_template_pack2_draft:restore_power_spine/scan_small_battery_bank",
+      "type": "scan_block",
+      "target": "echopowergrid:small_battery_bank",
+      "label": "Deep Scan the Small Battery Bank",
+      "detail": "Place the starter battery, connect the first loop, then scan the battery block.",
+      "required": 1,
+      "icon": "echopowergrid:small_battery_bank"
+    },
+    {
+      "id": "echo_template_pack2_draft:restore_power_spine/check_power_marker",
+      "type": "custom",
+      "target": "echoholomap:marker/power_spine/first_power_loop",
+      "label": "Check the power spine marker",
+      "detail": "Use the Pack #2 HoloMap layer when available; otherwise continue from the Terminal mission route.",
+      "required": 1,
+      "icon": "minecraft:compass"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "echo_template_pack2_draft:restore_power_spine/scrap_wire",
+      "item": "echopowergrid:scrap_wire",
+      "count": 6,
+      "label": "Scrap Wire",
+      "detail": "A small repair bundle for the next starter route."
+    },
+    {
+      "id": "echo_template_pack2_draft:restore_power_spine/fuse",
+      "item": "echopowergrid:fuse",
+      "count": 1,
+      "label": "Fuse",
+      "detail": "A single safety component for the next diagnostic step."
+    }
+  ],
+  "metadata": {
+    "indexEntry": "echo_template_pack2_draft:grid_commissioning",
+    "scanProfile": "echo_template_pack2_draft:dormant_substation",
+    "tutorialHint": "echo_template_pack2_draft:power_spine_hint",
+    "holoMapMarker": "echo_template_pack2_draft:power_spine#first_power_loop",
+    "completionCue": "echo_template_pack2_draft:objective_complete",
+    "unlockIndexEntries": "echo_template_pack2_draft:foundry_power_components,echo_template_pack2_draft:fault_troubleshooting",
+    "completionFeedback": "Starter power loop verified. Processor Worksite is ready to mark."
+  },
+  "terminal_route_order": "20",
+  "terminal_route_role": "starter_mission",
+  "terminal_route_prerequisites": "echo_template_pack2_draft:foundry_commissioning_draft"
+}

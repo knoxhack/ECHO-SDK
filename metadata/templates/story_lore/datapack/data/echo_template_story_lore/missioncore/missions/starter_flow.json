@@ -1,0 +1,45 @@
+{
+  "id": "echo_template_story_lore:starter_flow",
+  "chapterId": "echo_template_story_lore:starter_chapter",
+  "title": "Chapter One Signal",
+  "briefing": "Follow an original archive clue from mission log to map marker to Lens scan.",
+  "objectives": [
+    {
+      "id": "open_the_chapter_1_archive",
+      "type": "creator_action",
+      "label": "Open the Chapter 1 archive",
+      "detail": "Creator starter objective for Story/Lore: Open the Chapter 1 archive."
+    },
+    {
+      "id": "track_the_mission_chain",
+      "type": "creator_action",
+      "label": "Track the mission chain",
+      "detail": "Creator starter objective for Story/Lore: Track the mission chain."
+    },
+    {
+      "id": "visit_the_objective_marker",
+      "type": "creator_action",
+      "label": "Visit the objective marker",
+      "detail": "Creator starter objective for Story/Lore: Visit the objective marker."
+    },
+    {
+      "id": "scan_the_clue_with_lens",
+      "type": "creator_action",
+      "label": "Scan the clue with Lens",
+      "detail": "Creator starter objective for Story/Lore: Scan the clue with Lens."
+    },
+    {
+      "id": "trigger_a_story_notification",
+      "type": "creator_action",
+      "label": "Trigger a story notification",
+      "detail": "Creator starter objective for Story/Lore: Trigger a story notification."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_story_lore:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

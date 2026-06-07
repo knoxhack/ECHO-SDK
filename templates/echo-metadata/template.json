@@ -1,0 +1,61 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-metadata",
+  "name": "ECHO Metadata",
+  "kind": "addon",
+  "description": "Scaffold a metadata contract module shell.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoSdkMetadata",
+    "kind": "metadata",
+    "role": "metadata_contract",
+    "feature_id": "metadata.generated",
+    "display_name": "ECHO SDK Metadata"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/gradle.properties",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/contract/{{class_name}}MetadataContract.java",
+    "addons/{{module_id}}/src/main/resources/data/{{module_id}}/metadata/{{module_id}}.metadata.json",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.mod.json",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.ai.json",
+    "addons/{{module_id}}/src/main/templates/META-INF/neoforge.mods.toml",
+    "addons/{{module_id}}/README.md",
+    "addons/{{module_id}}/docs/{{module_id}}.md",
+    "addons/{{module_id}}/src/test/validation/{{module_id}}.validation.json"
+  ],
+  "defaultFeatures": [
+    "metadata.generated"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "src/main/resources/META-INF/**",
+    "docs/**",
+    "README.md"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "user save metadata",
+    "managed installs"
+  ],
+  "recommendedAgentLanes": [
+    "diagnostics_agent",
+    "test_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew scanEchoWorkspace -PechoAddonSet=beta",
+    ".\\gradlew scanEchoMetadata -PechoAddonSet=beta"
+  ]
+}

@@ -1,0 +1,19 @@
+# Vanilla+ Starter Docs
+
+This generated-pack support folder summarizes the Vanilla+ starter progression sync.
+
+First 10 minutes:
+- Open Index and read the Vanilla+ welcome page.
+- Set a home or safe return point with PlayerCore.
+- Create one HoloMap marker for base, farm, mine, or village.
+
+First 30 minutes:
+- Finish a small shelter or base corner.
+- Mark a farm, mine, or village on the starter HoloMap layer.
+- Complete the gentle MissionCore checklist.
+- Review the TutorialCore card if a module is unfamiliar.
+
+First 2 hours:
+- Expand the first base and document recurring routes in Index.
+- Use PlayerCore homes and HoloMap markers to connect farms, mines, and villages.
+- Add creator-specific checklist objectives if this becomes a light SMP pack.

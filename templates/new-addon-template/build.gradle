@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'dev.echo.native.echo-sdk-gradle-plugin' version '1.0.0-RC'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+    mavenLocal()
+    maven { url 'https://maven.echo.dev/rc' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'dev.echo.native:echoaddonapi:1.0.0-RC'
+    implementation 'dev.echo.native:echo-native-contracts:1.0.0-RC'
+    testImplementation 'dev.echo.native:echo-native-testkit:1.0.0-RC'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+packageAddon {
+    descriptorPath = 'src/main/resources/META-INF/echo-native-addon.descriptor.json'
+}

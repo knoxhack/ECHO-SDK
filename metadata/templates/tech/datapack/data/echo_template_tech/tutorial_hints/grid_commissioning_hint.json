@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_tech:grid_commissioning_hint",
+  "title": "Commission Before Scaling",
+  "message": "Lens scan one PowerGrid node, check the Terminal next-step line, and mark the substation, trunk, and battery room on HoloMap.",
+  "trigger": "first_powergrid_scan"
+}

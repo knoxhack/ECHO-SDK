@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_survival:orientation",
+  "category": "creator_pack",
+  "title": "First Shelter",
+  "summary": "A practical survival starter with weather, reclamation, PlayerCore, SoundCore, HoloMap, and optional recovery.",
+  "body": "A survival-first ECHO template with weather awareness, reclamation basics, safe markers, recovery notes, and practical first-night guidance.",
+  "steps": [
+    "Check weather status before traveling.",
+    "Use HoloMap for safe routes and supply points.",
+    "Keep recovery optional and documented for servers."
+  ],
+  "commonMistakes": [
+    "Low-risk creative packs",
+    "Factory-first tech packs",
+    "Story packs with no survival pressure"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

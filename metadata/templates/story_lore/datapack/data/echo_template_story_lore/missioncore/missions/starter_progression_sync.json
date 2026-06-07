@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_story_lore:starter_progression_sync",
+  "chapterId": "echo_template_story_lore:starter_chapter",
+  "title": "First Archive Route",
+  "briefing": "Connect Terminal archive reading, a Lens clue, an Index summary, and the first story marker.",
+  "objectives": [
+    {
+      "id": "read_the_first_terminal_archive",
+      "type": "creator_action",
+      "label": "Read the first Terminal archive",
+      "detail": "1.0.0 template sync objective 1: Read the first Terminal archive."
+    },
+    {
+      "id": "accept_the_starter_mission",
+      "type": "creator_action",
+      "label": "Accept the starter mission",
+      "detail": "1.0.0 template sync objective 2: Accept the starter mission."
+    },
+    {
+      "id": "scan_one_clue",
+      "type": "creator_action",
+      "label": "Scan one clue",
+      "detail": "1.0.0 template sync objective 3: Scan one clue."
+    },
+    {
+      "id": "follow_the_story_marker",
+      "type": "creator_action",
+      "label": "Follow the story marker",
+      "detail": "1.0.0 template sync objective 4: Follow the story marker."
+    },
+    {
+      "id": "open_the_next_archive_note",
+      "type": "creator_action",
+      "label": "Open the next archive note",
+      "detail": "1.0.0 template sync objective 5: Open the next archive note."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_story_lore:starter_timeline",
+    "holomapMarker": "echo_template_story_lore:first_archive_signal",
+    "tutorialCard": "echo_template_story_lore:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_story_lore:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

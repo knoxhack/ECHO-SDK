@@ -1,0 +1,11 @@
+{
+  "id": "echo_template_pack2_draft:processor_bay",
+  "name": "Processor Bay",
+  "description": "Prototype WorldCore subregion for the first processor worksite route.",
+  "risk": "blocked",
+  "riskLabel": "blocked_route",
+  "linkedIndexEntry": "echo_template_pack2_draft:processor_workcell",
+  "linkedHoloMapLayer": "echo_template_pack2_draft:processor_route",
+  "linkedMission": "echo_template_pack2_draft:route_processor_line",
+  "notes": "Data label only; no processor structure or production balance ships in 1.0.0."
+}

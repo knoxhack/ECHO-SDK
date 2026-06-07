@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_server_smp:backups",
+  "category": "echo_template_server_smp:starter",
+  "title": "Backups",
+  "subtitle": "Server SMP creator note",
+  "summary": "Starter documentation for backups in a Server SMP pack.",
+  "body": "Use this page to explain backups with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Server SMP",
+    "starter"
+  ]
+}

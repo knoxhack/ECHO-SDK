@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_horror:starter_region",
+  "displayName": "Abandoned Listening Post",
+  "description": "Example WorldCore region for Horror packs.",
+  "regionType": "starter",
+  "priority": 1
+}

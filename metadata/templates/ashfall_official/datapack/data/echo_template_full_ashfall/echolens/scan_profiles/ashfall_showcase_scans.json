@@ -1,0 +1,33 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_showcase_scans",
+  "title": "Ashfall Opening Scans",
+  "rows": [
+    {
+      "target": "drop_pod_terminal",
+      "text": "Terminal wake signal detected. Index entry unlocked: Showcase Flow.",
+      "indexEntry": "echo_template_full_ashfall:showcase_flow",
+      "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "holomapMarker": "echo_template_full_ashfall:drop_pod_terminal",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "tutorialHint": "echo_template_full_ashfall:ashfall_showcase_next_step"
+    },
+    {
+      "target": "field_wreckage",
+      "text": "Wreckage contains relic interference and a weak grid bus signature.",
+      "indexEntry": "echo_template_full_ashfall:ashfall_relic_field_note",
+      "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "holomapMarker": "echo_template_full_ashfall:first_field_objective",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "tutorialHint": "echo_template_full_ashfall:ashfall_showcase_next_step"
+    },
+    {
+      "target": "pod_power_spine",
+      "text": "Low-load repair possible. Do not scale the factory before stabilizing storage.",
+      "indexEntry": "echo_template_full_ashfall:ashfall_powergrid_repair",
+      "mission": "echo_template_full_ashfall:ashfall_showcase_flow",
+      "holomapMarker": "echo_template_full_ashfall:pod_power_spine",
+      "routeLink": "echo_template_full_ashfall:ashfall_depot_bridge",
+      "tutorialHint": "echo_template_full_ashfall:ashfall_showcase_next_step"
+    }
+  ]
+}

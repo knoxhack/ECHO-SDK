@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_story_lore:chapter_1_archive",
+  "category": "echo_template_story_lore:starter",
+  "title": "Chapter 1 Archive",
+  "subtitle": "Story/Lore creator note",
+  "summary": "Starter documentation for chapter 1 archive in a Story/Lore pack.",
+  "body": "Use this page to explain chapter 1 archive with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Story/Lore",
+    "starter"
+  ]
+}

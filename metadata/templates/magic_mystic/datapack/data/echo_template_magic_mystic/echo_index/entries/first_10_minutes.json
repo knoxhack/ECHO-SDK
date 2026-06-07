@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_magic_mystic:first_10_minutes",
+  "category": "echo_template_magic_mystic:starter",
+  "title": "First 10 Minutes",
+  "subtitle": "Template starter guidance",
+  "summary": "Opening goals for Magic/Mystic generated packs.",
+  "body": "Read the Relic Basics Index page. Scan the first relic clue with Lens. Open the artifact safety tutorial card.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "first-10-minutes"
+  ]
+}

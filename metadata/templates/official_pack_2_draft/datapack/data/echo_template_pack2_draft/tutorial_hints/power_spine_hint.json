@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_pack2_draft:power_spine_hint",
+  "text": "Deep Scan the starter battery, then check the power spine marker if HoloMap is installed.",
+  "context": "lens",
+  "linkedScanProfile": "echo_template_pack2_draft:dormant_substation",
+  "linkedMapMarker": "echo_template_pack2_draft:power_spine#first_power_loop",
+  "themeToken": "scan.pulse"
+}

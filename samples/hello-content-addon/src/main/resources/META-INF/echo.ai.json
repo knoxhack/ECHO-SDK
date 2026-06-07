@@ -1,0 +1,14 @@
+{
+  "schema": "echo.ai.v1",
+  "module": "hello_content_addon",
+  "owner": "sdk_platform",
+  "summary": "Public SDK sample that imports only dev.echo.api.* and JDK types.",
+  "safeEditZones": [
+    "samples/hello-content-addon"
+  ],
+  "protectedFiles": [],
+  "recommendedAgentLanes": [
+    "test_agent",
+    "release_agent"
+  ]
+}

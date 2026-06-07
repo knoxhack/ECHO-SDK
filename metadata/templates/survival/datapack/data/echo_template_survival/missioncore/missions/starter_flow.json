@@ -1,0 +1,45 @@
+{
+  "id": "echo_template_survival:starter_flow",
+  "chapterId": "echo_template_survival:starter_chapter",
+  "title": "Safe Shelter Protocol",
+  "briefing": "Survive the opening stretch by reading conditions and creating a recoverable base route.",
+  "objectives": [
+    {
+      "id": "open_the_survival_guide",
+      "type": "creator_action",
+      "label": "Open the survival guide",
+      "detail": "Creator starter objective for Survival: Open the survival guide."
+    },
+    {
+      "id": "find_shelter_before_the_first_weather_warning",
+      "type": "creator_action",
+      "label": "Find shelter before the first weather warning",
+      "detail": "Creator starter objective for Survival: Find shelter before the first weather warning."
+    },
+    {
+      "id": "mark_a_safe_location",
+      "type": "creator_action",
+      "label": "Mark a safe location",
+      "detail": "Creator starter objective for Survival: Mark a safe location."
+    },
+    {
+      "id": "start_a_reclamation_or_farming_setup",
+      "type": "creator_action",
+      "label": "Start a reclamation or farming setup",
+      "detail": "Creator starter objective for Survival: Start a reclamation or farming setup."
+    },
+    {
+      "id": "prepare_emergency_supplies",
+      "type": "creator_action",
+      "label": "Prepare emergency supplies",
+      "detail": "Creator starter objective for Survival: Prepare emergency supplies."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_survival:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

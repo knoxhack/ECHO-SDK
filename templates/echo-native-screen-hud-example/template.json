@@ -1,0 +1,53 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-native-screen-hud-example",
+  "name": "ECHO Native Screen HUD Example",
+  "kind": "addon",
+  "description": "Example scaffold for typed native screens and HUD surfaces.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoNativeHud",
+    "kind": "native_example",
+    "role": "client_surface_example",
+    "feature_id": "native.screen_hud.example",
+    "display_name": "ECHO Native Screen HUD Example"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/examples/{{class_name}}Surface.java"
+  ],
+  "defaultFeatures": [
+    "native.screen_hud.example"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "src/main/resources/assets/{{module_id}}/**",
+    "docs/**"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "ui_agent",
+    "runtime_agent",
+    "test_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew validateEchoSdkTemplates",
+    ".\\gradlew generatePlan3ReleasePrepReport"
+  ]
+}

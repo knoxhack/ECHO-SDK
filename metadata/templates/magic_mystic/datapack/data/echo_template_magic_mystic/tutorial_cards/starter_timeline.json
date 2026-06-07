@@ -1,0 +1,20 @@
+{
+  "id": "echo_template_magic_mystic:starter_timeline",
+  "category": "creator_pack",
+  "title": "Magic/Mystic Starter Timeline",
+  "summary": "A relic-discovery template with Lens scans, research Index pages, starter missions, mystic ambience, safe artifact hints, and map signals.",
+  "body": "Use this card to connect the first 10 minutes, first 30 minutes, and first 2 hours for Magic/Mystic generated packs.",
+  "steps": [
+    "Read the Relic Basics Index page.",
+    "Scan the first relic clue with Lens.",
+    "Open the artifact safety tutorial card.",
+    "Track a relic signal on HoloMap.",
+    "Complete the relic scan starter mission."
+  ],
+  "commonMistakes": [
+    "Factory-first tech packs",
+    "Pure vanilla starts"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}

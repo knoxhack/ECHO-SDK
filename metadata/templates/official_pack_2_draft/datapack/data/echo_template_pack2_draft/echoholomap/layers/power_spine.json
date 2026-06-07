@@ -1,0 +1,71 @@
+{
+  "id": "echo_template_pack2_draft:power_spine",
+  "title": "Power Spine Objectives",
+  "description": "Metadata label for the first PowerGrid loop. Live network markers come from PowerGrid; Pack #2 labels the next objective, risk state, and Index links.",
+  "markerSource": "powergrid_network_player_waypoints_and_pack2_metadata",
+  "visibleByDefault": true,
+  "markerStyle": "pack2_theme",
+  "markers": [
+    {
+      "id": "first_power_loop",
+      "label": "First Power Loop",
+      "kind": "power",
+      "type": "next_objective",
+      "status": "active_after_orientation",
+      "riskLabel": "low_power",
+      "icon": "echopowergrid:small_battery_bank",
+      "x": 0,
+      "z": 0,
+      "missionId": "echo_template_pack2_draft:restore_power_spine",
+      "objectiveId": "echo_template_pack2_draft:restore_power_spine/scan_small_battery_bank",
+      "indexEntry": "echo_template_pack2_draft:grid_commissioning",
+      "linkedMission": "echo_template_pack2_draft:restore_power_spine",
+      "linkedIndexEntry": "echo_template_pack2_draft:grid_commissioning",
+      "themeToken": "map.marker.next",
+      "previewIconState": "active_after_orientation",
+      "tooltip": "First Power Loop: low_power",
+      "screenshotHint": "Include this marker in the HoloMap preview screenshot if it is part of the active route."
+    },
+    {
+      "id": "starter_generator",
+      "label": "Hand Crank Generator",
+      "kind": "power",
+      "type": "route_support",
+      "status": "starter",
+      "riskLabel": "manual",
+      "icon": "echopowergrid:hand_crank_generator",
+      "x": -4,
+      "z": 1,
+      "missionId": "echo_template_pack2_draft:runtime_budget_review",
+      "objectiveId": "echo_template_pack2_draft:runtime_budget_review/scan_hand_crank_generator",
+      "indexEntry": "echo_template_pack2_draft:foundry_power_components",
+      "themeToken": "map.route.power",
+      "previewIconState": "starter",
+      "tooltip": "Hand Crank Generator: manual",
+      "screenshotHint": "Include this marker in the HoloMap preview screenshot if it is part of the active route."
+    },
+    {
+      "id": "fault_breaker",
+      "label": "Fault Breaker",
+      "kind": "hazard",
+      "type": "risk_label",
+      "status": "warning",
+      "riskLabel": "unstable_power_bus",
+      "icon": "echoworldcore:hazard",
+      "x": 7,
+      "z": 3,
+      "indexEntry": "echo_template_pack2_draft:fault_troubleshooting",
+      "worldHazard": "echo_template_pack2_draft:unstable_power_bus",
+      "themeToken": "border.warning",
+      "previewIconState": "warning",
+      "tooltip": "Fault Breaker: unstable_power_bus",
+      "screenshotHint": "Include this marker in the HoloMap preview screenshot if it is part of the active route."
+    }
+  ],
+  "previewStatus": "internal_preview",
+  "visualPolish": {
+    "markerShape": "compact diamond or square pin",
+    "labelDensity": "short labels with risk chip",
+    "avoidAshfallStyle": true
+  }
+}

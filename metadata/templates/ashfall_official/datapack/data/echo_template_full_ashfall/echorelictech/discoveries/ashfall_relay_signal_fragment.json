@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_relay_signal_fragment",
+  "title": "Relay Signal Fragment",
+  "summary": "A low-intensity RelicTech signal caught in relay static. It is a research teaser, not a late-game relic route.",
+  "indexEntry": "echo_template_full_ashfall:first_relay_station",
+  "mission": "echo_template_full_ashfall:first_relay_station_route",
+  "soundCue": "echo_template_full_ashfall:showcase_cues",
+  "fallback": "If RelicTech is unavailable, keep this as archived field intel only."
+}

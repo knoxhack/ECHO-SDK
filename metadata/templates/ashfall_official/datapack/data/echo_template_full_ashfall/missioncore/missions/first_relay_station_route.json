@@ -1,0 +1,78 @@
+{
+  "id": "echo_template_full_ashfall:first_relay_station_route",
+  "chapterId": "ashfall_major_routes",
+  "title": "Secure the First Relay Station",
+  "briefing": "The relay route is your first major POI push. It is real, useful, and exposed: check weather, scan the relay console, repair the coupler, claim the cache, and return before chasing locked routes.",
+  "prerequisites": [
+    "echo_template_full_ashfall:ashfall_first_month_routes"
+  ],
+  "objectives": [
+    {
+      "id": "open_major_route_records",
+      "type": "terminal_page",
+      "label": "Open Major Route Records",
+      "detail": "Confirm First Relay Station is the selected route and future markers are locked."
+    },
+    {
+      "id": "check_weather_window",
+      "type": "hazard_check",
+      "label": "Check the relay weather window",
+      "detail": "Delay the route during active toxic fronts unless you have filters, clean water, and a marked exit."
+    },
+    {
+      "id": "track_relay_marker",
+      "type": "holomap_marker",
+      "label": "Track the First Relay Station marker",
+      "detail": "Use the first major route HoloMap layer and ignore locked future routes."
+    },
+    {
+      "id": "scan_relay_console",
+      "type": "lens_scan",
+      "label": "Scan the relay console",
+      "detail": "Confirm this is the relay station POI and open its Index guide."
+    },
+    {
+      "id": "repair_power_coupler",
+      "type": "powergrid_repair",
+      "label": "Repair or document the relay power coupler",
+      "detail": "Use relay repair guidance; if repair is blocked, document missing input/status text."
+    },
+    {
+      "id": "claim_relay_cache",
+      "type": "loot_container",
+      "label": "Claim the relay cache",
+      "detail": "The cache should support power, scanner, and next-route prep without skipping late systems."
+    },
+    {
+      "id": "return_and_update_terminal",
+      "type": "return",
+      "label": "Return and update Terminal",
+      "detail": "Return to shelter and confirm What Now points to the next safe route state."
+    }
+  ],
+  "guidanceLinks": {
+    "terminalPage": "echo_template_full_ashfall:ashfall_major_route_records",
+    "indexEntry": "echo_template_full_ashfall:first_relay_station",
+    "holomapLayer": "echo_template_full_ashfall:first_major_route",
+    "lensProfile": "echo_template_full_ashfall:ashfall_major_route_scans",
+    "powerGridRepair": "echo_template_full_ashfall:ashfall_relay_station_repair"
+  },
+  "rewards": [
+    {
+      "type": "loot_table",
+      "id": "echo_template_full_ashfall:chests/relay_station_cache",
+      "label": "Relay cache supplies"
+    },
+    {
+      "type": "documentation",
+      "id": "echo_template_full_ashfall:relay_station_rewards",
+      "label": "Relay reward guide unlocked"
+    },
+    {
+      "type": "route_unlock",
+      "id": "echo_template_full_ashfall:crashbreak_relay_contract",
+      "label": "Optional Crashbreak relay proof available"
+    }
+  ],
+  "completionText": "Relay route secured. You now have a tested major-route pattern: prep, scan, repair, cache, return, then choose the next route intentionally."
+}

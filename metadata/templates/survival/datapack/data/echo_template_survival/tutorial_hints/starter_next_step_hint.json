@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_survival:starter_next_step_hint",
+  "title": "Survival Next Step",
+  "message": "Open the survival guide in Index.",
+  "trigger": "first_login",
+  "nextStep": "Gather emergency food, light, and recovery supplies."
+}

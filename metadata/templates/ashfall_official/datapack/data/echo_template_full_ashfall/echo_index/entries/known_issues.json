@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_full_ashfall:known_issues",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Known Issues",
+  "subtitle": "Full Ashfall creator note",
+  "summary": "Starter documentation for known issues in a Full Ashfall pack.",
+  "body": "Use this page to explain known issues with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Official Pack",
+    "starter"
+  ]
+}

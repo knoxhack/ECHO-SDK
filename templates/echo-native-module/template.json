@@ -1,0 +1,53 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-native-module",
+  "name": "ECHO Native Module",
+  "kind": "addon",
+  "description": "Native module scaffold for SDK-facing shared runtime features.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoNativeModule",
+    "kind": "native_module",
+    "role": "native_module",
+    "feature_id": "native.module",
+    "display_name": "ECHO Native Module"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/examples/{{class_name}}NativeModuleContract.java"
+  ],
+  "defaultFeatures": [
+    "native.module"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "docs/**",
+    "README.md"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "architect_agent",
+    "runtime_agent",
+    "test_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew validateEchoSdkTemplates",
+    ".\\gradlew generatePlan3ReleasePrepReport"
+  ]
+}

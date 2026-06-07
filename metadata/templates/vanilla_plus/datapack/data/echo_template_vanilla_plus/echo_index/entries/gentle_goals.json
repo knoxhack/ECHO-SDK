@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_vanilla_plus:gentle_goals",
+  "category": "echo_template_vanilla_plus:starter",
+  "title": "Gentle Goals",
+  "subtitle": "Vanilla+ creator note",
+  "summary": "Starter documentation for gentle goals in a Vanilla+ pack.",
+  "body": "Use this page to explain gentle goals with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Vanilla+",
+    "starter"
+  ]
+}

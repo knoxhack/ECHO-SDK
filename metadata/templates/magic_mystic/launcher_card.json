@@ -1,0 +1,38 @@
+{
+  "id": "magic_mystic",
+  "title": "Magic/Mystic",
+  "subtitle": "A relic-discovery template with Lens scans, research Index pages, starter missions, mystic ambience, safe artifact hints, and map signals.",
+  "description": "A relic-discovery starter with a guided scan, research page, safe artifact handling tutorial, mystic ambience, and a HoloMap relic marker.",
+  "status": "Beta",
+  "style": "Magic/Mystic",
+  "theme": "mystic_tech",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Mystic",
+    "Relic Tech",
+    "Discovery"
+  ],
+  "difficulty": "Medium",
+  "first10MinutesPreview": [
+    "Read the Relic Basics Index page.",
+    "Scan the first relic clue with Lens.",
+    "Open the artifact safety tutorial card."
+  ],
+  "first30MinutesPreview": [
+    "Track a relic signal on HoloMap.",
+    "Complete the relic scan starter mission.",
+    "Write the first research note or creator replacement page.",
+    "Use SoundCore ambience for discovery feedback."
+  ],
+  "first2HoursPreview": [
+    "Add two research entries and link them to mission steps.",
+    "Create one stable artifact handling rule.",
+    "Replace sample relic language with pack-specific discoveries."
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Magic/Mystic first 10 minutes screenshot",
+    "Magic/Mystic first 30 minutes checklist screenshot",
+    "Magic/Mystic generated pack launcher card screenshot"
+  ]
+}

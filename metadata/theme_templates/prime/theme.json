@@ -1,0 +1,49 @@
+{
+  "id": "prime",
+  "name": "Prime",
+  "version": "1.0.0",
+  "tokens": {
+    "surface.background": "#08100F",
+    "surface.panel": "#10211F",
+    "text.primary": "#EAF7EF",
+    "text.muted": "#93A7A2",
+    "state.success": "#65E68E",
+    "state.warning": "#FFD166",
+    "state.error": "#FF6B6B",
+    "focus.primary": "#2BE8C8",
+    "accent.primary": "#FFD166"
+  },
+  "iconRequirements": [
+    "Prime module icon",
+    "route readiness icon",
+    "signal marker icon"
+  ],
+  "panelStyle": "Stable survival console panels with readable teal/amber route states.",
+  "uiPreviewNotes": "Use ECHO: Prime dashboard, Index hints, Lens scan rows, and HoloMap relay markers as preview surfaces.",
+  "resourcePackStructure": [
+    "assets/<namespace>/textures/gui/",
+    "assets/<namespace>/lang/en_us.json"
+  ],
+  "fallback": "cyberglass",
+  "examplePrompts": [
+    "Create a clean ECHO: Prime ThemeCore UI preview, stable overworld survival dashboard, teal signal lines, amber objectives, no baked readable text, no watermark."
+  ],
+  "optionalTokens": [
+    "map.marker.signal",
+    "map.marker.relay_ruin",
+    "mission.active",
+    "route.ready",
+    "route.dormant",
+    "scan.pulse"
+  ],
+  "contrastNotes": "Primary text, muted text, success, warning, and error colors are chosen for readable contrast on dark Prime panels.",
+  "moduleCompatibility": [
+    "Terminal",
+    "Index",
+    "HoloMap",
+    "Lens",
+    "MissionCore",
+    "ThemeCore",
+    "ECHO: Prime Core"
+  ]
+}

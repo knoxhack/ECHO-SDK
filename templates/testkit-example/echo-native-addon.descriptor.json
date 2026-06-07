@@ -1,0 +1,13 @@
+{
+  "schema": "echo.native.descriptor.v1",
+  "id": "testkitexample",
+  "name": "Testkit Example",
+  "version": "1.0.0",
+  "nativePolicy": "NATIVE",
+  "entryPoints": {
+    "native": "com.example.testkitexample.TestkitExampleAddon"
+  },
+  "services": ["testkitexample:counter_service"],
+  "optionalIntegrations": [],
+  "side": "BOTH"
+}

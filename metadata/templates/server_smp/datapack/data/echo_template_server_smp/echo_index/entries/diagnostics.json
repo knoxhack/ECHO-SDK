@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_server_smp:diagnostics",
+  "category": "echo_template_server_smp:starter",
+  "title": "Diagnostics",
+  "subtitle": "Server SMP creator note",
+  "summary": "Starter documentation for diagnostics in a Server SMP pack.",
+  "body": "Use this page to explain diagnostics with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Server SMP",
+    "starter"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "echo_template_full_ashfall:survivor_cache_sweep",
+  "chapterId": "ashfall_first_month",
+  "title": "Optional: Sweep a Survivor Cache",
+  "optional": true,
+  "briefing": "A survivor cache is the safest way to turn scanner work into supplies. Confirm the marker, recover the cache, and log what it points toward next.",
+  "prerequisites": [
+    "echo_template_full_ashfall:ashfall_first_month_routes"
+  ],
+  "objectives": [
+    {
+      "id": "scan_cache",
+      "type": "lens_scan",
+      "label": "Scan the cache casing",
+      "detail": "Confirm it is a survivor cache and not a hazard lure."
+    },
+    {
+      "id": "recover_supplies",
+      "type": "loot_container",
+      "label": "Recover useful supplies",
+      "detail": "Take food, filters, repair parts, or map notes if present."
+    },
+    {
+      "id": "log_cache_route",
+      "type": "terminal_route_record",
+      "label": "Log the cache route",
+      "detail": "Return to Terminal Route Records so What Now can suggest a sensible next step."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_full_ashfall:field_caches",
+    "holomapMarker": "echo_template_full_ashfall:survivor_cache_signal",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "rewards": [
+    {
+      "type": "items",
+      "id": "echo_template_full_ashfall:survivor_cache_supplies",
+      "label": "Food, filters, and small repair parts"
+    }
+  ],
+  "completionText": "Cache swept. The route is now a known safe resupply point instead of another unknown signal."
+}

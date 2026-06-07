@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_full_ashfall:server_notes",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Server Notes",
+  "subtitle": "Full Ashfall creator note",
+  "summary": "Starter documentation for server notes in a Full Ashfall pack.",
+  "body": "Use this page to explain server notes with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Official Pack",
+    "starter"
+  ]
+}

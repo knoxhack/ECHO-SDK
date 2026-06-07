@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_vanilla_plus:starter_ambience",
+  "sound": "minecraft:ambient.cave",
+  "subtitle": "Calm Camp Ambience",
+  "volume": 0.35,
+  "pitch": 1.0,
+  "loop": true,
+  "description": "Subtle ambience placeholder for Vanilla+ starter packs."
+}

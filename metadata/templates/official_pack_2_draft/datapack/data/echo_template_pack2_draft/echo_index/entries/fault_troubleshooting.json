@@ -1,0 +1,24 @@
+{
+  "id": "echo_template_pack2_draft:fault_troubleshooting",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Troubleshooting: Foundry Fault States",
+  "summary": "Preview-safe recovery guidance for stuck objectives, optional modules, and placeholder visuals.",
+  "body": "If the preview route feels stuck, check the active MissionCore objective first, then verify the Lens target, HoloMap marker, and Index entry named by the Terminal What Now panel. Optional module warnings are not hard failures. Placeholder art warnings mean the launcher preview still needs approved Pack #2 visuals. Runtime budget warnings stay advisory until the pack adds heavier automation or world systems.",
+  "tags": [
+    "troubleshooting",
+    "warning",
+    "runtimeguard"
+  ],
+  "related": [
+    "echo_template_pack2_draft:terminal_next_objective",
+    "echo_template_pack2_draft:runtime_budget",
+    "echo_template_pack2_draft:foundry_power_components"
+  ],
+  "sortOrder": 55,
+  "commonIssues": [
+    "Lens missing: use Index and Terminal fallback text until Lens is installed.",
+    "HoloMap missing: MissionCore and Index still carry the route.",
+    "Placeholder visuals: expected for 1.0.0 internal preview.",
+    "Objective not advancing: rerun Pack #2 profile validation and verify structured objective ids."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_pack2_draft:objective_complete",
+  "title": "Objective Complete Stinger",
+  "description": "Subtle objective-complete cue shared by Pack #2 MVP mission beats. Final audio asset is deferred.",
+  "events": [
+    {
+      "id": "objective_complete_soft",
+      "trigger": "echomissioncore:objective_completed",
+      "sound": "echo_template_pack2_draft:stinger.objective_complete",
+      "volume": 0.35,
+      "pitch": 1,
+      "fallback": "silent"
+    }
+  ],
+  "status": "prototype_stub",
+  "themeToken": "state.success"
+}

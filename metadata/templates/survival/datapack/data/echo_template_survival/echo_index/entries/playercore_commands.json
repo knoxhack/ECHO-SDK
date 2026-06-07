@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_survival:playercore_commands",
+  "category": "echo_template_survival:starter",
+  "title": "PlayerCore Commands",
+  "subtitle": "Survival creator note",
+  "summary": "Starter documentation for playercore commands in a Survival pack.",
+  "body": "Use this page to explain playercore commands with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Survival",
+    "starter"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_server_smp:starter_chapter",
+  "title": "Server SMP Opening Loop",
+  "summary": "A server-focused starter with admin setup missions, PlayerCore permissions and home docs, RuntimeGuard budgets, shared HoloMap objectives, and server-balanced plus low-end configs.",
+  "description": "Read admin setup, confirm PlayerCore rules, run diagnostics, mark a shared objective, and select server-balanced or low-end configs.",
+  "sortOrder": 10
+}

@@ -1,0 +1,39 @@
+{
+  "id": "echo_template_vanilla_plus:starter_flow",
+  "chapterId": "echo_template_vanilla_plus:starter_chapter",
+  "title": "Vanilla+ First Camp",
+  "briefing": "Settle in, learn the guide tools, and mark a safe return point.",
+  "objectives": [
+    {
+      "id": "read_the_vanilla_guide_page",
+      "type": "creator_action",
+      "label": "Read the Vanilla+ guide page",
+      "detail": "Creator starter objective for Vanilla+: Read the Vanilla+ guide page."
+    },
+    {
+      "id": "set_a_home_or_safe_return_point",
+      "type": "creator_action",
+      "label": "Set a home or safe return point",
+      "detail": "Creator starter objective for Vanilla+: Set a home or safe return point."
+    },
+    {
+      "id": "mark_one_useful_location",
+      "type": "creator_action",
+      "label": "Mark one useful location",
+      "detail": "Creator starter objective for Vanilla+: Mark one useful location."
+    },
+    {
+      "id": "gather_basic_food_and_shelter_supplies",
+      "type": "creator_action",
+      "label": "Gather basic food and shelter supplies",
+      "detail": "Creator starter objective for Vanilla+: Gather basic food and shelter supplies."
+    }
+  ],
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_vanilla_plus:starter_docs",
+      "label": "Unlock the next creator documentation step."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "echo_template_tech:orientation",
+  "category": "creator_pack",
+  "title": "Factory Commissioning",
+  "summary": "Bring a small EP grid online, then scale into high-voltage routing and logistics.",
+  "body": "A readable Tech Wave starter has generation, storage, routing, processing, and depot movement. Build one section at a time and document every pack-specific change in Index.",
+  "steps": [
+    "Use Terminal as the operator dashboard.",
+    "Build a Reinforced Solar Panel or Biofuel Generator.",
+    "Place a Field Battery Bank before the first machine row.",
+    "Route High Voltage Cable through a Factory Substation.",
+    "Scan one PowerGrid node with Lens and place HoloMap markers for the factory rooms.",
+    "Use RuntimeGuard before expanding beyond the starter line."
+  ],
+  "commonMistakes": [
+    "Scaling machines before storage exists.",
+    "Hiding long cable runs with no HoloMap marker.",
+    "Adding custom recipes without an Index page."
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echopowergrid"
+}

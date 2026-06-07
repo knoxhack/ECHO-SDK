@@ -1,0 +1,65 @@
+{
+  "id": "echo_template_pack2_draft:runtime_budget_review",
+  "chapter": "echo_template_pack2_draft:foundry_draft",
+  "phase": "foundry_commissioning_mvp",
+  "phaseTitle": "Foundry Commissioning MVP",
+  "phaseOrder": 10,
+  "category": "Foundry Protocol",
+  "difficulty": "Guided",
+  "terminal_route_phase": "foundry_commissioning_mvp",
+  "terminal_source": "missioncore",
+  "terminal_chapter": "echo_template_pack2_draft:foundry_draft",
+  "order": 35,
+  "title": "Optional: Runtime Budget Review",
+  "briefing": "Run the first warning-state check so the prototype explains runtime and optional-module posture before heavier factory systems arrive.",
+  "fieldGuide": "This is an optional side mission. It teaches where warning states, subtle UI sounds, and RuntimeGuard notes appear, while keeping all budgets generic until Pack #2 has heavier automation to measure.",
+  "icon": "echopowergrid:hand_crank_generator",
+  "kind": "side",
+  "prerequisites": [
+    "echo_template_pack2_draft:restore_power_spine"
+  ],
+  "objectives": [
+    {
+      "id": "echo_template_pack2_draft:runtime_budget_review/scan_hand_crank_generator",
+      "type": "scan_block",
+      "target": "echopowergrid:hand_crank_generator",
+      "label": "Deep Scan the Hand Crank Generator",
+      "detail": "Scan the generator after the starter loop has been checked.",
+      "required": 1,
+      "icon": "echopowergrid:hand_crank_generator"
+    },
+    {
+      "id": "echo_template_pack2_draft:runtime_budget_review/read_budget_note",
+      "type": "custom",
+      "target": "echoruntimeguard:pack2_budget_note",
+      "label": "Read the budget note",
+      "detail": "Open the Runtime Budget Index entry or Terminal warning-state panel.",
+      "required": 1,
+      "icon": "echoruntimeguard:runtime_guard"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "echo_template_pack2_draft:runtime_budget_review/runtime_intel",
+      "label": "Runtime Budget Intel",
+      "detail": "Unlocks the warning-state and troubleshooting notes for the prototype route.",
+      "metadata": {
+        "indexEntry": "echo_template_pack2_draft:runtime_budget",
+        "claimMode": "immediate"
+      }
+    }
+  ],
+  "metadata": {
+    "indexEntry": "echo_template_pack2_draft:runtime_budget",
+    "scanProfile": "echo_template_pack2_draft:runtime_budget_panel",
+    "unlockIndexEntries": "echo_template_pack2_draft:runtime_budget,echo_template_pack2_draft:fault_troubleshooting",
+    "nextObjective": "Continue the main route at Processor Worksite or Depot Request calibration.",
+    "completionCue": "echo_template_pack2_draft:objective_complete",
+    "warningCue": "echo_template_pack2_draft:warning_fault",
+    "completionFeedback": "Runtime posture reviewed. This side check is complete."
+  },
+  "terminal_route_order": "35",
+  "terminal_route_role": "side_mission",
+  "terminal_route_prerequisites": "echo_template_pack2_draft:restore_power_spine",
+  "terminal_route_gate": "optional_runtime_review"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_vanilla_plus:homes_and_waypoints",
+  "category": "echo_template_vanilla_plus:starter",
+  "title": "Homes and Waypoints",
+  "subtitle": "Vanilla+ creator note",
+  "summary": "Starter documentation for homes and waypoints in a Vanilla+ pack.",
+  "body": "Use this page to explain homes and waypoints with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Vanilla+",
+    "starter"
+  ]
+}

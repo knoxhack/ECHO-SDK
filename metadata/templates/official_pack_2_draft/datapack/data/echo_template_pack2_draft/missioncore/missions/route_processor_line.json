@@ -1,0 +1,61 @@
+{
+  "id": "echo_template_pack2_draft:route_processor_line",
+  "chapter": "echo_template_pack2_draft:foundry_draft",
+  "phase": "foundry_commissioning_mvp",
+  "phaseTitle": "Foundry Commissioning MVP",
+  "phaseOrder": 10,
+  "category": "Foundry Protocol",
+  "difficulty": "Guided",
+  "terminal_route_phase": "foundry_commissioning_mvp",
+  "terminal_source": "missioncore",
+  "terminal_chapter": "echo_template_pack2_draft:foundry_draft",
+  "order": 30,
+  "title": "Mark the Processor Worksite",
+  "briefing": "Use HoloMap to create the first player waypoint for the processor worksite, then scan the worksite target if Lens is present.",
+  "fieldGuide": "Pack #2 uses live HoloMap support from player waypoints. The Pack #2 layer JSON labels the route, while the waypoint is the real marker players create. The Lens scan unlocks processor docs without shipping final machine balance.",
+  "icon": "minecraft:compass",
+  "kind": "main",
+  "prerequisites": [
+    "echo_template_pack2_draft:restore_power_spine"
+  ],
+  "objectives": [
+    {
+      "id": "echo_template_pack2_draft:route_processor_line/create_waypoint",
+      "type": "custom",
+      "target": "echoholomap:mission/create_waypoint/waypoint",
+      "label": "Create a HoloMap waypoint",
+      "detail": "Drop a waypoint near the planned processor worksite.",
+      "required": 1,
+      "icon": "minecraft:compass"
+    },
+    {
+      "id": "echo_template_pack2_draft:route_processor_line/scan_processor_worksite",
+      "type": "scan_block",
+      "target": "echoindustrialnexus:scrap_processor_controller",
+      "label": "Scan the processor worksite",
+      "detail": "Inspect the planned processor controller or placeholder worksite marker.",
+      "required": 1,
+      "icon": "echoindustrialnexus:scrap_processor_controller"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "echo_template_pack2_draft:route_processor_line/power_meter",
+      "item": "echopowergrid:power_meter",
+      "count": 1,
+      "label": "Power Meter",
+      "detail": "A useful diagnostic block for the next scan."
+    }
+  ],
+  "metadata": {
+    "indexEntry": "echo_template_pack2_draft:processor_route",
+    "scanProfile": "echo_template_pack2_draft:processor_worksite",
+    "holoMapMarker": "echo_template_pack2_draft:processor_route#processor_worksite",
+    "completionCue": "echo_template_pack2_draft:objective_complete",
+    "unlockIndexEntries": "echo_template_pack2_draft:processor_route,echo_template_pack2_draft:processor_workcell",
+    "completionFeedback": "Processor worksite marked. Depot request calibration is next."
+  },
+  "terminal_route_order": "30",
+  "terminal_route_role": "starter_mission",
+  "terminal_route_prerequisites": "echo_template_pack2_draft:restore_power_spine"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_magic_mystic:overview",
+  "category": "echo_template_magic_mystic:starter",
+  "title": "Magic/Mystic Overview",
+  "subtitle": "A relic-discovery template with Lens scans, research Index pages, missions, ambience, and map signals.",
+  "summary": "A mystic-tech and relic-discovery starter that focuses on scanning, research, stability, and artifact safety without Ashfall finale lore.",
+  "body": "Find a strange relic, scan it with Lens, unlock Index context, stabilize a fragment, and track the next signal.\n\nFirst 30 minutes:\n- Read the Relic Basics Index page.\n- Scan the first relic or evidence object with Lens.\n- Open the new research page and follow its safety notes.\n- Track a relic signal on HoloMap.\n\nFirst 2 hours:\n- Stabilize a fragment and unlock a second research entry.\n- Use SoundCore ambience to signal research states.\n- Add more relic entries through datapacks without adding Ashfall story terms.",
+  "tags": [
+    "Magic/Mystic",
+    "template",
+    "creator"
+  ]
+}

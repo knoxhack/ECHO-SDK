@@ -1,0 +1,53 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-pack-profile",
+  "name": "ECHO Pack Profile",
+  "kind": "pack-profile",
+  "description": "Scaffold a planned PackOS profile without generating lockfiles or modifying installs.",
+  "fileSets": [
+    "pack-profile"
+  ],
+  "defaultValues": {
+    "class_name": "EchoSdkPackProfile",
+    "kind": "official_pack",
+    "role": "pack_root",
+    "feature_id": "pack.profile.generated",
+    "display_name": "ECHO SDK Pack Profile"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Root module id for the generated profile."},
+    "package_path": {"required": true, "description": "Reserved for template consistency."},
+    "package_name": {"required": true, "description": "Reserved for template consistency."},
+    "class_name": {"required": true, "description": "Reserved class token for template consistency."},
+    "role": {"required": true, "description": "Pack root role."},
+    "kind": {"required": true, "description": "Pack profile type."},
+    "feature_id": {"required": true, "description": "Primary required feature id."}
+  },
+  "requiredFiles": [
+    "packs/{{pack_dir}}/echo.pack.json",
+    "packs/{{pack_dir}}/README.md",
+    "packs/{{pack_dir}}/echo.ai.json",
+    "docs/{{pack_id}}.md",
+    "src/test/validation/{{pack_id}}.validation.json"
+  ],
+  "defaultFeatures": [
+    "pack.profile.generated"
+  ],
+  "safeEditZones": [
+    "packs/{{pack_dir}}/**",
+    "docs/**"
+  ],
+  "protectedFiles": [
+    "packs/**/echo.lock.json",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "packaging_agent",
+    "diagnostics_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew loadEchoPackProfile -PechoPack={{pack_id}}",
+    ".\\gradlew generateEchoPackReadiness -PechoPack={{pack_id}} -PechoAddonSet=beta"
+  ]
+}

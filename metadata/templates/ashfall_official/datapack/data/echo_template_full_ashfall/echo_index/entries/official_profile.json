@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_full_ashfall:official_profile",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Official Profile",
+  "subtitle": "Full Ashfall creator note",
+  "summary": "Starter documentation for official profile in a Full Ashfall pack.",
+  "body": "Use this page to explain official profile with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Official Pack",
+    "starter"
+  ]
+}

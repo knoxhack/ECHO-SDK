@@ -1,0 +1,35 @@
+{
+  "id": "echo_template_pack2_draft:processor_worksite",
+  "title": "Processor Worksite Scan",
+  "target": "echoindustrialnexus:scrap_processor_controller",
+  "summary": "Scan-to-Index and scan-to-map bridge for the first processor route.",
+  "signals": [
+    "processor_route_detected",
+    "index_workcell_docs_available",
+    "holomap_worksite_marker_available"
+  ],
+  "linkedMission": "echo_template_pack2_draft:route_processor_line",
+  "linkedIndexEntry": "echo_template_pack2_draft:processor_workcell",
+  "linkedMapLayer": "echo_template_pack2_draft:processor_route",
+  "linkedMapMarker": "processor_worksite",
+  "missionObjective": "echo_template_pack2_draft:route_processor_line/scan_processor_worksite",
+  "unlocks": {
+    "indexEntries": [
+      "echo_template_pack2_draft:processor_route",
+      "echo_template_pack2_draft:processor_workcell"
+    ],
+    "missionObjectives": [
+      "echo_template_pack2_draft:route_processor_line/scan_processor_worksite"
+    ],
+    "mapMarkers": [
+      "echo_template_pack2_draft:processor_route#processor_worksite"
+    ]
+  },
+  "scanTargets": [
+    "echoindustrialnexus:scrap_processor_controller",
+    "echoindustrialnexus:component_assembler",
+    "echoindustrialnexus:industrial_item_bus",
+    "echoindustrialnexus:industrial_power_bus"
+  ],
+  "status": "1.0.0_systems_integration"
+}

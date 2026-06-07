@@ -1,0 +1,6 @@
+#Shows an early loading screen for mod loading which improves the user experience with early feedback about mod loading.
+earlyWindowControl = true
+#Early window provider
+earlyWindowProvider = "fmlearlywindow"
+#Force a given theme-id to be used for the early loading screen
+earlyLoadingScreenTheme = "echo-terminal"

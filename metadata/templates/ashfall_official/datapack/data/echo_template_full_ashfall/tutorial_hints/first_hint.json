@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_full_ashfall:first_hint",
+  "title": "Full Ashfall First Hint",
+  "message": "Read the Ashfall install notes.",
+  "trigger": "first_login"
+}

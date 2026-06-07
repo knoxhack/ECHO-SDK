@@ -1,0 +1,110 @@
+{
+  "id": "blank_custom",
+  "name": "Blank Custom",
+  "version": "1.0.0",
+  "style": "Blank Custom",
+  "goals": [
+    "Provide a neutral but playable ECHO pack scaffold",
+    "Show where missions, Index pages, TutorialCore hints, and HoloMap layers belong",
+    "Keep every piece easy to replace with creator-owned content"
+  ],
+  "description": "A guided Blank Custom starter with Core, NetCore, Index, TutorialCore, MissionCore, and HoloMap scaffolds plus one replaceable first-session loop.",
+  "targetPlayer": "Creators who want a neutral ECHO pack shell that launches with one minimal, replaceable starter loop.",
+  "gameplayLoop": "Open Index, read the blank-pack orientation, complete a tiny MissionCore checklist, view the starter HoloMap layer, and replace the sample content with the pack concept.",
+  "first30Minutes": [
+    "Complete the minimal MissionCore checklist.",
+    "Rename the sample Index page to match the pack concept.",
+    "Pick the first additional module or config preset.",
+    "Run pack validation after changing the scaffold."
+  ],
+  "first2Hours": [
+    "Replace the sample mission with a real chapter objective.",
+    "Add one pack-specific Index entry and one tutorial hint.",
+    "Export and validate a client and server manifest."
+  ],
+  "notRecommendedFor": [
+    "Players expecting finished gameplay",
+    "Official-pack profiles"
+  ],
+  "wizardCopy": {
+    "summary": "A guided blank scaffold with Core, NetCore, Index, TutorialCore, MissionCore, and HoloMap selected so generated packs have a tiny playable loop.",
+    "difficulty": "Creator",
+    "bestFor": [
+      "Custom",
+      "Advanced Creators",
+      "Tooling Tests"
+    ],
+    "warnings": [
+      "All starter content is intentionally generic and should be renamed before publishing."
+    ],
+    "notFor": [
+      "Players expecting finished gameplay",
+      "Official-pack profiles"
+    ]
+  },
+  "recommendedModules": [
+    "echocore",
+    "echonetcore",
+    "echoindex",
+    "echotutorialcore",
+    "echomissioncore",
+    "echoholomap"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "optionalModules": [
+    "echothemecore",
+    "echoplayercore",
+    "echosoundcore"
+  ],
+  "defaultTheme": "default_dark",
+  "starterMissions": [
+    "datapack/data/echo_template_blank_custom/missioncore/chapters/starter.json",
+    "datapack/data/echo_template_blank_custom/missioncore/missions/starter_progression_sync.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echo_template_blank_custom/echo_index/categories/starter.json",
+    "datapack/data/echo_template_blank_custom/echo_index/entries/first_10_minutes.json",
+    "datapack/data/echo_template_blank_custom/echo_index/entries/starter_timeline.json",
+    "datapack/data/echo_template_blank_custom/echo_index/relations/starter_timeline_to_mission.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echo_template_blank_custom/tutorial_cards/starter_timeline.json",
+    "datapack/data/echo_template_blank_custom/tutorial_hints/starter_next_step_hint.json",
+    "datapack/data/echo_template_blank_custom/tutorial_flows/first_30_minutes.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echo_template_blank_custom/echoholomap/layers/starter_layer.json"
+  ],
+  "starterWeatherCoreEvents": [],
+  "starterSoundCoreRules": [],
+  "starterWorldCoreRegions": [],
+  "configPresets": [
+    "normal"
+  ],
+  "exportProfiles": [
+    "client",
+    "server",
+    "curseforge",
+    "modrinth",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "dependencies.required_present",
+    "versions.ecosystem_aligned",
+    "configs.preset_reasoned",
+    "datapacks.examples_valid",
+    "theme.tokens.required",
+    "export.profiles.present",
+    "ashfall.no_leak"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "first10Minutes": [
+    "Open Index and read the Blank Custom orientation page.",
+    "Open the starter TutorialCore card.",
+    "Track the starter HoloMap marker."
+  ],
+  "contentWaveLabel": "1.0.0 template sync"
+}

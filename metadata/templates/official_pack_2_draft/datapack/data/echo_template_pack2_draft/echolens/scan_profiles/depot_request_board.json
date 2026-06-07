@@ -1,0 +1,34 @@
+{
+  "id": "echo_template_pack2_draft:depot_request_board",
+  "title": "Depot Request Board Scan",
+  "target": "echologisticsnetwork:route_requester",
+  "summary": "Scan metadata for the prototype depot request handoff.",
+  "signals": [
+    "logistics_route_seen",
+    "depot_docs_unlocked",
+    "map_route_labeled"
+  ],
+  "linkedMission": "echo_template_pack2_draft:calibrate_depot_requests",
+  "linkedIndexEntry": "echo_template_pack2_draft:logistics_request_board",
+  "linkedMapLayer": "echo_template_pack2_draft:depot_route",
+  "linkedMapMarker": "depot_request_board",
+  "missionObjective": "echo_template_pack2_draft:calibrate_depot_requests/read_depot_request",
+  "unlocks": {
+    "indexEntries": [
+      "echo_template_pack2_draft:depot_requests",
+      "echo_template_pack2_draft:logistics_request_board"
+    ],
+    "missionObjectives": [
+      "echo_template_pack2_draft:calibrate_depot_requests/read_depot_request"
+    ],
+    "mapMarkers": [
+      "echo_template_pack2_draft:depot_route#depot_request_board"
+    ]
+  },
+  "scanTargets": [
+    "echologisticsnetwork:route_requester",
+    "echologisticsnetwork:logistics_terminal",
+    "echologisticsnetwork:auto_restock_station"
+  ],
+  "status": "1.0.0_systems_integration"
+}

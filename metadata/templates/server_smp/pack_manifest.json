@@ -1,0 +1,43 @@
+{
+  "id": "server_smp",
+  "name": "Server SMP Starter Pack",
+  "version": "1.0.0",
+  "minecraftVersion": "26.1.2",
+  "loader": "NeoForge",
+  "modules": {
+    "requiredModules": [
+      "echocore",
+      "echonetcore"
+    ],
+    "recommendedModules": [
+      "echoplayercore",
+      "echoruntimeguard",
+      "echodatacore",
+      "echoholomap",
+      "echomissioncore",
+      "echoindex",
+      "echotutorialcore"
+    ],
+    "optionalModules": [
+      "echologisticsnetwork",
+      "echoweathercore",
+      "echothemecore",
+      "echosoundcore"
+    ]
+  },
+  "exportProfiles": {
+    "client": true,
+    "server": true,
+    "curseforge": true,
+    "modrinth": true,
+    "configsOnly": true
+  },
+  "docs": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "knownIssues": "KNOWN_ISSUES.md",
+    "support": "SUPPORT.md"
+  },
+  "ashfallProfile": false,
+  "jars": []
+}

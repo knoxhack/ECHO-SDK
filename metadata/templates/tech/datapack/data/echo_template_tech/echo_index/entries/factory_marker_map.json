@@ -1,0 +1,26 @@
+{
+  "id": "echo_template_tech:factory_marker_map",
+  "category": "echo_template_tech:starter",
+  "title": "Factory HoloMap Markers",
+  "subtitle": "Room and route markers for the starter factory",
+  "summary": "HoloMap markers identify Factory Substation anchors, high-voltage trunks, Field Battery rooms, depot lanes, and runtime hotspots.",
+  "body": "Place markers where the factory changes responsibility: generation, storage, high-voltage routing, logistics, and machine hall boundaries. PowerGrid also contributes loaded node markers for substations, high-voltage trunks, and Field Battery Banks when HoloMap is present.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "HoloMap",
+    "PowerGrid"
+  ],
+  "related": [
+    "echo_template_tech:factory_substations",
+    "echo_template_tech:high_voltage_distribution",
+    "echo_template_tech:grid_commissioning_depth"
+  ],
+  "markerIds": [
+    "factory_substation_anchor",
+    "high_voltage_trunk",
+    "field_battery_room",
+    "component_depot_lane",
+    "runtime_hotspot"
+  ]
+}

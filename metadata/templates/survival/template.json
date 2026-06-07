@@ -1,0 +1,130 @@
+{
+  "id": "survival",
+  "name": "Survival",
+  "version": "1.0.0",
+  "style": "Survival",
+  "goals": [
+    "Teach shelter, weather, and safe-zone markers",
+    "Introduce farming and reclamation as a survival loop",
+    "Document normal and hardcore survival tuning"
+  ],
+  "description": "A practical survival starter with a shelter, weather, safe-zone, farming, and reclamation chain plus normal and hardcore config guidance.",
+  "targetPlayer": "Creators building weather-aware survival packs with safe onboarding and optional harsher tuning.",
+  "gameplayLoop": "Find shelter, check weather, mark a safe zone, start food or reclamation, and prepare supplies before harder exploration.",
+  "first30Minutes": [
+    "Gather emergency food, light, and recovery supplies.",
+    "Start a first farm or reclamation patch.",
+    "Complete the shelter/weather starter mission.",
+    "Pick normal or hardcore config guidance."
+  ],
+  "first2Hours": [
+    "Expand food security and local restoration.",
+    "Document recurring weather responses in Index.",
+    "Tune TutorialCore frequency and weather intensity for the intended audience."
+  ],
+  "notRecommendedFor": [
+    "Creative-only packs",
+    "Story packs with no survival pressure"
+  ],
+  "wizardCopy": {
+    "summary": "A survival starter with weather checks, safety markers, reclamation goals, SoundCore ambience, and normal versus hardcore config guidance.",
+    "difficulty": "Medium",
+    "bestFor": [
+      "Survival",
+      "Hardcore Optional",
+      "SMP"
+    ],
+    "warnings": [
+      "Hardcore presets should be opt-in and documented before export."
+    ],
+    "notFor": [
+      "Creative-only packs",
+      "Story packs with no survival pressure"
+    ]
+  },
+  "recommendedModules": [
+    "echocore",
+    "echonetcore",
+    "echoindex",
+    "echotutorialcore",
+    "echoweathercore",
+    "echoagriculturereclamation",
+    "echoplayercore",
+    "echosoundcore",
+    "echoholomap"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "optionalModules": [
+    "echomissioncore",
+    "echorecovery",
+    "echothemecore"
+  ],
+  "defaultTheme": "default_dark",
+  "starterMissions": [
+    "datapack/data/echo_template_survival/missioncore/chapters/starter.json",
+    "datapack/data/echo_template_survival/missioncore/missions/starter_flow.json",
+    "datapack/data/echo_template_survival/missioncore/missions/starter_progression_sync.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echo_template_survival/echo_index/categories/starter.json",
+    "datapack/data/echo_template_survival/echo_index/entries/overview.json",
+    "datapack/data/echo_template_survival/echo_index/relations/overview_to_flow.json",
+    "datapack/data/echo_template_survival/echo_index/entries/survival_basics.json",
+    "datapack/data/echo_template_survival/echo_index/entries/weather_warnings.json",
+    "datapack/data/echo_template_survival/echo_index/entries/reclamation.json",
+    "datapack/data/echo_template_survival/echo_index/entries/safe_markers.json",
+    "datapack/data/echo_template_survival/echo_index/entries/playercore_commands.json",
+    "datapack/data/echo_template_survival/echo_index/entries/first_10_minutes.json",
+    "datapack/data/echo_template_survival/echo_index/entries/starter_timeline.json",
+    "datapack/data/echo_template_survival/echo_index/relations/starter_timeline_to_mission.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echo_template_survival/tutorial_cards/orientation.json",
+    "datapack/data/echo_template_survival/tutorial_hints/first_hint.json",
+    "datapack/data/echo_template_survival/tutorial_cards/starter_timeline.json",
+    "datapack/data/echo_template_survival/tutorial_hints/starter_next_step_hint.json",
+    "datapack/data/echo_template_survival/tutorial_flows/first_30_minutes.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echo_template_survival/echoholomap/layers/starter_layer.json"
+  ],
+  "starterWeatherCoreEvents": [
+    "datapack/data/echo_template_survival/echoweathercore/weather_profiles/starter_weather.json"
+  ],
+  "starterSoundCoreRules": [
+    "datapack/data/echo_template_survival/echosoundcore/audio_profiles/ambience/starter_ambience.json"
+  ],
+  "starterWorldCoreRegions": [
+    "datapack/data/echo_template_survival/echoworldcore/world_regions/starter_region.json"
+  ],
+  "configPresets": [
+    "normal",
+    "survival_hardcore"
+  ],
+  "exportProfiles": [
+    "client",
+    "server",
+    "curseforge",
+    "modrinth",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "dependencies.required_present",
+    "versions.ecosystem_aligned",
+    "configs.preset_reasoned",
+    "datapacks.examples_valid",
+    "theme.tokens.required",
+    "export.profiles.present",
+    "ashfall.no_leak"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "first10Minutes": [
+    "Open the survival guide in Index.",
+    "Find shelter and check the WeatherCore warning page.",
+    "Mark a safe zone on HoloMap."
+  ],
+  "contentWaveLabel": "1.0.0 template sync"
+}

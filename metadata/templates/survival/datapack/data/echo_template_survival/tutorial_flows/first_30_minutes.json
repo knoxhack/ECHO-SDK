@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_survival:first_30_minutes",
+  "title": "Survival First 30 Minutes",
+  "cards": [
+    "echo_template_survival:orientation",
+    "echo_template_survival:starter_timeline"
+  ],
+  "steps": [
+    "Gather emergency food, light, and recovery supplies.",
+    "Start a first farm or reclamation patch.",
+    "Complete the shelter/weather starter mission.",
+    "Pick normal or hardcore config guidance."
+  ]
+}

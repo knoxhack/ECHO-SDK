@@ -1,0 +1,44 @@
+{
+  "id": "echo_template_blank_custom:starter_progression_sync",
+  "chapterId": "echo_template_blank_custom:starter_chapter",
+  "title": "Blank Custom First Loop",
+  "briefing": "Prove the generated pack can guide a player before the creator replaces the sample content.",
+  "objectives": [
+    {
+      "id": "read_the_blank_custom_orientation_page",
+      "type": "creator_action",
+      "label": "Read the Blank Custom orientation page",
+      "detail": "1.0.0 template sync objective 1: Read the Blank Custom orientation page."
+    },
+    {
+      "id": "open_the_starter_tutorialcore_card",
+      "type": "creator_action",
+      "label": "Open the starter TutorialCore card",
+      "detail": "1.0.0 template sync objective 2: Open the starter TutorialCore card."
+    },
+    {
+      "id": "track_the_starter_holomap_marker",
+      "type": "creator_action",
+      "label": "Track the starter HoloMap marker",
+      "detail": "1.0.0 template sync objective 3: Track the starter HoloMap marker."
+    },
+    {
+      "id": "replace_one_sample_string_with_the_pack_concept",
+      "type": "creator_action",
+      "label": "Replace one sample string with the pack concept",
+      "detail": "1.0.0 template sync objective 4: Replace one sample string with the pack concept."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_blank_custom:starter_timeline",
+    "holomapMarker": "echo_template_blank_custom:starter_marker",
+    "tutorialCard": "echo_template_blank_custom:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_blank_custom:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

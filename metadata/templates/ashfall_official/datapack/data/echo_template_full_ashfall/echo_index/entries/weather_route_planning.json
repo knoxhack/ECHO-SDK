@@ -1,0 +1,18 @@
+{
+  "id": "echo_template_full_ashfall:weather_route_planning",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "Weather and Hazard Route Planning",
+  "subtitle": "Preparation is part of the route",
+  "summary": "Storms, toxic fronts, radiation zones, and exposed ruins should change route decisions before they become emergencies.",
+  "body": "Check warning text before leaving shelter. Bring clean water, filters, food, and a return marker when moving near toxic or radiation markers.",
+  "links": {
+    "mission": "echo_template_full_ashfall:hazard_route_prep",
+    "holomapLayer": "echo_template_full_ashfall:first_month_field_intel",
+    "lensProfile": "echo_template_full_ashfall:ashfall_first_month_scans"
+  },
+  "tags": [
+    "ashfall",
+    "weather",
+    "hazards"
+  ]
+}

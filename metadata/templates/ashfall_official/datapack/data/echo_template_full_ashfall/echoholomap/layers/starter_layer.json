@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_full_ashfall:starter_layer",
+  "name": "Full Ashfall Starter Layer",
+  "description": "Starter HoloMap layer for Full Ashfall generated packs.",
+  "visibleByDefault": true,
+  "markerStyle": "template",
+  "markers": [
+    {
+      "id": "echo_template_full_ashfall:official_profile_checkpoint",
+      "label": "Official Profile Checkpoint",
+      "kind": "ashfall_profile",
+      "description": "Ashfall-specific marker data stays only in the official profile namespace.",
+      "missionId": "echo_template_full_ashfall:starter_progression_sync",
+      "indexEntry": "echo_template_full_ashfall:starter_timeline"
+    }
+  ]
+}

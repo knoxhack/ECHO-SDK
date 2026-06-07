@@ -1,0 +1,11 @@
+{
+  "id": "echo_template_pack2_draft:unstable_power_bus",
+  "name": "Unstable Power Bus",
+  "description": "Prototype hazard label for future power routing risk.",
+  "severity": "minor",
+  "riskLabel": "watch",
+  "linkedIndexEntry": "echo_template_pack2_draft:fault_troubleshooting",
+  "linkedHoloMapMarker": "echo_template_pack2_draft:power_spine#fault_breaker",
+  "linkedMission": "echo_template_pack2_draft:runtime_budget_review",
+  "notes": "Advisory only in 1.0.0; no damage, worldgen, or runtime budget side effect is added."
+}

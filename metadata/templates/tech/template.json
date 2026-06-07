@@ -1,0 +1,155 @@
+{
+  "id": "tech",
+  "name": "Tech",
+  "version": "1.0.0",
+  "style": "Tech",
+  "goals": [
+    "Teach power generation and storage",
+    "Introduce machine processing, depot automation, and Terminal next steps",
+    "Keep automation readable, validated, and grounded in the existing Tech wave"
+  ],
+  "description": "A 1.0.0-synced Tech starter that keeps the existing 1.0.0 Tech wave content and makes the first generator, battery, processor, depot, and Terminal dashboard path explicit.",
+  "targetPlayer": "Creators building a structured machine and automation pack with clear early power goals and template-ready generated pack docs.",
+  "gameplayLoop": "Open Terminal, read Power Basics, build generation and storage, route high voltage into a processor, automate a depot, then verify runtime budgets before scaling.",
+  "first30Minutes": [
+    "Route High Voltage Cable through a Factory Substation.",
+    "Run the first Industrial Nexus processor recipe.",
+    "Place a logistics depot beside the powered machine row.",
+    "Open Terminal again and confirm the next-step dashboard."
+  ],
+  "first2Hours": [
+    "Automate the first depot request loop.",
+    "Validate the factory power spine and note failure reasons in Index.",
+    "Review RuntimeGuard budget guidance before duplicating machine rows."
+  ],
+  "notRecommendedFor": [
+    "Vanilla-only packs",
+    "No-tech RPG packs"
+  ],
+  "wizardCopy": {
+    "summary": "A factory-ready 1.0.0 template with reinforced power, high-voltage routing, logistics, multiblocks, Lens, HoloMap, Terminal, and runtime guidance.",
+    "difficulty": "Medium",
+    "bestFor": [
+      "Tech",
+      "Automation",
+      "Kitchen Sink"
+    ],
+    "warnings": [
+      "Use Field Battery Banks and Factory Substations to keep grids readable before adding heavy automation."
+    ],
+    "notFor": [
+      "Vanilla-only packs",
+      "No-tech RPG packs"
+    ]
+  },
+  "recommendedModules": [
+    "echocore",
+    "echonetcore",
+    "echothemecore",
+    "echoindex",
+    "echoterminal",
+    "echomissioncore",
+    "echopowergrid",
+    "echoindustrialnexus",
+    "echomultiblockcore",
+    "echologisticsnetwork",
+    "echolens",
+    "echoholomap",
+    "echoruntimeguard"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "optionalModules": [
+    "echodatacore",
+    "echosoundcore"
+  ],
+  "defaultTheme": "tech_console",
+  "starterMissions": [
+    "datapack/data/echo_template_tech/missioncore/chapters/starter.json",
+    "datapack/data/echo_template_tech/missioncore/missions/starter_flow.json",
+    "datapack/data/echo_template_tech/missioncore/missions/grid_commissioning_depth.json",
+    "datapack/data/echo_template_tech/missioncore/missions/starter_progression_sync.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echo_template_tech/echo_index/categories/starter.json",
+    "datapack/data/echo_template_tech/echo_index/entries/overview.json",
+    "datapack/data/echo_template_tech/echo_index/relations/overview_to_flow.json",
+    "datapack/data/echo_template_tech/echo_index/entries/power_basics.json",
+    "datapack/data/echo_template_tech/echo_index/entries/machines.json",
+    "datapack/data/echo_template_tech/echo_index/entries/batteries.json",
+    "datapack/data/echo_template_tech/echo_index/entries/cables_and_relays.json",
+    "datapack/data/echo_template_tech/echo_index/entries/logistics.json",
+    "datapack/data/echo_template_tech/echo_index/entries/multiblocks.json",
+    "datapack/data/echo_template_tech/echo_index/entries/runtime_safety.json",
+    "datapack/data/echo_template_tech/echo_index/entries/reinforced_power.json",
+    "datapack/data/echo_template_tech/echo_index/entries/biofuel_generation.json",
+    "datapack/data/echo_template_tech/echo_index/entries/high_voltage_distribution.json",
+    "datapack/data/echo_template_tech/echo_index/entries/field_batteries.json",
+    "datapack/data/echo_template_tech/echo_index/entries/factory_substations.json",
+    "datapack/data/echo_template_tech/echo_index/entries/automation_line.json",
+    "datapack/data/echo_template_tech/echo_index/entries/component_assembly_recipes.json",
+    "datapack/data/echo_template_tech/echo_index/entries/lens_grid_scans.json",
+    "datapack/data/echo_template_tech/echo_index/entries/factory_marker_map.json",
+    "datapack/data/echo_template_tech/echo_index/entries/terminal_next_steps.json",
+    "datapack/data/echo_template_tech/echo_index/entries/runtime_budget_checklist.json",
+    "datapack/data/echo_template_tech/echo_index/relations/component_recipes_to_depth_mission.json",
+    "datapack/data/echo_template_tech/echo_index/relations/lens_scans_to_depth_mission.json",
+    "datapack/data/echo_template_tech/echo_index/relations/factory_markers_to_depth_mission.json",
+    "datapack/data/echo_template_tech/echo_index/relations/terminal_steps_to_depth_mission.json",
+    "datapack/data/echo_template_tech/echo_index/relations/runtime_budgets_to_depth_mission.json",
+    "datapack/data/echo_template_tech/echo_index/entries/first_10_minutes.json",
+    "datapack/data/echo_template_tech/echo_index/entries/starter_timeline.json",
+    "datapack/data/echo_template_tech/echo_index/relations/starter_timeline_to_mission.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echo_template_tech/tutorial_cards/orientation.json",
+    "datapack/data/echo_template_tech/tutorial_cards/grid_commissioning.json",
+    "datapack/data/echo_template_tech/tutorial_hints/first_hint.json",
+    "datapack/data/echo_template_tech/tutorial_hints/grid_commissioning_hint.json",
+    "datapack/data/echo_template_tech/tutorial_cards/starter_timeline.json",
+    "datapack/data/echo_template_tech/tutorial_hints/starter_next_step_hint.json",
+    "datapack/data/echo_template_tech/tutorial_flows/first_30_minutes.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echo_template_tech/echoholomap/layers/starter_layer.json"
+  ],
+  "starterWeatherCoreEvents": [
+    "datapack/data/echo_template_tech/echoweathercore/weather_profiles/starter_weather.json"
+  ],
+  "starterSoundCoreRules": [
+    "datapack/data/echo_template_tech/echosoundcore/audio_profiles/ambience/starter_ambience.json"
+  ],
+  "starterWorldCoreRegions": [
+    "datapack/data/echo_template_tech/echoworldcore/world_regions/starter_region.json"
+  ],
+  "configPresets": [
+    "tech_normal",
+    "low_end_performance"
+  ],
+  "exportProfiles": [
+    "client",
+    "server",
+    "curseforge",
+    "modrinth",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "dependencies.required_present",
+    "versions.ecosystem_aligned",
+    "configs.preset_reasoned",
+    "datapacks.examples_valid",
+    "theme.tokens.required",
+    "export.profiles.present",
+    "ashfall.no_leak"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "contentWave": "tech_1_0_0",
+  "first10Minutes": [
+    "Open Terminal and read Power Basics.",
+    "Build a starter generator or reinforced solar path.",
+    "Place a Field Battery Bank and inspect stored power."
+  ],
+  "contentWaveLabel": "1.0.0 template sync"
+}

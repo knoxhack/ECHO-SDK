@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_full_ashfall:first_10_minutes",
+  "category": "echo_template_full_ashfall:starter",
+  "title": "First 10 Minutes",
+  "subtitle": "Template starter guidance",
+  "summary": "Opening goals for Full Ashfall generated packs.",
+  "body": "Read the Ashfall install notes. Confirm the official profile module list. Open the Ashfall-safe starter TutorialCore card.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "first-10-minutes"
+  ]
+}

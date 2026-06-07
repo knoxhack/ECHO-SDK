@@ -1,0 +1,44 @@
+{
+  "id": "echo_template_pack2_draft:processor_route",
+  "title": "Processor Route",
+  "description": "Objective route from the starter power loop to the first Industrial Nexus worksite.",
+  "markerSource": "pack2_metadata_and_player_waypoints",
+  "visibleByDefault": true,
+  "markerStyle": "pack2_theme",
+  "routeLinks": [
+    {
+      "id": "starter_loop_to_processor",
+      "from": "first_power_loop",
+      "to": "processor_worksite",
+      "riskLabel": "blocked",
+      "themeToken": "map.route.blocked"
+    }
+  ],
+  "markers": [
+    {
+      "id": "processor_worksite",
+      "label": "Processor Worksite",
+      "kind": "worksite",
+      "type": "next_objective",
+      "status": "planned",
+      "riskLabel": "blocked",
+      "icon": "echoindustrialnexus:scrap_processor_controller",
+      "x": 18,
+      "z": -8,
+      "missionId": "echo_template_pack2_draft:route_processor_line",
+      "objectiveId": "echo_template_pack2_draft:route_processor_line/scan_processor_worksite",
+      "indexEntry": "echo_template_pack2_draft:processor_workcell",
+      "lensProfile": "echo_template_pack2_draft:processor_worksite",
+      "themeToken": "map.marker.next",
+      "previewIconState": "planned",
+      "tooltip": "Processor Worksite: blocked",
+      "screenshotHint": "Include this marker in the HoloMap preview screenshot if it is part of the active route."
+    }
+  ],
+  "previewStatus": "internal_preview",
+  "visualPolish": {
+    "markerShape": "compact diamond or square pin",
+    "labelDensity": "short labels with risk chip",
+    "avoidAshfallStyle": true
+  }
+}

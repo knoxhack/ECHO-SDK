@@ -1,0 +1,24 @@
+{
+  "schema": "echo.mod.v1",
+  "id": "hello_content_addon",
+  "name": "Hello Content Add-on",
+  "version": "0.1.0",
+  "kind": "content",
+  "role": "sample",
+  "runtimeTargets": [
+    "echo_native",
+    "neoforge",
+    "echo_runtime_standalone"
+  ],
+  "domains": [
+    "items",
+    "blocks",
+    "recipes"
+  ],
+  "permissions": [
+    "registry.items",
+    "registry.blocks",
+    "registry.recipes"
+  ],
+  "entrypoint": "dev.echo.samples.hello.HelloContentAddon"
+}

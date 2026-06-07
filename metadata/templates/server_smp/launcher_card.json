@@ -1,0 +1,38 @@
+{
+  "id": "server_smp",
+  "title": "Server SMP",
+  "subtitle": "A server starter with PlayerCore, RuntimeGuard, DataCore, HoloMap, MissionCore, Index, TutorialCore, shared objectives, and low-end guidance.",
+  "description": "A server-focused starter with admin setup missions, PlayerCore permissions and home docs, RuntimeGuard budgets, shared HoloMap objectives, and server-balanced plus low-end configs.",
+  "status": "Beta",
+  "style": "Server SMP",
+  "theme": "default_dark",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "SMP",
+    "Server Admins",
+    "Community Packs"
+  ],
+  "difficulty": "Admin",
+  "first10MinutesPreview": [
+    "Open the admin setup Index page.",
+    "Confirm PlayerCore permissions and home rules.",
+    "Run the first RuntimeGuard budget check."
+  ],
+  "first30MinutesPreview": [
+    "Create a shared HoloMap objective marker.",
+    "Complete the admin setup MissionCore checklist.",
+    "Review backup and diagnostics docs.",
+    "Choose server-balanced or low-end config guidance."
+  ],
+  "first2HoursPreview": [
+    "Write staff-specific permission notes.",
+    "Add one shared community objective mission.",
+    "Recheck RuntimeGuard budgets after player count assumptions change."
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Server SMP first 10 minutes screenshot",
+    "Server SMP first 30 minutes checklist screenshot",
+    "Server SMP generated pack launcher card screenshot"
+  ]
+}

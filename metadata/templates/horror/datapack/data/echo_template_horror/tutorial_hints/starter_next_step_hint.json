@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_horror:starter_next_step_hint",
+  "title": "Horror Next Step",
+  "message": "Read the signal investigation Index page.",
+  "trigger": "first_login",
+  "nextStep": "Open the first archive entry."
+}

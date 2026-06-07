@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_full_ashfall:starter_ambience",
+  "sound": "minecraft:ambient.cave",
+  "subtitle": "Ashfall Profile Ambience",
+  "volume": 0.35,
+  "pitch": 1.0,
+  "loop": true,
+  "description": "Subtle ambience placeholder for Full Ashfall starter packs."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "echo_template_pack2_draft:warning_fault",
+  "title": "Warning Fault Cue",
+  "description": "Low-volume warning cue for optional module, RuntimeGuard, and route-risk states. Final audio asset is deferred.",
+  "events": [
+    {
+      "id": "foundry_warning_soft",
+      "trigger": "echoterminal:warning_state",
+      "sound": "echo_template_pack2_draft:stinger.warning_fault",
+      "volume": 0.28,
+      "pitch": 0.92,
+      "fallback": "silent"
+    }
+  ],
+  "status": "prototype_stub",
+  "themeToken": "state.warning"
+}

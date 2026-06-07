@@ -1,0 +1,9 @@
+{
+  "id": "echo_template_pack2_draft:overview_to_commissioning",
+  "from": "echo_template_pack2_draft:foundry_overview",
+  "to": "echo_template_pack2_draft:grid_commissioning",
+  "type": "starter_guidance",
+  "label": "Start with grid commissioning",
+  "terminalPanel": "echo_template_pack2_draft:foundry_dashboard#next_objective",
+  "mission": "echo_template_pack2_draft:restore_power_spine"
+}

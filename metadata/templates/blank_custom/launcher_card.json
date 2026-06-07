@@ -1,0 +1,46 @@
+{
+  "id": "blank_custom",
+  "title": "Blank Custom",
+  "subtitle": "A guided blank scaffold with Core, NetCore, Index, TutorialCore, MissionCore, and HoloMap selected so generated packs have a tiny playable loop.",
+  "description": "A guided Blank Custom starter with Core, NetCore, Index, TutorialCore, MissionCore, and HoloMap scaffolds plus one replaceable first-session loop.",
+  "status": "Stable",
+  "style": "Blank Custom",
+  "theme": "default_dark",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Custom",
+    "Advanced Creators",
+    "Tooling Tests"
+  ],
+  "difficulty": "Creator",
+  "first10MinutesPreview": [
+    "Open Index and read the Blank Custom orientation page.",
+    "Open the starter TutorialCore card.",
+    "Track the starter HoloMap marker."
+  ],
+  "first30MinutesPreview": [
+    "Complete the minimal MissionCore checklist.",
+    "Rename the sample Index page to match the pack concept.",
+    "Pick the first additional module or config preset.",
+    "Run pack validation after changing the scaffold."
+  ],
+  "first2HoursPreview": [
+    "Replace the sample mission with a real chapter objective.",
+    "Add one pack-specific Index entry and one tutorial hint.",
+    "Export and validate a client and server manifest."
+  ],
+  "recommendedModules": [
+    "echocore",
+    "echonetcore",
+    "echoindex",
+    "echotutorialcore",
+    "echomissioncore",
+    "echoholomap"
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Blank Custom first 10 minutes screenshot",
+    "Blank Custom first 30 minutes checklist screenshot",
+    "Blank Custom generated pack launcher card screenshot"
+  ]
+}

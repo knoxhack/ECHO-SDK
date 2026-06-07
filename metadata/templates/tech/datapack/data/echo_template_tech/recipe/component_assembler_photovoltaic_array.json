@@ -1,0 +1,14 @@
+{
+  "type": "echoindustrialnexus:industrial_processing",
+  "machine": "component_assembler",
+  "ingredient": [
+    "minecraft:glass_pane",
+    "minecraft:redstone",
+    "echopowergrid:copper_coil"
+  ],
+  "result": "echopowergrid:photovoltaic_array",
+  "count": 1,
+  "duration": 100,
+  "fluxCost": 60,
+  "heat": 1
+}

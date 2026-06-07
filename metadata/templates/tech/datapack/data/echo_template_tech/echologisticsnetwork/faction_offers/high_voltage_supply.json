@@ -1,0 +1,15 @@
+{
+  "id": "echo_template_tech:high_voltage_supply",
+  "factionId": "echo_template_tech:factory_exchange",
+  "input": {
+    "item": "minecraft:copper_ingot",
+    "count": 8
+  },
+  "output": {
+    "item": "echopowergrid:ceramic_insulator",
+    "count": 2
+  },
+  "reputationDelta": 1,
+  "minReputation": 0,
+  "cooldownTicks": 1200
+}

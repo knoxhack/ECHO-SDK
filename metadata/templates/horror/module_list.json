@@ -1,0 +1,33 @@
+{
+  "template": "horror",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echothemecore",
+    "echoindex",
+    "echoterminal",
+    "echosoundcore",
+    "echolens",
+    "echomissioncore",
+    "echoholomap"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echothemecore",
+    "echoindex",
+    "echoterminal",
+    "echosoundcore",
+    "echolens",
+    "echomissioncore",
+    "echoholomap"
+  ],
+  "optionalModules": [
+    "echostationfall",
+    "echoblackboxprotocol",
+    "echotutorialcore"
+  ]
+}

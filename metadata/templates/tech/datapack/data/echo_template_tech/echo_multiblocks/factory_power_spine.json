@@ -1,0 +1,63 @@
+{
+  "id": "echo_template_tech:factory_power_spine",
+  "display_name": "Factory Power Spine",
+  "category": "tech_wave",
+  "role": "INFRASTRUCTURE",
+  "primary_use": "Shows creators how to document a power trunk multiblock without adding a new machine system.",
+  "integration_hints": [
+    "Index: high_voltage_distribution",
+    "HoloMap: Factory Utilities",
+    "RuntimeGuard: keep starter lines small"
+  ],
+  "size": [
+    3,
+    2,
+    3
+  ],
+  "controller": "echoindustrialnexus:factory_controller",
+  "palette": {
+    "C": {
+      "block": "echoindustrialnexus:factory_controller",
+      "controller": true
+    },
+    "F": {
+      "block": "echoindustrialnexus:reinforced_machine_casing"
+    },
+    "P": {
+      "block": "echoindustrialnexus:industrial_power_bus",
+      "component": true
+    },
+    "B": {
+      "block": "echopowergrid:field_battery_bank",
+      "component": true
+    },
+    "H": {
+      "block": "echopowergrid:high_voltage_cable",
+      "component": true
+    },
+    ".": {
+      "air": true
+    }
+  },
+  "layers": [
+    [
+      "FPF",
+      "HCH",
+      "FBF"
+    ],
+    [
+      ".H.",
+      ".P.",
+      ".H."
+    ]
+  ],
+  "capabilities": [
+    "echo:item_input",
+    "echo:item_output",
+    "echo:scanner_target",
+    "echo:map_marker"
+  ],
+  "preview": {
+    "color": "#5BD6FF"
+  }
+}

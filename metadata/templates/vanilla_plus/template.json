@@ -1,0 +1,127 @@
+{
+  "id": "vanilla_plus",
+  "name": "Vanilla+",
+  "version": "1.0.0",
+  "style": "Vanilla+",
+  "goals": [
+    "Add a friendly guide layer to vanilla play",
+    "Teach homes, farms, villages, and basic ECHO navigation",
+    "Keep progression gentle and free of heavy tech, horror, or official-pack content"
+  ],
+  "description": "A lightweight ECHO-enhanced vanilla starter that now includes a guided first-session loop for homes, Index pages, map markers, and gentle optional missions without changing the core feel.",
+  "targetPlayer": "Players who want Minecraft to stay familiar while gaining clean guidebook, tutorial, home, and waypoint support.",
+  "gameplayLoop": "Open Index, set a safe return point, mark a useful place, complete a gentle checklist, and expand farms or village notes at your own pace.",
+  "first30Minutes": [
+    "Finish a small shelter or base corner.",
+    "Mark a farm, mine, or village on the starter HoloMap layer.",
+    "Complete the gentle MissionCore checklist.",
+    "Review the TutorialCore card if a module is unfamiliar."
+  ],
+  "first2Hours": [
+    "Expand the first base and document recurring routes in Index.",
+    "Use PlayerCore homes and HoloMap markers to connect farms, mines, and villages.",
+    "Add creator-specific checklist objectives if this becomes a light SMP pack."
+  ],
+  "notRecommendedFor": [
+    "Tech factories",
+    "Horror investigations",
+    "Official pack campaigns"
+  ],
+  "wizardCopy": {
+    "summary": "A quiet Vanilla+ starter with guided Index, PlayerCore homes, HoloMap markers, TutorialCore hints, and a gentle MissionCore checklist.",
+    "difficulty": "Easy",
+    "bestFor": [
+      "Vanilla+",
+      "Kitchen Sink",
+      "Light SMP"
+    ],
+    "warnings": [
+      "Keep optional modules light to preserve the vanilla feel."
+    ],
+    "notFor": [
+      "Tech factories",
+      "Horror investigations",
+      "Official pack campaigns"
+    ]
+  },
+  "recommendedModules": [
+    "echocore",
+    "echonetcore",
+    "echoindex",
+    "echotutorialcore",
+    "echoplayercore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "optionalModules": [
+    "echoholomap",
+    "echothemecore",
+    "echosoundcore",
+    "echomissioncore",
+    "echorecovery"
+  ],
+  "defaultTheme": "vanilla_book",
+  "starterMissions": [
+    "datapack/data/echo_template_vanilla_plus/missioncore/chapters/starter.json",
+    "datapack/data/echo_template_vanilla_plus/missioncore/missions/starter_flow.json",
+    "datapack/data/echo_template_vanilla_plus/missioncore/missions/starter_progression_sync.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echo_template_vanilla_plus/echo_index/categories/starter.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/entries/overview.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/relations/overview_to_flow.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/entries/using_index.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/entries/homes_and_waypoints.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/entries/gentle_goals.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/entries/first_10_minutes.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/entries/starter_timeline.json",
+    "datapack/data/echo_template_vanilla_plus/echo_index/relations/starter_timeline_to_mission.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echo_template_vanilla_plus/tutorial_cards/orientation.json",
+    "datapack/data/echo_template_vanilla_plus/tutorial_hints/first_hint.json",
+    "datapack/data/echo_template_vanilla_plus/tutorial_cards/starter_timeline.json",
+    "datapack/data/echo_template_vanilla_plus/tutorial_hints/starter_next_step_hint.json",
+    "datapack/data/echo_template_vanilla_plus/tutorial_flows/first_30_minutes.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echo_template_vanilla_plus/echoholomap/layers/starter_layer.json"
+  ],
+  "starterWeatherCoreEvents": [
+    "datapack/data/echo_template_vanilla_plus/echoweathercore/weather_profiles/starter_weather.json"
+  ],
+  "starterSoundCoreRules": [
+    "datapack/data/echo_template_vanilla_plus/echosoundcore/audio_profiles/ambience/starter_ambience.json"
+  ],
+  "starterWorldCoreRegions": [
+    "datapack/data/echo_template_vanilla_plus/echoworldcore/world_regions/starter_region.json"
+  ],
+  "configPresets": [
+    "easy"
+  ],
+  "exportProfiles": [
+    "client",
+    "server",
+    "curseforge",
+    "modrinth",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "dependencies.required_present",
+    "versions.ecosystem_aligned",
+    "configs.preset_reasoned",
+    "datapacks.examples_valid",
+    "theme.tokens.required",
+    "export.profiles.present",
+    "ashfall.no_leak"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "first10Minutes": [
+    "Open Index and read the Vanilla+ welcome page.",
+    "Set a home or safe return point with PlayerCore.",
+    "Create one HoloMap marker for base, farm, mine, or village."
+  ],
+  "contentWaveLabel": "1.0.0 template sync"
+}

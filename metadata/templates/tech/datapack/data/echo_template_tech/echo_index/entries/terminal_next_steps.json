@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_tech:terminal_next_steps",
+  "category": "echo_template_tech:starter",
+  "title": "Terminal Next Steps",
+  "subtitle": "Power Grid dashboard guidance",
+  "summary": "The Power Grid Terminal tab summarizes the next commissioning action from loaded grid telemetry.",
+  "body": "If no grid is synced, build a generator, battery, and cable run. If a network is stressed, stabilize supply or transfer first. If no high-voltage route exists, route High Voltage Cable into a Factory Substation. If reserve is thin, add a Field Battery Bank before scaling machines.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "Terminal",
+    "PowerGrid"
+  ],
+  "related": [
+    "echo_template_tech:power_basics",
+    "echo_template_tech:runtime_safety",
+    "echo_template_tech:grid_commissioning_depth"
+  ]
+}

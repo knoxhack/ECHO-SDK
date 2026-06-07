@@ -1,0 +1,58 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-addon-platform-contract",
+  "name": "ECHO Addon Platform Contract",
+  "kind": "addon",
+  "description": "Scaffold a common/server-safe platform contract addon.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoSdkPlatformContract",
+    "kind": "library",
+    "role": "platform_contract",
+    "feature_id": "platform.contracts.generated",
+    "display_name": "ECHO SDK Platform Contract"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/gradle.properties",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.mod.json",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.ai.json",
+    "addons/{{module_id}}/src/main/templates/META-INF/neoforge.mods.toml",
+    "addons/{{module_id}}/README.md",
+    "addons/{{module_id}}/docs/{{module_id}}.md",
+    "addons/{{module_id}}/src/test/validation/{{module_id}}.validation.json"
+  ],
+  "defaultFeatures": [
+    "platform.contracts.generated"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "docs/**",
+    "README.md"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "managed installs",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "architect_agent",
+    "diagnostics_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew scanEchoWorkspace -PechoAddonSet=beta",
+    ".\\gradlew generateEchoModuleGraph -PechoAddonSet=beta"
+  ]
+}

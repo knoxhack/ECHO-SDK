@@ -1,0 +1,62 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "echo-addon-ui-surface",
+  "name": "ECHO Addon UI Surface",
+  "kind": "addon",
+  "description": "Scaffold a UI surface addon shell with explicit client/common boundary review points.",
+  "fileSets": [
+    "addon-module"
+  ],
+  "defaultValues": {
+    "class_name": "EchoSdkUiSurface",
+    "kind": "ui",
+    "role": "ui_surface",
+    "feature_id": "ui.surface.generated",
+    "display_name": "ECHO SDK UI Surface"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": [
+    "addons/{{module_id}}/build.gradle",
+    "addons/{{module_id}}/gradle.properties",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/{{class_name}}.java",
+    "addons/{{module_id}}/src/main/java/{{package_path}}/clientboundary/{{class_name}}ClientBoundary.java",
+    "addons/{{module_id}}/src/main/resources/data/{{module_id}}/ui/{{module_id}}_surface.json",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.mod.json",
+    "addons/{{module_id}}/src/main/resources/META-INF/echo.ai.json",
+    "addons/{{module_id}}/src/main/templates/META-INF/neoforge.mods.toml",
+    "addons/{{module_id}}/README.md",
+    "addons/{{module_id}}/docs/client-isolation.md",
+    "addons/{{module_id}}/docs/{{module_id}}.md",
+    "addons/{{module_id}}/src/test/validation/{{module_id}}.validation.json"
+  ],
+  "defaultFeatures": [
+    "ui.surface.generated"
+  ],
+  "safeEditZones": [
+    "src/main/java/**",
+    "src/main/resources/assets/{{module_id}}/**",
+    "docs/**",
+    "README.md"
+  ],
+  "protectedFiles": [
+    "src/generated/**",
+    "common contracts outside the module",
+    "user saves"
+  ],
+  "recommendedAgentLanes": [
+    "ui_agent",
+    "diagnostics_agent"
+  ],
+  "validationCommands": [
+    ".\\gradlew scanEchoWorkspace -PechoAddonSet=beta",
+    ".\\gradlew generateEchoModuleGraph -PechoAddonSet=beta"
+  ]
+}

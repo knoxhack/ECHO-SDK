@@ -1,0 +1,12 @@
+{
+  "id": "echo_template_server_smp:team_markers",
+  "category": "echo_template_server_smp:starter",
+  "title": "Team Markers",
+  "subtitle": "Server SMP creator note",
+  "summary": "Starter documentation for team markers in a Server SMP pack.",
+  "body": "Use this page to explain team markers with real pack-specific recipes, commands, blocks, or objectives before publishing.",
+  "tags": [
+    "Server SMP",
+    "starter"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_vanilla_plus:starter_next_step_hint",
+  "title": "Vanilla+ Next Step",
+  "message": "Open Index and read the Vanilla+ welcome page.",
+  "trigger": "first_login",
+  "nextStep": "Finish a small shelter or base corner."
+}

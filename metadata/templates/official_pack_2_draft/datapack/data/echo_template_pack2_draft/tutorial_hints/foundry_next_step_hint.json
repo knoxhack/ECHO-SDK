@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_pack2_draft:foundry_next_step_hint",
+  "text": "Use the Foundry dashboard next-objective panel to keep Terminal, MissionCore, Index, Lens, and HoloMap in sync.",
+  "context": "terminal",
+  "linkedPanel": "echo_template_pack2_draft:foundry_dashboard#next_objective",
+  "themeToken": "mission.active"
+}

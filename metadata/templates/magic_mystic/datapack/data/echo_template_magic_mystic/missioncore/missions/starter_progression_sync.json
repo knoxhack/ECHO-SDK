@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_magic_mystic:starter_progression_sync",
+  "chapterId": "echo_template_magic_mystic:starter_chapter",
+  "title": "Relic Scan Route",
+  "briefing": "Teach the first scan, research page, marker, and safe artifact handling loop.",
+  "objectives": [
+    {
+      "id": "read_relic_basics",
+      "type": "creator_action",
+      "label": "Read Relic Basics",
+      "detail": "1.0.0 template sync objective 1: Read Relic Basics."
+    },
+    {
+      "id": "scan_one_relic_clue_with_lens",
+      "type": "creator_action",
+      "label": "Scan one relic clue with Lens",
+      "detail": "1.0.0 template sync objective 2: Scan one relic clue with Lens."
+    },
+    {
+      "id": "open_the_research_index_page",
+      "type": "creator_action",
+      "label": "Open the research Index page",
+      "detail": "1.0.0 template sync objective 3: Open the research Index page."
+    },
+    {
+      "id": "track_the_relic_marker",
+      "type": "creator_action",
+      "label": "Track the relic marker",
+      "detail": "1.0.0 template sync objective 4: Track the relic marker."
+    },
+    {
+      "id": "review_safe_artifact_handling",
+      "type": "creator_action",
+      "label": "Review safe artifact handling",
+      "detail": "1.0.0 template sync objective 5: Review safe artifact handling."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_magic_mystic:starter_timeline",
+    "holomapMarker": "echo_template_magic_mystic:relic_signal",
+    "tutorialCard": "echo_template_magic_mystic:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_magic_mystic:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

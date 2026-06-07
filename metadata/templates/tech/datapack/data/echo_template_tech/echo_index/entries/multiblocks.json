@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:multiblocks",
+  "category": "echo_template_tech:starter",
+  "title": "Multiblocks",
+  "subtitle": "Validated factory structures",
+  "summary": "Multiblock examples should explain missing blocks instead of becoming mystery boxes.",
+  "body": "The Tech Wave starter includes a factory power spine definition. It is intentionally simple: a controller, casing, power bus, and battery/cable markers that show creators how to connect PowerGrid and Industrial Nexus concepts without adding new Java systems.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "vanilla_plus",
+  "title": "Vanilla+",
+  "subtitle": "A quiet Vanilla+ starter with guided Index, PlayerCore homes, HoloMap markers, TutorialCore hints, and a gentle MissionCore checklist.",
+  "description": "A lightweight ECHO-enhanced vanilla starter that now includes a guided first-session loop for homes, Index pages, map markers, and gentle optional missions without changing the core feel.",
+  "status": "Beta",
+  "style": "Vanilla+",
+  "theme": "vanilla_book",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Vanilla+",
+    "Kitchen Sink",
+    "Light SMP"
+  ],
+  "difficulty": "Easy",
+  "first10MinutesPreview": [
+    "Open Index and read the Vanilla+ welcome page.",
+    "Set a home or safe return point with PlayerCore.",
+    "Create one HoloMap marker for base, farm, mine, or village."
+  ],
+  "first30MinutesPreview": [
+    "Finish a small shelter or base corner.",
+    "Mark a farm, mine, or village on the starter HoloMap layer.",
+    "Complete the gentle MissionCore checklist.",
+    "Review the TutorialCore card if a module is unfamiliar."
+  ],
+  "first2HoursPreview": [
+    "Expand the first base and document recurring routes in Index.",
+    "Use PlayerCore homes and HoloMap markers to connect farms, mines, and villages.",
+    "Add creator-specific checklist objectives if this becomes a light SMP pack."
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Vanilla+ first 10 minutes screenshot",
+    "Vanilla+ first 30 minutes checklist screenshot",
+    "Vanilla+ generated pack launcher card screenshot"
+  ]
+}

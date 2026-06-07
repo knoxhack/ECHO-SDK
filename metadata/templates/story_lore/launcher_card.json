@@ -1,0 +1,38 @@
+{
+  "id": "story_lore",
+  "title": "Story/Lore",
+  "subtitle": "A lore-pack foundation with Terminal, Index, MissionCore, SignalOS, Lens, HoloMap, tutorials, and SoundCore.",
+  "description": "A story foundation with Terminal archive start, SignalOS chapter sample, Lens clue objective, HoloMap story marker, and mission chain guidance.",
+  "status": "Beta",
+  "style": "Story/Lore",
+  "theme": "rpg_journal",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Story",
+    "RPG",
+    "Mystery"
+  ],
+  "difficulty": "Medium",
+  "first10MinutesPreview": [
+    "Open Terminal and read the first archive.",
+    "Accept the starter story mission.",
+    "Pin the first story marker on HoloMap."
+  ],
+  "first30MinutesPreview": [
+    "Scan a story clue with Lens.",
+    "Read the Index page that summarizes the chapter.",
+    "Complete the first mission step and unlock the next archive note.",
+    "Review the Terminal next-step summary."
+  ],
+  "first2HoursPreview": [
+    "Add two more chapter records and connect them to missions.",
+    "Use SoundCore for subtle progression notifications.",
+    "Build a Terminal dashboard that reflects the creator setting."
+  ],
+  "contentWaveLabel": "1.0.0 template sync",
+  "screenshotsNeeded": [
+    "Story/Lore first 10 minutes screenshot",
+    "Story/Lore first 30 minutes checklist screenshot",
+    "Story/Lore generated pack launcher card screenshot"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ashfall_official",
+  "title": "Full Ashfall",
+  "subtitle": "Official ECHO Pack #1 showcase profile",
+  "description": "Ashfall demonstrates the ECHO stack with a guided Terminal, Index, Lens, HoloMap, MissionCore, WeatherCore, RelicTech, PowerGrid, Armory, and story flow while reusable modules stay standalone.",
+  "status": "Beta",
+  "style": "Official Pack",
+  "theme": "ashfall",
+  "accent": "#5bd6ff",
+  "bestFor": [
+    "Ashfall",
+    "Official Pack",
+    "Story Survival"
+  ],
+  "difficulty": "Official",
+  "first10MinutesPreview": [
+    "Open Terminal and read the Ashfall field dashboard.",
+    "Read the Ashfall Showcase Flow Index entry.",
+    "Scan drop-pod wreckage with Lens and pin the first HoloMap marker."
+  ],
+  "first30MinutesPreview": [
+    "Accept the Ashfall Showcase Opening mission.",
+    "Respond to the first WeatherCore toxic-front warning.",
+    "Recover the first relic field note.",
+    "Repair the pod PowerGrid spine."
+  ],
+  "first2HoursPreview": [
+    "Install the first Armory upgrade.",
+    "Follow the first faction/story signal.",
+    "Use Logistics, Convoy, Nexus, Orbital, Stationfall, and Blackbox hooks only when the profile route calls for them.",
+    "Verify Ashfall-specific content remains in the official profile or echoashfallprotocol namespace."
+  ],
+  "contentWaveLabel": "1.0.0 Ashfall showcase sync",
+  "screenshotsNeeded": [
+    "Ashfall Terminal dashboard screenshot",
+    "Ashfall Showcase Flow Index screenshot",
+    "Ashfall HoloMap opening markers screenshot",
+    "Ashfall Lens scan row screenshot",
+    "Ashfall client/server export validation screenshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_showcase_dashboard",
+  "title": "Ashfall Field Dashboard",
+  "summary": "Next step: open the active mission, read Index, scan wreckage, pin the low-risk field marker, then return before the weather warning peaks.",
+  "nextSteps": [
+    "Open Index: Ashfall Showcase Flow.",
+    "Scan drop-pod wreckage with Lens.",
+    "Pin HoloMap marker: First Field Objective.",
+    "Track MissionCore: Ashfall Showcase Opening.",
+    "Claim the starter documentation reward, then return before the toxic-front warning peaks."
+  ],
+  "theme": "ashfall",
+  "styleTokenSet": "ashfall_cyberglass"
+}

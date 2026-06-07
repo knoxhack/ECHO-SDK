@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_server_smp:starter_weather",
+  "type": "ambient",
+  "displayName": "Server Weather Controls",
+  "defaultSeverity": "low",
+  "scope": "starter_area",
+  "description": "Weather profile used by the Server SMP starter template."
+}

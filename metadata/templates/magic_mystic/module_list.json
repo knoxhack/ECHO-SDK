@@ -1,0 +1,34 @@
+{
+  "template": "magic_mystic",
+  "version": "1.0.0",
+  "modules": [
+    "echocore",
+    "echonetcore",
+    "echothemecore",
+    "echoindex",
+    "echomissioncore",
+    "echorelictech",
+    "echolens",
+    "echoholomap",
+    "echosoundcore",
+    "echotutorialcore"
+  ],
+  "requiredModules": [
+    "echocore",
+    "echonetcore"
+  ],
+  "recommendedModules": [
+    "echothemecore",
+    "echoindex",
+    "echomissioncore",
+    "echorelictech",
+    "echolens",
+    "echoholomap",
+    "echosoundcore",
+    "echotutorialcore"
+  ],
+  "optionalModules": [
+    "echodatacore",
+    "echoworldcore"
+  ]
+}

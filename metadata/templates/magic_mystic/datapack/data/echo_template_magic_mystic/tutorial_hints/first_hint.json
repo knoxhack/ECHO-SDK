@@ -1,0 +1,6 @@
+{
+  "id": "echo_template_magic_mystic:first_hint",
+  "title": "Magic/Mystic First Hint",
+  "message": "Read the Relic Basics Index page.",
+  "trigger": "first_login"
+}

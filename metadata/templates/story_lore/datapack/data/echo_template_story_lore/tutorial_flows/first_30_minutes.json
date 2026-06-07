@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_story_lore:first_30_minutes",
+  "title": "Story/Lore First 30 Minutes",
+  "cards": [
+    "echo_template_story_lore:orientation",
+    "echo_template_story_lore:starter_timeline"
+  ],
+  "steps": [
+    "Scan a story clue with Lens.",
+    "Read the Index page that summarizes the chapter.",
+    "Complete the first mission step and unlock the next archive note.",
+    "Review the Terminal next-step summary."
+  ]
+}

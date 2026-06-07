@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_survival:first_10_minutes",
+  "category": "echo_template_survival:starter",
+  "title": "First 10 Minutes",
+  "subtitle": "Template starter guidance",
+  "summary": "Opening goals for Survival generated packs.",
+  "body": "Open the survival guide in Index. Find shelter and check the WeatherCore warning page. Mark a safe zone on HoloMap.",
+  "tags": [
+    "1.0.0",
+    "template-sync",
+    "first-10-minutes"
+  ]
+}

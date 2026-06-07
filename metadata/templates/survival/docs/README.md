@@ -1,0 +1,19 @@
+# Survival Starter Docs
+
+This generated-pack support folder summarizes the Survival starter progression sync.
+
+First 10 minutes:
+- Open the survival guide in Index.
+- Find shelter and check the WeatherCore warning page.
+- Mark a safe zone on HoloMap.
+
+First 30 minutes:
+- Gather emergency food, light, and recovery supplies.
+- Start a first farm or reclamation patch.
+- Complete the shelter/weather starter mission.
+- Pick normal or hardcore config guidance.
+
+First 2 hours:
+- Expand food security and local restoration.
+- Document recurring weather responses in Index.
+- Tune TutorialCore frequency and weather intensity for the intended audience.

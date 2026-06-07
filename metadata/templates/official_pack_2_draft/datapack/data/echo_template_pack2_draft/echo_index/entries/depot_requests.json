@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_pack2_draft:depot_requests",
+  "category": "echo_template_pack2_draft:foundry_ops",
+  "title": "Progression: Depot Requests",
+  "summary": "Calibrate first logistics requests after the processor route is safe.",
+  "body": "Depot requests are Pack #2's first logistics beat. The MVP shows where this system lives, which module owns it, and what future UI should explain before full production balance is added. In 1.0.0 the request board is represented by Index guidance, HoloMap route labels, and Lens scan metadata rather than a Pack #2-only block.",
+  "tags": [
+    "logistics",
+    "depot",
+    "progression"
+  ],
+  "related": [
+    "echo_template_pack2_draft:grid_commissioning",
+    "echo_template_pack2_draft:logistics_request_board",
+    "echo_template_pack2_draft:runtime_budget",
+    "echo_template_pack2_draft:fault_troubleshooting"
+  ],
+  "sortOrder": 40
+}

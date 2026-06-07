@@ -1,0 +1,11 @@
+{
+  "id": "echo_template_pack2_draft:blocked_processor_lane",
+  "name": "Blocked Processor Lane",
+  "description": "Prototype hazard label for the first processor-route risk state.",
+  "severity": "minor",
+  "riskLabel": "blocked",
+  "linkedIndexEntry": "echo_template_pack2_draft:processor_route",
+  "linkedHoloMapMarker": "echo_template_pack2_draft:processor_route#processor_worksite",
+  "linkedMission": "echo_template_pack2_draft:route_processor_line",
+  "notes": "Advisory map/docs label only; no collision, structure, or gameplay penalty ships in 1.0.0."
+}

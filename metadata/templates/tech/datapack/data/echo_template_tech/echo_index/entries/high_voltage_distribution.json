@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_tech:high_voltage_distribution",
+  "category": "echo_template_tech:starter",
+  "title": "High-Voltage Distribution",
+  "subtitle": "Move EP farther with clearer bottlenecks",
+  "summary": "High Voltage Cable and Factory Substations make starter factories easier to diagnose.",
+  "body": "High Voltage Cable carries 1200 EP/t, making it the preferred line between generators, battery rooms, and machine halls. Factory Substations cap routing at 3000 EP/t and are meant to sit at clear network boundaries so players can see where a factory section starts and ends.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "PowerGrid"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_horror:starter_progression_sync",
+  "chapterId": "echo_template_horror:starter_chapter",
+  "title": "First Evidence Route",
+  "briefing": "Teach evidence scan, first archive, danger-aware map marker, and subtle audio feedback.",
+  "objectives": [
+    {
+      "id": "read_the_signal_investigation_page",
+      "type": "creator_action",
+      "label": "Read the signal investigation page",
+      "detail": "1.0.0 template sync objective 1: Read the signal investigation page."
+    },
+    {
+      "id": "scan_one_evidence_object",
+      "type": "creator_action",
+      "label": "Scan one evidence object",
+      "detail": "1.0.0 template sync objective 2: Scan one evidence object."
+    },
+    {
+      "id": "open_the_first_archive",
+      "type": "creator_action",
+      "label": "Open the first archive",
+      "detail": "1.0.0 template sync objective 3: Open the first archive."
+    },
+    {
+      "id": "follow_the_clue_marker",
+      "type": "creator_action",
+      "label": "Follow the clue marker",
+      "detail": "1.0.0 template sync objective 4: Follow the clue marker."
+    },
+    {
+      "id": "review_stinger_pacing_guidance",
+      "type": "creator_action",
+      "label": "Review stinger pacing guidance",
+      "detail": "1.0.0 template sync objective 5: Review stinger pacing guidance."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_horror:starter_timeline",
+    "holomapMarker": "echo_template_horror:evidence_signal",
+    "tutorialCard": "echo_template_horror:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_horror:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

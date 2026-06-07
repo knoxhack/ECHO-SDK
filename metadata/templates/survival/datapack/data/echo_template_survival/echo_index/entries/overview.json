@@ -1,0 +1,13 @@
+{
+  "id": "echo_template_survival:overview",
+  "category": "echo_template_survival:starter",
+  "title": "Survival Overview",
+  "subtitle": "A practical survival starter with weather, reclamation, PlayerCore, SoundCore, HoloMap, and optional recovery.",
+  "summary": "A survival-first ECHO template with weather awareness, reclamation basics, safe markers, recovery notes, and practical first-night guidance.",
+  "body": "Open the survival guide, find shelter, read weather warnings, mark safe spots, and start basic reclamation.\n\nFirst 30 minutes:\n- Open the survival guide in Index.\n- Find shelter and identify weather warnings.\n- Mark a safe location on HoloMap.\n- Gather emergency food, light, and recovery supplies.\n\nFirst 2 hours:\n- Start basic farming or reclamation near a safe base.\n- Tune survival_hardcore only after the normal preset feels good.\n- Add MissionCore if the pack needs structured survival goals.",
+  "tags": [
+    "Survival",
+    "template",
+    "creator"
+  ]
+}

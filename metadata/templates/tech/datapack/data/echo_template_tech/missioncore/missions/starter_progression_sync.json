@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_tech:starter_progression_sync",
+  "chapterId": "echo_template_tech:starter_chapter",
+  "title": "Tech Starter Timeline",
+  "briefing": "Make the generator, battery, processor, depot, and Terminal dashboard route explicit for generated Tech packs.",
+  "objectives": [
+    {
+      "id": "open_terminal_power_basics",
+      "type": "creator_action",
+      "label": "Open Terminal Power Basics",
+      "detail": "1.0.0 template sync objective 1: Open Terminal Power Basics."
+    },
+    {
+      "id": "build_first_generation_and_storage",
+      "type": "creator_action",
+      "label": "Build first generation and storage",
+      "detail": "1.0.0 template sync objective 2: Build first generation and storage."
+    },
+    {
+      "id": "route_power_through_a_substation",
+      "type": "creator_action",
+      "label": "Route power through a substation",
+      "detail": "1.0.0 template sync objective 3: Route power through a substation."
+    },
+    {
+      "id": "process_one_material_and_connect_a_depot",
+      "type": "creator_action",
+      "label": "Process one material and connect a depot",
+      "detail": "1.0.0 template sync objective 4: Process one material and connect a depot."
+    },
+    {
+      "id": "check_runtimeguard_before_scaling",
+      "type": "creator_action",
+      "label": "Check RuntimeGuard before scaling",
+      "detail": "1.0.0 template sync objective 5: Check RuntimeGuard before scaling."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_tech:starter_timeline",
+    "holomapMarker": "echo_template_tech:factory_commissioning_point",
+    "tutorialCard": "echo_template_tech:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_tech:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

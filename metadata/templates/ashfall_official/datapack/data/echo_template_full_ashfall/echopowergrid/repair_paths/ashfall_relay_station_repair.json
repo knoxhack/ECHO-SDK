@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_full_ashfall:ashfall_relay_station_repair",
+  "title": "Relay Station Repair",
+  "summary": "First major route PowerGrid support path. Repair the relay coupler only after scanning the console and checking the weather window.",
+  "indexEntry": "echo_template_full_ashfall:first_relay_station",
+  "mission": "echo_template_full_ashfall:first_relay_station_route",
+  "holomapMarker": "echo_template_full_ashfall:first_relay_station",
+  "requiredItems": [
+    "echo_template_full_ashfall:scrap_wire",
+    "echo_template_full_ashfall:circuit_board",
+    "echo_template_full_ashfall:energy_cell"
+  ],
+  "fallback": "If PowerGrid is unavailable, log the relay as damaged field intel and continue with cache recovery only."
+}

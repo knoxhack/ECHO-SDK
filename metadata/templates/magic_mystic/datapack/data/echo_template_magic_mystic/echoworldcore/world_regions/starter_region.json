@@ -1,0 +1,7 @@
+{
+  "id": "echo_template_magic_mystic:starter_region",
+  "displayName": "Quiet Ruin Survey Site",
+  "description": "Example WorldCore region for Magic/Mystic packs.",
+  "regionType": "starter",
+  "priority": 1
+}

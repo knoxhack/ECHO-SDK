@@ -1,0 +1,11 @@
+{
+  "id": "echo_template_full_ashfall:first_month_route_hint",
+  "message": "Scan first, read the linked Index entry, then track the HoloMap marker. First-month routes are about preparation, not sprinting at every signal.",
+  "priority": 4,
+  "conditions": [
+    "profile:ashfall",
+    "after:echo_template_full_ashfall:first_week_summary"
+  ],
+  "relatedMission": "echo_template_full_ashfall:ashfall_first_month_routes",
+  "relatedIndexEntry": "echo_template_full_ashfall:first_month_routes"
+}

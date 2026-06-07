@@ -1,0 +1,50 @@
+{
+  "id": "echo_template_survival:starter_progression_sync",
+  "chapterId": "echo_template_survival:starter_chapter",
+  "title": "Shelter and Reclamation Route",
+  "briefing": "Connect shelter, weather, safe-zone markers, and the first food or reclamation step.",
+  "objectives": [
+    {
+      "id": "read_the_survival_guide",
+      "type": "creator_action",
+      "label": "Read the survival guide",
+      "detail": "1.0.0 template sync objective 1: Read the survival guide."
+    },
+    {
+      "id": "find_shelter",
+      "type": "creator_action",
+      "label": "Find shelter",
+      "detail": "1.0.0 template sync objective 2: Find shelter."
+    },
+    {
+      "id": "check_weather_warnings",
+      "type": "creator_action",
+      "label": "Check weather warnings",
+      "detail": "1.0.0 template sync objective 3: Check weather warnings."
+    },
+    {
+      "id": "mark_a_safe_zone",
+      "type": "creator_action",
+      "label": "Mark a safe zone",
+      "detail": "1.0.0 template sync objective 4: Mark a safe zone."
+    },
+    {
+      "id": "start_food_or_reclamation_supplies",
+      "type": "creator_action",
+      "label": "Start food or reclamation supplies",
+      "detail": "1.0.0 template sync objective 5: Start food or reclamation supplies."
+    }
+  ],
+  "guidanceLinks": {
+    "indexEntry": "echo_template_survival:starter_timeline",
+    "holomapMarker": "echo_template_survival:starter_safe_zone",
+    "tutorialCard": "echo_template_survival:starter_timeline"
+  },
+  "rewards": [
+    {
+      "type": "documentation",
+      "id": "echo_template_survival:starter_sync_docs",
+      "label": "Unlock the next template documentation step."
+    }
+  ]
+}

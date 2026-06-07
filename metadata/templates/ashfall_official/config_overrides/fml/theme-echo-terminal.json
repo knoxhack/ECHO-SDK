@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "extends": "darkmode",
+  "colorScheme": {
+    "screenBackground": "#03070b",
+    "text": "#b9f7ff",
+    "memoryLowColor": "#44ffc8",
+    "memoryHighColor": "#ff4fd8"
+  },
+  "sprites": {
+    "progressBarBackground": {
+      "resource": "echo_progress_bar_bg.png",
+      "scaling": {
+        "type": "nine_slice",
+        "width": 40,
+        "height": 20,
+        "left": 2,
+        "top": 2,
+        "right": 2,
+        "bottom": 2,
+        "stretchHorizontalFill": true,
+        "stretchVerticalFill": true,
+        "linearScaling": false
+      }
+    },
+    "progressBarForeground": {
+      "resource": "echo_progress_bar_fg.png",
+      "scaling": {
+        "type": "nine_slice",
+        "width": 40,
+        "height": 20,
+        "left": 4,
+        "top": 4,
+        "right": 4,
+        "bottom": 4,
+        "stretchHorizontalFill": true,
+        "stretchVerticalFill": true,
+        "linearScaling": false
+      }
+    },
+    "progressBarIndeterminate": {
+      "resource": "echo_progress_bar_fg.png",
+      "scaling": {
+        "type": "nine_slice",
+        "width": 40,
+        "height": 20,
+        "left": 4,
+        "top": 4,
+        "right": 4,
+        "bottom": 4,
+        "stretchHorizontalFill": true,
+        "stretchVerticalFill": true,
+        "linearScaling": false
+      }
+    },
+    "progressBarIndeterminateBounces": true
+  },
+  "loadingScreen": {
+    "background": {
+      "type": "image",
+      "texture": {
+        "resource": "echo_terminal_background.png",
+        "scaling": {
+          "type": "stretch",
+          "width": 854,
+          "height": 480,
+          "linearScaling": false
+        }
+      },
+      "visible": true,
+      "maintainAspectRatio": false,
+      "left": 0.0,
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "centerHorizontally": false,
+      "centerVertically": false,
+      "font": "default"
+    },
+    "performance": {
+      "visible": true,
+      "maintainAspectRatio": true,
+      "left": 18.0,
+      "top": 18.0,
+      "centerHorizontally": false,
+      "centerVertically": false,
+      "font": "default"
+    },
+    "progressBars": {
+      "labelGap": 4,
+      "barGap": 5,
+      "visible": true,
+      "maintainAspectRatio": false,
+      "left": 96.0,
+      "top": 286.0,
+      "right": 96.0,
+      "centerHorizontally": false,
+      "centerVertically": false,
+      "font": "default"
+    },
+    "startupLog": {
+      "visible": true,
+      "maintainAspectRatio": true,
+      "left": 18.0,
+      "bottom": 18.0,
+      "centerHorizontally": false,
+      "centerVertically": false,
+      "font": "default"
+    },
+    "mojangLogo": {
+      "visible": false
+    },
+    "decoration": {
+      "version": {
+        "type": "label",
+        "text": "ECHO BOOT // ${version}",
+        "visible": true,
+        "maintainAspectRatio": true,
+        "right": 18.0,
+        "bottom": 18.0,
+        "centerHorizontally": false,
+        "centerVertically": false,
+        "font": "default"
+      },
+      "fox": {
+        "type": "image",
+        "visible": false
+      },
+      "title": {
+        "type": "label",
+        "text": "ECHO CYBERGLASS // ASHFALL PROTOCOL",
+        "visible": true,
+        "maintainAspectRatio": true,
+        "left": 96.0,
+        "top": 96.0,
+        "centerHorizontally": false,
+        "centerVertically": false,
+        "font": "default"
+      },
+      "phase": {
+        "type": "label",
+        "text": "NEOFORGE BOOT HANDSHAKE",
+        "visible": true,
+        "maintainAspectRatio": true,
+        "left": 96.0,
+        "top": 124.0,
+        "centerHorizontally": false,
+        "centerVertically": false,
+        "font": "default"
+      },
+      "status": {
+        "type": "label",
+        "text": "BOOT VECTOR: mounting mod resources / baking CyberGlass surfaces / syncing orbital uplink",
+        "visible": true,
+        "maintainAspectRatio": true,
+        "left": 96.0,
+        "top": 152.0,
+        "centerHorizontally": false,
+        "centerVertically": false,
+        "font": "default"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_magic_mystic:first_30_minutes",
+  "title": "Magic/Mystic First 30 Minutes",
+  "cards": [
+    "echo_template_magic_mystic:orientation",
+    "echo_template_magic_mystic:starter_timeline"
+  ],
+  "steps": [
+    "Track a relic signal on HoloMap.",
+    "Complete the relic scan starter mission.",
+    "Write the first research note or creator replacement page.",
+    "Use SoundCore ambience for discovery feedback."
+  ]
+}

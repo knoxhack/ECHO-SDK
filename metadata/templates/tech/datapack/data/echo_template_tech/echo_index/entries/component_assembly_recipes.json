@@ -1,0 +1,32 @@
+{
+  "id": "echo_template_tech:component_assembly_recipes",
+  "category": "echo_template_tech:starter",
+  "title": "Component Assembly Recipes",
+  "subtitle": "Industrial Nexus support recipes for the Tech Wave",
+  "summary": "The Tech starter now includes Component Assembler recipes for PowerGrid support components.",
+  "body": "Use the Component Assembler to make photovoltaic arrays, biofuel turbines, ceramic insulators, and high-voltage buses before placing higher-tier PowerGrid blocks. These recipes give the 1.0.0 Tech Wave a clearer material bridge without adding a new machine tier.",
+  "tags": [
+    "Tech",
+    "1.0.0",
+    "IndustrialNexus",
+    "PowerGrid"
+  ],
+  "related": [
+    "echo_template_tech:reinforced_power",
+    "echo_template_tech:biofuel_generation",
+    "echo_template_tech:high_voltage_distribution",
+    "echo_template_tech:grid_commissioning_depth"
+  ],
+  "linked_items": [
+    "echopowergrid:photovoltaic_array",
+    "echopowergrid:biofuel_turbine",
+    "echopowergrid:ceramic_insulator",
+    "echopowergrid:high_voltage_bus"
+  ],
+  "linked_recipes": [
+    "echo_template_tech:component_assembler_photovoltaic_array",
+    "echo_template_tech:component_assembler_biofuel_turbine",
+    "echo_template_tech:component_assembler_ceramic_insulator",
+    "echo_template_tech:component_assembler_high_voltage_bus"
+  ]
+}

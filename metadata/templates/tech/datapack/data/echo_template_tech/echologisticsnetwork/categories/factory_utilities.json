@@ -1,0 +1,8 @@
+{
+  "id": "echo_template_tech:factory_utilities",
+  "title": "Factory Utilities",
+  "order": 55,
+  "accentColor": "#FF5BD6FF",
+  "lowStockTarget": 8,
+  "tagId": "echo_template_tech:echo_logistics/factory_utilities"
+}

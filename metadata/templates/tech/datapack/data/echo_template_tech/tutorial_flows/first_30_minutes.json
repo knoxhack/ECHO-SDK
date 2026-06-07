@@ -1,0 +1,14 @@
+{
+  "id": "echo_template_tech:first_30_minutes",
+  "title": "Tech First 30 Minutes",
+  "cards": [
+    "echo_template_tech:orientation",
+    "echo_template_tech:starter_timeline"
+  ],
+  "steps": [
+    "Route High Voltage Cable through a Factory Substation.",
+    "Run the first Industrial Nexus processor recipe.",
+    "Place a logistics depot beside the powered machine row.",
+    "Open Terminal again and confirm the next-step dashboard."
+  ]
+}

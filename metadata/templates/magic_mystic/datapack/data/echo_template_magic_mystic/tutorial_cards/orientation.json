@@ -1,0 +1,19 @@
+{
+  "id": "echo_template_magic_mystic:orientation",
+  "category": "creator_pack",
+  "title": "Relic Survey",
+  "summary": "A relic-discovery template with Lens scans, research Index pages, missions, ambience, and map signals.",
+  "body": "A mystic-tech and relic-discovery starter that focuses on scanning, research, stability, and artifact safety without Ashfall finale lore.",
+  "steps": [
+    "Scan before interacting with unknown relics.",
+    "Use Index research pages to explain stability and risk.",
+    "Use HoloMap markers for signals the player should revisit."
+  ],
+  "commonMistakes": [
+    "Pure factory automation",
+    "Ashfall-derived Nexus finale packs",
+    "Vanilla-only packs with no discovery mechanics"
+  ],
+  "defaultUnlocked": true,
+  "addonOwnerId": "echocore"
+}
