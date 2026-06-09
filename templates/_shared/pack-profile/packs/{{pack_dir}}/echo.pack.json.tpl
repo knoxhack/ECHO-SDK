@@ -1,5 +1,5 @@
 {
-  "schema": "echo.pack.v1",
+  "schemaVersion": "echo.pack.v1",
   "id": "{{pack_id}}",
   "name": "{{display_name}}",
   "publisher": "KnoxHack",

@@ -1,0 +1,30 @@
+{
+  "schema": "echo.sdk.template.v1",
+  "id": "config-example",
+  "name": "Config Example",
+  "kind": "addon",
+  "description": "Example scaffold for addon configuration patterns.",
+  "fileSets": ["addon-module"],
+  "defaultValues": {
+    "class_name": "ConfigExampleAddon",
+    "kind": "native_example",
+    "role": "config_example",
+    "feature_id": "config.example",
+    "display_name": "Config Example"
+  },
+  "tokens": {
+    "module_id": {"required": true, "description": "Lowercase ECHO module id."},
+    "package_path": {"required": true, "description": "Generated Java package path."},
+    "package_name": {"required": true, "description": "Generated Java package name."},
+    "class_name": {"required": true, "description": "Generated entrypoint class name."},
+    "role": {"required": true, "description": "ECHO module role."},
+    "kind": {"required": true, "description": "ECHO module kind."},
+    "feature_id": {"required": true, "description": "Primary provided feature id."}
+  },
+  "requiredFiles": ["addons/{{module_id}}/build.gradle", "addons/{{module_id}}/src/main/resources/META-INF/echo.mod.json"],
+  "defaultFeatures": ["config.example"],
+  "safeEditZones": ["src/main/java/**", "src/main/resources/**", "docs/**"],
+  "protectedFiles": ["src/generated/**", "managed installs", "user saves"],
+  "recommendedAgentLanes": ["runtime_agent", "diagnostics_agent", "test_agent"],
+  "validationCommands": [".\\gradlew validateEchoSdkTemplates"]
+}

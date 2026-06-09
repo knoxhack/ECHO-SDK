@@ -1,11 +1,18 @@
 {
-  "schema": "echo.addon.package.v1",
-  "moduleId": "hello_content_addon",
+  "schemaVersion": "echo.addon.package.v1",
+  "id": "hello_content_addon",
   "version": "0.1.0",
+  "publisher": {
+    "githubOwner": "knoxhack",
+    "githubRepo": "ECHO-SDK"
+  },
+  "targets": ["native", "neoforge", "standalone"],
+  "dependencies": [],
   "entrypoint": "dev.echo.samples.hello.HelloContentAddon",
   "artifacts": {
     "native": "hello_content_addon-0.1.0.echo-addon",
     "neoforge": "hello_content_addon-0.1.0-neoforge.jar",
-    "standalone": "hello_content_addon-0.1.0-standalone.jar"
+    "standalone": "hello_content_addon-0.1.0-standalone.jar",
+    "sources": "hello_content_addon-0.1.0-sources.jar"
   }
 }

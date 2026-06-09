@@ -13,3 +13,9 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/docs-audit.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/echo_sdk.py validate templates --json
+      - run: python tools/validate_echo_contracts.py --json
+      - run: python tools/test_echo_contract_schemas.py --json

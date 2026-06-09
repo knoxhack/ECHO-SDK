@@ -22,7 +22,9 @@ Public is recommended for third-party addon and pack developers. Private is acce
 
 Run commands from the repository root.
 
-- `No build command is currently tracked in this repo.`
+- `python tools/echo_sdk.py validate templates --json`
+- `python tools/validate_echo_contracts.py --json`
+- `python tools/test_echo_contract_schemas.py --json`
 
 ## Artifact Ownership
 
@@ -35,6 +37,7 @@ SDK template bundles, schema snapshots, and documentation artifacts belong here.
 - [docs/schemas/index.md](docs/schemas/index.md)
 - [docs/examples/index.md](docs/examples/index.md)
 - [docs/release-packaging.md](docs/release-packaging.md)
+- [docs/ecosystem-artifact-ownership.md](docs/ecosystem-artifact-ownership.md)
 - [docs/native-addon-guide.md](docs/native-addon-guide.md)
 - [docs/neoforge-module-guide.md](docs/neoforge-module-guide.md)
 - [docs/standalone-module-guide.md](docs/standalone-module-guide.md)

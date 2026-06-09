@@ -86,7 +86,6 @@
         "echoashfallprotocol"
     ],
     "optionalModules": [
-        "echomodpackcommandcenter",
         "echotextureforge",
         "signalosexample"
     ],

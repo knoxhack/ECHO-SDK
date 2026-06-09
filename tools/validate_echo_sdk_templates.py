@@ -229,8 +229,8 @@ def validate_pack_fixture_files(fixture_root: Path, errors: list[str]) -> None:
         errors.append("Rendered pack fixture is missing validation stub")
     pack_profile = validate_json_file(pack_root / "echo.pack.json", errors)
     pack_ai = validate_json_file(pack_root / "echo.ai.json", errors)
-    if pack_profile.get("schema") != "echo.pack.v1":
-        errors.append("echo.pack.json schema must be echo.pack.v1")
+    if pack_profile.get("schemaVersion") != "echo.pack.v1":
+        errors.append("echo.pack.json schemaVersion must be echo.pack.v1")
     if pack_profile.get("id") != FIXTURE_PACK_ID:
         errors.append("echo.pack.json id does not match fixture pack id")
     if pack_profile.get("type") != "official_pack":

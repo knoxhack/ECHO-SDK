@@ -235,15 +235,22 @@ def manifest_payload(addon_id: str) -> dict[str, Any]:
 
 def package_payload(addon_id: str) -> dict[str, Any]:
     return {
-        "schema": "echo.addon.package.v1",
-        "moduleId": addon_id,
+        "schemaVersion": "echo.addon.package.v1",
+        "id": addon_id,
         "version": VERSION,
+        "publisher": {
+            "githubOwner": "knoxhack",
+            "githubRepo": "ECHO-SDK",
+        },
+        "targets": RUNTIMES,
+        "dependencies": [],
         "entrypoint": entrypoint_for(addon_id),
         "runtimes": RUNTIMES,
         "artifacts": {
             "native": f"{addon_id}-{VERSION}.echo-addon",
             "neoforge": f"{addon_id}-{VERSION}-neoforge.jar",
             "standalone": f"{addon_id}-{VERSION}-standalone.jar",
+            "sources": f"{addon_id}-{VERSION}-sources.jar",
         },
     }
 
@@ -395,8 +402,8 @@ def validate_schemas(root: Path, addon_id: str) -> None:
     reference = load_json(target / "src" / "test" / "echo" / "reference-behavior.json")
     if manifest.get("schema") != "echo.mod.v1":
         raise ValueError("echo.mod.json schema must be echo.mod.v1")
-    if package.get("schema") != "echo.addon.package.v1":
-        raise ValueError("echo-addon-package.json schema must be echo.addon.package.v1")
+    if package.get("schemaVersion") != "echo.addon.package.v1":
+        raise ValueError("echo-addon-package.json schemaVersion must be echo.addon.package.v1")
     if reference.get("schema") != "echo.reference.behavior.v1":
         raise ValueError("reference-behavior.json schema must be echo.reference.behavior.v1")
 

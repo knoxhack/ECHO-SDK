@@ -257,7 +257,13 @@ def validate_templates(root: Path) -> dict[str, Any]:
             "validatedTemplates": [],
             "errors": [f"Missing templates directory: {template_dir.as_posix()}"],
         }
-    observed = sorted(path.name for path in template_dir.iterdir() if path.is_dir() and not path.name.startswith("_"))
+    observed = sorted(
+        path.name
+        for path in template_dir.iterdir()
+        if path.is_dir()
+        and not path.name.startswith("_")
+        and (path / "template.json").is_file()
+    )
     for required in REQUIRED_TEMPLATE_IDS:
         if required not in observed:
             errors.append(f"Missing required template folder: {required}")
