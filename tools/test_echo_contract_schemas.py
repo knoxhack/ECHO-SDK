@@ -237,6 +237,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "commitSha", "0000000"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"kind": "runtime"}]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"id": "fixture-runtime", "kind": "unknown"}]),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "validation", "unknown"),
     ],
     "product-update-entry.schema.json": [
         without(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts"),
