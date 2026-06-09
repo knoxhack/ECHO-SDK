@@ -170,7 +170,7 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "stability": "alpha",
     },
     "module-release-manifest.schema.json": {
-        "schemaVersion": 1,
+        "schemaVersion": "echo.module.release.v1",
         "releaseId": "modules-fixture",
         "generatedAt": "2026-06-09T00:00:00Z",
         "sourceRepo": "https://github.com/knoxhack/ECHO-Modules",
@@ -281,7 +281,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
     "module-release-manifest.schema.json": [
         without(VALID_FIXTURES["module-release-manifest.schema.json"], "provenance"),
         without(VALID_FIXTURES["module-release-manifest.schema.json"], "modules"),
-        with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "schemaVersion", 2),
+        with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "schemaVersion", 1),
         with_value(
             VALID_FIXTURES["module-release-manifest.schema.json"],
             "provenance",
