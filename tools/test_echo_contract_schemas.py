@@ -259,6 +259,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"id": "fixture-runtime", "kind": "unknown"}]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "compatibility", [123]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "compatibility", ["ashfall-native-edition", "ashfall-native-edition"]),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "trust", "unknown"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "validation", "unknown"),
     ],
     "product-update-entry.schema.json": [
@@ -268,6 +269,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "dependencies", [{"id": "echo-runtime", "kind": "unknown"}]),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "compatibility", [123]),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "compatibility", ["windows-x64", "windows-x64"]),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "trust", "unknown"),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "C:/latest.yml", "sha256": SHA}}),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": "not-a-sha"}}),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": SHA, "url": "http://example.com/latest.yml"}}),
