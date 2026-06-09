@@ -159,6 +159,21 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "releaseId": "modules-fixture",
         "generatedAt": "2026-06-09T00:00:00Z",
         "sourceRepo": "https://github.com/knoxhack/ECHO-Modules",
+        "provenance": {
+            "sourceRepo": "knoxhack/ECHO-Modules",
+            "commitSha": "abc1234",
+            "workflow": ".github/workflows/release-modules.yml",
+            "workflowRef": "knoxhack/ECHO-Modules/.github/workflows/release-modules.yml@refs/tags/modules-fixture",
+            "runId": "123",
+            "runAttempt": "1",
+            "refName": "modules-fixture",
+            "eventName": "workflow_dispatch",
+            "generatedBy": "scripts/generate-module-release.mjs",
+            "attestation": {
+                "action": "actions/attest@v4",
+                "subjectChecksums": "checksums.sha256",
+            },
+        },
         "modules": [
             {
                 "moduleId": "fixture-addon",
@@ -225,8 +240,21 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["channel.schema.json"], "stability", "nightly"),
     ],
     "module-release-manifest.schema.json": [
+        without(VALID_FIXTURES["module-release-manifest.schema.json"], "provenance"),
         without(VALID_FIXTURES["module-release-manifest.schema.json"], "modules"),
         with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "schemaVersion", 2),
+        with_value(
+            VALID_FIXTURES["module-release-manifest.schema.json"],
+            "provenance",
+            {
+                "sourceRepo": "knoxhack/ECHO-Modules",
+                "generatedBy": "scripts/generate-module-release.mjs",
+                "attestation": {
+                    "action": "actions/attest@v3",
+                    "subjectChecksums": "checksums.sha256",
+                },
+            },
+        ),
         with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "modules", []),
         with_value(
             VALID_FIXTURES["module-release-manifest.schema.json"],
