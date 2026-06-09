@@ -229,10 +229,12 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         without(VALID_FIXTURES["release-index-entry.schema.json"], "sourceRepo"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "sourceRepo", "not-a-repo"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "commitSha", "not-a-sha"),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "commitSha", "0000000"),
     ],
     "product-update-entry.schema.json": [
         without(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts"),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "kind", "module"),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "commitSha", "0000000"),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": "not-a-sha"}}),
     ],
     "channel.schema.json": [
