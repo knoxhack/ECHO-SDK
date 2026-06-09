@@ -59,6 +59,8 @@ def validate_value(schema: dict[str, Any], value: Any, pointer: str = "$") -> li
     if isinstance(value, list):
         if "minItems" in schema and len(value) < int(schema["minItems"]):
             errors.append(f"{pointer} expected minItems {schema['minItems']}")
+        if schema.get("uniqueItems") and len({json.dumps(item, sort_keys=True) for item in value}) != len(value):
+            errors.append(f"{pointer} expected uniqueItems")
         item_schema = schema.get("items")
         if isinstance(item_schema, dict):
             for index, item in enumerate(value):
@@ -240,6 +242,8 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "artifacts", {"native": {"file": "fixture-addon.echo-addon", "sha256": "not-a-sha"}}),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"kind": "runtime"}]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"id": "fixture-runtime", "kind": "unknown"}]),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "compatibility", [123]),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "compatibility", ["ashfall-native-edition", "ashfall-native-edition"]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "validation", "unknown"),
     ],
     "product-update-entry.schema.json": [
@@ -247,6 +251,8 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "kind", "module"),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "commitSha", "0000000"),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "dependencies", [{"id": "echo-runtime", "kind": "unknown"}]),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "compatibility", [123]),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "compatibility", ["windows-x64", "windows-x64"]),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": "not-a-sha"}}),
     ],
     "channel.schema.json": [
