@@ -130,7 +130,13 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "sourceRepo": "knoxhack/ECHO-Fixture",
         "releaseTag": "v1.0.0",
         "commitSha": "abc1234",
-        "artifacts": {"native": {"file": "fixture-addon.echo-addon", "sha256": SHA}},
+        "artifacts": {
+            "native": {
+                "file": "fixture-addon.echo-addon",
+                "sha256": SHA,
+                "url": "https://github.com/knoxhack/ECHO-Fixture/releases/download/v1.0.0/fixture-addon.echo-addon",
+            }
+        },
         "dependencies": [{"id": "fixture-runtime", "kind": "runtime", "version": "1.0.0"}],
         "compatibility": ["ashfall-native-edition"],
         "trust": "community",
@@ -145,7 +151,14 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "sourceRepo": "knoxhack/ECHO-Launcher",
         "releaseTag": "v1.0.0",
         "commitSha": "abc1234",
-        "artifacts": {"updater": {"file": "latest.yml", "sha256": SHA, "size": 42}},
+        "artifacts": {
+            "updater": {
+                "file": "latest.yml",
+                "sha256": SHA,
+                "url": "https://github.com/knoxhack/ECHO-Launcher/releases/download/v1.0.0/latest.yml",
+                "size": 42,
+            }
+        },
         "dependencies": [{"id": "echo-runtime", "kind": "runtime", "version": "1.0.0"}],
         "compatibility": ["windows-x64"],
         "trust": "official",
@@ -240,6 +253,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "artifacts", []),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "artifacts", {"native": {"file": "fixture-addon.echo-addon"}}),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "artifacts", {"native": {"file": "fixture-addon.echo-addon", "sha256": "not-a-sha"}}),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "artifacts", {"native": {"file": "fixture-addon.echo-addon", "sha256": SHA, "url": "http://example.com/fixture-addon.echo-addon"}}),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"kind": "runtime"}]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "dependencies", [{"id": "fixture-runtime", "kind": "unknown"}]),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "compatibility", [123]),
@@ -254,6 +268,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "compatibility", [123]),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "compatibility", ["windows-x64", "windows-x64"]),
         with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": "not-a-sha"}}),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": SHA, "url": "http://example.com/latest.yml"}}),
     ],
     "channel.schema.json": [
         without(VALID_FIXTURES["channel.schema.json"], "stability"),
