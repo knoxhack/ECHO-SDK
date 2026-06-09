@@ -220,6 +220,11 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         without(VALID_FIXTURES["echo-addon-package.schema.json"], "schemaVersion"),
         with_value(VALID_FIXTURES["echo-addon-package.schema.json"], "schemaVersion", "echo.addon.package.v0"),
         with_value(VALID_FIXTURES["echo-addon-package.schema.json"], "dependencies", {}),
+        with_value(
+            VALID_FIXTURES["echo-addon-package.schema.json"],
+            "dependencies",
+            [{"id": "fixture-runtime", "kind": "unknown", "version": "1.0.0"}],
+        ),
     ],
     "echo-pack.schema.json": [
         without(VALID_FIXTURES["echo-pack.schema.json"], "requiredArtifacts"),
