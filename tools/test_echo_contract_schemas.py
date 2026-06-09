@@ -122,6 +122,7 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "requiredArtifacts": [{"id": "fixture-runtime", "kind": "runtime", "version": "1.0.0"}],
     },
     "release-index-entry.schema.json": {
+        "schemaVersion": "echo.release.index.entry.v1",
         "id": "fixture-addon",
         "kind": "addon",
         "version": "1.0.0",
@@ -247,6 +248,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
     ],
     "release-index-entry.schema.json": [
         without(VALID_FIXTURES["release-index-entry.schema.json"], "sourceRepo"),
+        with_value(VALID_FIXTURES["release-index-entry.schema.json"], "schemaVersion", 1),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "sourceRepo", "not-a-repo"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "commitSha", "not-a-sha"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "commitSha", "0000000"),
