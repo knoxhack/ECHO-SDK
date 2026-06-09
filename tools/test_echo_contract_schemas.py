@@ -56,13 +56,30 @@ def validate_value(schema: dict[str, Any], value: Any, pointer: str = "$") -> li
             errors.append(f"{pointer} did not match pattern {schema['pattern']}")
     if isinstance(value, int) and "minimum" in schema and value < int(schema["minimum"]):
         errors.append(f"{pointer} expected minimum {schema['minimum']}")
+    if isinstance(value, list):
+        if "minItems" in schema and len(value) < int(schema["minItems"]):
+            errors.append(f"{pointer} expected minItems {schema['minItems']}")
+        item_schema = schema.get("items")
+        if isinstance(item_schema, dict):
+            for index, item in enumerate(value):
+                errors.extend(validate_value(item_schema, item, f"{pointer}[{index}]"))
     if isinstance(value, dict):
         for field in schema.get("required", []):
             if field not in value:
                 errors.append(f"{pointer}.{field} is required")
-        for field, child_schema in schema.get("properties", {}).items():
+        properties = schema.get("properties", {})
+        for field, child_schema in properties.items():
             if field in value:
                 errors.extend(validate_value(child_schema, value[field], f"{pointer}.{field}"))
+        additional = schema.get("additionalProperties")
+        if isinstance(additional, dict):
+            for field, child_value in value.items():
+                if field not in properties:
+                    errors.extend(validate_value(additional, child_value, f"{pointer}.{field}"))
+        elif additional is False:
+            for field in value:
+                if field not in properties:
+                    errors.append(f"{pointer}.{field} is not allowed")
     return errors
 
 
@@ -92,7 +109,7 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "version": "1.0.0",
         "publisher": {"githubOwner": "knoxhack", "githubRepo": "ECHO-Fixture"},
         "targets": ["native"],
-        "dependencies": [{"id": "fixture-runtime", "kind": "runtime"}],
+        "dependencies": [{"id": "fixture-runtime", "kind": "runtime", "version": "1.0.0"}],
         "artifacts": {"native": "fixture-addon-1.0.0.echo-addon"},
     },
     "echo-pack.schema.json": {
@@ -100,7 +117,7 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "id": "fixture-pack",
         "version": "1.0.0",
         "target": "native",
-        "requiredArtifacts": ["fixture-runtime"],
+        "requiredArtifacts": [{"id": "fixture-runtime", "kind": "runtime", "version": "1.0.0"}],
     },
     "release-index-entry.schema.json": {
         "id": "fixture-addon",
@@ -116,6 +133,50 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "compatibility": ["ashfall-native-edition"],
         "trust": "community",
         "validation": "approved",
+    },
+    "product-update-entry.schema.json": {
+        "id": "echo-launcher",
+        "kind": "product",
+        "version": "1.0.0",
+        "channel": "alpha",
+        "publisher": "knoxhack",
+        "sourceRepo": "knoxhack/ECHO-Launcher",
+        "releaseTag": "v1.0.0",
+        "commitSha": "abc1234",
+        "artifacts": {"updater": {"file": "latest.yml", "sha256": SHA, "size": 42}},
+        "dependencies": [],
+        "compatibility": ["windows-x64"],
+        "trust": "official",
+        "validation": "approved",
+    },
+    "channel.schema.json": {
+        "id": "alpha",
+        "name": "Alpha",
+        "stability": "alpha",
+    },
+    "module-release-manifest.schema.json": {
+        "schemaVersion": 1,
+        "releaseId": "modules-fixture",
+        "generatedAt": "2026-06-09T00:00:00Z",
+        "sourceRepo": "https://github.com/knoxhack/ECHO-Modules",
+        "modules": [
+            {
+                "moduleId": "fixture-addon",
+                "version": "1.0.0",
+                "descriptor": {"path": "META-INF/echo.mod.json", "sha256": SHA},
+                "requires": [],
+                "optional": [],
+                "artifacts": [
+                    {
+                        "kind": "echo-addon",
+                        "filename": "fixture-addon-1.0.0.echo-addon",
+                        "sha256": SHA,
+                        "size": 42,
+                        "buildMode": "compiled-runtime",
+                    }
+                ],
+            }
+        ],
     },
     "publisher.schema.json": {
         "id": "knoxhack",
@@ -153,6 +214,34 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         without(VALID_FIXTURES["release-index-entry.schema.json"], "sourceRepo"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "sourceRepo", "not-a-repo"),
         with_value(VALID_FIXTURES["release-index-entry.schema.json"], "commitSha", "not-a-sha"),
+    ],
+    "product-update-entry.schema.json": [
+        without(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts"),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "kind", "module"),
+        with_value(VALID_FIXTURES["product-update-entry.schema.json"], "artifacts", {"updater": {"file": "latest.yml", "sha256": "not-a-sha"}}),
+    ],
+    "channel.schema.json": [
+        without(VALID_FIXTURES["channel.schema.json"], "stability"),
+        with_value(VALID_FIXTURES["channel.schema.json"], "stability", "nightly"),
+    ],
+    "module-release-manifest.schema.json": [
+        without(VALID_FIXTURES["module-release-manifest.schema.json"], "modules"),
+        with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "schemaVersion", 2),
+        with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "modules", []),
+        with_value(
+            VALID_FIXTURES["module-release-manifest.schema.json"],
+            "modules",
+            [
+                {
+                    "moduleId": "fixture-addon",
+                    "version": "1.0.0",
+                    "descriptor": {"path": "wrong/path.json", "sha256": SHA},
+                    "requires": [],
+                    "optional": [],
+                    "artifacts": [{"kind": "zip", "filename": "fixture.zip", "sha256": SHA, "size": 42}],
+                }
+            ],
+        ),
     ],
     "publisher.schema.json": [
         without(VALID_FIXTURES["publisher.schema.json"], "githubOwner"),
