@@ -101,7 +101,7 @@ jobs:
             --sdk-root ECHO-SDK \
             --native-platform-root ECHO-Native-Platform \
             --modules-root ECHO-Modules \
-            --out ECHO-SDK/dist/native-sdk-rc1 \
+            --out dist/native-sdk-rc1 \
             --clean \
             --require-complete
 
