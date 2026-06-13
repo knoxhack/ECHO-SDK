@@ -78,7 +78,7 @@ jobs:
       - name: Build module SDK jars
         working-directory: ECHO-Modules
         run: |
-          bash ./gradlew --no-daemon --no-parallel --max-workers=1 -PechoAddonSet=beta \
+          gradle --no-daemon --no-parallel --max-workers=1 -PechoAddonSet=beta \
             :echoaddonapi:clean \
             :echoaddonapi:jar \
             :echoaddonapi:sourcesJar \
