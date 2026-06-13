@@ -1,0 +1,187 @@
+{
+  "schema": "echo.sdk.template_validation.v1",
+  "status": "PASS",
+  "templateCount": 28,
+  "validatedTemplates": [
+    "config-example",
+    "echo-addon-ai-tool",
+    "echo-addon-bridge-tool",
+    "echo-addon-content",
+    "echo-addon-pack-root",
+    "echo-addon-platform-contract",
+    "echo-addon-ui-surface",
+    "echo-metadata",
+    "echo-native-addon",
+    "echo-native-config-example",
+    "echo-native-event-example",
+    "echo-native-module",
+    "echo-native-packet-example",
+    "echo-native-registry-example",
+    "echo-native-screen-hud-example",
+    "echo-native-testkit-example",
+    "echo-native-worldgen-example",
+    "echo-pack-profile",
+    "echo-report",
+    "echo-schema",
+    "event-example",
+    "native-module-template",
+    "new-addon-template",
+    "packet-example",
+    "registry-example",
+    "screen-hud-example",
+    "testkit-example",
+    "worldgen-example"
+  ],
+  "fixtureRoot": "build/echo-sdk-fixtures",
+  "fixtureModuleId": "echosdkfixturecontent",
+  "fixturePackId": "echo_sdk_fixture_pack",
+  "renderedFileCount": 9,
+  "renderedPackFileCount": 5,
+  "templateSpecificStubCount": 13,
+  "registrationPlan": {
+    "schema": "echo.sdk.registration_plan.v1",
+    "status": "planned",
+    "action": "register_addon_dry_run",
+    "moduleId": "echosdkfixturecontent",
+    "outputRoot": "build/echo-sdk-fixtures",
+    "targetAddonPath": "build/echo-sdk-fixtures/addons/echosdkfixturecontent",
+    "proposedSettingsGradleLines": [
+      "include 'echosdkfixturecontent'",
+      "project(':echosdkfixturecontent').projectDir = file('build/echo-sdk-fixtures/addons/echosdkfixturecontent')"
+    ],
+    "requiredValidationCommands": [
+      ".\\gradlew :echosdkfixturecontent:compileJava -PechoAddonSet=beta",
+      ".\\gradlew scanEchoWorkspace -PechoAddonSet=beta",
+      ".\\gradlew generateEchoModuleGraph -PechoAddonSet=beta",
+      ".\\gradlew build -PechoAddonSet=beta"
+    ],
+    "safetyNotes": [
+      "Dry-run only; real settings.gradle is not modified.",
+      "Review generated metadata before manually registering the addon.",
+      "Do not register build/ fixtures into release packs.",
+      "Regenerate PackOS reports and lockfiles only after human review."
+    ],
+    "mutatesSettingsGradle": false,
+    "writesFiles": false,
+    "localOnly": true
+  },
+  "compileProof": {
+    "status": "static_only",
+    "checkedJavaFiles": 1,
+    "blockedReason": "Generated fixtures are intentionally not registered into the real workspace; isolated NeoForge compile proof remains a future SDK harness task."
+  },
+  "nativeTemplateExports": [
+    {
+      "templateId": "echo-native-addon",
+      "moduleId": "echosdknativeaddon",
+      "renderedFileCount": 11,
+      "javaFileCount": 1,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-config-example",
+      "moduleId": "echosdknativeconfigexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-event-example",
+      "moduleId": "echosdknativeeventexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-module",
+      "moduleId": "echosdknativemodule",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-packet-example",
+      "moduleId": "echosdknativepacketexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-registry-example",
+      "moduleId": "echosdknativeregistryexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-screen-hud-example",
+      "moduleId": "echosdknativescreenhudexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-testkit-example",
+      "moduleId": "echosdknativetestkitexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "echo-native-worldgen-example",
+      "moduleId": "echosdknativeworldgenexample",
+      "renderedFileCount": 11,
+      "javaFileCount": 2,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "new-addon-template",
+      "moduleId": "echosdknewaddontemplate",
+      "renderedFileCount": 10,
+      "javaFileCount": 1,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    },
+    {
+      "templateId": "native-module-template",
+      "moduleId": "echosdknativemoduletemplate",
+      "renderedFileCount": 10,
+      "javaFileCount": 1,
+      "testJavaFileCount": 1,
+      "hasSettings": true,
+      "hasDescriptor": true,
+      "hasPackageTask": true
+    }
+  ],
+  "settingsGradleModified": false,
+  "errors": []
+}

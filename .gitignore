@@ -1,0 +1,6 @@
+/build/
+/dist/
+/gradle-plugin/echo-addon-gradle-plugin/.gradle/
+/gradle-plugin/echo-addon-gradle-plugin/build/
+__pycache__/
+*.py[cod]
