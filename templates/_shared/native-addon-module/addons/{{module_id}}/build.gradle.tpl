@@ -23,10 +23,13 @@ java {
 
 dependencies {
     compileOnly 'dev.echo.native:echoaddonapi:1.0.0-RC1'
-    compileOnly 'dev.echo.native:echoadaptercore:1.0.0-RC1'
+    compileOnly('dev.echo.native:echoadaptercore:1.0.0-RC1') {
+        transitive = false
+    }
     compileOnly 'dev.echo.native:echo-native-contracts:1.0.0-RC1'
     testImplementation 'dev.echo.native:echo-native-testkit:1.0.0-RC1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 test {

@@ -3,22 +3,23 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'dev.echo'
-version = '0.1.0'
+group = 'dev.echo.native'
+version = '1.0.0-RC1'
 
 base {
-    archivesName = 'echo-addon-gradle-plugin'
+    archivesName = 'echo-sdk-gradle-plugin'
 }
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(25)
     withSourcesJar()
+    withJavadocJar()
 }
 
 gradlePlugin {
     plugins {
         echoSdk {
-            id = 'dev.echo.sdk'
+            id = 'dev.echo.native.echo-sdk-gradle-plugin'
             implementationClass = 'dev.echo.gradle.EchoSdkPlugin'
             displayName = 'ECHO Add-on SDK'
             description = 'Registers ECHO SDK add-on validation, packaging, parity, and release tasks.'
@@ -28,4 +29,16 @@ gradlePlugin {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc).configureEach {
+    options.addStringOption('Xdoclint:none', '-quiet')
+}
+
+publishing {
+    publications.withType(MavenPublication).configureEach {
+        if (name == 'pluginMaven') {
+            artifactId = 'echo-sdk-gradle-plugin'
+        }
+    }
 }

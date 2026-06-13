@@ -339,16 +339,22 @@ def validate_native_template_exports(root: Path, fixture_root: Path, errors: lis
         rendered = echo_sdk.render_template(root, template_id, output_root, args, "addon", force=True, dry_run=False)
         rendered_targets = {item.target.relative_to(output_root).as_posix() for item in rendered}
         addon_root = output_root / "addons" / module_id
+        settings_file = addon_root / "settings.gradle"
         build_file = addon_root / "build.gradle"
         descriptor_file = addon_root / "src/main/resources/META-INF/echo.mod.json"
         java_files = sorted((addon_root / "src/main/java").rglob("*.java"))
+        test_java_files = sorted((addon_root / "src/test/java").rglob("*.java"))
 
+        if f"addons/{module_id}/settings.gradle" not in rendered_targets:
+            errors.append(f"{template_id} did not render a module-local settings.gradle")
         if f"addons/{module_id}/build.gradle" not in rendered_targets:
             errors.append(f"{template_id} did not render a Gradle build file")
         if f"addons/{module_id}/src/main/resources/META-INF/echo.mod.json" not in rendered_targets:
             errors.append(f"{template_id} did not render META-INF/echo.mod.json")
         if not java_files:
             errors.append(f"{template_id} did not render a Java entrypoint")
+        if not test_java_files:
+            errors.append(f"{template_id} did not render a Java testkit smoke test")
 
         entrypoint_files = [path for path in java_files if path.parent.name != "examples"]
         for java_file in java_files:
@@ -356,12 +362,20 @@ def validate_native_template_exports(root: Path, fixture_root: Path, errors: lis
             for forbidden in FORBIDDEN_NATIVE_JAVA_MARKERS:
                 if forbidden in text:
                     errors.append(f"{template_id} rendered forbidden Native Java marker {forbidden}: {java_file.as_posix()}")
+            if "new EchoNativeMutationReceipt" in text or "EchoNativeMutationReceipt.mutated" in text:
+                errors.append(f"{template_id} must not self-mint typed mutation receipts: {java_file.as_posix()}")
         for java_file in entrypoint_files:
             text = java_file.read_text(encoding="utf-8")
             if "EchoNativeModuleEntrypoint" not in text:
                 errors.append(f"{template_id} entrypoint must implement EchoNativeModuleEntrypoint: {java_file.as_posix()}")
-            if "EchoNativeMutationReceipt" not in text:
-                errors.append(f"{template_id} entrypoint must demonstrate typed mutation receipts: {java_file.as_posix()}")
+            if "EchoNativeRegistryService" not in text or "echo.native.registry" not in text:
+                errors.append(f"{template_id} entrypoint must request typed host service receipts: {java_file.as_posix()}")
+        for test_java_file in test_java_files:
+            test_text = test_java_file.read_text(encoding="utf-8")
+            if "EchoNativeSdkTestkit" not in test_text:
+                errors.append(f"{template_id} test must use EchoNativeSdkTestkit: {test_java_file.as_posix()}")
+            if "requireOnlyTypedReceipts" not in test_text:
+                errors.append(f"{template_id} test must assert typed-only receipt evidence: {test_java_file.as_posix()}")
 
         descriptor = validate_json_file(descriptor_file, errors)
         access = descriptor.get("access") if isinstance(descriptor.get("access"), dict) else {}
@@ -372,6 +386,13 @@ def validate_native_template_exports(root: Path, fixture_root: Path, errors: lis
             errors.append(f"{template_id} descriptor must declare access.nativeClasspath ['addon.jar']")
 
         build_text = build_file.read_text(encoding="utf-8") if build_file.is_file() else ""
+        settings_text = settings_file.read_text(encoding="utf-8") if settings_file.is_file() else ""
+        if "pluginManagement" not in settings_text or "mavenLocal()" not in settings_text:
+            errors.append(f"{template_id} settings.gradle must resolve the SDK plugin from mavenLocal")
+        if "dev.echo.native:echoadaptercore:1.0.0-RC1" in build_text and "transitive = false" not in build_text:
+            errors.append(f"{template_id} must keep echoadaptercore non-transitive for external Native scaffold builds")
+        if "org.junit.platform:junit-platform-launcher" not in build_text:
+            errors.append(f"{template_id} build must declare the JUnit Platform launcher for Gradle 9 test runtime")
         if "packageEchoNativeAddon" not in build_text:
             errors.append(f"{template_id} build must expose packageEchoNativeAddon")
         if "verifyNativeAddonBoundaries" not in build_text:
@@ -382,6 +403,8 @@ def validate_native_template_exports(root: Path, fixture_root: Path, errors: lis
             "moduleId": module_id,
             "renderedFileCount": len(rendered_targets),
             "javaFileCount": len(java_files),
+            "testJavaFileCount": len(test_java_files),
+            "hasSettings": settings_file.is_file(),
             "hasDescriptor": descriptor_file.is_file(),
             "hasPackageTask": "packageEchoNativeAddon" in build_text,
         })
