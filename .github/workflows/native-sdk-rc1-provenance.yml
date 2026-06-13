@@ -65,7 +65,7 @@ jobs:
       - name: Build Native Platform SDK jars
         working-directory: ECHO-Native-Platform
         run: |
-          ./gradlew --no-daemon --no-parallel --max-workers=1 \
+          bash ./gradlew --no-daemon --no-parallel --max-workers=1 \
             :echo-native-contracts:clean \
             :echo-native-contracts:jar \
             :echo-native-contracts:sourcesJar \
@@ -78,7 +78,7 @@ jobs:
       - name: Build module SDK jars
         working-directory: ECHO-Modules
         run: |
-          ./gradlew --no-daemon --no-parallel --max-workers=1 -PechoAddonSet=beta \
+          bash ./gradlew --no-daemon --no-parallel --max-workers=1 -PechoAddonSet=beta \
             :echoaddonapi:clean \
             :echoaddonapi:jar \
             :echoaddonapi:sourcesJar \
