@@ -1,0 +1,153 @@
+{
+  "id": "openlands_official",
+  "name": "Openlands Official",
+  "version": "0.1.0",
+  "style": "Relaxed Building Survival",
+  "goals": [
+    "Ship Official ECHO Pack #2 as a relaxed vanilla-style experience without copyrighted Minecraft assets or branding.",
+    "Use echoopenlandsprotocol as the shared data source for Native, Standalone, and NeoForge outputs.",
+    "Validate a first-hour loop built around gathering, shelter, sleeping, exploration, old roads, and first waystone restoration."
+  ],
+  "description": "Official Openlands profile for ECHO: a relaxed block-survival sandbox about homesteads, roads, regions, and waystones.",
+  "targetPlayer": "Players who want a familiar, welcoming block-sandbox loop with better building flow, clearer progression, map discovery, and optional co-op.",
+  "gameplayLoop": "Gather starter resources, craft tools, build a forgiving shelter, sleep safely, follow old roads, restore waystones, expand a homestead, farm, trade, and explore deeper regions.",
+  "first30Minutes": [
+    "Spawn near wood, loose stone, fiber, food, water, and one exploration hook.",
+    "Collect branchwood, fieldstone, reed fiber, and starter food.",
+    "Craft fiber binding, a crude tool, a campfire, and a workbench.",
+    "Build or adapt a forgiving shelter with roof coverage, enclosure, light, and bedroll.",
+    "Sleep to set a return point and complete the first shelter milestone."
+  ],
+  "first2Hours": [
+    "Discover a road marker, tiny camp, ruin, cave mouth, or broken waystone.",
+    "Use the map table and HoloMap data to record a region rubbing.",
+    "Repair a broken waystone through debris cleared and stone repaired states.",
+    "Build a kiln, craft bricks/glass/charcoal, and begin metal progression.",
+    "Start grain, roots, berries, animal pens, or trader surplus depending on available modules."
+  ],
+  "notRecommendedFor": [
+    "Hardcore-only survival packs",
+    "Minecraft asset reuse",
+    "Packs that need copied vanilla mob or block identity"
+  ],
+  "wizardCopy": {
+    "summary": "Relaxed Openlands sandbox profile with building, farming, old roads, waystones, HoloMap discovery, and cross-runtime parity.",
+    "difficulty": "Relaxed",
+    "bestFor": [
+      "Building",
+      "Exploration",
+      "Co-op",
+      "Vanilla-style ECHO"
+    ],
+    "warnings": [
+      "Hardlands is optional and must not change the Standard default.",
+      "All assets and names must be original Openlands content."
+    ],
+    "notFor": [
+      "Hardcore-only balance",
+      "Minecraft-branded content",
+      "Copied vanilla assets"
+    ]
+  },
+  "requiredModules": [
+    "echocore",
+    "echonetcore",
+    "echoadaptercore",
+    "echocontentcore",
+    "echoworldcore",
+    "echorecipecore",
+    "echobiomecore",
+    "echostructurecore",
+    "echocreaturecore",
+    "echoprogressioncore",
+    "echoassetcore"
+  ],
+  "recommendedModules": [
+    "echoopenlandsprotocol",
+    "echoindex",
+    "echotutorialcore",
+    "echoholomap",
+    "echosoundcore",
+    "echoplayercore",
+    "echorecovery",
+    "echolootcore",
+    "echoblockworks",
+    "echoagriculturereclamation",
+    "echonpcore",
+    "echoeconomycore",
+    "echoscreencore",
+    "echothemecore"
+  ],
+  "optionalModules": [
+    "echoweathercore",
+    "echohealthcore",
+    "echolens",
+    "echodatacore",
+    "echowiki",
+    "echotextureforge",
+    "echoruntimeguard"
+  ],
+  "runtimeTargets": [
+    "echo_native",
+    "echo_runtime_standalone",
+    "neoforge"
+  ],
+  "editionRepos": [
+    "ECHO-Openlands-Native-Edition",
+    "ECHO-Openlands-Standalone-Edition",
+    "ECHO-Openlands-NeoForge-Edition"
+  ],
+  "defaultTheme": "openlands_field_guide",
+  "starterMissions": [
+    "datapack/data/echoopenlandsprotocol/openlands/progression/first_hour_route.json"
+  ],
+  "starterIndexEntries": [
+    "datapack/data/echoopenlandsprotocol/openlands/index/openlands_overview.json"
+  ],
+  "starterTutorials": [
+    "datapack/data/echoopenlandsprotocol/openlands/tutorials/first_hour_prompts.json"
+  ],
+  "starterHoloMapLayers": [
+    "datapack/data/echoopenlandsprotocol/openlands/holomap/mvp_regions.json"
+  ],
+  "starterWorldCoreRegions": [
+    "datapack/data/echoopenlandsprotocol/openlands/biomes/mvp_biomes.json",
+    "datapack/data/echoopenlandsprotocol/openlands/structures/mvp_landmarks.json"
+  ],
+  "starterSoundCoreRules": [
+    "datapack/data/echoopenlandsprotocol/openlands/sounds/mvp_sound_contract.json"
+  ],
+  "configPresets": [
+    "openlands_standard",
+    "openlands_peaceful",
+    "openlands_explorer",
+    "openlands_builder_survival",
+    "openlands_creative",
+    "openlands_hardlands"
+  ],
+  "exportProfiles": [
+    "native",
+    "standalone",
+    "neoforge",
+    "client",
+    "server",
+    "configsOnly"
+  ],
+  "healthRules": [
+    "openlands.no_minecraft_assets",
+    "openlands.standard_relaxed",
+    "openlands.id_parity_all_runtimes",
+    "openlands.save_load_first_hour",
+    "openlands.waystone_state_serialized",
+    "release_index.warning_until_artifacts_exist"
+  ],
+  "packManifestPath": "pack_manifest.json",
+  "officialPack": true,
+  "officialPackNumber": 2,
+  "profilePath": "metadata/official_packs/openlands/profile.json",
+  "contentWaveLabel": "0.1.0 MVP foundation",
+  "previewStatus": "implementation_foundation",
+  "publicBetaReadiness": "not_ready",
+  "standardDefaultLocked": true,
+  "hardlandsOptional": true
+}

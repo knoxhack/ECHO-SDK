@@ -1,0 +1,28 @@
+{
+  "schema": "echo.openlands.config.v1",
+  "id": "openlands_standard",
+  "displayName": "Openlands Standard",
+  "default": true,
+  "survival": {
+    "hunger": "gentle",
+    "stamina": false,
+    "hydration": false,
+    "foodSpoilage": false,
+    "temperatureDamage": false,
+    "deathRecovery": "recoverable_death_pack",
+    "hostiles": "moderate"
+  },
+  "builderComfort": {
+    "forgivingShelterScore": true,
+    "craftFromNearbyStorage": true,
+    "quickStack": true,
+    "quickDeposit": true,
+    "inventorySort": true,
+    "namedChests": true
+  },
+  "exploration": {
+    "oldRoadHints": true,
+    "waystoneMapReveal": true,
+    "fastTravelRequiresActiveStones": 2
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "openlands_official",
+  "name": "Openlands",
+  "version": "0.1.0",
+  "namespace": "echoopenlandsprotocol",
+  "runtimeTargets": [
+    {
+      "id": "echo_native",
+      "editionRepo": "ECHO-Openlands-Native-Edition",
+      "loader": "echo-native-loader",
+      "moduleArtifactFamily": "echo-addon",
+      "moduleArtifactPattern": "<module>-<version>.echo-addon"
+    },
+    {
+      "id": "echo_runtime_standalone",
+      "editionRepo": "ECHO-Openlands-Standalone-Edition",
+      "loader": "echo-standalone-runtime",
+      "moduleArtifactFamily": "standalone",
+      "moduleArtifactPattern": "<module>-<version>-standalone.jar"
+    },
+    {
+      "id": "neoforge",
+      "editionRepo": "ECHO-Openlands-NeoForge-Edition",
+      "loader": "neoforge",
+      "moduleArtifactFamily": "neoforge",
+      "moduleArtifactPattern": "<module>-<version>-neoforge.jar"
+    }
+  ],
+  "modules": {
+    "requiredModules": [
+      "echocore",
+      "echonetcore",
+      "echoadaptercore",
+      "echocontentcore",
+      "echoworldcore",
+      "echorecipecore",
+      "echobiomecore",
+      "echostructurecore",
+      "echocreaturecore",
+      "echoprogressioncore",
+      "echoassetcore",
+      "echoopenlandsprotocol"
+    ],
+    "recommendedModules": [
+      "echoindex",
+      "echotutorialcore",
+      "echoholomap",
+      "echosoundcore",
+      "echoplayercore",
+      "echorecovery",
+      "echolootcore",
+      "echoblockworks",
+      "echoagriculturereclamation",
+      "echonpcore",
+      "echoeconomycore"
+    ],
+    "optionalModules": [
+      "echoweathercore",
+      "echohealthcore",
+      "echolens",
+      "echodatacore",
+      "echowiki",
+      "echotextureforge",
+      "echoruntimeguard"
+    ]
+  },
+  "exportProfiles": {
+    "native": true,
+    "standalone": true,
+    "neoforge": true,
+    "client": true,
+    "server": true,
+    "configsOnly": true
+  },
+  "docs": {
+    "readme": "README.md",
+    "knownIssues": "KNOWN_ISSUES.md",
+    "testChecklist": "test_checklist.md",
+    "support": "docs/README.md"
+  },
+  "defaultConfig": "config_overrides/openlands_standard.json",
+  "ashfallProfile": false,
+  "previewStatus": "implementation_foundation",
+  "publicBetaReadiness": "not_ready",
+  "jars": []
+}
