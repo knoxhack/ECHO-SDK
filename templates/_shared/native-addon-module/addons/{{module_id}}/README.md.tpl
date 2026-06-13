@@ -5,7 +5,7 @@ Native-first ECHO addon generated from the public SDK template.
 ## Build
 
 ```bash
-./gradlew build
+./gradlew clean check
 ./gradlew packageEchoNativeAddon
 ```
 

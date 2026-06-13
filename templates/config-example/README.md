@@ -1,19 +1,5 @@
 # Config Example
 
-Demonstrates loading and exposing addon configuration through a service.
+Legacy bridge/reference scaffold for addon configuration patterns.
 
-## Build
-
-```bash
-./gradlew build
-./gradlew validateAddon
-./gradlew packageAddon
-```
-
-## Expected Output
-
-- `build/libs/configexample-1.0.0-echo-native.jar`
-
-## Policy
-
-`NATIVE`. Config can be TOML or datapack-driven. For NeoForge `ModConfigSpec`, use `NEOFORGE_BRIDGE` and access through `EchoNativeRuntimeHost`.
+This template ID renders from `_shared/addon-module`, not the Native-first RC1 `.echo-addon` scaffold. Use `echo-native-config-example` or `new-addon-template` for release-mode Native addon work.

@@ -14,6 +14,12 @@ SDK docs, schemas, samples, templates, API stability notes, native authoring gui
 
 Owns SDK documentation and template releases. Runtime/player artifacts are owned by launcher, module, pack, or runtime repos.
 
+## Current Native SDK Line
+
+The active Native SDK line is `1.0.0-RC1`. The canonical Native addon template compiles against `echo-native-contracts`, `echoaddonapi`, `echoadaptercore`, and `echo-native-testkit`, packages a `.echo-addon`, and has been proven in an external clean project loaded by ECHO Native release mode.
+
+Do not document Native-first addons as importing NeoForge, Forge, Fabric, or `echo-native-loader`. Addons prove mutation only through typed host services returning `EchoNativeMutationReceipt`.
+
 ## Public Or Private
 
 Public is recommended for third-party addon and pack developers. Private is acceptable only for unreleased internal contracts.
@@ -25,6 +31,8 @@ Run commands from the repository root.
 - `python tools/echo_sdk.py validate templates --json`
 - `python tools/validate_echo_contracts.py --json`
 - `python tools/test_echo_contract_schemas.py --json`
+- `python tools/echo_sdk.py create addon --template new-addon-template --id <id> --role community_addon --kind addon --output-root <path>`
+- `.\gradlew.bat -p <generated-addon> clean check packageEchoNativeAddon`
 
 ## Artifact Ownership
 

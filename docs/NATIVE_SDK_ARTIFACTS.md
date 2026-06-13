@@ -14,6 +14,7 @@ Artifacts are installed to `~/.m2/repository/dev/echo/native/`.
 | Artifact ID | Type | Coordinates | Description |
 |---|---|---|---|
 | `echoaddonapi` | library | `dev.echo.native:echoaddonapi:1.0.0-RC1` | Public addon API surface. |
+| `echoadaptercore` | library | `dev.echo.native:echoadaptercore:1.0.0-RC1` | Adapter service bridge for shared runtime-facing contracts. |
 | `echo-native-contracts` | library | `dev.echo.native:echo-native-contracts:1.0.0-RC1` | Runtime contracts and descriptors. |
 | `echo-sdk-gradle-plugin` | plugin | `dev.echo.native:echo-sdk-gradle-plugin:1.0.0-RC1` | Build plugin for addon projects. |
 | `echo-native-testkit` | library | `dev.echo.native:echo-native-testkit:1.0.0-RC1` | Headless loader tests. |
@@ -38,6 +39,7 @@ plugins {
 
 dependencies {
     implementation 'dev.echo.native:echoaddonapi:1.0.0-RC1'
+    implementation 'dev.echo.native:echoadaptercore:1.0.0-RC1'
     implementation 'dev.echo.native:echo-native-contracts:1.0.0-RC1'
     testImplementation 'dev.echo.native:echo-native-testkit:1.0.0-RC1'
 }
@@ -52,6 +54,8 @@ dependencies {
 ## Acceptance
 
 - `echoaddonapi` source jar present.
+- `echoadaptercore` source and Javadoc jars present.
 - `echo-native-contracts` source jar present.
+- `echo-native-testkit` source and Javadoc jars present.
 - `echo-sdk-gradle-plugin` artifact resolvable.
 - All artifacts publish to local Maven without errors.

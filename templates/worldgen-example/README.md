@@ -1,19 +1,5 @@
 # Worldgen Example
 
-Demonstrates registering a datapack-friendly worldgen feature service.
+Legacy bridge/reference scaffold for world generation content and tests.
 
-## Build
-
-```bash
-./gradlew build
-./gradlew validateAddon
-./gradlew packageAddon
-```
-
-## Expected Output
-
-- `build/libs/worldgenexample-1.0.0-echo-native.jar`
-
-## Policy
-
-`NATIVE`. Prefer datapack JSON for features, biomes, and structures. Use Java only for procedural logic that cannot be expressed in JSON.
+This template ID renders from `_shared/addon-module`, not the Native-first RC1 `.echo-addon` scaffold. Use `echo-native-worldgen-example` or `new-addon-template` for release-mode Native addon work.

@@ -1,19 +1,5 @@
 # Registry Example
 
-Demonstrates registering a block through the ECHO Native registry API.
+Legacy bridge/reference scaffold for registry and data registration patterns.
 
-## Build
-
-```bash
-./gradlew build
-./gradlew validateAddon
-./gradlew packageAddon
-```
-
-## Expected Output
-
-- `build/libs/registryexample-1.0.0-echo-native.jar`
-
-## Policy
-
-`NATIVE`. Uses `EchoRegistry` for lane-agnostic registration.
+This template ID renders from `_shared/addon-module`, not the Native-first RC1 `.echo-addon` scaffold. Use `echo-native-registry-example` or `new-addon-template` for release-mode Native addon work.

@@ -1,47 +1,34 @@
 # ECHO Native Templates and Examples
 
-## Templates
+## Canonical Template
 
 | Template | Location | Description |
 |---|---|---|
-| New addon | `new-addon-template/` | Minimal NATIVE addon scaffold. |
-| Native module | `native-module-template/` | Module with registrar and service. |
+| New addon | `_shared/native-addon-module/` through `new-addon-template` | Canonical Native-first addon scaffold. |
 
-## Examples
+The canonical template generates a fresh Gradle project with:
 
-| Example | Location | Policy | Side |
-|---|---|---|---|
-| Registry | `registry-example/` | NATIVE | BOTH |
-| Event | `event-example/` | NATIVE | BOTH |
-| Packet | `packet-example/` | NATIVE | BOTH |
-| Config | `config-example/` | NATIVE | BOTH |
-| Screen/HUD | `screen-hud-example/` | NATIVE | CLIENT |
-| Worldgen | `worldgen-example/` | NATIVE | BOTH |
-| Testkit | `testkit-example/` | NATIVE | BOTH |
+- `META-INF/echo.mod.json`.
+- `EchoNativeModuleEntrypoint`.
+- Public SDK dependencies for `1.0.0-RC1`.
+- Typed Native registry service usage.
+- `echo-native-testkit` smoke test.
+- `packageEchoNativeAddon` producing `.echo-addon`.
 
-## Each Template Contains
+## Legacy Examples
 
-- `build.gradle` â€” SDK plugin, dependencies, `packageAddon` config.
-- `echo.mod.json` â€” validated metadata.
-- Minimal source file(s) â€” entry point and helper classes.
-- Test fixture â€” `EchoNativeTestLoader` bootstrap or service test.
-- `README.md` â€” build commands, expected output, policy notes.
+Older example folders such as `registry-example/`, `event-example/`, `packet-example/`, `config-example/`, `screen-hud-example/`, `worldgen-example/`, and `testkit-example/` are reference material only until refreshed to the canonical template contract. Do not use them as release-mode proof if they self-mint mutation receipts or skip `packageEchoNativeAddon`.
 
 ## Policy Notes
 
-All templates default to `nativePolicy: NATIVE`. To use NeoForge compatibility:
-1. Change `nativePolicy` to `NEOFORGE_BRIDGE`.
-2. Add a NeoForge `@Mod` entry point alongside the native one.
-3. Use `EchoNativeRuntimeHost` for NeoForge-specific registries.
+Native-first templates must not import NeoForge, Forge, Fabric, or `echo-native-loader` implementation classes. Mutation proof comes from typed host services returning `EchoNativeMutationReceipt`, not from addon-created diagnostic records.
 
-To use Standalone:
-1. Change `nativePolicy` to `STANDALONE`.
-2. Avoid NeoForge-only imports.
-3. Verify with testkit before packaging.
+NeoForge support is a separate bridge/compat lane. Keep `@Mod` classes and NeoForge dependencies out of Native-first scaffolds unless the project is explicitly a bridge template.
 
 ## Acceptance
 
-- All templates generate via `./gradlew build`.
-- All templates compile.
-- All templates package via `./gradlew packageAddon`.
-- All templates have native/neoforge/standalone policy guidance in README.
+- Canonical template generation renders a fresh Gradle project.
+- Generated project resolves `dev.echo.native` `1.0.0-RC1` artifacts.
+- Generated project passes `./gradlew clean check packageEchoNativeAddon`.
+- Packaged `.echo-addon` contains `META-INF/echo.mod.json` and `addon.jar`.
+- Release-mode load passes without dev classpath fallback.

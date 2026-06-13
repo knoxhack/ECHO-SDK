@@ -1,6 +1,6 @@
 # Example Addon Walkthrough: EchoExampleMod
 
-This walkthrough builds a minimal ECHO Native addon from scratch. It registers a block, an item, a datapack-driven recipe, and an optional Index integration.
+This walkthrough builds a minimal ECHO Native addon from scratch. It declares a content registration through the typed Native registry host, packages a `.echo-addon`, and remains independent from NeoForge and Native Loader internals.
 
 ## 1. Create the Project
 
@@ -53,7 +53,10 @@ public class EchoExampleAddon implements EchoNativeModuleEntrypoint {
     public void registerContent(EchoNativeModuleLoadContext context) {
         EchoNativeServiceMutation mutation = EchoNativeServiceMutation.of(
                 "echoexample", "registry", "declare_content", "echoexample:example_item", EchoNativeRuntimeSide.COMMON);
-        context.recordMutation(EchoNativeMutationReceipt.mutated("echoexample:content_registry", mutation, 1));
+        context.serviceRegistry()
+                .service("echo.native.registry", EchoNativeRegistryService.class)
+                .map(registry -> registry.register(mutation))
+                .ifPresent(context::recordMutation);
     }
 }
 ```
@@ -100,10 +103,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class EchoExampleAddonTest {
     @Test
     public void testBootstrap() {
-        EchoNativeTestLoader loader = new EchoNativeTestLoader();
-        loader.loadAddon("echoexample");
-        assertTrue(loader.isServiceRegistered("echoexample:content_registry"));
-        assertEquals(2, loader.registeredContentCount());
+        EchoNativeSdkTestkit.Environment env = EchoNativeSdkTestkit.common("echoexample");
+        EchoNativeModuleLoadContext context = env.loadEntrypoint(new EchoExampleAddon());
+        assertTrue(context.serviceRegistry().hasService("echoexample:content_registry"));
+        env.goldenParity().requireMutatedServices("echo.native.registry");
+        env.goldenParity().requireOnlyTypedReceipts();
     }
 }
 ```
@@ -112,7 +116,6 @@ public class EchoExampleAddonTest {
 
 ```bash
 ./gradlew build
-./gradlew validateAddon
 ./gradlew packageEchoNativeAddon
 ```
 
@@ -122,7 +125,9 @@ Output:
 
 ## 8. Install and Verify
 
-Drop the jar into `mods/`. Launch and run:
+Install the `.echo-addon` through the launcher-managed addon store or a release-mode product profile. Do not install the development jar from `build/classes` or an IDE classpath.
+
+Launch and run:
 
 ```
 /give @p echoexample:example_item
@@ -135,4 +140,4 @@ If Index is installed, check `/index` for the new documentation page.
 - The descriptor drives loader behavior; code only runs after validation passes.
 - Optional integrations keep the addon standalone-safe.
 - Datapacks are first-class; prefer JSON over hardcoded recipes.
-- Tests use `EchoNativeTestLoader` for fast, headless validation.
+- Tests use `echo-native-testkit` for fast, headless validation.

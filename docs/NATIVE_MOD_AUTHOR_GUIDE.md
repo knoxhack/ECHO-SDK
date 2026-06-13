@@ -6,7 +6,7 @@
 2. Apply the `echo-sdk-gradle-plugin` to your addon project.
 3. Pick a [template](NATIVE_TEMPLATES.md) matching your addon type.
 4. Write your addon descriptor, service registrations, and content.
-5. Validate with `./gradlew validateAddon` and package with `./gradlew packageAddon`.
+5. Validate with `./gradlew check` and package with `./gradlew packageEchoNativeAddon`.
 
 ## Project Structure
 
@@ -51,20 +51,25 @@ Every addon needs `echo.mod.json`:
 
 ## Service Registration
 
-Use `EchoCoreServices` or `EchoNativeModuleLoadContext` to register providers:
+Use `EchoNativeModuleLoadContext` to register addon services, then call typed host services for runtime mutations. Do not mint `MUTATED` receipts yourself; record the receipt returned by the host service.
 
 ```java
 public class MyAddon implements EchoNativeModuleEntrypoint {
+    private static final String SERVICE_ID = "myaddon:registry_service";
+
     @Override
     public void registerServices(EchoNativeModuleLoadContext context) {
-        context.registerService("myaddon:registry_service", new MyRegistryService(), "registry");
+        context.registerService(SERVICE_ID, new MyRegistryService(), "registry");
     }
 
     @Override
     public void registerContent(EchoNativeModuleLoadContext context) {
         EchoNativeServiceMutation mutation = EchoNativeServiceMutation.of(
                 "myaddon", "registry", "declare_content", "myaddon:example", EchoNativeRuntimeSide.COMMON);
-        context.recordMutation(EchoNativeMutationReceipt.mutated("myaddon:registry_service", mutation, 1));
+        context.serviceRegistry()
+                .service("echo.native.registry", EchoNativeRegistryService.class)
+                .map(registry -> registry.register(mutation))
+                .ifPresent(context::recordMutation);
     }
 }
 ```
@@ -86,9 +91,6 @@ index.ifPresent(i -> i.registerProvider(myDocsProvider));
 # Compile and run tests
 ./gradlew build
 
-# Validate descriptor and service contracts
-./gradlew validateAddon
-
 # Produce .echo-addon distribution
 ./gradlew packageEchoNativeAddon
 ```
@@ -106,9 +108,10 @@ testImplementation 'dev.echo.native:echo-native-testkit:1.0.0-RC1'
 ```java
 @Test
 public void testBootstrap() {
-    EchoNativeTestLoader loader = new EchoNativeTestLoader();
-    loader.loadAddon("myaddon");
-    assertTrue(loader.isServiceRegistered("myaddon:registry_service"));
+    EchoNativeSdkTestkit.Environment env = EchoNativeSdkTestkit.common("myaddon");
+    EchoNativeModuleLoadContext context = env.loadEntrypoint(new MyAddon());
+    assertTrue(context.serviceRegistry().hasService("myaddon:registry_service"));
+    env.goldenParity().requireOnlyTypedReceipts();
 }
 ```
 

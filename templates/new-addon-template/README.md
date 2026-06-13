@@ -1,25 +1,24 @@
-# My Addon â€” New Addon Template
+# My Addon - New Addon Template
 
 ## Files
 
-- `build.gradle` â€” SDK plugin and dependencies.
-- `echo.mod.json` â€” addon metadata.
-- `MyAddon.java` â€” minimal entry point.
-- `MyAddonTest.java` â€” testkit bootstrap test.
+- `build.gradle` - SDK plugin and dependencies.
+- `echo.mod.json` - addon metadata.
+- `MyAddon.java` - minimal `EchoNativeModuleEntrypoint`.
+- `MyAddonTest.java` - testkit bootstrap test.
 
 ## Build
 
 ```bash
-./gradlew build
-./gradlew validateAddon
-./gradlew packageAddon
+./gradlew clean check packageEchoNativeAddon
 ```
 
 ## Expected Output
 
-- `build/libs/myaddon-1.0.0-echo-native.jar`
+- `build/echo-native/addons/myaddon-1.0.0-RC1.echo-addon`
+- packaged `addon.jar` inside the `.echo-addon`
 - `build/reports/myaddon-parity.json`
 
 ## Policy
 
-This template uses `nativePolicy: NATIVE`. To start with NeoForge compatibility, change to `NEOFORGE_BRIDGE` and keep your `@Mod` entry point alongside the native one.
+This template uses the Native-first RC1 path. For NeoForge compatibility, use a bridge/compat template and keep `@Mod` code out of the Native-first entrypoint.

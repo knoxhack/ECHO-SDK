@@ -1,24 +1,23 @@
-# My Native Module â€” Native Module Template
+# My Native Module - Native Module Template
 
 ## Files
 
-- `build.gradle` â€” SDK plugin and dependencies.
-- `echo.mod.json` â€” metadata with service declaration.
-- `NativeModule.java` â€” entry point.
-- `NativeService.java` â€” minimal service implementation.
-- `NativeModuleTest.java` â€” service registration test.
+- `build.gradle` - SDK plugin and dependencies.
+- `echo.mod.json` - metadata with service declaration.
+- `NativeModule.java` - `EchoNativeModuleEntrypoint` entry point.
+- `NativeService.java` - minimal service implementation.
+- `NativeModuleTest.java` - service registration test.
 
 ## Build
 
 ```bash
-./gradlew build
-./gradlew validateAddon
-./gradlew packageAddon
+./gradlew clean check packageEchoNativeAddon
 ```
 
 ## Expected Output
 
-- `build/libs/mynativemodule-1.0.0-echo-native.jar`
+- `build/echo-native/addons/mynativemodule-1.0.0-RC1.echo-addon`
+- packaged `addon.jar` inside the `.echo-addon`
 
 ## Policy
 

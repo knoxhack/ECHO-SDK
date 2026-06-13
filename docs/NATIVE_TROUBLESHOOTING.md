@@ -57,19 +57,22 @@ EchoOptionalServices.terminal().ifPresent(t -> t.registerCard(card));
 
 ## Build Issues
 
-### `./gradlew validateAddon` fails with contract errors
+### `./gradlew check` fails with contract errors
 
 **Cause**: A registered service does not implement its declared contract.
 **Fix**:
 1. Compare the service class against the contract interface.
 2. Ensure the contract ID in `echo.mod.json` matches the runtime registration.
+3. Confirm Native-first source does not import loader internals, Forge, Fabric, or NeoForge APIs.
 
-### `./gradlew packageAddon` produces no jar
+### `./gradlew packageEchoNativeAddon` produces no `.echo-addon`
 
-**Cause**: Missing `packageAddon` task configuration or descriptor validation blocked packaging.
+**Cause**: Descriptor validation failed, the SDK plugin is not on the RC1 template path, or the project is still using an old template task name.
 **Fix**:
-1. Run `./gradlew validateAddon` first and resolve errors.
-2. Ensure `echo-sdk-gradle-plugin` is applied and the `echoNative` block is configured.
+1. Run `./gradlew clean check packageEchoNativeAddon` and fix the first failing task.
+2. Ensure `META-INF/echo.mod.json` declares `schema`, `id`, `version`, `entrypoint`, `side`, and `access.nativeClasspath`.
+3. Confirm `access.nativeClasspath` includes `addon.jar`.
+4. Use the generated `.echo-addon` from `build/echo-native/addons/`; do not install loose classes or a dev jar for release-mode testing.
 
 ## Performance Issues
 

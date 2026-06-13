@@ -100,12 +100,6 @@ tasks.register('packageEchoNativeAddon', Zip) {
     }
 }
 
-tasks.register('packageAddon') {
-    group = 'distribution'
-    description = 'Compatibility alias for packageEchoNativeAddon.'
-    dependsOn tasks.named('packageEchoNativeAddon')
-}
-
 publishing {
     publications {
         register('mavenJava', MavenPublication) {

@@ -1,19 +1,5 @@
 # Event Example
 
-Demonstrates subscribing to ECHO Native events via `EchoEventBus`.
+Legacy bridge/reference scaffold for runtime event handling patterns.
 
-## Build
-
-```bash
-./gradlew build
-./gradlew validateAddon
-./gradlew packageAddon
-```
-
-## Expected Output
-
-- `build/libs/eventexample-1.0.0-echo-native.jar`
-
-## Policy
-
-`NATIVE`. Events are lane-agnostic where a Native equivalent exists. NeoForge-specific events require `NEOFORGE_BRIDGE` policy and `EchoNativeRuntimeHost`.
+This template ID renders from `_shared/addon-module`, not the Native-first RC1 `.echo-addon` scaffold. Use `echo-native-event-example` or `new-addon-template` for release-mode Native addon work.
