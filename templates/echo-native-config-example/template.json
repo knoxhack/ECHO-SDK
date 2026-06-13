@@ -5,7 +5,7 @@
   "kind": "addon",
   "description": "Example scaffold for typed native configuration keys.",
   "fileSets": [
-    "addon-module"
+    "native-addon-module"
   ],
   "defaultValues": {
     "class_name": "EchoNativeConfig",

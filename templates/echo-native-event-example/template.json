@@ -5,7 +5,7 @@
   "kind": "addon",
   "description": "Example scaffold for typed native event subscriptions and receipts.",
   "fileSets": [
-    "addon-module"
+    "native-addon-module"
   ],
   "defaultValues": {
     "class_name": "EchoNativeEvent",

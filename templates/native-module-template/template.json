@@ -4,7 +4,7 @@
   "name": "Native Module Template",
   "kind": "addon",
   "description": "Legacy native module starter wrapped in the SDK template contract.",
-  "fileSets": ["addon-module"],
+  "fileSets": ["native-addon-module"],
   "defaultValues": {
     "class_name": "NativeModule",
     "kind": "native_module",

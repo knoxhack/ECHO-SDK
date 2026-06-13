@@ -14,24 +14,28 @@
 my-addon/
   build.gradle
   src/main/java/.../MyAddon.java
-  src/main/resources/META-INF/echo-native-addon.descriptor.json
+  src/main/resources/META-INF/echo.mod.json
   src/main/resources/data/myaddon/...
   src/test/java/.../MyAddonTest.java
 ```
 
 ## Descriptor
 
-Every addon needs `echo-native-addon.descriptor.json`:
+Every addon needs `echo.mod.json`:
 
 ```json
 {
+  "schema": "echo.mod.v1",
   "id": "myaddon",
   "name": "My Addon",
-  "version": "1.0.0",
-  "nativePolicy": "NATIVE",
-  "services": ["myaddon:registry_service"],
-  "optionalIntegrations": ["echoindex", "echoterminal"],
-  "side": "BOTH"
+  "version": "1.0.0-RC1",
+  "entrypoint": "com.example.myaddon.MyAddon",
+  "side": "common",
+  "provides": ["myaddon.registry"],
+  "access": {
+    "nativeClasspath": ["addon.jar"]
+  },
+  "apiStability": "beta"
 }
 ```
 
@@ -40,19 +44,27 @@ Every addon needs `echo-native-addon.descriptor.json`:
 | `id` | Yes | Unique modid. Lowercase, no spaces. |
 | `name` | Yes | Human-readable name. |
 | `version` | Yes | Semver string. |
-| `nativePolicy` | Yes | `NATIVE`, `NEOFORGE_BRIDGE`, or `STANDALONE`. |
-| `services` | No | List of service contract IDs this addon registers. |
-| `optionalIntegrations` | No | Modids this addon optionally integrates with. |
-| `side` | Yes | `CLIENT`, `SERVER`, or `BOTH`. |
+| `entrypoint` | Yes | Class implementing `EchoNativeModuleEntrypoint`. |
+| `side` | Yes | `common`, `client`, or `server`. |
+| `provides` | No | Feature IDs this addon provides. |
+| `access.nativeClasspath` | Yes | Release-mode classpath entries, usually `addon.jar`. |
 
 ## Service Registration
 
-Use `EchoCoreServices` or `EchoNativeAddonRuntime` to register providers:
+Use `EchoCoreServices` or `EchoNativeModuleLoadContext` to register providers:
 
 ```java
-public class MyAddon {
-    public void onInitialize(EchoNativeAddonRuntime runtime) {
-        runtime.registerService("myaddon:registry_service", new MyRegistryService());
+public class MyAddon implements EchoNativeModuleEntrypoint {
+    @Override
+    public void registerServices(EchoNativeModuleLoadContext context) {
+        context.registerService("myaddon:registry_service", new MyRegistryService(), "registry");
+    }
+
+    @Override
+    public void registerContent(EchoNativeModuleLoadContext context) {
+        EchoNativeServiceMutation mutation = EchoNativeServiceMutation.of(
+                "myaddon", "registry", "declare_content", "myaddon:example", EchoNativeRuntimeSide.COMMON);
+        context.recordMutation(EchoNativeMutationReceipt.mutated("myaddon:registry_service", mutation, 1));
     }
 }
 ```
@@ -77,18 +89,18 @@ index.ifPresent(i -> i.registerProvider(myDocsProvider));
 # Validate descriptor and service contracts
 ./gradlew validateAddon
 
-# Produce distribution jar
-./gradlew packageAddon
+# Produce .echo-addon distribution
+./gradlew packageEchoNativeAddon
 ```
 
-Output lands in `build/libs/<id>-<version>-echo-native.jar`.
+Output lands in `build/echo-native/addons/<id>-<version>.echo-addon`.
 
 ## Testing
 
 Use the `echo-native-testkit` dependency for in-memory loader tests:
 
 ```groovy
-testImplementation 'dev.echo.native:testkit:1.0.0-RC'
+testImplementation 'dev.echo.native:echo-native-testkit:1.0.0-RC1'
 ```
 
 ```java

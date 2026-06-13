@@ -14,45 +14,46 @@ ECHO Native gives you service-based optional integrations, policy-driven runtime
 
 ### 2. Descriptor
 
-Create `META-INF/echo-native-addon.descriptor.json` with:
-- `nativePolicy`: Start with `NEOFORGE_BRIDGE` if you want gradual migration.
-- `optionalIntegrations`: List every cross-mod integration.
-- `side`: Declare `CLIENT`/`SERVER`/`BOTH` accurately.
+Create `META-INF/echo.mod.json` with:
+- `entrypoint`: Your `EchoNativeModuleEntrypoint` implementation.
+- `access.nativeClasspath`: Packaged release classpath entries such as `addon.jar`.
+- `side`: Declare `common`, `client`, or `server` accurately.
 
 ### 3. Entry Point Migration
 
-Replace `@Mod` main class with an `EchoNativeAddon` entry point:
+Replace `@Mod` main class with an `EchoNativeModuleEntrypoint` entry point:
 
 ```java
 public class MyNeoForgeMod {
-    // NeoForge entry point — keep it for NEOFORGE_BRIDGE lane
+    // NeoForge entry point â€” keep it for NEOFORGE_BRIDGE lane
 }
 
-public class MyNativeAddon implements EchoNativeAddon {
+public class MyNativeAddon implements EchoNativeModuleEntrypoint {
     @Override
-    public void onInitialize(EchoNativeAddonRuntime runtime) {
+    public void registerServices(EchoNativeModuleLoadContext context) {
         // Register services here
     }
 }
 ```
 
-Register the native entry point in `echo-native-addon.descriptor.json`:
+Register the native entry point in `echo.mod.json`:
 
 ```json
 {
-  "entryPoints": {
-    "native": "com.example.MyNativeAddon"
+  "entrypoint": "com.example.MyNativeAddon",
+  "access": {
+    "nativeClasspath": ["addon.jar"]
   }
 }
 ```
 
 ### 4. Event Handling
 
-Replace direct NeoForge event bus subscriptions with ECHO Native event contracts where available. For events without a Native wrapper, keep NeoForge subscriptions—they still work in the `NEOFORGE_BRIDGE` lane.
+Replace direct NeoForge event bus subscriptions with ECHO Native event contracts where available. For events without a Native wrapper, keep NeoForge subscriptionsâ€”they still work in the `NEOFORGE_BRIDGE` lane.
 
 | NeoForge Event | ECHO Native Equivalent |
 |---|---|
-| `FMLCommonSetupEvent` | `EchoNativeAddonRuntime.onInitialize()` |
+| `FMLCommonSetupEvent` | `EchoNativeModuleEntrypoint.commonSetup()` |
 | `RegisterEvent` | `EchoCoreServices.registry().register(...)` |
 | `ServerStartingEvent` | `EchoNativeServerLifecycle.STARTING` |
 | `PlayerEvent.PlayerLoggedInEvent` | `EchoPlayerService.joinEvent()` |
@@ -95,7 +96,7 @@ Fix any `ParityMismatch` warnings before switching from `NEOFORGE_BRIDGE` to `NA
 |---|---|---|
 | 1 | `NEOFORGE_BRIDGE` | Addon loads via NeoForge; services registered to ECHO. |
 | 2 | `NEOFORGE_BRIDGE` | Replace direct cross-mod calls with service lookups. |
-| 3 | `NATIVE` | Switch policy; verify with testkit + parity report. |
+| 3 | Native-first `.echo-addon` | Package with `access.nativeClasspath` and verify with testkit + parity report. |
 | 4 | `STANDALONE` (optional) | Strip NeoForge-only code for lightweight deployments. |
 
 See [AdapterCore Guide](NATIVE_ADAPTERCORE_GUIDE.md) for bridge helpers.

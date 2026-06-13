@@ -7,8 +7,8 @@
 **Cause**: An addon descriptor is missing a required field or contains invalid JSON.
 **Fix**:
 1. Check `logs/latest.log` for the exact field name and addon ID.
-2. Open the addon jar and inspect `META-INF/echo-native-addon.descriptor.json`.
-3. Ensure `id`, `version`, `nativePolicy`, and `side` are present and valid.
+2. Open the addon jar and inspect `META-INF/echo.mod.json`.
+3. Ensure `id`, `version`, `entrypoint`, `side`, and `access.nativeClasspath` are present and valid.
 4. Re-package the addon after fixing the descriptor.
 
 ### `UnsupportedClassVersionError`
@@ -18,11 +18,11 @@
 
 ### Loader does not discover an addon
 
-**Cause**: Jar is not in `mods/`, descriptor is missing, or `nativePolicy` is unsupported.
+**Cause**: The `.echo-addon` is not installed, descriptor is missing, or the release classpath is incomplete.
 **Fix**:
-1. Confirm the jar filename ends with `.jar` and is in the correct folder.
-2. Open the jar and verify `META-INF/echo-native-addon.descriptor.json` exists.
-3. Check that `nativePolicy` is one of `NATIVE`, `NEOFORGE_BRIDGE`, or `STANDALONE`.
+1. Confirm the package filename ends with `.echo-addon` and is in the correct install folder.
+2. Open the jar and verify `META-INF/echo.mod.json` exists.
+3. Check that `access.nativeClasspath` includes the packaged `addon.jar`.
 
 ## Runtime Issues
 
@@ -39,12 +39,12 @@ TerminalService t = TerminalService.instance(); // crashes if absent
 EchoOptionalServices.terminal().ifPresent(t -> t.registerCard(card));
 ```
 
-### Crash during `onInitialize`
+### Crash during lifecycle setup
 
 **Cause**: Service registration throwing an exception prevents further addon boot.
 **Fix**:
 1. Wrap registration in try/catch and log instead of crash.
-2. Use `EchoNativeAddonRuntime.registerService(contract, impl, true)` for best-effort registration.
+2. Use `EchoNativeModuleLoadContext.registerService(serviceId, impl, surfaces...)` from `registerServices`.
 3. Check the addon's parity report for missing NeoForge bridge dependencies.
 
 ### Networking packets not arriving
@@ -62,7 +62,7 @@ EchoOptionalServices.terminal().ifPresent(t -> t.registerCard(card));
 **Cause**: A registered service does not implement its declared contract.
 **Fix**:
 1. Compare the service class against the contract interface.
-2. Ensure the contract ID in `echo-native-addon.descriptor.json` matches the runtime registration.
+2. Ensure the contract ID in `echo.mod.json` matches the runtime registration.
 
 ### `./gradlew packageAddon` produces no jar
 

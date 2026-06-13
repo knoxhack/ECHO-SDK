@@ -21,11 +21,11 @@
 
 ## Each Template Contains
 
-- `build.gradle` — SDK plugin, dependencies, `packageAddon` config.
-- `echo-native-addon.descriptor.json` — validated metadata.
-- Minimal source file(s) — entry point and helper classes.
-- Test fixture — `EchoNativeTestLoader` bootstrap or service test.
-- `README.md` — build commands, expected output, policy notes.
+- `build.gradle` â€” SDK plugin, dependencies, `packageAddon` config.
+- `echo.mod.json` â€” validated metadata.
+- Minimal source file(s) â€” entry point and helper classes.
+- Test fixture â€” `EchoNativeTestLoader` bootstrap or service test.
+- `README.md` â€” build commands, expected output, policy notes.
 
 ## Policy Notes
 

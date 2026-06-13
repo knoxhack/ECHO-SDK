@@ -5,10 +5,10 @@
   "kind": "addon",
   "description": "Public native addon starter with release-prep checklist and SDK-only boundaries.",
   "fileSets": [
-    "addon-module"
+    "native-addon-module"
   ],
   "defaultValues": {
-    "class_name": "EchoNativeAddon",
+    "class_name": "EchoNativeExampleAddon",
     "kind": "native_addon",
     "role": "native_feature",
     "feature_id": "native.generated",

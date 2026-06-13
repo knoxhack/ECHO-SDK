@@ -5,7 +5,7 @@
   "kind": "addon",
   "description": "Native module scaffold for SDK-facing shared runtime features.",
   "fileSets": [
-    "addon-module"
+    "native-addon-module"
   ],
   "defaultValues": {
     "class_name": "EchoNativeModule",

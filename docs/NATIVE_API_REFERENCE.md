@@ -39,14 +39,15 @@ EchoCoreServices.playerService();
 EchoCoreServices.serverLifecycle();
 ```
 
-### EchoNativeAddonRuntime
+### EchoNativeModuleLoadContext
 
-Passed to every addon during initialization:
+Passed to every `EchoNativeModuleEntrypoint` lifecycle method:
 
 ```java
-runtime.registerService(String contractId, Object implementation);
-runtime.registerEventHandler(EchoNativeEventChannel channel, Consumer<EchoEvent> handler);
-runtime.policy(); // Current NativePolicy
+context.registerService(String serviceId, Object implementation, String... surfaces);
+context.recordMutation(EchoNativeMutationReceipt receipt);
+context.resolveDependency(String moduleId);
+context.missingDependency(String moduleId);
 ```
 
 ### EchoNetService
@@ -63,19 +64,19 @@ EchoNetService.broadcastToDimension(ResourceKey<Level> dim, EchoPacket packet);
 
 Key records and interfaces:
 
-- `EchoNativeAddonDescriptor` — validated addon metadata.
-- `EchoNativeBootstrapPlan` — loader boot sequence.
-- `EchoNativeAddonRuntimeDiscoveryPlan` — addon discovery and ordering.
-- `EchoNativeAccessPolicy` — runtime capability visibility rules.
-- `EchoNativeApiStability` — stability annotation helper.
+- `EchoNativeAddonDescriptor` â€” validated addon metadata.
+- `EchoNativeBootstrapPlan` â€” loader boot sequence.
+- `EchoNativeAddonRuntimeDiscoveryPlan` â€” addon discovery and ordering.
+- `EchoNativeAccessPolicy` â€” runtime capability visibility rules.
+- `EchoNativeApiStability` â€” stability annotation helper.
 
 ## AdapterCore Bridge Types
 
-- `EchoNativeRuntimeHost` — registry/capability/event host.
-- `EchoBackendEnergyBridge` — energy handler portability.
-- `EchoBackendFluidBridge` — fluid handler portability.
-- `EchoBlockDefinition` — portable block metadata.
-- `EchoClientAdapter` / `EchoCommandAdapter` — lane-agnostic client/command hooks.
+- `EchoNativeRuntimeHost` â€” registry/capability/event host.
+- `EchoBackendEnergyBridge` â€” energy handler portability.
+- `EchoBackendFluidBridge` â€” fluid handler portability.
+- `EchoBlockDefinition` â€” portable block metadata.
+- `EchoClientAdapter` / `EchoCommandAdapter` â€” lane-agnostic client/command hooks.
 
 ## Deprecation Policy
 
@@ -88,9 +89,9 @@ Key records and interfaces:
 
 | Artifact | Version | Stability |
 |---|---|---|
-| `echoaddonapi` | `1.0.0-RC` | Beta |
-| `echo-native-contracts` | `1.0.0-RC` | Beta |
-| `echo-sdk-gradle-plugin` | `1.0.0-RC` | Beta |
-| `echo-native-testkit` | `1.0.0-RC` | Beta |
+| `echoaddonapi` | `1.0.0-RC1` | Beta |
+| `echo-native-contracts` | `1.0.0-RC1` | Beta |
+| `echo-sdk-gradle-plugin` | `1.0.0-RC1` | Beta |
+| `echo-native-testkit` | `1.0.0-RC1` | Beta |
 
 See [Compatibility Matrix](NATIVE_COMPATIBILITY_MATRIX.md) for runtime version mapping.

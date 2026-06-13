@@ -4,7 +4,7 @@
   "name": "New Addon Template",
   "kind": "addon",
   "description": "Legacy general addon starter wrapped in the SDK template contract.",
-  "fileSets": ["addon-module"],
+  "fileSets": ["native-addon-module"],
   "defaultValues": {
     "class_name": "MyAddon",
     "kind": "addon",

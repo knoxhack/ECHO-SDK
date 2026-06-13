@@ -1,17 +1,47 @@
 package com.example.registryexample;
 
-import dev.echo.nativeplatform.contracts.EchoNativeAddon;
-import dev.echo.nativeplatform.contracts.EchoNativeAddonRuntime;
-import dev.echo.api.registry.EchoRegistry;
-import dev.echo.api.registry.EchoRegistryKey;
-import dev.echo.api.block.EchoBlockDescriptor;
+import dev.echo.nativeplatform.contracts.EchoNativeLoadStatus;
+import dev.echo.nativeplatform.contracts.EchoNativeModuleEntrypoint;
+import dev.echo.nativeplatform.contracts.EchoNativeModuleLoadContext;
+import dev.echo.nativeplatform.contracts.EchoNativeMutationReceipt;
+import dev.echo.nativeplatform.contracts.EchoNativeRuntimeSide;
+import dev.echo.nativeplatform.contracts.EchoNativeServiceMutation;
 
-public class RegistryExampleAddon implements EchoNativeAddon {
+import java.util.Map;
+
+public class RegistryExampleAddon implements EchoNativeModuleEntrypoint {
+    public static final String MODULE_ID = "registryexample";
+    public static final String SERVICE_ID = MODULE_ID + ":native_service";
+
     @Override
-    public void onInitialize(EchoNativeAddonRuntime runtime) {
-        EchoRegistry<EchoBlockDescriptor> blocks = EchoRegistry.create("registryexample:blocks");
-        blocks.register(EchoRegistryKey.of("registryexample:example_block"),
-            new EchoBlockDescriptor("registryexample:example_block"));
-        runtime.registerService("registryexample:block_registry", blocks);
+    public void registerServices(EchoNativeModuleLoadContext context) {
+        context.registerService(SERVICE_ID, new NativeService(MODULE_ID), "registry", "events");
+    }
+
+    @Override
+    public void registerContent(EchoNativeModuleLoadContext context) {
+        EchoNativeServiceMutation mutation = new EchoNativeServiceMutation(
+                MODULE_ID,
+                "registry",
+                "declare_content",
+                MODULE_ID + ":example",
+                EchoNativeRuntimeSide.COMMON,
+                Map.of("template", "RegistryExampleAddon")
+        );
+        context.recordMutation(new EchoNativeMutationReceipt(
+                MODULE_ID,
+                SERVICE_ID,
+                mutation.surface(),
+                mutation.action(),
+                mutation.target(),
+                EchoNativeLoadStatus.MUTATED,
+                mutation.side(),
+                MODULE_ID + ":registry/example",
+                1,
+                mutation.evidence()
+        ));
+    }
+
+    public record NativeService(String moduleId) {
     }
 }

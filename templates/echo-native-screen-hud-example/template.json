@@ -5,7 +5,7 @@
   "kind": "addon",
   "description": "Example scaffold for typed native screens and HUD surfaces.",
   "fileSets": [
-    "addon-module"
+    "native-addon-module"
   ],
   "defaultValues": {
     "class_name": "EchoNativeHud",

@@ -1,12 +1,12 @@
-# My Native Module — Native Module Template
+# My Native Module â€” Native Module Template
 
 ## Files
 
-- `build.gradle` — SDK plugin and dependencies.
-- `echo-native-addon.descriptor.json` — metadata with service declaration.
-- `NativeModule.java` — entry point.
-- `NativeService.java` — minimal service implementation.
-- `NativeModuleTest.java` — service registration test.
+- `build.gradle` â€” SDK plugin and dependencies.
+- `echo.mod.json` â€” metadata with service declaration.
+- `NativeModule.java` â€” entry point.
+- `NativeService.java` â€” minimal service implementation.
+- `NativeModuleTest.java` â€” service registration test.
 
 ## Build
 

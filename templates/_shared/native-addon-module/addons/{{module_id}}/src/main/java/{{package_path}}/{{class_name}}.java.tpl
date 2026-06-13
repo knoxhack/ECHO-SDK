@@ -1,4 +1,4 @@
-package com.example.worldgenexample;
+package {{package_name}};
 
 import dev.echo.nativeplatform.contracts.EchoNativeLoadStatus;
 import dev.echo.nativeplatform.contracts.EchoNativeModuleEntrypoint;
@@ -9,13 +9,14 @@ import dev.echo.nativeplatform.contracts.EchoNativeServiceMutation;
 
 import java.util.Map;
 
-public class WorldgenExampleAddon implements EchoNativeModuleEntrypoint {
-    public static final String MODULE_ID = "worldgenexample";
-    public static final String SERVICE_ID = MODULE_ID + ":native_service";
+public final class {{class_name}} implements EchoNativeModuleEntrypoint {
+    public static final String MODULE_ID = "{{module_id}}";
+    public static final String SERVICE_ID = MODULE_ID + ".sdk.service";
+    public static final String FEATURE_ID = "{{feature_id}}";
 
     @Override
     public void registerServices(EchoNativeModuleLoadContext context) {
-        context.registerService(SERVICE_ID, new NativeService(MODULE_ID), "registry", "events");
+        context.registerService(SERVICE_ID, new NativeSdkService(MODULE_ID, FEATURE_ID), "registry", "events");
     }
 
     @Override
@@ -26,7 +27,7 @@ public class WorldgenExampleAddon implements EchoNativeModuleEntrypoint {
                 "declare_content",
                 MODULE_ID + ":example",
                 EchoNativeRuntimeSide.COMMON,
-                Map.of("template", "WorldgenExampleAddon")
+                Map.of("featureId", FEATURE_ID)
         );
         context.recordMutation(new EchoNativeMutationReceipt(
                 MODULE_ID,
@@ -42,6 +43,6 @@ public class WorldgenExampleAddon implements EchoNativeModuleEntrypoint {
         ));
     }
 
-    public record NativeService(String moduleId) {
+    public record NativeSdkService(String moduleId, String featureId) {
     }
 }

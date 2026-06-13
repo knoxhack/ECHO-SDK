@@ -1,11 +1,11 @@
-# My Addon — New Addon Template
+# My Addon â€” New Addon Template
 
 ## Files
 
-- `build.gradle` — SDK plugin and dependencies.
-- `echo-native-addon.descriptor.json` — addon metadata.
-- `MyAddon.java` — minimal entry point.
-- `MyAddonTest.java` — testkit bootstrap test.
+- `build.gradle` â€” SDK plugin and dependencies.
+- `echo.mod.json` â€” addon metadata.
+- `MyAddon.java` â€” minimal entry point.
+- `MyAddonTest.java` â€” testkit bootstrap test.
 
 ## Build
 

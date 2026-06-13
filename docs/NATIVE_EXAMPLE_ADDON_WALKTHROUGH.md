@@ -16,21 +16,21 @@ Use the new-addon template:
 
 ## 2. Descriptor
 
-`src/main/resources/META-INF/echo-native-addon.descriptor.json`
+`src/main/resources/META-INF/echo.mod.json`
 
 ```json
 {
-  "schema": "echo.native.descriptor.v1",
+  "schema": "echo.mod.v1",
   "id": "echoexample",
   "name": "Echo Example Mod",
-  "version": "1.0.0",
-  "nativePolicy": "NATIVE",
-  "entryPoints": {
-    "native": "com.example.echoexample.EchoExampleAddon"
+  "version": "1.0.0-RC1",
+  "entrypoint": "com.example.echoexample.EchoExampleAddon",
+  "side": "common",
+  "provides": ["echoexample.content"],
+  "access": {
+    "nativeClasspath": ["addon.jar"]
   },
-  "services": ["echoexample:content_registry"],
-  "optionalIntegrations": ["echoindex"],
-  "side": "BOTH"
+  "apiStability": "beta"
 }
 ```
 
@@ -42,21 +42,18 @@ Use the new-addon template:
 package com.example.echoexample;
 
 import dev.echo.nativeplatform.contracts.*;
-import dev.echo.core.services.*;
 
-public class EchoExampleAddon implements EchoNativeAddon {
+public class EchoExampleAddon implements EchoNativeModuleEntrypoint {
     @Override
-    public void onInitialize(EchoNativeAddonRuntime runtime) {
-        // Register block and item
-        EchoCoreServices.contentRegistry().registerBlock("echoexample:example_block", new ExampleBlock());
-        EchoCoreServices.contentRegistry().registerItem("echoexample:example_item", new ExampleItem());
+    public void registerServices(EchoNativeModuleLoadContext context) {
+        context.registerService("echoexample:content_registry", new ExampleContentService(), "registry");
+    }
 
-        // Register optional Index provider
-        EchoOptionalServices.index().ifPresent(index -> {
-            index.registerProvider(new ExampleIndexProvider());
-        });
-
-        runtime.registerService("echoexample:content_registry", new ExampleContentService());
+    @Override
+    public void registerContent(EchoNativeModuleLoadContext context) {
+        EchoNativeServiceMutation mutation = EchoNativeServiceMutation.of(
+                "echoexample", "registry", "declare_content", "echoexample:example_item", EchoNativeRuntimeSide.COMMON);
+        context.recordMutation(EchoNativeMutationReceipt.mutated("echoexample:content_registry", mutation, 1));
     }
 }
 ```
@@ -116,11 +113,11 @@ public class EchoExampleAddonTest {
 ```bash
 ./gradlew build
 ./gradlew validateAddon
-./gradlew packageAddon
+./gradlew packageEchoNativeAddon
 ```
 
 Output:
-- `build/libs/echoexample-1.0.0-echo-native.jar`
+- `build/echo-native/addons/echoexample-1.0.0-RC1.echo-addon`
 - `build/reports/echoexample-parity.json`
 
 ## 8. Install and Verify

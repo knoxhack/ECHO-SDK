@@ -5,7 +5,7 @@
   "kind": "addon",
   "description": "Example scaffold for typed native registry mutation receipts.",
   "fileSets": [
-    "addon-module"
+    "native-addon-module"
   ],
   "defaultValues": {
     "class_name": "EchoNativeRegistry",

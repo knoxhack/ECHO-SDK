@@ -49,6 +49,26 @@ FORBIDDEN_COMMON_IMPORTS = (
     "net.minecraftforge",
     "net.fabricmc",
 )
+NATIVE_TEMPLATE_IDS = (
+    "echo-native-addon",
+    "echo-native-config-example",
+    "echo-native-event-example",
+    "echo-native-module",
+    "echo-native-packet-example",
+    "echo-native-registry-example",
+    "echo-native-screen-hud-example",
+    "echo-native-testkit-example",
+    "echo-native-worldgen-example",
+    "new-addon-template",
+    "native-module-template",
+)
+FORBIDDEN_NATIVE_JAVA_MARKERS = (
+    "dev.echo.nativeplatform.loader",
+    "net.neoforged",
+    "net.minecraftforge",
+    "net.fabricmc",
+    "EchoNativeAddonRuntime",
+)
 
 
 def write_text(path: Path, text: str) -> None:
@@ -303,6 +323,71 @@ def validate_static_compile_orientation(fixture_root: Path, errors: list[str]) -
     }
 
 
+def validate_native_template_exports(root: Path, fixture_root: Path, errors: list[str]) -> list[dict[str, Any]]:
+    reports: list[dict[str, Any]] = []
+    for template_id in NATIVE_TEMPLATE_IDS:
+        module_id = f"echosdk{template_id.replace('echo-', '').replace('-', '')}"[:48]
+        args = SimpleNamespace(
+            module_id=module_id,
+            role=None,
+            kind_value=None,
+            feature_id=None,
+            class_name=None,
+            display_name=None,
+        )
+        output_root = fixture_root / "native-template-exports" / template_id
+        rendered = echo_sdk.render_template(root, template_id, output_root, args, "addon", force=True, dry_run=False)
+        rendered_targets = {item.target.relative_to(output_root).as_posix() for item in rendered}
+        addon_root = output_root / "addons" / module_id
+        build_file = addon_root / "build.gradle"
+        descriptor_file = addon_root / "src/main/resources/META-INF/echo.mod.json"
+        java_files = sorted((addon_root / "src/main/java").rglob("*.java"))
+
+        if f"addons/{module_id}/build.gradle" not in rendered_targets:
+            errors.append(f"{template_id} did not render a Gradle build file")
+        if f"addons/{module_id}/src/main/resources/META-INF/echo.mod.json" not in rendered_targets:
+            errors.append(f"{template_id} did not render META-INF/echo.mod.json")
+        if not java_files:
+            errors.append(f"{template_id} did not render a Java entrypoint")
+
+        entrypoint_files = [path for path in java_files if path.parent.name != "examples"]
+        for java_file in java_files:
+            text = java_file.read_text(encoding="utf-8")
+            for forbidden in FORBIDDEN_NATIVE_JAVA_MARKERS:
+                if forbidden in text:
+                    errors.append(f"{template_id} rendered forbidden Native Java marker {forbidden}: {java_file.as_posix()}")
+        for java_file in entrypoint_files:
+            text = java_file.read_text(encoding="utf-8")
+            if "EchoNativeModuleEntrypoint" not in text:
+                errors.append(f"{template_id} entrypoint must implement EchoNativeModuleEntrypoint: {java_file.as_posix()}")
+            if "EchoNativeMutationReceipt" not in text:
+                errors.append(f"{template_id} entrypoint must demonstrate typed mutation receipts: {java_file.as_posix()}")
+
+        descriptor = validate_json_file(descriptor_file, errors)
+        access = descriptor.get("access") if isinstance(descriptor.get("access"), dict) else {}
+        native_classpath = access.get("nativeClasspath") if isinstance(access.get("nativeClasspath"), list) else []
+        if descriptor.get("entrypoint") is None:
+            errors.append(f"{template_id} descriptor must declare entrypoint")
+        if "addon.jar" not in native_classpath:
+            errors.append(f"{template_id} descriptor must declare access.nativeClasspath ['addon.jar']")
+
+        build_text = build_file.read_text(encoding="utf-8") if build_file.is_file() else ""
+        if "packageEchoNativeAddon" not in build_text:
+            errors.append(f"{template_id} build must expose packageEchoNativeAddon")
+        if "verifyNativeAddonBoundaries" not in build_text:
+            errors.append(f"{template_id} build must verify Native addon import boundaries")
+
+        reports.append({
+            "templateId": template_id,
+            "moduleId": module_id,
+            "renderedFileCount": len(rendered_targets),
+            "javaFileCount": len(java_files),
+            "hasDescriptor": descriptor_file.is_file(),
+            "hasPackageTask": "packageEchoNativeAddon" in build_text,
+        })
+    return reports
+
+
 def validate_fixture_reports(fixture_root: Path, errors: list[str]) -> None:
     context = generate_echo_reports.collect_context(fixture_root, "beta", "sdk_fixture", "not_run", "ashfall", "")
     reports = generate_echo_reports.create_reports(context)
@@ -332,6 +417,7 @@ def main() -> int:
     validate_pack_fixture_files(fixture_root, errors)
     registration = validate_registration_plan(root, fixture_root, errors)
     compile_proof = validate_static_compile_orientation(fixture_root, errors)
+    native_exports = validate_native_template_exports(root, fixture_root, errors)
     validate_fixture_reports(fixture_root, errors)
     payload = {
         "schema": "echo.sdk.template_validation.v1",
@@ -346,6 +432,7 @@ def main() -> int:
         "templateSpecificStubCount": len(rendered_stub_files),
         "registrationPlan": registration,
         "compileProof": compile_proof,
+        "nativeTemplateExports": native_exports,
         "settingsGradleModified": False,
         "errors": errors,
     }
