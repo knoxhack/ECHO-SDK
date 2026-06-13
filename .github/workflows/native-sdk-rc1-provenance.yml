@@ -1,0 +1,144 @@
+name: Native SDK RC1 Provenance
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: GitHub release tag to upload when publishing is enabled.
+        required: true
+        default: v1.0.0-RC1
+      native_platform_ref:
+        description: ECHO-Native-Platform ref used to build contracts and testkit.
+        required: true
+        default: main
+      modules_ref:
+        description: ECHO-Modules ref used to build echoaddonapi and echoadaptercore.
+        required: true
+        default: main
+      publish_release:
+        description: Upload staged SDK artifacts to release_tag with --clobber.
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build-attest:
+    name: Build And Attest Native SDK RC1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout SDK
+        uses: actions/checkout@v4
+        with:
+          path: ECHO-SDK
+
+      - name: Checkout Native Platform
+        uses: actions/checkout@v4
+        with:
+          repository: knoxhack/ECHO-Native-Platform
+          ref: ${{ inputs.native_platform_ref }}
+          path: ECHO-Native-Platform
+
+      - name: Checkout Modules
+        uses: actions/checkout@v4
+        with:
+          repository: knoxhack/ECHO-Modules
+          ref: ${{ inputs.modules_ref }}
+          path: ECHO-Modules
+
+      - name: Set up Java 25
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 9.2.1
+
+      - name: Build Native Platform SDK jars
+        working-directory: ECHO-Native-Platform
+        run: |
+          ./gradlew --no-daemon --no-parallel --max-workers=1 \
+            :echo-native-contracts:clean \
+            :echo-native-contracts:jar \
+            :echo-native-contracts:sourcesJar \
+            :echo-native-contracts:javadocJar \
+            :echo-native-testkit:clean \
+            :echo-native-testkit:jar \
+            :echo-native-testkit:sourcesJar \
+            :echo-native-testkit:javadocJar
+
+      - name: Build module SDK jars
+        working-directory: ECHO-Modules
+        run: |
+          ./gradlew --no-daemon --no-parallel --max-workers=1 -PechoAddonSet=beta \
+            :echoaddonapi:clean \
+            :echoaddonapi:jar \
+            :echoaddonapi:sourcesJar \
+            :echoaddonapi:javadocJar \
+            :echoadaptercore:clean \
+            :echoadaptercore:jar \
+            :echoadaptercore:sourcesJar \
+            :echoadaptercore:javadocJar
+
+      - name: Build SDK Gradle plugin jars
+        working-directory: ECHO-SDK
+        run: |
+          gradle --no-daemon --no-parallel --max-workers=1 \
+            -p gradle-plugin/echo-addon-gradle-plugin \
+            clean jar sourcesJar javadocJar
+
+      - name: Stage Native SDK RC1 artifact set
+        run: |
+          node ECHO-SDK/scripts/stage-native-sdk-rc1-release.mjs \
+            --sdk-root ECHO-SDK \
+            --native-platform-root ECHO-Native-Platform \
+            --modules-root ECHO-Modules \
+            --out ECHO-SDK/dist/native-sdk-rc1 \
+            --clean \
+            --require-complete
+
+      - name: Upload Native SDK RC1 artifact set
+        uses: actions/upload-artifact@v4
+        with:
+          name: echo-native-sdk-1.0.0-RC1
+          if-no-files-found: error
+          path: |
+            ECHO-SDK/dist/native-sdk-rc1/*.jar
+            ECHO-SDK/dist/native-sdk-rc1/native-sdk-rc1-manifest.json
+            ECHO-SDK/dist/native-sdk-rc1/checksums.sha256
+
+      - name: Attest Native SDK RC1 artifact set
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: |
+            ECHO-SDK/dist/native-sdk-rc1/*.jar
+            ECHO-SDK/dist/native-sdk-rc1/native-sdk-rc1-manifest.json
+            ECHO-SDK/dist/native-sdk-rc1/checksums.sha256
+
+      - name: Publish Native SDK RC1 release assets
+        if: ${{ inputs.publish_release }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
+            gh release create "$RELEASE_TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" \
+              --prerelease \
+              --title "ECHO SDK 1.0.0-RC1" \
+              --notes "Workflow-built Native SDK RC1 artifact set with GitHub build provenance attestations."
+          gh release upload "$RELEASE_TAG" \
+            ECHO-SDK/dist/native-sdk-rc1/*.jar \
+            ECHO-SDK/dist/native-sdk-rc1/native-sdk-rc1-manifest.json \
+            ECHO-SDK/dist/native-sdk-rc1/checksums.sha256 \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber

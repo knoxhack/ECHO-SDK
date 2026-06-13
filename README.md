@@ -31,8 +31,16 @@ Run commands from the repository root.
 - `python tools/echo_sdk.py validate templates --json`
 - `python tools/validate_echo_contracts.py --json`
 - `python tools/test_echo_contract_schemas.py --json`
+- `node scripts/stage-native-sdk-rc1-release.mjs --clean --require-complete`
+- `node scripts/test-stage-native-sdk-rc1-release.mjs`
 - `python tools/echo_sdk.py create addon --template new-addon-template --id <id> --role community_addon --kind addon --output-root <path>`
 - `.\gradlew.bat -p <generated-addon> clean check packageEchoNativeAddon`
+
+## Native SDK RC1 Provenance
+
+`.github/workflows/native-sdk-rc1-provenance.yml` is the workflow-built provenance lane for the public Native SDK RC1 jars. It checks out `ECHO-Native-Platform`, `ECHO-Modules`, and `ECHO-SDK`, builds the five public SDK components, stages the 15 main/source/Javadoc jars with `scripts/stage-native-sdk-rc1-release.mjs`, uploads the staged set as a workflow artifact, and emits GitHub build provenance attestations for the exact staged bytes.
+
+Run it with `publish_release=true` only when replacing the `v1.0.0-RC1` release assets intentionally. Release Index promotion still has to verify the attested digests before changing SDK trust from `source-linked`.
 
 ## Artifact Ownership
 
