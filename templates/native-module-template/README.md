@@ -22,3 +22,7 @@
 ## Policy
 
 `NATIVE` policy. This template demonstrates a module that registers its own registrar and service contract. No NeoForge bridge code is required.
+
+## AdapterCore Gameplay Proof
+
+Modules that mutate gameplay through AdapterCore should use `EchoAdapterCoreGameplayMutationService` and record returned `EchoNativeMutationReceipt` values. A queued command, diagnostic report, or descriptor-only claim is not release proof; player-visible state changes need a receipt with host-state, save-write, HUD/event, or packet/event evidence.

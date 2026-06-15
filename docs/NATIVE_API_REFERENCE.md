@@ -73,6 +73,8 @@ context.serviceRegistry()
 
 A module counts as `MUTATED` only when a typed host service returns an `EchoNativeMutationReceipt` with status `MUTATED`. Descriptor metadata, legacy `activateNative(Map)`, diagnostic maps, and report-only claims are not mutation proof in release mode.
 
+AdapterCore gameplay mutations use `EchoAdapterCoreGameplayMutationService`. The service accepts `EchoNativeServiceMutation` requests for inventory, player state, world blocks, structures, block entities, capabilities, save data, HUD, packets, and events. `MUTATED` responses must carry host-state, save-write, HUD/event, or packet/event evidence; queued-only and diagnostic-only evidence is never release proof.
+
 ## Contracts
 
 Key public records and interfaces:
@@ -82,6 +84,7 @@ Key public records and interfaces:
 - `EchoNativeAddonDescriptor` - validated `META-INF/echo.mod.json` metadata.
 - `EchoNativeServiceMutation` - requested host mutation.
 - `EchoNativeMutationReceipt` - typed host mutation proof.
+- `EchoAdapterCoreGameplayMutationService` - typed AdapterCore gameplay mutation backend contract.
 - `EchoNativeRegistryService` - registry/content host service.
 - `EchoNativeRuntimeSide` - common/client/server routing.
 - `EchoNativeAccessPolicy` - runtime capability visibility rules.
@@ -90,6 +93,7 @@ Key public records and interfaces:
 ## AdapterCore Bridge Types
 
 - `EchoNativeRuntimeHost` - registry/capability/event host.
+- `EchoNativeRuntimeHost.NativeMutationReceipt` - AdapterCore receipt required for release-proof `MUTATED` gameplay results.
 - `EchoBackendEnergyBridge` - energy handler portability.
 - `EchoBackendFluidBridge` - fluid handler portability.
 - `EchoBlockDefinition` - portable block metadata.
