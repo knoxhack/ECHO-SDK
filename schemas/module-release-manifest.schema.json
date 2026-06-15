@@ -30,7 +30,7 @@
           "required": ["action", "subjectChecksums"],
           "properties": {
             "action": { "const": "actions/attest@v4" },
-            "subjectChecksums": { "const": "checksums.sha256" }
+            "subjectChecksums": { "const": "echo-module-release.tar.gz.sha256" }
           }
         }
       }
