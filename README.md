@@ -8,7 +8,7 @@ Source of truth for ECHO schemas, contracts, templates, API docs, and developer/
 
 ## What Lives Here
 
-SDK docs, schemas, samples, templates, API stability notes, native authoring guidance, and release packaging contracts.
+SDK docs, schemas, samples, templates, API stability notes, native authoring guidance, release packaging contracts, and the canonical `.ECHO Content Graph` schema family.
 
 ## Release And Update Role
 
@@ -44,13 +44,14 @@ Run it with `publish_release=true` only when replacing the `v1.0.0-RC1` release 
 
 ## Artifact Ownership
 
-SDK template bundles, schema snapshots, and documentation artifacts belong here. Runtime module artifacts stay in `ECHO-Modules`.
+SDK template bundles, schema snapshots, content graph schemas, and documentation artifacts belong here. Runtime module artifacts (including the generated `-content-graph.json` sidecars and embedded `.echo/content-graph/` trees) stay in `ECHO-Modules`.
 
 ## Docs Index
 
 - [docs/getting-started.md](docs/getting-started.md)
 - [docs/api/index.md](docs/api/index.md)
 - [docs/schemas/index.md](docs/schemas/index.md)
+- [docs/schemas/content-graph.md](docs/schemas/content-graph.md)
 - [docs/examples/index.md](docs/examples/index.md)
 - [docs/release-packaging.md](docs/release-packaging.md)
 - [docs/ecosystem-artifact-ownership.md](docs/ecosystem-artifact-ownership.md)

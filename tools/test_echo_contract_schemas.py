@@ -13,6 +13,9 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+GENERATED_FIXTURES: dict[str, Path] = {
+    "content-graph-evidence.schema.json": REPO_ROOT / "fixtures" / "content-graph-evidence.generated.json",
+}
 
 
 def load_json(path: Path) -> Any:
@@ -190,6 +193,16 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
                 "subjectChecksums": "checksums.sha256",
             },
         },
+        "contentGraphEvidence": {
+            "kind": "content-graph-evidence",
+            "filename": "content-graph-evidence.json",
+            "sha256": SHA,
+            "size": 420,
+            "downloadUrl": "https://github.com/knoxhack/ECHO-Modules/releases/download/modules-fixture/content-graph-evidence.json",
+            "runtimeTarget": "content-graph",
+            "buildMode": "generated",
+            "schemaVersion": "echo.content_graph.evidence.v1",
+        },
         "modules": [
             {
                 "moduleId": "fixture-addon",
@@ -204,6 +217,14 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
                         "sha256": SHA,
                         "size": 42,
                         "buildMode": "compiled-runtime",
+                    },
+                    {
+                        "kind": "content-graph",
+                        "filename": "fixture-addon-1.0.0-content-graph.json",
+                        "sha256": SHA,
+                        "size": 84,
+                        "runtimeTarget": "content-graph",
+                        "buildMode": "generated",
                     }
                 ],
             }
@@ -227,6 +248,118 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "target": "fixture-addon",
         "reason": "Fixture block.",
         "createdAt": "2026-06-09T00:00:00Z",
+    },
+    "content-graph-node.schema.json": {
+        "schemaVersion": "echo.content_graph.node.v1",
+        "kind": "echo:block",
+        "id": "fixture:old_waystone",
+        "moduleId": "fixturemodule",
+        "addonId": "fixtureaddon",
+        "displayName": "Old Waystone",
+        "tags": ["interactable"],
+        "source": {"repo": "ECHO-Modules", "path": "addons/fixturemodule/...", "format": "json"},
+        "aliases": [],
+        "capabilities": ["stateful", "interactable"],
+        "runtimeHints": {
+            "neoforge": {},
+            "echo_native": {},
+            "echo_runtime_standalone": {},
+            "hytale": {},
+        },
+        "data": {"hardness": 2.5},
+        "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
+    },
+    "content-graph-edge.schema.json": {
+        "schemaVersion": "echo.content_graph.edge.v1",
+        "id": "fixture:core_requires_material",
+        "kind": "module_requires_module",
+        "from": "echocore",
+        "to": "echomaterialcore",
+        "moduleId": "echocore",
+        "tags": [],
+        "data": {},
+        "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
+    },
+    "content-graph.schema.json": {
+        "schemaVersion": "echo.content_graph.v1",
+        "id": "fixture:fixturemodule_graph",
+        "generatedAt": "2026-06-09T00:00:00Z",
+        "modules": ["fixturemodule"],
+        "nodes": [
+            {
+                "schemaVersion": "echo.content_graph.node.v1",
+                "kind": "echo:module",
+                "id": "fixturemodule",
+                "moduleId": "fixturemodule",
+                "displayName": "Fixture Module",
+                "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
+            }
+        ],
+        "edges": [],
+        "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
+    },
+    "content-graph-export-plan.schema.json": {
+        "schemaVersion": "echo.content_graph.export_plan.v1",
+        "target": "hytale",
+        "sourceGraphId": "fixture:fixturemodule_graph",
+        "plannedAt": "2026-06-09T00:00:00Z",
+        "nodes": [
+            {"nodeId": "fixture:old_waystone", "status": "direct", "rationale": "Stateful block maps to server state object."}
+        ],
+        "summary": {"direct": 1, "adapter_required": 0, "fallback": 0, "blocked": 0, "not_applicable": 0},
+        "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
+    },
+    "content-feature-list.schema.json": {
+        "schemaVersion": "echo.content_feature_list.v1",
+        "moduleId": "fixturemodule",
+        "generatedAt": "2026-06-09T00:00:00Z",
+        "features": [
+            {
+                "id": "fixture:waystone_travel",
+                "title": "Waystone Travel",
+                "nodes": ["fixture:old_waystone"],
+                "runtimes": {
+                    "neoforge": "supported",
+                    "echo_native": "supported",
+                    "echo_runtime_standalone": "supported",
+                    "hytale": "planned_with_fallback",
+                },
+            }
+        ],
+        "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
+    },
+    "content-graph-evidence.schema.json": {
+        "schemaVersion": "echo.content_graph.evidence.v1",
+        "generatedAt": "2026-06-09T00:00:00Z",
+        "source": "ECHO-Modules/dist/echo-module-release",
+        "graphCount": 1,
+        "moduleCount": 1,
+        "nodeCount": 2,
+        "edgeCount": 1,
+        "featureCount": 1,
+        "exportPlanCount": 4,
+        "unresolvedReferenceCount": 0,
+        "hytaleBlockerCount": 1,
+        "validationState": "warning",
+        "hytaleSummary": {"direct": 1, "adapter_required": 0, "fallback": 0, "blocked": 1, "not_applicable": 0},
+        "modules": [
+            {
+                "moduleId": "fixturemodule",
+                "version": "1.0.0",
+                "graphPath": ".echo/content-graph/content-graph.json",
+                "schemaVersion": "echo.content_graph.v1",
+                "nodeCount": 2,
+                "edgeCount": 1,
+                "featureCount": 1,
+                "exportPlanCount": 4,
+                "unresolvedReferenceCount": 0,
+                "hytaleBlockerCount": 1,
+                "validationState": "warning",
+                "hytaleBlockers": ["fixture:old_waystone: needs runtime hint"],
+                "validationIssues": [],
+            }
+        ],
+        "diagnostics": [{"severity": "warning", "code": "HYTALE_BLOCKED", "message": "One Hytale node is blocked."}],
     },
 }
 
@@ -282,6 +415,7 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
     ],
     "module-release-manifest.schema.json": [
         without(VALID_FIXTURES["module-release-manifest.schema.json"], "provenance"),
+        without(VALID_FIXTURES["module-release-manifest.schema.json"], "contentGraphEvidence"),
         without(VALID_FIXTURES["module-release-manifest.schema.json"], "modules"),
         with_value(VALID_FIXTURES["module-release-manifest.schema.json"], "schemaVersion", 1),
         with_value(
@@ -325,6 +459,64 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
         without(VALID_FIXTURES["block.schema.json"], "reason"),
         with_value(VALID_FIXTURES["block.schema.json"], "scope", "unknown"),
     ],
+    "content-graph-node.schema.json": [
+        without(VALID_FIXTURES["content-graph-node.schema.json"], "schemaVersion"),
+        with_value(VALID_FIXTURES["content-graph-node.schema.json"], "kind", "echo:unknown_kind"),
+        with_value(VALID_FIXTURES["content-graph-node.schema.json"], "id", "bad id"),
+        without(VALID_FIXTURES["content-graph-node.schema.json"], "moduleId"),
+        with_value(VALID_FIXTURES["content-graph-node.schema.json"], "source", {"repo": "ECHO-Modules"}),
+        with_value(VALID_FIXTURES["content-graph-node.schema.json"], "neoforgeScreenClass", "com.example.FancyScreen"),
+        with_value(
+            VALID_FIXTURES["content-graph-node.schema.json"],
+            "provenance",
+            {"generatedAt": "2026-06-09T00:00:00Z"},
+        ),
+    ],
+    "content-graph-edge.schema.json": [
+        without(VALID_FIXTURES["content-graph-edge.schema.json"], "from"),
+        with_value(VALID_FIXTURES["content-graph-edge.schema.json"], "kind", "echo:bad_edge"),
+        with_value(VALID_FIXTURES["content-graph-edge.schema.json"], "id", "no-colon-here"),
+    ],
+    "content-graph.schema.json": [
+        without(VALID_FIXTURES["content-graph.schema.json"], "nodes"),
+        with_value(VALID_FIXTURES["content-graph.schema.json"], "schemaVersion", "echo.content_graph.v0"),
+        with_value(VALID_FIXTURES["content-graph.schema.json"], "modules", []),
+    ],
+    "content-graph-export-plan.schema.json": [
+        without(VALID_FIXTURES["content-graph-export-plan.schema.json"], "target"),
+        with_value(VALID_FIXTURES["content-graph-export-plan.schema.json"], "target", "fabric"),
+        with_value(
+            VALID_FIXTURES["content-graph-export-plan.schema.json"],
+            "nodes",
+            [{"nodeId": "fixture:old_waystone", "status": "maybe"}],
+        ),
+    ],
+    "content-feature-list.schema.json": [
+        without(VALID_FIXTURES["content-feature-list.schema.json"], "features"),
+        with_value(VALID_FIXTURES["content-feature-list.schema.json"], "moduleId", "BAD ID"),
+        with_value(
+            VALID_FIXTURES["content-feature-list.schema.json"],
+            "features",
+            [{"id": "fixture:empty", "title": "Empty", "nodes": [], "runtimes": {}}],
+        ),
+    ],
+    "content-graph-evidence.schema.json": [
+        without(VALID_FIXTURES["content-graph-evidence.schema.json"], "schemaVersion"),
+        without(VALID_FIXTURES["content-graph-evidence.schema.json"], "hytaleBlockerCount"),
+        with_value(VALID_FIXTURES["content-graph-evidence.schema.json"], "schemaVersion", "echo.content_graph.evidence.v0"),
+        with_value(VALID_FIXTURES["content-graph-evidence.schema.json"], "nodeCount", -1),
+        with_value(VALID_FIXTURES["content-graph-evidence.schema.json"], "validationState", "unknown"),
+        with_value(
+            VALID_FIXTURES["content-graph-evidence.schema.json"],
+            "modules",
+            [{"moduleId": "BAD ID", "nodeCount": 0, "edgeCount": 0, "featureCount": 0, "exportPlanCount": 0, "hytaleBlockerCount": 0, "validationState": "valid"}],
+        ),
+        with_value(
+            VALID_FIXTURES["content-graph-evidence.schema.json"],
+            "diagnostics",
+            [{"severity": "bad", "message": "Invalid severity"}],
+        ),
+    ],
 }
 
 
@@ -336,6 +528,15 @@ def run_tests() -> dict[str, Any]:
         errors = validate_schema_fixture(schema_name, fixture)
         if errors:
             failures.append(f"{schema_name} valid fixture failed: {errors}")
+        generated_fixture = GENERATED_FIXTURES.get(schema_name)
+        if generated_fixture is not None:
+            tested += 1
+            if not generated_fixture.exists():
+                failures.append(f"{schema_name} generated fixture missing: {generated_fixture}")
+            else:
+                errors = validate_schema_fixture(schema_name, load_json(generated_fixture))
+                if errors:
+                    failures.append(f"{schema_name} generated fixture failed: {errors}")
         for index, invalid in enumerate(INVALID_FIXTURES[schema_name], start=1):
             tested += 1
             errors = validate_schema_fixture(schema_name, invalid)
