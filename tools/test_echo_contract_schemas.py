@@ -304,9 +304,24 @@ VALID_FIXTURES: dict[str, dict[str, Any]] = {
         "sourceGraphId": "fixture:fixturemodule_graph",
         "plannedAt": "2026-06-09T00:00:00Z",
         "nodes": [
-            {"nodeId": "fixture:old_waystone", "status": "direct", "rationale": "Stateful block maps to server state object."}
+            {
+                "nodeId": "fixture:old_waystone",
+                "kind": "echo:block",
+                "status": "direct",
+                "rationale": "Stateful block maps to server state object.",
+            },
+            {
+                "nodeId": "fixture:waste_stalker",
+                "kind": "echo:entity",
+                "status": "blocked",
+                "rationale": "Hytale entity contract not defined.",
+                "contract": "echo.hytale.entity_contract.v1",
+                "requiredAdapter": "echo.hytale.entity_adapter.v1",
+                "blockedReasonCode": "HYTALE_ACTOR_CONTRACT_MISSING",
+                "recommendedFix": "Define echo.hytale.entity_contract.v1 hints or an explicit Hytale fallback.",
+            },
         ],
-        "summary": {"direct": 1, "adapter_required": 0, "fallback": 0, "blocked": 0, "not_applicable": 0},
+        "summary": {"direct": 1, "adapter_required": 0, "fallback": 0, "blocked": 1, "not_applicable": 0},
         "provenance": {"generatedBy": "fixture", "generatedAt": "2026-06-09T00:00:00Z"},
     },
     "content-feature-list.schema.json": {
@@ -489,6 +504,11 @@ INVALID_FIXTURES: dict[str, list[dict[str, Any]]] = {
             VALID_FIXTURES["content-graph-export-plan.schema.json"],
             "nodes",
             [{"nodeId": "fixture:old_waystone", "status": "maybe"}],
+        ),
+        with_value(
+            VALID_FIXTURES["content-graph-export-plan.schema.json"],
+            "nodes",
+            [{"nodeId": "fixture:waste_stalker", "status": "blocked", "blockedReasonCode": ""}],
         ),
     ],
     "content-feature-list.schema.json": [

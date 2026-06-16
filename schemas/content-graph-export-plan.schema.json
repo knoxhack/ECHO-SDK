@@ -21,12 +21,17 @@
         "required": ["nodeId", "status"],
         "properties": {
           "nodeId": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "minLength": 1 },
           "status": {
             "type": "string",
             "enum": ["direct", "adapter_required", "fallback", "blocked", "not_applicable"]
           },
           "rationale": { "type": "string" },
           "mappedTo": { "type": "string" },
+          "contract": { "type": "string", "minLength": 1 },
+          "requiredAdapter": { "type": "string", "minLength": 1 },
+          "blockedReasonCode": { "type": "string", "minLength": 1 },
+          "recommendedFix": { "type": "string", "minLength": 1 },
           "runtimeHints": { "type": "object", "additionalProperties": true }
         }
       }

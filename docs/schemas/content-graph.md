@@ -92,6 +92,15 @@ The export plan schema supports planning statuses:
 
 Hytale export is planning-only; no runtime code generation is produced by this schema. Status values such as `direct`, `adapter_required`, `fallback`, and `blocked` are export planning evidence only and must not be displayed as playable/runtime support.
 
+Entity and NPC nodes use typed actor planning. If a node lacks a Hytale actor contract or explicit fallback, the export plan should mark it `blocked` with:
+
+- `blockedReasonCode`
+- `contract`
+- `requiredAdapter`
+- `recommendedFix`
+
+These fields describe the missing adapter contract only. They are not a Hytale runtime schema and must not be treated as generated Hytale content.
+
 ## Evidence Summary
 
 Tools that do not need the full graph should publish or display a compact `echo.content_graph.evidence.v1` summary. For ECHO module releases, this is published as the root-level `content-graph-evidence.json` artifact and is the canonical release evidence document. Local scanners may emit the same shape as workspace or installed evidence, but should label that source separately from release evidence.
@@ -367,22 +376,30 @@ An export plan declares how each graph node maps to a target runtime. The Hytale
   "nodes": [
     {
       "nodeId": "echocore:block/ashfall_bricks",
+      "kind": "echo:block",
       "status": "adapter_required",
       "rationale": "Hytale block adapter maps custom block state.",
       "mappedTo": "hytale:block/custom"
     },
     {
       "nodeId": "echocore:item/ashfall_ingot",
+      "kind": "echo:item",
       "status": "direct",
       "rationale": "Item shape maps directly to Hytale item JSON."
     },
     {
-      "nodeId": "echocore:recipe/ashfall_bricks_from_ingots",
+      "nodeId": "echocore:entity/waste_stalker",
+      "kind": "echo:entity",
       "status": "blocked",
-      "rationale": "Missing `hytale.craftingStation` runtime hint."
+      "rationale": "Hytale entity contract not defined.",
+      "contract": "echo.hytale.entity_contract.v1",
+      "requiredAdapter": "echo.hytale.entity_adapter.v1",
+      "blockedReasonCode": "HYTALE_ACTOR_CONTRACT_MISSING",
+      "recommendedFix": "Define echo.hytale.entity_contract.v1 hints or an explicit Hytale fallback for this entity node."
     },
     {
       "nodeId": "echocore:mission/rescue_survivors",
+      "kind": "echo:mission",
       "status": "fallback",
       "rationale": "Mission system not available; emit quest JSON instead."
     }
