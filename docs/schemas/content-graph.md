@@ -23,8 +23,14 @@ The `.ECHO Content Graph` is a runtime-neutral, portable semantic model of ECHO 
 - `echo:item`
 - `echo:creative_tab`
 - `echo:recipe`
+- `echo:loot_table`
 - `echo:entity`
 - `echo:npc`
+- `echo:biome`
+- `echo:structure`
+- `echo:feature`
+- `echo:spawn_rule`
+- `echo:sound_event`
 - `echo:region`
 - `echo:trigger`
 - `echo:effect`
@@ -44,6 +50,11 @@ The `.ECHO Content Graph` is a runtime-neutral, portable semantic model of ECHO 
 - `creative_tab_contains_item`
 - `recipe_consumes_item`
 - `recipe_outputs_item`
+- `loot_table_drops_item`
+- `biome_has_structure`
+- `biome_has_feature`
+- `structure_uses_template_pool`
+- `spawn_rule_spawns_entity`
 - `mission_has_objective`
 - `objective_targets_node`
 - `ui_intent_controls_node`
