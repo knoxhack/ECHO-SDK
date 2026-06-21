@@ -58,6 +58,14 @@ The `.ECHO Content Graph` is a runtime-neutral, portable semantic model of ECHO 
 - `mission_has_objective`
 - `objective_targets_node`
 - `ui_intent_controls_node`
+- `ui_surface_uses_theme`
+- `ui_surface_requires_input`
+- `ui_surface_dispatches_action`
+- `hud_widget_reads_session_state`
+- `inventory_action_invokes_gameplay_action`
+- `terminal_page_controls_node`
+- `index_page_documents_node`
+- `runtime_host_adapts_surface`
 - `trigger_invokes_effect`
 - `region_contains_trigger`
 - `setting_affects_system`
@@ -73,6 +81,22 @@ Supported intents:
 - `detail_panel`
 - `notification`
 - `terminal_page`
+- `index_page`
+- `title_menu`
+- `pause_menu`
+- `world_create`
+- `world_load`
+- `module_diagnostics`
+- `inventory_surface`
+- `crafting_surface`
+- `hotbar_surface`
+- `hud_widget`
+- `overlay`
+- `keybind_action`
+- `mission_tracker`
+- `death_respawn`
+- `save_warning`
+- `runtime_blocker`
 - `map_overlay`
 - `scanner_result`
 - `inventory_action`
@@ -87,6 +111,7 @@ Runtime-specific implementation detail belongs only inside `runtimeHints.<target
 - `runtimeHints.neoforge`
 - `runtimeHints.echo_native`
 - `runtimeHints.echo_runtime_standalone`
+- `runtimeHints.standalone_engine`
 - `runtimeHints.hytale`
 
 Portable fields must never contain NeoForge screen classes, block entity classes, registry classes, or Minecraft package names.
@@ -216,6 +241,8 @@ A complete `content-graph.json` for a tiny module (`echocore`) that defines one 
       "fallbacks": {
         "neoforge": "echocore:screen/mission_terminal",
         "echo_native": "native://mission/terminal",
+        "echo_runtime_standalone": "standalone://mission/terminal",
+        "standalone_engine": "engine://mission/terminal",
         "hytale": "hytale://ui/mission-terminal"
       }
     }
@@ -314,6 +341,7 @@ A complete `content-graph.json` for a tiny module (`echocore`) that defines one 
     "neoforge": "echocore:screen/scanner_result",
     "echo_native": "native://ui/scanner-result",
     "echo_runtime_standalone": "standalone://ui/scanner-result",
+    "standalone_engine": "engine://ui/scanner-result",
     "hytale": "hytale://ui/scanner-result"
   }
 }
@@ -366,6 +394,7 @@ Edges are directional. `from` and `to` must reference node `id`s present in the 
         "neoforge": "supported",
         "echo_native": "supported",
         "echo_runtime_standalone": "supported",
+        "standalone_engine": "supported",
         "hytale": "planned"
       },
       "tags": ["building", "crafting"]
@@ -436,6 +465,7 @@ Portable fields must never contain NeoForge screen classes, block entity classes
   "runtimeHints": {
     "neoforge": { "blockClass": "dev.echo.echocore.block.AshfallBricksBlock" },
     "echo_native": { "bootstrapClass": "dev.echo.echocore.native.EchoCoreBootstrap" },
+    "standalone_engine": { "surfaceResolver": "echoscreencore:title_menu" },
     "hytale": { "textureSet": "ashfall_bricks" }
   }
 }
@@ -484,7 +514,7 @@ This writes per-module outputs under `dist/echo-module-release/<module>/<version
 - `features.json` - derived feature list
 - `provenance.json` - generation provenance
 - `unresolved-references.json` - optional reference audit
-- `export-plans/{neoforge,echo_native,echo_runtime_standalone,hytale}.json`
+- `export-plans/{neoforge,echo_native,echo_runtime_standalone,standalone_engine,hytale}.json`
 
 It also writes `dist/echo-module-release/content-graph-evidence.json`, the aggregate release artifact validated by `content-graph-evidence.schema.json`.
 

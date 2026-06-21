@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/knoxhack/ECHO-SDK/main/schemas/echo-gameplay-action.schema.json",
+  "title": "ECHO Gameplay Action",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "ownerModule", "domain", "verb", "receiptProofKinds"],
+  "properties": {
+    "schemaVersion": { "const": "echo.gameplay.action.v1" },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+    },
+    "ownerModule": { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$" },
+    "domain": {
+      "enum": ["inventory", "player_state", "world_blocks", "structures", "block_entities", "capabilities", "events", "hud_packets", "save_data"]
+    },
+    "verb": { "type": "string", "minLength": 1 },
+    "target": { "type": "string", "minLength": 1 },
+    "receiptProofKinds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["HOST_STATE", "SAVE_WRITE", "HUD_EVENT", "PACKET_EVENT"] }
+    },
+    "allowedNonProofKinds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["DIAGNOSTIC_ONLY", "QUEUED_ONLY", "METADATA_ONLY"] }
+    }
+  }
+}

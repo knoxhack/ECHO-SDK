@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/knoxhack/ECHO-SDK/main/schemas/echo-save-session.schema.json",
+  "title": "ECHO Save Session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "saveId", "contentGraphFingerprint", "loadedModules", "migrationState", "sessionState"],
+  "properties": {
+    "schemaVersion": { "const": "echo.save.session.v1" },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+    },
+    "saveId": { "type": "string", "minLength": 1 },
+    "contentGraphFingerprint": { "type": "string", "minLength": 1 },
+    "loadedModules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "version"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$" },
+          "version": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "migrationState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["clean", "migration_required", "blocked"] },
+        "message": { "type": "string" }
+      }
+    },
+    "sessionState": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["packPhase"],
+      "properties": {
+        "packPhase": { "type": "string", "minLength": 1 },
+        "activeObjective": { "type": "string" }
+      }
+    }
+  }
+}

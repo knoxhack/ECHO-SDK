@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/knoxhack/ECHO-SDK/main/schemas/echo-player-surface-manifest.schema.json",
+  "title": "ECHO Native Player Surface Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "ownerModule", "requiredHostServices", "hostTargets", "surfaces"],
+  "properties": {
+    "schemaVersion": { "const": "echo.native.player_surface_manifest.v1" },
+    "ownerModule": { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$" },
+    "requiredHostServices": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "hostTargets": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["neoforge", "echo_native", "echo_runtime_standalone", "standalone_engine"] }
+    },
+    "surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "intent", "surface", "contract", "requiredHostServices"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+          },
+          "title": { "type": "string", "minLength": 1 },
+          "intent": {
+            "enum": [
+              "selection_menu",
+              "detail_panel",
+              "notification",
+              "terminal_page",
+              "index_page",
+              "title_menu",
+              "pause_menu",
+              "world_create",
+              "world_load",
+              "settings_panel",
+              "module_diagnostics",
+              "inventory_surface",
+              "crafting_surface",
+              "hotbar_surface",
+              "hud_widget",
+              "overlay",
+              "keybind_action",
+              "mission_tracker",
+              "death_respawn",
+              "save_warning",
+              "runtime_blocker",
+              "map_overlay",
+              "scanner_result",
+              "inventory_action",
+              "confirmation_prompt",
+              "progress_tracker",
+              "hud_layer",
+              "modal"
+            ]
+          },
+          "surface": { "type": "string", "minLength": 1 },
+          "contract": {
+            "enum": [
+              "echo.ui.surface.v1",
+              "echo.input.binding.v1",
+              "echo.inventory.surface.v1",
+              "echo.gameplay.action.v1",
+              "echo.save.session.v1",
+              "echo.runtime.conformance.v1",
+              "echo.theme.tokens.v1",
+              "echo.playtest.scenario.v1"
+            ]
+          },
+          "requiredHostServices": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "capabilities": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "dataProviders": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "themeTokens": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+            }
+          },
+          "inputBindings": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+            }
+          },
+          "gameplayActions": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+            }
+          },
+          "sessionState": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+            }
+          },
+          "controlledNodes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+            }
+          },
+          "documentedNodes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+            }
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "label", "action"],
+              "properties": {
+                "id": { "type": "string", "minLength": 1 },
+                "label": { "type": "string", "minLength": 1 },
+                "action": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+                },
+                "requires": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "fallbacks": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "neoforge": { "type": "string", "minLength": 1 },
+              "echo_native": { "type": "string", "minLength": 1 },
+              "echo_runtime_standalone": { "type": "string", "minLength": 1 },
+              "standalone_engine": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

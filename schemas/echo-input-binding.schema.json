@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/knoxhack/ECHO-SDK/main/schemas/echo-input-binding.schema.json",
+  "title": "ECHO Input Binding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "ownerModule", "context", "action", "defaultBindings", "remap"],
+  "properties": {
+    "schemaVersion": { "const": "echo.input.binding.v1" },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+    },
+    "ownerModule": { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$" },
+    "context": { "type": "string", "minLength": 1 },
+    "action": { "type": "string", "minLength": 1 },
+    "conflictGroup": { "type": "string", "minLength": 1 },
+    "controllerPrompt": { "type": "string", "minLength": 1 },
+    "defaultBindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["hostId", "key"],
+        "properties": {
+          "hostId": { "enum": ["neoforge", "echo_native", "echo_runtime_standalone", "standalone_engine"] },
+          "key": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "remap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed"],
+      "properties": {
+        "allowed": { "type": "boolean" },
+        "requiresRestart": { "type": "boolean" }
+      }
+    }
+  }
+}

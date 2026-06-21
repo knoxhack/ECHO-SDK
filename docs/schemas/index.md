@@ -20,6 +20,16 @@ Schemas define the machine-readable contracts used by launchers, modules, packs,
 - Content graph export plan: `schemas/content-graph-export-plan.schema.json`
 - Content feature list: `schemas/content-feature-list.schema.json`
 - Content graph evidence summary: `schemas/content-graph-evidence.schema.json` (`content-graph-evidence.json` in ECHO module releases)
+- Unified Native host: `schemas/echo-native-host.schema.json`
+- Unified UI surface: `schemas/echo-ui-surface.schema.json`
+- Unified input binding: `schemas/echo-input-binding.schema.json`
+- Unified inventory surface: `schemas/echo-inventory-surface.schema.json`
+- Unified gameplay action: `schemas/echo-gameplay-action.schema.json`
+- Unified save/session state: `schemas/echo-save-session.schema.json`
+- Unified runtime conformance: `schemas/echo-runtime-conformance.schema.json`
+- Unified player surface manifest: `schemas/echo-player-surface-manifest.schema.json`
+- Unified theme tokens: `schemas/echo-theme-tokens.schema.json`
+- Unified playtest scenario: `schemas/echo-playtest-scenario.schema.json`
 - Pack release metadata: `echo-release.json`
 - Pack manifest: edition-specific `.pack.json`
 
@@ -28,3 +38,8 @@ Schema changes must be reflected in SDK docs and docs CI before release.
 Run `python tools/validate_echo_contracts.py --json` before changing contract fixtures.
 
 Hytale runtime support is intentionally out of scope for the current content graph schemas. See `docs/schemas/hytale-adapter-rfc.md` for the adapter/codegen and runtime-gate requirements that must exist before Hytale evidence can be treated as playable support.
+
+The Unified ECHO Native Player Runtime schemas are documented in
+[`docs/schemas/unified-native-player-runtime.md`](unified-native-player-runtime.md). They make ECHO modules the owner
+of player-facing surfaces while NeoForge, Native Loader, Standalone Runtime, and
+Standalone Engine act as host adapters.

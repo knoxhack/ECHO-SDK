@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/knoxhack/ECHO-SDK/main/schemas/echo-ui-surface.schema.json",
+  "title": "ECHO UI Surface",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "ownerModule", "kind", "actions", "dataProviders", "fallbackPolicy"],
+  "properties": {
+    "schemaVersion": { "const": "echo.ui.surface.v1" },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+    },
+    "ownerModule": { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$" },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "title_menu",
+        "pause_menu",
+        "world_create",
+        "world_load",
+        "settings_panel",
+        "module_diagnostics",
+        "runtime_blocker",
+        "death_respawn",
+        "hud_layer",
+        "hud_widget",
+        "overlay",
+        "terminal_page",
+        "index_page",
+        "inventory_surface",
+        "crafting_surface",
+        "hotbar_surface",
+        "keybind_action",
+        "mission_tracker",
+        "save_warning",
+        "modal",
+        "selection_menu",
+        "detail_panel",
+        "notification",
+        "map_overlay",
+        "scanner_result",
+        "inventory_action",
+        "confirmation_prompt",
+        "progress_tracker"
+      ]
+    },
+    "layoutId": { "type": "string", "minLength": 1 },
+    "themeTokens": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "requiredHostServices": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "action"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "action": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "dataProviders": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "fallbackPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defaultStatus"],
+      "properties": {
+        "defaultStatus": { "enum": ["supported", "adapted", "fallback", "blocked"] },
+        "reason": { "type": "string" }
+      }
+    }
+  }
+}

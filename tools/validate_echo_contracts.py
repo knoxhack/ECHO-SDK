@@ -14,6 +14,22 @@ from typing import Any
 ADDON_SCHEMA = "echo.addon.package.v1"
 PACK_SCHEMA = "echo.pack.v1"
 SHA256 = re.compile(r"^[a-f0-9]{64}$", re.IGNORECASE)
+RUNTIME_CONTRACT_SCHEMA_VERSIONS = {
+    "echo-native-host.schema.json": "echo.native.host.v1",
+    "echo-ui-surface.schema.json": "echo.ui.surface.v1",
+    "echo-input-binding.schema.json": "echo.input.binding.v1",
+    "echo-inventory-surface.schema.json": "echo.inventory.surface.v1",
+    "echo-gameplay-action.schema.json": "echo.gameplay.action.v1",
+    "echo-save-session.schema.json": "echo.save.session.v1",
+    "echo-runtime-conformance.schema.json": "echo.runtime.conformance.v1",
+    "echo-player-surface-manifest.schema.json": "echo.native.player_surface_manifest.v1",
+    "echo-theme-tokens.schema.json": "echo.theme.tokens.v1",
+    "echo-playtest-scenario.schema.json": "echo.playtest.scenario.v1",
+}
+RUNTIME_CONTRACT_FIXTURES = {
+    schema_name: Path("fixtures") / "unified-native" / schema_name.replace(".schema.json", ".fixture.json")
+    for schema_name in RUNTIME_CONTRACT_SCHEMA_VERSIONS
+}
 
 
 def load_json(path: Path) -> Any:
@@ -84,12 +100,36 @@ def validate_schema_files(root: Path, errors: list[str]) -> None:
             continue
         for field in ["$schema", "$id", "title", "type"]:
             require(errors, schema, payload, field)
+        expected_schema_version = RUNTIME_CONTRACT_SCHEMA_VERSIONS.get(schema.name)
+        if expected_schema_version:
+            actual_schema_version = payload.get("properties", {}).get("schemaVersion", {}).get("const")
+            if actual_schema_version != expected_schema_version:
+                errors.append(f"{schema.as_posix()} properties.schemaVersion.const must be {expected_schema_version}")
+
+
+def validate_unified_native_fixtures(root: Path, errors: list[str]) -> None:
+    from test_echo_contract_schemas import validate_value
+
+    for schema_name, fixture_path in sorted(RUNTIME_CONTRACT_FIXTURES.items()):
+        absolute_fixture = root / fixture_path
+        absolute_schema = root / "schemas" / schema_name
+        if not absolute_schema.is_file():
+            errors.append(f"Missing runtime contract schema: {absolute_schema.as_posix()}")
+            continue
+        if not absolute_fixture.is_file():
+            errors.append(f"Missing runtime contract fixture: {absolute_fixture.as_posix()}")
+            continue
+        schema_payload = load_json(absolute_schema)
+        fixture_payload = load_json(absolute_fixture)
+        for error in validate_value(schema_payload, fixture_payload):
+            errors.append(f"{absolute_fixture.as_posix()} failed {schema_name}: {error}")
 
 
 def command_validate(args: argparse.Namespace) -> int:
     root = Path(args.root).resolve()
     errors: list[str] = []
     validate_schema_files(root, errors)
+    validate_unified_native_fixtures(root, errors)
     sample = root / "samples" / "hello-content-addon" / "src" / "main" / "resources" / "META-INF" / "echo-addon-package.json"
     if sample.is_file():
         validate_addon_package(sample, errors)

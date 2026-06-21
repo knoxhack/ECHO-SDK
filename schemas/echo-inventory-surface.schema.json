@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/knoxhack/ECHO-SDK/main/schemas/echo-inventory-surface.schema.json",
+  "title": "ECHO Inventory Surface",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "ownerModule", "kind", "slots", "itemActions"],
+  "properties": {
+    "schemaVersion": { "const": "echo.inventory.surface.v1" },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9_-]*:[a-zA-Z0-9_/.-]+$"
+    },
+    "ownerModule": { "type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9_-]*$" },
+    "kind": {
+      "enum": ["hotbar", "backpack", "equipment", "crafting", "inventory_overlay", "container"]
+    },
+    "tooltipProviders": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "slots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "index"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["hotbar", "backpack", "equipment", "crafting_input", "crafting_output", "container"] },
+          "index": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "itemActions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "gameplayAction"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "gameplayAction": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

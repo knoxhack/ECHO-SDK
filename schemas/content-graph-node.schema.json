@@ -74,6 +74,7 @@
         "neoforge": { "type": "object", "additionalProperties": true },
         "echo_native": { "type": "object", "additionalProperties": true },
         "echo_runtime_standalone": { "type": "object", "additionalProperties": true },
+        "standalone_engine": { "type": "object", "additionalProperties": true },
         "hytale": { "type": "object", "additionalProperties": true }
       }
     },
@@ -84,12 +85,30 @@
         "detail_panel",
         "notification",
         "terminal_page",
+        "index_page",
+        "title_menu",
+        "pause_menu",
+        "world_create",
+        "world_load",
+        "module_diagnostics",
+        "inventory_surface",
+        "crafting_surface",
+        "hotbar_surface",
+        "hud_widget",
+        "overlay",
+        "keybind_action",
+        "mission_tracker",
+        "death_respawn",
+        "save_warning",
+        "runtime_blocker",
         "map_overlay",
         "scanner_result",
         "inventory_action",
         "confirmation_prompt",
         "settings_panel",
-        "progress_tracker"
+        "progress_tracker",
+        "hud_layer",
+        "modal"
       ]
     },
     "actions": {
@@ -112,6 +131,7 @@
         "neoforge": { "type": "string", "minLength": 1 },
         "echo_native": { "type": "string", "minLength": 1 },
         "echo_runtime_standalone": { "type": "string", "minLength": 1 },
+        "standalone_engine": { "type": "string", "minLength": 1 },
         "hytale": { "type": "string", "minLength": 1 }
       }
     },

@@ -20,6 +20,18 @@ The active Native SDK line is `1.0.0-RC1`. The canonical Native addon template c
 
 Do not document Native-first addons as importing NeoForge, Forge, Fabric, or `echo-native-loader`. Addons prove mutation only through typed host services returning `EchoNativeMutationReceipt`.
 
+## Unified ECHO Native Player Runtime
+
+ECHO Native is the canonical player-facing contract model for Native Loader,
+NeoForge, Standalone Runtime, and Standalone Engine. Runtimes are host adapters;
+ECHO modules own menus, HUDs, inventory, keybinds, overlays, terminal, index,
+diagnostics, save/session warnings, and gameplay action contracts. Pack
+repositories are selectors, asset/configuration owners, and evidence fixtures
+only. See [docs/UNIFIED_ECHO_NATIVE_PLAYER_RUNTIME.md](docs/UNIFIED_ECHO_NATIVE_PLAYER_RUNTIME.md)
+and [docs/schemas/unified-native-player-runtime.md](docs/schemas/unified-native-player-runtime.md).
+Module-owned player surface manifests use `echo.native.player_surface_manifest.v1`
+under `data/<module>/echo_native/player_surfaces.json`.
+
 ## Public Or Private
 
 Public is recommended for third-party addon and pack developers. Private is acceptable only for unreleased internal contracts.
@@ -52,6 +64,8 @@ SDK template bundles, schema snapshots, content graph schemas, and documentation
 - [docs/api/index.md](docs/api/index.md)
 - [docs/schemas/index.md](docs/schemas/index.md)
 - [docs/schemas/content-graph.md](docs/schemas/content-graph.md)
+- [docs/UNIFIED_ECHO_NATIVE_PLAYER_RUNTIME.md](docs/UNIFIED_ECHO_NATIVE_PLAYER_RUNTIME.md)
+- [docs/schemas/unified-native-player-runtime.md](docs/schemas/unified-native-player-runtime.md)
 - [docs/examples/index.md](docs/examples/index.md)
 - [docs/release-packaging.md](docs/release-packaging.md)
 - [docs/ecosystem-artifact-ownership.md](docs/ecosystem-artifact-ownership.md)

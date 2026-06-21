@@ -1,12 +1,29 @@
 {
-  "schema": "echo.ui.surface.placeholder.v1",
-  "module": "{{module_id}}",
-  "feature": "{{feature_id}}",
-  "clientImplementation": "not_generated",
-  "commonSafe": true,
-  "notes": [
-    "This placeholder declares a UI surface contract only.",
-    "Client rendering code must be added in an isolated reviewed client package."
-  ]
+  "schemaVersion": "echo.ui.surface.v1",
+  "id": "{{module_id}}:surface/{{feature_id}}",
+  "ownerModule": "{{module_id}}",
+  "kind": "modal",
+  "layoutId": "{{module_id}}:layout/{{feature_id}}",
+  "themeTokens": [
+    "echothemecore:token/default_surface"
+  ],
+  "requiredHostServices": [
+    "echo.native.screens",
+    "echo.input.bindings"
+  ],
+  "actions": [
+    {
+      "id": "close",
+      "label": "Close",
+      "action": "{{module_id}}:action/{{feature_id}}/close"
+    }
+  ],
+  "dataProviders": [
+    "{{module_id}}:provider/{{feature_id}}"
+  ],
+  "fallbackPolicy": {
+    "defaultStatus": "blocked",
+    "reason": "Player-facing UI must be implemented by an ECHO Native host adapter before release."
+  }
 }
 

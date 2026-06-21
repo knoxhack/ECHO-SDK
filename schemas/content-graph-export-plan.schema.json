@@ -9,7 +9,7 @@
     "schemaVersion": { "const": "echo.content_graph.export_plan.v1" },
     "target": {
       "type": "string",
-      "enum": ["neoforge", "echo_native", "echo_runtime_standalone", "hytale"]
+      "enum": ["neoforge", "echo_native", "echo_runtime_standalone", "standalone_engine", "hytale"]
     },
     "sourceGraphId": { "type": "string", "minLength": 1 },
     "plannedAt": { "type": "string", "minLength": 1 },
